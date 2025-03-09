@@ -588,6 +588,10 @@ video {
   }
 }
 
+.static {
+  position: static;
+}
+
 .fixed {
   position: fixed;
 }
@@ -705,12 +709,12 @@ video {
   margin-left: 0.75rem;
 }
 
-.ml-32 {
-  margin-left: 8rem;
-}
-
 .ml-4 {
   margin-left: 1rem;
+}
+
+.ml-7 {
+  margin-left: 1.75rem;
 }
 
 .ml-72 {
@@ -749,20 +753,12 @@ video {
   margin-top: 0.75rem;
 }
 
-.mt-4 {
-  margin-top: 1rem;
-}
-
 .mt-5 {
   margin-top: 1.25rem;
 }
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.ml-7 {
-  margin-left: 1.75rem;
 }
 
 .block {
@@ -945,10 +941,6 @@ video {
   scroll-behavior: smooth;
 }
 
-.rounded {
-  border-radius: 0.25rem;
-}
-
 .rounded-3xl {
   border-radius: 1.5rem;
 }
@@ -963,6 +955,10 @@ video {
 
 .rounded-md {
   border-radius: 0.375rem;
+}
+
+.rounded {
+  border-radius: 0.25rem;
 }
 
 .border {
@@ -1026,11 +1022,6 @@ video {
   --tw-border-opacity: 0.15;
 }
 
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
 .bg-dark-purple-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(53 51 83 / var(--tw-bg-opacity));
@@ -1085,21 +1076,16 @@ video {
   background-color: rgb(255 255 255 / 0.3);
 }
 
+.bg-white\/40 {
+  background-color: rgb(255 255 255 / 0.4);
+}
+
 .bg-zinc-50\/5 {
   background-color: rgb(250 250 250 / 0.05);
 }
 
-.bg-red-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(127 29 29 / var(--tw-bg-opacity));
-}
-
 .bg-opacity-20 {
   --tw-bg-opacity: 0.2;
-}
-
-.bg-opacity-50 {
-  --tw-bg-opacity: 0.5;
 }
 
 .object-cover {
@@ -1517,14 +1503,14 @@ video {
   background-color: rgb(176 57 83 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-pink-red-light:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(206 100 123 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-slate-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(51 65 85 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-pink-red-light:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(206 100 123 / var(--tw-bg-opacity));
 }
 
 .hover\:shadow-lg:hover {
@@ -1640,16 +1626,16 @@ video {
     margin-bottom: 4rem;
   }
 
-  .lg\:ml-32 {
-    margin-left: 8rem;
-  }
-
   .lg\:ml-7 {
     margin-left: 1.75rem;
   }
 
   .lg\:hidden {
     display: none;
+  }
+
+  .lg\:h-full {
+    height: 100%;
   }
 
   .lg\:w-\[20\%\] {
@@ -1660,8 +1646,8 @@ video {
     width: 40%;
   }
 
-  .lg\:w-\[70\%\] {
-    width: 70%;
+  .lg\:w-full {
+    width: 100%;
   }
 
   .lg\:flex-row {
