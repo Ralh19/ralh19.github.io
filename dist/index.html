@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-en" class="scroll-smooth">
+<html lang="fr-en" class="scroll-smooth lg:overflow-x-hidden">
 
     <head>
         <meta charset="UTF-8">
@@ -9,6 +9,7 @@
             rel="stylesheet" />
         <title>PORTFOLIO</title>
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="font/Komyca3Dfreeversion-Italic.ttf">
         <link rel="stylesheet" href="css/animations.css">
         <script src="/dist/scripts/birthDate.js"></script>
         <script src="/dist/scripts/scrollBack.js"></script>
@@ -17,6 +18,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <script src="scripts/sidebar.js"></script>
+        <script src="scripts/modal.js"></script>
+        <script src="/dist/scripts/certificationModal.js"></script>
+
     </head>
 
     <body>
@@ -24,14 +28,40 @@
         <header>
             <section id="hub" class="bg-dark-purple-300 h-screen w-screen">
                 <div class="h-screen w-full flex flex-col justify-center items-center transition-all duration-300">
-                    <div class="flex flex-col items-center justify-center w-full lg:ml-[300px] h-fit">
-                        <div class="flex flex-col items-center">
+                    <div
+                        class="flex flex-col items-center justify-center w-full lg:ml-[300px] h-fit perspective-[1000px]">
+                        <div class="flex flex-col items-center transform-style-3d">
+                            <!-- Main title -->
                             <h1
-                                class="text-white text-8xl text-shadow-pink_red_glow font-extrabold mb-1 max-lg:text-5xl max-:text-3xl">
-                                PORTFOLIO</h1>
+                                class="text-9xl font-extrabold mb-4 max-lg:text-5xl max-:text-3xl relative transform hover:scale-105 transition-transform duration-500 animate-float">
+                                <span class="relative inline-block">
+                                    <!-- Base white shadow layer -->
+                                    <span
+                                        class="absolute inset-0 text-white [text-shadow:0_1px_0_#ffffff,0_2px_0_#ffffff,0_3px_0_#ffffff,0_4px_0_#ffffff,0_5px_0_#ffffff,0_6px_0_#ffffff,0_7px_0_#ffffff,0_8px_0_#ffffff,0_9px_0_#ffffff,0_10px_10px_rgba(0,0,0,0.8)]">
+                                        PORTFOLIO
+                                    </span>
+                                    <!-- Top pink-red layer -->
+                                    <span class="relative text-pink-red">
+                                        PORTFOLIO
+                                    </span>
+                                </span>
+                            </h1>
+
+                            <!-- Subtitle -->
                             <h2
-                                class="text-white text-6xl font-extrabold text-shadow-white_glow max-lg:text-4xl max-sm:text-2xl">
-                                ALMEIDA ALHADA Ruben</h2>
+                                class="text-6xl font-extrabold max-lg:text-4xl max-sm:text-2xl relative transform hover:scale-105 transition-transform duration-500 animate-float-delayed">
+                                <span class="relative inline-block">
+                                    <!-- Base pink-red shadow layer -->
+                                    <span
+                                        class="absolute inset-0 text-pink-red [text-shadow:0_1px_0_#ff1744,0_2px_0_#ff1744,0_3px_0_#ff1744,0_4px_0_#ff1744,0_5px_0_#ff1744,0_6px_0_#ff1744,0_7px_0_#ff1744,0_8px_0_#ff1744,0_9px_0_#ff1744,0_10px_10px_rgba(0,0,0,0.8)]">
+                                        ALMEIDA ALHADA Ruben
+                                    </span>
+                                    <!-- Top white layer -->
+                                    <span class="relative text-white">
+                                        ALMEIDA ALHADA Ruben
+                                    </span>
+                                </span>
+                            </h2>
                         </div>
                     </div>
                 </div>
@@ -68,14 +98,14 @@
                             <a href="#presentation">
                                 <div
                                     class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-pink-red">
-                                    <i class="bi bi-bookmark-fill"></i>
+                                    <i class="bi bi-easel2-fill"></i>
                                     <p><span class="text-[15px] ml-4 text-gray-200">Présentation</span></p>
                                 </div>
                             </a>
                             <a href="#certifications">
                                 <div
                                     class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-pink-red">
-                                    <i class="bi bi-bookmark-fill"></i>
+                                    <i class="bi bi-patch-check-fill"></i>
                                     <p><span class="text-[15px] ml-4 text-gray-200">Toutes mes Certifications </span>
                                     </p>
                                 </div>
@@ -83,7 +113,7 @@
                             <a href="#skills">
                                 <div
                                     class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-pink-red">
-                                    <i class="bi bi-bookmark-fill"></i>
+                                    <i class="bi bi-code-square"></i>
                                     <p><span class="text-[15px] ml-4 text-gray-200">Mes Compétences</span></p>
                                 </div>
                             </a>
@@ -91,21 +121,21 @@
                             <a href="#parcours-pro">
                                 <div
                                     class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-pink-red">
-                                    <i class="bi bi-envelope-fill"></i>
+                                    <i class="bi bi-person-fill"></i>
                                     <p><span class="text-[15px] ml-4 text-gray-200"> Parcours Professionnel</span></p>
                                 </div>
                             </a>
                             <a href="#parcours-scolaire">
                                 <div
                                     class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-pink-red">
-                                    <i class="bi bi-envelope-fill"></i>
+                                    <i class="bi bi-backpack-fill"></i>
                                     <p><span class="text-[15px] ml-4 text-gray-200">Parcours Scolaire</span></p>
                                 </div>
                             </a>
                             <a href="pages/epreuve-e4.html">
                                 <div
                                     class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-pink-red">
-                                    <i class="bi bi-box-arrow-in-right"></i>
+                                    <i class="bi bi-mortarboard-fill"></i>
                                     <span class="text-[15px] ml-4 text-gray-200">Epreuve E4</span>
                                 </div>
                             </a>
@@ -113,7 +143,7 @@
                             <a href="#contact">
                                 <div
                                     class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-pink-red">
-                                    <i class="bi bi-box-arrow-in-right"></i>
+                                    <i class="bi bi-chat-fill"></i>
                                     <span class="text-[15px] ml-4 text-gray-200">Contact</span>
                                 </div>
                             </a>
@@ -295,14 +325,18 @@
                             parcours de certification obligatoires. <br><br> Vous trouverez ci-dessous les attestations
                             prouvant ma participation ainsi que ma réussite dans ceux-ci :</p>
                         <div class="py-8 flex flex-col lg:flex-row lg:space-x-8 items-center justify-center w-full">
+                            <!-- CErtifiaction ANSSI -->
                             <img src="images/certifications/anssi.jpg"
                                 class="w-[70%] lg:w-[40%] mb-4 lg:mb-0 cursor-pointer transform transition-transform duration-500 hover:scale-105"
-                                alt="Attestation secNumAcademi MOOC avec un score de 100% à chaque module"
-                                onclick="openModal(this.src, 'Description de l\'attestation secNumAcademi MOOC ici.')">
-                            <img src="https://clg-hberlioz.loire-atlantique.e-lyco.fr/wp-content/uploads/sites/16/2023/06/attestation.png"
+                                alt="Attestation secNumAcademi MOOC" data-title="SecNumAcademie MOOC"
+                                data-description="Formation complète en cybersécurité par l'ANSSI, couvrant les fondamentaux de la sécurité informatique avec un score de 100% à chaque module."
+                                onclick="openModal(this)">
+                            <!-- Certifiaction PIX -->
+                            <img src="images/certifications/pix.jpg"
                                 class="w-[70%] lg:w-[20%] cursor-pointer transform transition-transform duration-500 hover:scale-105"
-                                alt="Attestation PIX"
-                                onclick="openModal(this.src, 'Description de l\'attestation PIX ici.')">
+                                alt="Attestation PIX" data-title="Certifiaction PIX"
+                                data-description="Formation complète en cybersécurité par l'ANSSI, couvrant les fondamentaux de la sécurité informatique avec un score de 100% à chaque module."
+                                onclick="openModal(this)">
                         </div>
                         <!-- FIN CERTIF BTS -->
 
@@ -318,7 +352,9 @@
                             <img src="images/certifications/xamk.jpg"
                                 class="w-[70%] lg:w-[40%] mb-4 lg:mb-0 cursor-pointer transform transition-transform duration-500 hover:scale-105"
                                 alt="Attestation secNumAcademi MOOC avec un score de 100% à chaque module"
-                                onclick="openModal(this.src, 'Description de la certification XAMK')">
+                                data-title="Certification XAMK"
+                                data-description="Formation complète en cybersécurité par l'ANSSI, couvrant les fondamentaux de la sécurité informatique avec un score de 100% à chaque module."
+                                onclick="openModal(this)">
                         </div>
                         <!-- FIN CERTIF PERSO -->
                     </div>
@@ -936,22 +972,42 @@
 
         <!-- Modal -->
 
-        <div id="modal" class="fixed inset-0 items-center justify-center hidden">
-            <div class="bg-white/40  rounded-lg backdrop-blur-md shadow-lg w-screen h-screen flex flex-col items-center p-10"
-                id="modal-structure">
-                <div class="">
-                    <img id="modal-img" src=" " alt="" class="lg:w-full lg:h-full mb-4 lg:mb-0">
-                    <h5 id="modal-title" class="text-3xl text-center text-pink-red font-extrabold my-4">Titre de l'image
-                        ici</h5>
-                    <p id="modal-description" class="text-xl text-center font-semibold text-black my-4">Description de
-                        l'image ici.
-                    </p>
+        <div id="certification-modal" class="fixed inset-0 bg-black/50 items-center justify-center hidden z-50">
+            <div class="bg-white rounded-lg w-[90%] h-[90%] max-w-7xl mx-auto my-8 p-8 relative flex flex-col">
+                <!-- Close button -->
+                <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                    <i class="bi bi-x text-3xl"></i>
+                </button>
+
+                <!-- Main content container with fixed height -->
+                <div class="flex flex-row flex-1 overflow-hidden">
+                    <!-- Left side - Image with overflow control -->
+                    <div class="w-1/2 pr-8 overflow-auto">
+                        <div class="h-full flex items-center justify-center">
+                            <img id="modal-cert-img" src=" " alt=""
+                                class="max-w-full max-h-full object-contain rounded-lg">
+                        </div>
+                    </div>
+
+                    <!-- Right side - Content -->
+                    <div class="w-1/2 flex flex-col overflow-auto">
+                        <h2 id="modal-cert-title" class="text-center text-3xl font-bold text-pink-red mb-6"></h2>
+                        <div class="flex-grow content-center">
+                            <p id="modal-cert-description" class="text-gray-600 mb-8"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills section - Fixed at bottom -->
+                <div class="w-full mt-8 border-t pt-6">
+                    <div id="modal-cert-skills" class="flex flex-wrap gap-4 justify-center">
+                        <!-- Skills icons will be inserted here -->
+                    </div>
                 </div>
             </div>
         </div>
 
         <script src="/dist/scripts/formEmail.js"></script>
-        <script src="/dist/scripts/modal.js"></script>
         <script src="/dist/scripts/filter.js"></script>
         <script src="/dist/scripts/sidebar.js"></script>
 
