@@ -329,14 +329,17 @@
                             <img src="images/certifications/anssi.jpg"
                                 class="w-[70%] lg:w-[40%] mb-4 lg:mb-0 cursor-pointer transform transition-transform duration-500 hover:scale-105"
                                 alt="Attestation secNumAcademi MOOC" data-title="SecNumAcademie MOOC"
-                                data-description="Formation complète en cybersécurité par l'ANSSI, couvrant les fondamentaux de la sécurité informatique avec un score de 100% à chaque module."
+                                data-description="Formation officielle en cybersécurité proposée par l'Agence Nationale de la Sécurité des Systèmes d'Information (ANSSI). Le MOOC couvre les fondamentaux de la sécurité informatique :"
+                                data-description-list="• Protection des données personnelles • Sécurisation des appareils • Navigation web sécurisée • Bonnes pratiques de sécurité • Gestion des mots de passe • Il valide les compétences essentielles en cybersécurité avec un score de 100% obtenu sur chaque module"
                                 onclick="openModal(this)">
                             <!-- Certifiaction PIX -->
                             <img src="images/certifications/pix.jpg"
                                 class="w-[70%] lg:w-[20%] cursor-pointer transform transition-transform duration-500 hover:scale-105"
                                 alt="Attestation PIX" data-title="Certifiaction PIX"
-                                data-description="Formation complète en cybersécurité par l'ANSSI, couvrant les fondamentaux de la sécurité informatique avec un score de 100% à chaque module."
+                                data-description="Pix est une plateforme française d'évaluation et de certification des compétences numériques. Cette certification valide :"
+                                data-description-list="• La manipulation de données numériques • La recherche et le traitement d'informations • La communication et la collaboration en ligne • La création de contenu numérique • La résolution de problèmes techniques"
                                 onclick="openModal(this)">
+
                         </div>
                         <!-- FIN CERTIF BTS -->
 
@@ -352,8 +355,10 @@
                             <img src="images/certifications/xamk.jpg"
                                 class="w-[70%] lg:w-[40%] mb-4 lg:mb-0 cursor-pointer transform transition-transform duration-500 hover:scale-105"
                                 alt="Attestation secNumAcademi MOOC avec un score de 100% à chaque module"
-                                data-title="Certification XAMK"
-                                data-description="Formation complète en cybersécurité par l'ANSSI, couvrant les fondamentaux de la sécurité informatique avec un score de 100% à chaque module."
+                                data-title="Certification XAMK" 
+                                data-description="Formation en ligne sur la création de jeux vidéo proposée par l'université des sciences appliquées suédoise XAMK. Le cours couvre les fondamentaux du développement de jeux vidéo :" 
+                                data-description-list="• Concepts de base de la création de jeux vidéo • Game design et level design • Programmation des mécaniques de jeu • Unity Engine et C# • Gestion des ressources graphiques • Tests et déploiement • La formation étant entièrement en Anglais, elle m'a également permis d'améliorer ma maîtrise de cette langue"
+                                data-skills="cs,unity,git"
                                 onclick="openModal(this)">
                         </div>
                         <!-- FIN CERTIF PERSO -->
@@ -364,202 +369,154 @@
 
             <!-- == SKILLS == -->
             <section id="skills" class="bg-white min-h-screen max-w-full p-16 max-lg:px-0 mt-16">
-                <div class="flex flex-col m-auto items-center ">
+                <div class="flex flex-col m-auto items-center">
                     <div class="w-full mb-4">
-                        <h2
-                            class="relative text-pink-red text-4xl text-left ml-7 mt-8 pb-2 font-extrabold after:content-[''] after:absolute after:block after:w-16 after:h-[3px] after:bg-pink-red-light after:bottom-0 after:left-0">
-                            Mes Compétences</h2>
+                        <h2 class="relative text-pink-red text-4xl text-left ml-7 mt-8 pb-2 font-extrabold after:content-[''] after:absolute after:block after:w-16 after:h-[3px] after:bg-pink-red-light after:bottom-0 after:left-0">
+                            Mes Compétences
+                        </h2>
                     </div>
-                    <div class="flex flex-col items-center  p-10">
-                        <p class="text-xl mb-8 ">Ces connaissances ont été acquises de diverses manières : certaines
-                            lors de mon BTS SIO, d'autres par initiative personnelle en développant des solutions. </p>
+                    <div class="flex flex-col items-center p-10 w-full">
+                        <p class="text-xl mb-8">Ces connaissances ont été acquises de diverses manières : certaines lors de mon BTS SIO, d'autres par initiative personnelle en développant des solutions.</p>
 
-                        <!-- = LOGO-SKILLS = -->
-                        <div class="flex flex-wrap justify-center ">
+                        <!-- Langages -->
+                        <h4 class="relative w-full text-pink-red text-2xl font-extrabold my-8 ml-10 after:content-[''] after:absolute after:block after:w-8 after:h-[3px] after:bg-pink-red-light after:bottom-0 after:left-0">
+                            Langages :
+                        </h4>
 
-                            <!-- Languages -->
-
-                            <h4
-                                class="relative w-full text-pink-red text-2xl font-extrabold my-8 ml-10 after:content-[''] after:absolute after:block after:w-8 after:h-[3px] after:bg-pink-red-light after:bottom-0 after:left-0">
-                                Languages :</h4>
-
-
-                            <div class="flex justify-center gap-4 p-6 rounded-lg w-full ">
-
-
-
-                                <!-- Logo Skill 1 -->
-                                <div
-                                    class="group bg-white shadow rounded-lg overflow-hidden w-32 h-32 transform transition-transform duration-200 hover:scale-105">
-                                    <img src="images/skillsIcons/html_ico.png"
-                                        alt="Icone du language HTML5 issu de la plateforme Wikimedia : https://upload.wikimedia.org/wikipedia/commons/2/21/Devicon-html5-plain-wordmark.svg"
-                                        class="w-full h-full object-scale-down p-3">
-                                    <span class="hidden text-sm text-gray-700 group-hover:block">HTML5</span>
-
+                        <div class="w-full max-w-5xl grid grid-cols-2 gap-8">
+                            <!-- First Column -->
+                            <div class="space-y-6">
+                                <!-- HTML -->
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="images/skillsIcons/html_ico.png" alt="HTML5" class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">HTML5</span>
+                                            <span class="text-lg font-medium">90%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 90%"></div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <!-- Logo Skill 2 -->
-                                <div
-                                    class="bg-white shadow rounded-lg overflow-hidden w-32 h-32 transform transition-transform duration-200 hover:scale-105">
-                                    <img src="images/skillsIcons/css_ico.png"
-                                        alt="Icone du language CSS3 issu de la plateforme Wikimedia : https://commons.wikimedia.org/wiki/File:CSS3_logo_and_wordmark.svg"
-                                        class="w-full h-full object-scale-down p-3">
-                                </div>
-                                <!-- Logo Skill 3 -->
 
-                                <div
-                                    class="bg-white shadow rounded-lg overflow-hidden w-32 h-32 transform transition-transform duration-200 hover:scale-105">
-                                    <img src="images/skillsIcons/php_ico.png"
-                                        alt="Icone du language PHP issu de la plateforme Wikimedia : https://commons.wikimedia.org/wiki/Category:PHP_icons#/media/File:PHP-logo.svg"
-                                        class="w-full h-full object-scale-down p-3">
+                                <!-- CSS -->
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="images/skillsIcons/css_ico.png" alt="CSS3" class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">CSS3</span>
+                                            <span class="text-lg font-medium">85%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 85%"></div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <!-- Logo Skill 4 -->
-                                <div
-                                    class="bg-white shadow rounded-lg overflow-hidden w-32 h-32 transform transition-transform duration-200 hover:scale-105">
-                                    <img src="images/skillsIcons/js_ico.png"
-                                        alt="Icone du language JavaScript issu de la plateforme Wikimedia : https://commons.wikimedia.org/wiki/File:Unofficial_JavaScript_logo_2.svg"
-                                        class="w-full h-full p-[20%] object-scale-down">
+
+                                <!-- PHP -->
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="images/skillsIcons/php_ico.png" alt="PHP" class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">PHP</span>
+                                            <span class="text-lg font-medium">75%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 75%"></div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <!-- Logo Skill 5 -->
-                                <div
-                                    class="bg-white shadow rounded-lg overflow-hidden w-32 h-32 transform transition-transform duration-200 hover:scale-105">
-                                    <img src="images/skillsIcons/sql_ico.png"
-                                        alt="Icone du language SQL issu de la plateforme Wikimedia : https://commons.wikimedia.org/wiki/File:Sql_data_base_with_logo.svg"
-                                        class="w-full h-full object-scale-down p-3">
-                                </div>
-                                <!-- Logo Skill 6 -->
-                                <div
-                                    class="bg-white shadow rounded-lg overflow-hidden w-32 h-32 transform transition-transform duration-200 hover:scale-105">
-                                    <img src="images/skillsIcons/cs_ico.png"
-                                        alt="Icone du language C# issu de la plateforme Wikimedia : https://commons.wikimedia.org/wiki/File:C_Sharp_Icon.png"
-                                        class="w-full h-full object-scale-down p-3">
-                                </div>
-                                <!-- Logo Skill 7 -->
-                                <div
-                                    class="bg-white shadow rounded-lg overflow-hidden w-32 h-32 transform transition-transform duration-200 hover:scale-105">
-                                    <img src="images/skillsIcons/py_ico.png"
-                                        alt="Icone du language Python issu de la plateforme Wikimedia : https://commons.wikimedia.org/wiki/File:Python-logo.png"
-                                        class="w-full h-full object-scale-down p-3">
-                                </div>
-                                <!-- Logo Skill 8 -->
-                                <div
-                                    class="bg-white shadow rounded-lg overflow-hidden w-32 h-32 transform transition-transform duration-200 hover:scale-105">
-                                    <img src="images/skillsIcons/vba_ico.png"
-                                        alt="Icone du language VBA issu de la plateforme Wikimedia : https://commons.wikimedia.org/wiki/File:Microsoft_Visual_Basic_for_Applications_logo.svg"
-                                        class="w-full h-full object-scale-down p-3">
-                                </div>
-                                <!-- Logo Skill 9 -->
-                                <div
-                                    class="bg-white shadow rounded-lg overflow-hidden w-32 h-32 transform transition-transform duration-200 hover:scale-105">
-                                    <img src="images/skillsIcons/java_ico.png"
-                                        alt="Icone du language Java issu de la plateforme Wikimedia : https://fr.wikipedia.org/wiki/Fichier:Java_Logo.svg"
-                                        class="w-full h-full object-scale-down p-3">
+
+                                <!-- JavaScript -->
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="images/skillsIcons/js_ico.png" alt="JavaScript" class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">JavaScript</span>
+                                            <span class="text-lg font-medium">70%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 70%"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
-                            <!-- Logiciels/Technologies -->
-                            <h4
-                                class="relative w-full text-pink-red text-2xl font-extrabold my-8 ml-10 after:content-[''] after:absolute after:block after:w-8 after:h-[3px] after:bg-pink-red-light after:bottom-0 after:left-0">
-                                Logiciel /
-                                Technologie :</h4>
+                            <!-- Second Column -->
+                            <div class="space-y-6">
+                                <!-- SQL -->
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="images/skillsIcons/sql_ico.png" alt="SQL" class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">SQL</span>
+                                            <span class="text-lg font-medium">65%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 65%"></div>
+                                        </div>
+                                    </div>
+                                </div>
 
-                            <div class="flex justify-center gap-4 p-6 rounded-lg w-full ">
-                                <div
-                                    class="bg-white shadow rounded-lg overflow-hidden w-32 h-32 transform transition-transform duration-200 hover:scale-105">
-                                    <img src="images/skillsIcons/git_ico.png"
-                                        alt="Icone de git issu de la plateforme Wikimedia : https://commons.wikimedia.org/wiki/File:Git_format.png"
-                                        class="w-full h-full object-scale-down p-3">
+                                <!-- C# -->
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="images/skillsIcons/cs_ico.png" alt="C#" class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">C#</span>
+                                            <span class="text-lg font-medium">60%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 60%"></div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <!-- Logo Skill 13 -->
-                                <div
-                                    class="bg-white shadow rounded-lg overflow-hidden w-32 h-32 transform transition-transform duration-200 hover:scale-105">
-                                    <img src="images/skillsIcons/vscode_ico.png"
-                                        alt="Icone de l'IDE Visual Studio Code issu de la plateforme Wikimedia : https://commons.wikimedia.org/wiki/File:Visual_Studio_Code_1.35_icon.svg"
-                                        class="w-full h-full object-scale-down p-3">
+
+                                <!-- Python -->
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="images/skillsIcons/py_ico.png" alt="Python" class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">Python</span>
+                                            <span class="text-lg font-medium">55%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 55%"></div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <!-- Logo Skill 14 -->
-                                <div
-                                    class="bg-white shadow rounded-lg overflow-hidden w-32 h-32 transform transition-transform duration-200 hover:scale-105">
-                                    <img src="images/skillsIcons/eclipse_ico.webp"
-                                        alt="Icone de l'IDE Eclipse issu de la plateforme Wikimedia : https://commons.wikimedia.org/wiki/File:Eclipse-Luna-Logo.svg"
-                                        class="w-full h-full object-scale-down p-3">
-                                </div>
-                                <!-- Logo Skill 15 -->
-                                <div
-                                    class="bg-white shadow rounded-lg overflow-hidden w-32 h-32 transform transition-transform duration-200 hover:scale-105">
-                                    <img src="images/skillsIcons/netbeans_ico.png"
-                                        alt="Icone de l'IDE Apache Netbeans issu de la plateforme Wikimedia : https://commons.wikimedia.org/wiki/File:Apache_NetBeans_Logo.svg"
-                                        class="w-full h-full object-scale-down p-3">
-                                </div>
-                                <!-- Logo Skill 16 -->
-                                <div
-                                    class="bg-white shadow rounded-lg overflow-hidden w-32 h-32 transform transition-transform duration-200 hover:scale-105">
-                                    <img src="images/skillsIcons/unity_ico.png"
-                                        alt="Icone de Unity Apache Netbeans issu de la plateforme Wikimedia : https://commons.wikimedia.org/wiki/File:Apache_NetBeans_Logo.svg"
-                                        class="w-full h-full object-scale-down p-3">
-                                </div>
-                                <!-- Logo Skill 17 -->
-                                <div
-                                    class="bg-white shadow rounded-lg overflow-hidden w-32 h-32 transform transition-transform duration-200 hover:scale-105">
-                                    <img src="images/skillsIcons/blender_ico.png"
-                                        alt="Icone de Blender issu de la plateforme Wikimedia : https://commons.wikimedia.org/wiki/File:Apache_NetBeans_Logo.svg"
-                                        class="w-full h-full object-scale-down p-3">
-                                </div>
-                                <!-- Logo Skill 18 -->
-                                <div
-                                    class="bg-white shadow rounded-lg overflow-hidden w-32 h-32 transform transition-transform duration-200 hover:scale-105">
-                                    <img src="images/skillsIcons/ps_ico.png"
-                                        alt="Icone de Photoshop issu de la plateforme Wikimedia : https://commons.wikimedia.org/wiki/File:Apache_NetBeans_Logo.svg"
-                                        class="w-full h-full object-scale-down p-3">
-                                </div>
-                                <!-- Logo Skill 19 -->
-                                <div
-                                    class="bg-white shadow rounded-lg overflow-hidden w-32 h-32 transform transition-transform duration-200 hover:scale-105">
-                                    <img src="images/skillsIcons/wordpress_ico.png"
-                                        alt="Icone de Photoshop issu de la plateforme Wikimedia : https://commons.wikimedia.org/wiki/File:Apache_NetBeans_Logo.svg"
-                                        class="w-full h-full object-scale-down p-3">
+                                <!-- Java -->
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="images/skillsIcons/java_ico.png" alt="Java" class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">Java</span>
+                                            <span class="text-lg font-medium">45%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 45%"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-
-                            <!-- Frameworks -->
-                            <h4
-                                class="relative w-full text-pink-red text-2xl font-extrabold my-8 ml-10 after:content-[''] after:absolute after:block after:w-8 after:h-[3px] after:bg-pink-red-light after:bottom-0 after:left-0">
-                                Frameworks :</h4>
-
-                            <div class="flex justify-center gap-4 p-6 rounded-lg w-full ">
-
-                                <div
-                                    class="bg-white shadow rounded-lg overflow-hidden w-32 h-32 transform transition-transform duration-200 hover:scale-105">
-                                    <img src="images/skillsIcons/symfony_ico.png"
-                                        alt="Icone du framework php Symfony issu de la plateforme PNGWing : https://www.pngwing.com/en/free-png-drqen"
-                                        class="w-full h-full object-scale-down p-3">
-                                </div>
-                                <!-- Logo Skill Bootstrap -->
-                                <div
-                                    class="bg-white shadow rounded-lg overflow-hidden w-32 h-32 transform transition-transform duration-200 hover:scale-105">
-                                    <img src="images/skillsIcons/bootstrap_ico.png"
-                                        alt="Icone du framework CSS Bootstrap issu de la plateforme Wikimedia : https://commons.wikimedia.org/wiki/File:Bootstrap_logo.svg"
-                                        class="w-full h-full object-scale-down p-3">
-                                </div>
-                                <!-- Logo Skill Tailwind -->
-                                <div
-                                    class="bg-white shadow rounded-lg overflow-hidden w-32 h-32 transform transition-transform duration-200 hover:scale-105">
-                                    <img src="images/skillsIcons/tailwind_ico.png"
-                                        alt="Icone du framework CSS Bootstrap issu de la plateforme Wikimedia : https://commons.wikimedia.org/wiki/File:Bootstrap_logo.svg"
-                                        class="w-full h-full object-scale-down p-3">
-                                </div>
-                                <!-- Logo Skill Django -->
-                                <div
-                                    class="bg-white shadow rounded-lg overflow-hidden w-32 h-32 transform transition-transform duration-200 hover:scale-105">
-                                    <img src="images/skillsIcons/django_ico.png"
-                                        alt="Icone du framework Python Django du site officiel : https://static.djangoproject.com/img/logos/django-logo-positive.png"
-                                        class="w-full h-full object-scale-down p-3">
-                                </div>
-                            </div>
-
-
-
                         </div>
-                        <!-- = FIN LOGO-SKILLS = -->
                     </div>
                 </div>
             </section>
@@ -980,7 +937,7 @@
                 </button>
 
                 <!-- Main content container with fixed height -->
-                <div class="flex flex-row flex-1 overflow-hidden">
+                <div class="flex flex-row flex-1 overflow-hidden md:flexmd:flex-col">
                     <!-- Left side - Image with overflow control -->
                     <div class="w-1/2 pr-8 overflow-auto">
                         <div class="h-full flex items-center justify-center">
@@ -991,7 +948,7 @@
 
                     <!-- Right side - Content -->
                     <div class="w-1/2 flex flex-col overflow-auto">
-                        <h2 id="modal-cert-title" class="text-center text-3xl font-bold text-pink-red mb-6"></h2>
+                        <h2 id="modal-cert-title" class="text-center text-3xl font-bold text-pink-red"></h2>
                         <div class="flex-grow content-center">
                             <p id="modal-cert-description" class="text-gray-600 mb-8"></p>
                         </div>

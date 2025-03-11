@@ -40,7 +40,30 @@ function updateModalContent(element) {
     
     modalImg.src = element.src;
     modalTitle.textContent = element.dataset.title;
-    modalDesc.textContent = element.dataset.description;
+    
+    // Clear and set main description
+    modalDesc.innerHTML = '';
+    const descriptionP = document.createElement('p');
+    descriptionP.textContent = element.dataset.description;
+    descriptionP.className = 'text-gray-600 mb-4 text-lg';
+    modalDesc.appendChild(descriptionP);
+    
+    // Handle bullet point list if it exists
+    if (element.dataset.descriptionList) {
+        const ul = document.createElement('ul');
+        ul.className = 'list-none space-y-2 ml-4';
+        
+        const items = element.dataset.descriptionList.split('•').filter(item => item.trim() !== '');
+        items.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item.trim();
+            li.className = 'text-gray-600 flex items-start text-lg';
+            li.insertAdjacentHTML('afterbegin', '<span class="mr-2">•&nbsp;&nbsp;&nbsp;</span>');
+            ul.appendChild(li);
+        });
+        
+        modalDesc.appendChild(ul);
+    }
     
     // Clear previous skills
     modalSkills.innerHTML = '';
@@ -51,8 +74,8 @@ function updateModalContent(element) {
         skills.forEach(skill => {
             const skillIcon = document.createElement('img');
             skillIcon.src = `images/skillsIcons/${skill}_ico.png`;
-            skillIcon.style.width = '6rem';
-            skillIcon.style.height = '6rem';
+            skillIcon.style.width = '5rem';
+            skillIcon.style.height = '5rem';
             skillIcon.style.objectFit = 'contain';
             modalSkills.appendChild(skillIcon);
         });
