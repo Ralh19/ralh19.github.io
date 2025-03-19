@@ -331,14 +331,16 @@
                                 alt="Attestation secNumAcademi MOOC" data-title="SecNumAcademie MOOC"
                                 data-description="Formation officielle en cybersécurité proposée par l'Agence Nationale de la Sécurité des Systèmes d'Information (ANSSI). Le MOOC couvre les fondamentaux de la sécurité informatique :"
                                 data-description-list="• Protection des données personnelles • Sécurisation des appareils • Navigation web sécurisée • Bonnes pratiques de sécurité • Gestion des mots de passe • Il valide les compétences essentielles en cybersécurité avec un score de 100% obtenu sur chaque module"
-                                data-image="images/certifications/anssi.jpg" onclick="openModal(this)">
+                                data-image="images/certifications/anssi.jpg" data-type="certification"
+                                onclick="openModal(this)">
                             <!-- Certifiaction PIX -->
                             <img src="images/certifications/pix.jpg"
                                 class="w-[70%] lg:w-[20%] cursor-pointer transform transition-transform duration-500 hover:scale-105"
                                 alt="Attestation PIX" data-title="Certifiaction PIX"
                                 data-description="Pix est une plateforme française d'évaluation et de certification des compétences numériques. Cette certification valide :"
                                 data-description-list="• La manipulation de données numériques • La recherche et le traitement d'informations • La communication et la collaboration en ligne • La création de contenu numérique • La résolution de problèmes techniques"
-                                data-image="images/certifications/pix.jpg" onclick="openModal(this)">
+                                data-image="images/certifications/pix.jpg" data-type="certification"
+                                onclick="openModal(this)">
 
                         </div>
                         <!-- FIN CERTIF BTS -->
@@ -359,7 +361,7 @@
                                 data-description="Formation en ligne sur la création de jeux vidéo proposée par l'université des sciences appliquées suédoise XAMK. Le cours couvre les fondamentaux du développement de jeux vidéo :"
                                 data-description-list="• Concepts de base de la création de jeux vidéo • Game design et level design • Programmation des mécaniques de jeu • Unity Engine et C# • Gestion des ressources graphiques • Tests et déploiement • La formation étant entièrement en Anglais, elle m'a également permis d'améliorer ma maîtrise de cette langue"
                                 data-skills="cs,unity,git" data-image="images/certifications/xamk.jpg"
-                                onclick="openModal(this)">
+                                data-type="certification" onclick="openModal(this)">
                         </div>
                         <!-- FIN CERTIF PERSO -->
                     </div>
@@ -945,14 +947,15 @@
                     <div class="filterable_cards flex flex-wrap justify-center gap-10 p-7 my-4">
 
                         <!-- Project Card Template -->
-                        <div class="card group relative flex flex-col bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm border border-gray-100 w-96 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:-translate-y-1 animate-zoom-in" data-name="web">
+                        <div class="card group relative flex flex-col bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm border border-gray-100 w-96 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:-translate-y-1 animate-zoom-in"
+                            data-name="web">
                             <!-- Image Container - Now Clickable -->
                             <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer"
-                                 onclick="openModal(this.closest('.card').querySelector('button'))">
+                                onclick="openModal(this.closest('.card').querySelector('button'))">
                                 <img class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover"
-                                     src="images/projects/portfolio_screen1.png" 
-                                     alt="Portfolio Project Image" />
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    src="images/projects/portfolio_screen1.png" alt="Portfolio Project Image" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 </div>
                             </div>
 
@@ -960,16 +963,18 @@
                             <div class="p-6 flex flex-col flex-grow">
                                 <div class="flex items-center justify-between mb-4">
                                     <h6 class="text-xl font-bold text-gray-800">Portfolio Personnel</h6>
-                                    <span class="px-3 py-1 text-sm font-medium text-gray-600 bg-gray-100 rounded-full">2025</span>
+                                    <span
+                                        class="px-3 py-1 text-sm font-medium text-gray-600 bg-gray-100 rounded-full">2025</span>
                                 </div>
-                                <p class="text-gray-600 text-sm leading-relaxed flex-grow">Portfolio personnel développé avec TailwindCSS présentant mes compétences, projets et parcours professionnel</p>
+                                <p class="text-gray-600 text-sm leading-relaxed flex-grow">Portfolio personnel développé
+                                    avec TailwindCSS présentant mes compétences, projets et parcours professionnel</p>
                                 <div class="mt-6">
                                     <button onclick="openModal(this)"
                                         class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
                                         data-title="Portfolio Personnel"
                                         data-description="Portfolio personnel développé avec TailwindCSS présentant mes compétences, projets et parcours professionnel."
                                         data-skills="html,css,tailwind,js"
-                                        data-image="images/projects/portfolio_screen1.png">
+                                        data-image="images/projects/portfolio_screen1.png" data-type="project">
                                         <span>Voir plus</span>
                                         <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
                                             fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -984,8 +989,8 @@
                         <!-- Nolark Card -->
                         <div class="card group relative flex flex-col bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm border border-gray-100 w-96 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:-translate-y-1 animate-zoom-in"
                             data-name="bts">
-                            <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer" 
-                                 onclick="openModal(this.closest('.card').querySelector('button'))">
+                            <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer"
+                                onclick="openModal(this.closest('.card').querySelector('button'))">
                                 <img class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover"
                                     src="images/projects/nolark_screen.png" alt="Nolark Project Image" />
                                 <div
@@ -1006,7 +1011,8 @@
                                         class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
                                         data-title="Nolark"
                                         data-description="Site web static de vente de casques de moto, ayant pour but l'apprentissage des languages HTML, CSS et JavaScript."
-                                        data-skills="html,css,js" data-image="images/projects/nolark_screen.png">
+                                        data-skills="html,css,js" data-image="images/projects/nolark_screen.png"
+                                        data-type="project">
                                         <span>Voir plus</span>
                                         <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
                                             fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1021,8 +1027,8 @@
                         <!-- Amelia Card -->
                         <div class="card group relative flex flex-col bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm border border-gray-100 w-96 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:-translate-y-1 animate-zoom-in"
                             data-name="bts">
-                            <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer" 
-                                 onclick="openModal(this.closest('.card').querySelector('button'))">
+                            <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer"
+                                onclick="openModal(this.closest('.card').querySelector('button'))">
                                 <img class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover"
                                     src="images/projects/amelia_screen1.png" alt="Amélia Pilou Portfolio" />
                                 <div
@@ -1042,8 +1048,8 @@
                                         class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
                                         data-title="Portfolio d'Amélia Pilou"
                                         data-description="Portfolio d'un personnage fictif, ayant pour but la découverte du framework css Bootstrap."
-                                        data-skills="html,css,bootstrap"
-                                        data-image="images/projects/amelia_screen1.png">
+                                        data-skills="html,css,bootstrap" data-image="images/projects/amelia_screen1.png"
+                                        data-type="project">
                                         <span>Voir plus</span>
                                         <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
                                             fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1058,8 +1064,8 @@
                         <!-- Merlin Card -->
                         <div class="card group relative flex flex-col bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm border border-gray-100 w-96 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:-translate-y-1 animate-zoom-in"
                             data-name="games">
-                            <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer" 
-                                 onclick="openModal(this.closest('.card').querySelector('button'))">
+                            <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer"
+                                onclick="openModal(this.closest('.card').querySelector('button'))">
                                 <img class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover"
                                     src="images/projects/merlin_screen1.png" alt="Merlin Game Image" />
                                 <div
@@ -1079,7 +1085,8 @@
                                         class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
                                         data-title="Merlin's Demon War"
                                         data-description="Jeu de carte de combat en C# à travers le moteur de jeu Unity."
-                                        data-skills="cs,unity" data-image="images/projects/merlin_screen1.png">
+                                        data-skills="cs,unity" data-image="images/projects/merlin_screen1.png"
+                                        data-type="project">
                                         <span>Voir plus</span>
                                         <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
                                             fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1093,8 +1100,8 @@
                         <!-- GSB Card -->
                         <div class="card group relative flex flex-col bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm border border-gray-100 w-96 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:-translate-y-1 animate-zoom-in"
                             data-name="bts">
-                            <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer" 
-                                 onclick="openModal(this.closest('.card').querySelector('button'))">
+                            <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer"
+                                onclick="openModal(this.closest('.card').querySelector('button'))">
                                 <img class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover"
                                     src="images/projects/gsb_screen1.png" alt="GSB Project Image" />
                                 <div
@@ -1115,8 +1122,8 @@
                                         class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
                                         data-title="GSB"
                                         data-description="Application Web en PHP en architecture MVC de gestion et traitement de fiche de frais."
-                                        data-skills="php,css,bootstrap,sql"
-                                        data-image="images/projects/gsb_screen1.png">
+                                        data-skills="php,css,bootstrap,sql" data-image="images/projects/gsb_screen1.png"
+                                        data-type="project">
                                         <span>Voir plus</span>
                                         <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
                                             fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1131,8 +1138,8 @@
                         <!-- The Return Card -->
                         <div class="card group relative flex flex-col bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm border border-gray-100 w-96 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:-translate-y-1 animate-zoom-in"
                             data-name="games">
-                            <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer" 
-                                 onclick="openModal(this.closest('.card').querySelector('button'))">
+                            <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer"
+                                onclick="openModal(this.closest('.card').querySelector('button'))">
                                 <img class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover"
                                     src="images/projects/return_screen1.png" alt="The Return Game Image" />
                                 <div
@@ -1152,7 +1159,8 @@
                                         class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
                                         data-title="The Return"
                                         data-description="Jeu d'aventure textuel en C# à travers le moteur de jeu Unity."
-                                        data-skills="cs,unity" data-image="images/projects/return_screen1.png">
+                                        data-skills="cs,unity" data-image="images/projects/return_screen1.png"
+                                        data-type="project">
                                         <span>Voir plus</span>
                                         <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
                                             fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1167,8 +1175,8 @@
                         <!-- Carte Snake Game -->
                         <div class="card group relative flex flex-col bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm border border-gray-100 w-96 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:-translate-y-1 animate-zoom-in"
                             data-name="games">
-                            <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer" 
-                                 onclick="openModal(this.closest('.card').querySelector('button'))">
+                            <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer"
+                                onclick="openModal(this.closest('.card').querySelector('button'))">
                                 <img class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover"
                                     src="images/projects/snake_screen1.jpeg" alt="Snake Game Image" />
                                 <div
@@ -1188,7 +1196,8 @@
                                         class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
                                         data-title="Snake Game"
                                         data-description="Jeu Snake pour Android en C# à travers le moteur de jeu Unity."
-                                        data-skills="cs,unity" data-image="images/projects/snake_screen1.jpeg">
+                                        data-skills="cs,unity" data-image="images/projects/snake_screen1.jpeg"
+                                        data-type="project">
                                         <span>Voir plus</span>
                                         <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
                                             fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1291,6 +1300,21 @@
                 <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
                     <i class="bi bi-x text-3xl"></i>
                 </button>
+
+                <!-- Add these buttons inside your modal, next to the close button -->
+                <div class="absolute top-1/2 transform -translate-y-1/2 flex justify-between w-[110%] -left-[5%]">
+                    <!-- Previous button -->
+                    <button onclick="switchImage('prev')" 
+                        class="bg-dark-purple-200/50 hover:bg-dark-purple-200/75 text-white rounded-full p-3 transition-all duration-300 transform hover:scale-110 hover:bg-dark-purple-200">
+                        <i class="bi bi-chevron-left text-3xl"></i>
+                    </button>
+                    
+                    <!-- Next button -->
+                    <button onclick="switchImage('next')" 
+                        class="bg-dark-purple-200/50 hover:bg-dark-purple-200/75 text-white rounded-full p-3 transition-all duration-300 transform hover:scale-110 hover:bg-dark-purple-200">
+                        <i class="bi bi-chevron-right text-3xl"></i>
+                    </button>
+                </div>
 
                 <!-- Main content container with fixed height -->
                 <div class="flex flex-row flex-1 overflow-hidden md:flexmd:flex-col">

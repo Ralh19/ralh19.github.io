@@ -29,10 +29,21 @@ function openModal(element) {
         });
     }
 
-    // Show modal
+    // Show modal and navigation
     modal.classList.remove('hidden');
     modal.classList.add('flex');
     document.body.style.overflow = 'hidden';
+
+    // Store current image and its type for carousel
+    window.currentImage = element;
+    window.currentType = element.getAttribute('data-type') || 
+                        element.closest('.card').getAttribute('data-type');
+
+    // Ensure navigation buttons are visible
+    const navButtons = modal.querySelectorAll('button[onclick^="switchImage"]');
+    navButtons.forEach(button => {
+        button.classList.remove('hidden');
+    });
 }
 
 function updateModalContent(element) {
@@ -41,22 +52,27 @@ function updateModalContent(element) {
     const modalDesc = document.getElementById('modal-cert-description');
     const modalSkills = document.getElementById('modal-cert-skills');
     
-    modalImg.src = element.src;
-    modalTitle.textContent = element.dataset.title;
+    // Handle different element types (certification images vs project buttons)
+    const isProject = element.hasAttribute('onclick');
+    
+    // Update image source
+    modalImg.src = isProject ? element.getAttribute('data-image') : element.src;
+    modalTitle.textContent = isProject ? element.getAttribute('data-title') : element.dataset.title;
     
     // Clear and set main description
     modalDesc.innerHTML = '';
     const descriptionP = document.createElement('p');
-    descriptionP.textContent = element.dataset.description;
+    descriptionP.textContent = isProject ? element.getAttribute('data-description') : element.dataset.description;
     descriptionP.className = 'text-gray-600 mb-4 text-lg';
     modalDesc.appendChild(descriptionP);
     
     // Handle bullet point list if it exists
-    if (element.dataset.descriptionList) {
+    const descriptionList = isProject ? element.getAttribute('data-description-list') : element.dataset.descriptionList;
+    if (descriptionList) {
         const ul = document.createElement('ul');
         ul.className = 'list-none space-y-2 ml-4';
         
-        const items = element.dataset.descriptionList.split('•').filter(item => item.trim() !== '');
+        const items = descriptionList.split('•').filter(item => item.trim() !== '');
         items.forEach(item => {
             const li = document.createElement('li');
             li.textContent = item.trim();
@@ -71,9 +87,12 @@ function updateModalContent(element) {
     // Clear previous skills
     modalSkills.innerHTML = '';
     
-    // Only add skills if data-skills exists and is not empty
-    if (element.dataset.skills && element.dataset.skills.trim() !== '') {
-        const skills = element.dataset.skills.split(',');
+    // Get skills data based on element type
+    const skillsData = isProject ? element.getAttribute('data-skills') : element.dataset.skills;
+    
+    // Only add skills if they exist and are not empty
+    if (skillsData && skillsData.trim() !== '') {
+        const skills = skillsData.split(',');
         skills.forEach(skill => {
             const skillIcon = document.createElement('img');
             skillIcon.src = `images/skillsIcons/${skill}_ico.png`;
@@ -87,7 +106,15 @@ function updateModalContent(element) {
 
 function switchImage(direction) {
     const currentImage = window.currentImage;
-    const allImages = document.querySelectorAll('img[onclick="openModal(this)"]');
+    const currentType = currentImage.getAttribute('data-type') || 
+                       currentImage.closest('.card').getAttribute('data-type');
+    
+    // Select only images of the same type
+    const selector = currentType === 'certification' 
+        ? 'img[data-type="certification"]'
+        : '.card button[onclick="openModal(this)"][data-type="project"]';
+    
+    const allImages = document.querySelectorAll(selector);
     const currentIndex = Array.from(allImages).indexOf(currentImage);
     
     let nextIndex;
@@ -106,9 +133,8 @@ function closeModal() {
     modal.classList.add('hidden');
     modal.classList.remove('flex');
     
-    // Remove navigation buttons
-    const buttons = modal.querySelectorAll('button[onclick^="switchImage"]');
-    buttons.forEach(button => button.remove());
+    // Re-enable scrolling
+    document.body.style.overflow = 'auto';
 }
 
 // Add keyboard navigation
