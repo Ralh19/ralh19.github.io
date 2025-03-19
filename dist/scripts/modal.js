@@ -2,34 +2,37 @@ function openModal(element) {
     const modal = document.getElementById('certification-modal');
     const modalImg = document.getElementById('modal-cert-img');
     const modalTitle = document.getElementById('modal-cert-title');
-    const modalDesc = document.getElementById('modal-cert-description');
+    const modalDescription = document.getElementById('modal-cert-description');
     const modalSkills = document.getElementById('modal-cert-skills');
 
-    // Add navigation buttons
-    const navigation = `
-        <button onclick="switchImage('prev')" class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700">
-            <i class="bi bi-chevron-left text-4xl"></i>
-        </button>
-        <button onclick="switchImage('next')" class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700">
-            <i class="bi bi-chevron-right text-4xl"></i>
-        </button>
-    `;
-    
-    modal.insertAdjacentHTML('afterbegin', navigation);
-    
-    // Store current image element globally
-    window.currentImage = element;
-    
-    updateModalContent(element);
-    
+    // Get data from element
+    const title = element.getAttribute('data-title');
+    const description = element.getAttribute('data-description');
+    const skills = element.getAttribute('data-skills');
+    const image = element.getAttribute('data-image');
+
+    // Set modal content
+    modalImg.src = image;
+    modalImg.alt = title;
+    modalTitle.textContent = title;
+    modalDescription.textContent = description;
+
+    // Handle skills icons
+    modalSkills.innerHTML = ''; // Clear existing skills
+    if (skills) {
+        skills.split(',').forEach(skill => {
+            const skillIcon = document.createElement('img');
+            skillIcon.src = `images/skillsIcons/${skill}_ico.png`;
+            skillIcon.alt = skill;
+            skillIcon.className = 'w-12 h-12 object-contain';
+            modalSkills.appendChild(skillIcon);
+        });
+    }
+
+    // Show modal
     modal.classList.remove('hidden');
     modal.classList.add('flex');
-    
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeModal();
-        }
-    });
+    document.body.style.overflow = 'hidden';
 }
 
 function updateModalContent(element) {

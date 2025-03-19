@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-en" class="scroll-smooth lg:overflow-x-hidden">
+<html lang="fr-en" class="scroll-smooth">
 
     <head>
         <meta charset="UTF-8">
@@ -331,14 +331,14 @@
                                 alt="Attestation secNumAcademi MOOC" data-title="SecNumAcademie MOOC"
                                 data-description="Formation officielle en cybersécurité proposée par l'Agence Nationale de la Sécurité des Systèmes d'Information (ANSSI). Le MOOC couvre les fondamentaux de la sécurité informatique :"
                                 data-description-list="• Protection des données personnelles • Sécurisation des appareils • Navigation web sécurisée • Bonnes pratiques de sécurité • Gestion des mots de passe • Il valide les compétences essentielles en cybersécurité avec un score de 100% obtenu sur chaque module"
-                                onclick="openModal(this)">
+                                data-image="images/certifications/anssi.jpg" onclick="openModal(this)">
                             <!-- Certifiaction PIX -->
                             <img src="images/certifications/pix.jpg"
                                 class="w-[70%] lg:w-[20%] cursor-pointer transform transition-transform duration-500 hover:scale-105"
                                 alt="Attestation PIX" data-title="Certifiaction PIX"
                                 data-description="Pix est une plateforme française d'évaluation et de certification des compétences numériques. Cette certification valide :"
                                 data-description-list="• La manipulation de données numériques • La recherche et le traitement d'informations • La communication et la collaboration en ligne • La création de contenu numérique • La résolution de problèmes techniques"
-                                onclick="openModal(this)">
+                                data-image="images/certifications/pix.jpg" onclick="openModal(this)">
 
                         </div>
                         <!-- FIN CERTIF BTS -->
@@ -355,10 +355,10 @@
                             <img src="images/certifications/xamk.jpg"
                                 class="w-[70%] lg:w-[40%] mb-4 lg:mb-0 cursor-pointer transform transition-transform duration-500 hover:scale-105"
                                 alt="Attestation secNumAcademi MOOC avec un score de 100% à chaque module"
-                                data-title="Certification XAMK" 
-                                data-description="Formation en ligne sur la création de jeux vidéo proposée par l'université des sciences appliquées suédoise XAMK. Le cours couvre les fondamentaux du développement de jeux vidéo :" 
+                                data-title="Certification XAMK"
+                                data-description="Formation en ligne sur la création de jeux vidéo proposée par l'université des sciences appliquées suédoise XAMK. Le cours couvre les fondamentaux du développement de jeux vidéo :"
                                 data-description-list="• Concepts de base de la création de jeux vidéo • Game design et level design • Programmation des mécaniques de jeu • Unity Engine et C# • Gestion des ressources graphiques • Tests et déploiement • La formation étant entièrement en Anglais, elle m'a également permis d'améliorer ma maîtrise de cette langue"
-                                data-skills="cs,unity,git"
+                                data-skills="cs,unity,git" data-image="images/certifications/xamk.jpg"
                                 onclick="openModal(this)">
                         </div>
                         <!-- FIN CERTIF PERSO -->
@@ -368,28 +368,33 @@
             <!-- == FIN CERTIFICATIONS == -->
 
             <!-- == SKILLS == -->
-            <section id="skills" class="bg-white min-h-screen max-w-full p-16 max-lg:px-0 mt-16">
+            <section id="skills" class="bg-white min-h-screen max-w-full p-4 sm:p-8 lg:p-16 mt-16">
                 <div class="flex flex-col m-auto items-center">
                     <div class="w-full mb-4">
-                        <h2 class="relative text-pink-red text-4xl text-left ml-7 mt-8 pb-2 font-extrabold after:content-[''] after:absolute after:block after:w-16 after:h-[3px] after:bg-pink-red-light after:bottom-0 after:left-0">
+                        <h2
+                            class="relative text-pink-red text-3xl sm:text-4xl text-left ml-4 sm:ml-7 mt-8 pb-2 font-extrabold after:content-[''] after:absolute after:block after:w-16 after:h-[3px] after:bg-pink-red-light after:bottom-0 after:left-0">
                             Mes Compétences
                         </h2>
                     </div>
-                    <div class="flex flex-col items-center p-10 w-full">
-                        <p class="text-xl mb-8">Ces connaissances ont été acquises de diverses manières : certaines lors de mon BTS SIO, d'autres par initiative personnelle en développant des solutions.</p>
+                    <div class="flex flex-col items-center p-4 sm:p-10 w-full">
+                        <p class="text-base sm:text-xl mb-8 px-4">Ces connaissances ont été acquises de diverses
+                            manières : certaines lors de mon BTS SIO, d'autres par initiative personnelle en développant
+                            des solutions.</p>
 
-                        <!-- Langages -->
-                        <h4 class="relative w-full text-pink-red text-2xl font-extrabold my-8 ml-10 after:content-[''] after:absolute after:block after:w-8 after:h-[3px] after:bg-pink-red-light after:bottom-0 after:left-0">
+                        <!-- Languages -->
+                        <h4
+                            class="relative w-full text-pink-red text-xl sm:text-2xl font-extrabold my-6 sm:my-8 ml-4 sm:ml-10 after:content-[''] after:absolute after:block after:w-8 after:h-[3px] after:bg-pink-red-light after:bottom-0 after:left-0">
                             Langages :
                         </h4>
 
-                        <div class="w-full max-w-5xl grid grid-cols-2 gap-8">
+                        <div class="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 px-4 pb-10">
                             <!-- First Column -->
                             <div class="space-y-6">
                                 <!-- HTML -->
                                 <div class="flex items-center">
                                     <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
-                                        <img src="images/skillsIcons/html_ico.png" alt="HTML5" class="w-full h-full object-scale-down">
+                                        <img src="images/skillsIcons/html_ico.png" alt="HTML5"
+                                            class="w-full h-full object-scale-down">
                                     </div>
                                     <div class="flex-grow">
                                         <div class="flex justify-between mb-1">
@@ -405,7 +410,8 @@
                                 <!-- CSS -->
                                 <div class="flex items-center">
                                     <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
-                                        <img src="images/skillsIcons/css_ico.png" alt="CSS3" class="w-full h-full object-scale-down">
+                                        <img src="images/skillsIcons/css_ico.png" alt="CSS3"
+                                            class="w-full h-full object-scale-down">
                                     </div>
                                     <div class="flex-grow">
                                         <div class="flex justify-between mb-1">
@@ -421,7 +427,8 @@
                                 <!-- PHP -->
                                 <div class="flex items-center">
                                     <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
-                                        <img src="images/skillsIcons/php_ico.png" alt="PHP" class="w-full h-full object-scale-down">
+                                        <img src="images/skillsIcons/php_ico.png" alt="PHP"
+                                            class="w-full h-full object-scale-down">
                                     </div>
                                     <div class="flex-grow">
                                         <div class="flex justify-between mb-1">
@@ -437,15 +444,16 @@
                                 <!-- JavaScript -->
                                 <div class="flex items-center">
                                     <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
-                                        <img src="images/skillsIcons/js_ico.png" alt="JavaScript" class="w-full h-full object-scale-down">
+                                        <img src="images/skillsIcons/js_ico.png" alt="JavaScript"
+                                            class="w-full h-full object-scale-down">
                                     </div>
                                     <div class="flex-grow">
                                         <div class="flex justify-between mb-1">
                                             <span class="text-lg font-medium">JavaScript</span>
-                                            <span class="text-lg font-medium">70%</span>
+                                            <span class="text-lg font-medium">50%</span>
                                         </div>
                                         <div class="w-full bg-gray-200 rounded-full h-3">
-                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 70%"></div>
+                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 50%"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -456,7 +464,8 @@
                                 <!-- SQL -->
                                 <div class="flex items-center">
                                     <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
-                                        <img src="images/skillsIcons/sql_ico.png" alt="SQL" class="w-full h-full object-scale-down">
+                                        <img src="images/skillsIcons/sql_ico.png" alt="SQL"
+                                            class="w-full h-full object-scale-down">
                                     </div>
                                     <div class="flex-grow">
                                         <div class="flex justify-between mb-1">
@@ -472,11 +481,219 @@
                                 <!-- C# -->
                                 <div class="flex items-center">
                                     <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
-                                        <img src="images/skillsIcons/cs_ico.png" alt="C#" class="w-full h-full object-scale-down">
+                                        <img src="images/skillsIcons/cs_ico.png" alt="C#"
+                                            class="w-full h-full object-scale-down">
                                     </div>
                                     <div class="flex-grow">
                                         <div class="flex justify-between mb-1">
                                             <span class="text-lg font-medium">C#</span>
+                                            <span class="text-lg font-medium">65%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 65%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Python -->
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="images/skillsIcons/py_ico.png" alt="Python"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">Python</span>
+                                            <span class="text-lg font-medium">30%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 30%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Java -->
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="images/skillsIcons/java_ico.png" alt="Java"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">Java</span>
+                                            <span class="text-lg font-medium">70%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 70%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Frameworks & Tools -->
+                        <h4
+                            class="relative w-full text-pink-red text-xl sm:text-2xl font-extrabold my-6 sm:my-8 ml-4 sm:ml-10 after:content-[''] after:absolute after:block after:w-8 after:h-[3px] after:bg-pink-red-light after:bottom-0 after:left-0">
+                            Frameworks &amp; Outils :
+                        </h4>
+
+                        <div
+                            class="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 px-4">
+                            <!-- First Column -->
+                            <div class="space-y-6">
+                                <!-- Tailwind -->
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="images/skillsIcons/tailwind_ico.png" alt="Tailwind CSS"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">Tailwind CSS</span>
+                                            <span class="text-lg font-medium">95%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 95%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Bootstrap -->
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="images/skillsIcons/bootstrap_ico.png" alt="Bootstrap"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">Bootstrap</span>
+                                            <span class="text-lg font-medium">70%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 70%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Symfony -->
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="images/skillsIcons/symfony_ico.png" alt="Symfony"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">Symfony</span>
+                                            <span class="text-lg font-medium">40%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 40%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Spring -->
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="images/skillsIcons/spring_ico.png" alt="Spring"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">Spring</span>
+                                            <span class="text-lg font-medium">60%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 60%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Second Column -->
+                            <div class="space-y-6">
+                                <!-- Django -->
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="images/skillsIcons/django_ico.png" alt="Django"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">Django</span>
+                                            <span class="text-lg font-medium">45%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 45%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <!-- VS Code -->
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="images/skillsIcons/vscode_ico.png" alt="VS Code"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">VS Code</span>
+                                            <span class="text-lg font-medium">90%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 90%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Eclipse -->
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="images/skillsIcons/eclipse_ico.webp" alt="Eclipse"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">Eclipse</span>
+                                            <span class="text-lg font-medium">75%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- NetBeans -->
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="images/skillsIcons/netbeans_ico.png" alt="NetBeans"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">NetBeans</span>
+                                            <span class="text-lg font-medium">75%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Third Column -->
+                            <div class="space-y-6">
+
+
+                                <!-- Blender -->
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="images/skillsIcons/blender_ico.png" alt="Blender"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">Blender</span>
                                             <span class="text-lg font-medium">60%</span>
                                         </div>
                                         <div class="w-full bg-gray-200 rounded-full h-3">
@@ -485,33 +702,53 @@
                                     </div>
                                 </div>
 
-                                <!-- Python -->
+                                <!-- Photoshop -->
                                 <div class="flex items-center">
                                     <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
-                                        <img src="images/skillsIcons/py_ico.png" alt="Python" class="w-full h-full object-scale-down">
+                                        <img src="images/skillsIcons/ps_ico.png" alt="Photoshop"
+                                            class="w-full h-full object-scale-down">
                                     </div>
                                     <div class="flex-grow">
                                         <div class="flex justify-between mb-1">
-                                            <span class="text-lg font-medium">Python</span>
-                                            <span class="text-lg font-medium">55%</span>
+                                            <span class="text-lg font-medium">Photoshop</span>
+                                            <span class="text-lg font-medium">75%</span>
                                         </div>
                                         <div class="w-full bg-gray-200 rounded-full h-3">
-                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 55%"></div>
+                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 75%"></div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Java -->
+
+                                <!-- Unity -->
                                 <div class="flex items-center">
                                     <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
-                                        <img src="images/skillsIcons/java_ico.png" alt="Java" class="w-full h-full object-scale-down">
+                                        <img src="images/skillsIcons/unity_ico.png" alt="Unity"
+                                            class="w-full h-full object-scale-down">
                                     </div>
                                     <div class="flex-grow">
                                         <div class="flex justify-between mb-1">
-                                            <span class="text-lg font-medium">Java</span>
+                                            <span class="text-lg font-medium">Unity</span>
                                             <span class="text-lg font-medium">45%</span>
                                         </div>
                                         <div class="w-full bg-gray-200 rounded-full h-3">
                                             <div class="bg-pink-red-light h-3 rounded-full" style="width: 45%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- WordPress -->
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="images/skillsIcons/wordpress_ico.png" alt="WordPress"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">WordPress</span>
+                                            <span class="text-lg font-medium">65%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 65%"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -691,155 +928,275 @@
                         <button
                             class="active text-pink-red text-center text-sm font-bold w-auto bg-pink-red-light bg-opacity-20 border border-pink-red-light rounded-md px-2 py-2 transform transition-transform duration-200 hover:scale-105"
                             data-name="all">TOUT AFFICHER</button>
+
                         <button
                             class="text-gray-600 text-center text-sm font-bold w-auto bg-gray-100 border border-gray-300 rounded-md px-2 py-2 transform transition-transform duration-200 hover:bg-gray-200 hover:scale-105"
                             data-name="bts">BTS - SIO</button>
                         <button
                             class="text-gray-600 text-center text-sm font-bold w-auto bg-gray-100 border border-gray-300 rounded-md px-2 py-2 transform transition-transform duration-200 hover:bg-gray-200 hover:scale-105"
                             data-name="games">Jeux Vidéo</button>
+                        <button
+                            class="text-gray-600 text-center text-sm font-bold w-auto bg-gray-100 border border-gray-300 rounded-md px-2 py-2 transform transition-transform duration-200 hover:bg-gray-200 hover:scale-105"
+                            data-name="web">Web</button>
                     </div>
                     <!-- FIN BOUTONS DE FILTRES -->
 
                     <!-- CARTES FILTRABLES -->
                     <div class="filterable_cards flex flex-wrap justify-center gap-10 p-7 my-4">
 
-                        <!-- Carte Nolark -->
-                        <div class="card cursor-pointer group relative flex flex-col bg-slate-50 shadow-sm border border-slate-200 rounded-lg w-96 hover:shadow-lg transition-shadow duration-300 animate-zoom-in"
+                        <!-- Project Card Template -->
+                        <div class="card group relative flex flex-col bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm border border-gray-100 w-96 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:-translate-y-1 animate-zoom-in" data-name="web">
+                            <!-- Image Container - Now Clickable -->
+                            <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer"
+                                 onclick="openModal(this.closest('.card').querySelector('button'))">
+                                <img class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover"
+                                     src="images/projects/portfolio_screen1.png" 
+                                     alt="Portfolio Project Image" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                            </div>
+
+                            <!-- Content Container - Remains Unchanged -->
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h6 class="text-xl font-bold text-gray-800">Portfolio Personnel</h6>
+                                    <span class="px-3 py-1 text-sm font-medium text-gray-600 bg-gray-100 rounded-full">2025</span>
+                                </div>
+                                <p class="text-gray-600 text-sm leading-relaxed flex-grow">Portfolio personnel développé avec TailwindCSS présentant mes compétences, projets et parcours professionnel</p>
+                                <div class="mt-6">
+                                    <button onclick="openModal(this)"
+                                        class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
+                                        data-title="Portfolio Personnel"
+                                        data-description="Portfolio personnel développé avec TailwindCSS présentant mes compétences, projets et parcours professionnel."
+                                        data-skills="html,css,tailwind,js"
+                                        data-image="images/projects/portfolio_screen1.png">
+                                        <span>Voir plus</span>
+                                        <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Nolark Card -->
+                        <div class="card group relative flex flex-col bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm border border-gray-100 w-96 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:-translate-y-1 animate-zoom-in"
                             data-name="bts">
-                            <div class="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
-                                <img class="transition-transform duration-500 transform group-hover:scale-110 w-full h-full object-cover"
+                            <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer" 
+                                 onclick="openModal(this.closest('.card').querySelector('button'))">
+                                <img class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover"
                                     src="images/projects/nolark_screen.png" alt="Nolark Project Image" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                </div>
                             </div>
-                            <div class="p-4 relative">
-                                <h6 class="mb-2 text-slate-800 text-xl font-semibold flex items-center justify-between">
-                                    Nolark
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h6 class="text-xl font-bold text-gray-800">Nolark</h6>
                                     <span
-                                        class="ml-2 bg-white/30 backdrop-blur-md text-slate-800 text-sm px-3 py-1 rounded-full shadow-sm">2023</span>
-                                </h6>
-                                <p class="text-slate-600 leading-normal font-light">Site web static de vente de casques
-                                    de moto, ayant pour but l'apprentissage des languages HTML, CSS et JavaScript</p>
-                            </div>
-                            <div class="px-4 pb-4 pt-0 mt-2">
-                                <button
-                                    class="rounded-md bg-slate-800 py-2 px-4 text-sm text-white transition-all shadow-md hover:shadow-lg hover:bg-slate-700"
-                                    type="button">Read article</button>
+                                        class="px-3 py-1 text-sm font-medium text-gray-600 bg-gray-100 rounded-full">2023</span>
+                                </div>
+                                <p class="text-gray-600 text-sm leading-relaxed flex-grow">Site web static de vente de
+                                    casques de moto, ayant pour but l'apprentissage des languages HTML, CSS et
+                                    JavaScript</p>
+                                <div class="mt-6">
+                                    <button onclick="openModal(this)"
+                                        class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
+                                        data-title="Nolark"
+                                        data-description="Site web static de vente de casques de moto, ayant pour but l'apprentissage des languages HTML, CSS et JavaScript."
+                                        data-skills="html,css,js" data-image="images/projects/nolark_screen.png">
+                                        <span>Voir plus</span>
+                                        <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Carte Amelia -->
-                        <div class="card cursor-pointer group relative flex flex-col bg-slate-50 shadow-sm border border-slate-200 rounded-lg w-96 hover:shadow-lg transition-shadow duration-300 animate-zoom-in"
+                        <!-- Amelia Card -->
+                        <div class="card group relative flex flex-col bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm border border-gray-100 w-96 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:-translate-y-1 animate-zoom-in"
                             data-name="bts">
-                            <div class="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
-                                <img class="transition-transform duration-500 transform group-hover:scale-110 w-full h-full object-cover"
+                            <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer" 
+                                 onclick="openModal(this.closest('.card').querySelector('button'))">
+                                <img class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover"
                                     src="images/projects/amelia_screen1.png" alt="Amélia Pilou Portfolio" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                </div>
                             </div>
-                            <div class="p-4 relative">
-                                <h6 class="mb-2 text-slate-800 text-xl font-semibold flex items-center justify-between">
-                                    Portfolio d'Amélia Pilou
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h6 class="text-xl font-bold text-gray-800">Portfolio d'Amélia Pilou</h6>
                                     <span
-                                        class="ml-2 bg-white/30 backdrop-blur-md text-slate-800 text-sm px-3 py-1 rounded-full shadow-sm">2023</span>
-                                </h6>
-                                <p class="text-slate-600 leading-normal font-light">Portfolio d'un personnage fictif,
-                                    ayant pour but la découverte du framework css Bootstrap</p>
-                            </div>
-                            <div class="px-4 pb-4 pt-0 mt-2">
-                                <button
-                                    class="rounded-md bg-slate-800 py-2 px-4 text-sm text-white transition-all shadow-md hover:shadow-lg hover:bg-slate-700"
-                                    type="button">Read article</button>
+                                        class="px-3 py-1 text-sm font-medium text-gray-600 bg-gray-100 rounded-full">2023</span>
+                                </div>
+                                <p class="text-gray-600 text-sm leading-relaxed flex-grow">Portfolio d'un personnage
+                                    fictif, ayant pour but la découverte du framework css Bootstrap</p>
+                                <div class="mt-6">
+                                    <button onclick="openModal(this)"
+                                        class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
+                                        data-title="Portfolio d'Amélia Pilou"
+                                        data-description="Portfolio d'un personnage fictif, ayant pour but la découverte du framework css Bootstrap."
+                                        data-skills="html,css,bootstrap"
+                                        data-image="images/projects/amelia_screen1.png">
+                                        <span>Voir plus</span>
+                                        <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Carte Merlin -->
-                        <div class="card cursor-pointer group relative flex flex-col bg-slate-50 shadow-sm border border-slate-200 rounded-lg w-96 hover:shadow-lg transition-shadow duration-300 animate-zoom-in"
+                        <!-- Merlin Card -->
+                        <div class="card group relative flex flex-col bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm border border-gray-100 w-96 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:-translate-y-1 animate-zoom-in"
                             data-name="games">
-                            <div class="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
-                                <img class="transition-transform duration-500 transform group-hover:scale-110 w-full h-full object-cover"
+                            <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer" 
+                                 onclick="openModal(this.closest('.card').querySelector('button'))">
+                                <img class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover"
                                     src="images/projects/merlin_screen1.png" alt="Merlin Game Image" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                </div>
                             </div>
-                            <div class="p-4 relative">
-                                <h6 class="mb-2 text-slate-800 text-xl font-semibold flex items-center justify-between">
-                                    Merlin's Demon War - Card Combat Game
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h6 class="text-xl font-bold text-gray-800">Merlin's Demon War</h6>
                                     <span
-                                        class="ml-2 bg-white/30 backdrop-blur-md text-slate-800 text-sm px-3 py-1 rounded-full shadow-sm">2022</span>
-                                </h6>
-                                <p class="text-slate-600 leading-normal font-light">Jeu de carte de combat en C# a
-                                    travers le moteur de jeu Unity</p>
-                            </div>
-                            <div class="px-4 pb-4 pt-0 mt-2">
-                                <button
-                                    class="rounded-md bg-slate-800 py-2 px-4 text-sm text-white transition-all shadow-md hover:shadow-lg hover:bg-slate-700"
-                                    type="button">Read article</button>
+                                        class="px-3 py-1 text-sm font-medium text-gray-600 bg-gray-100 rounded-full">2022</span>
+                                </div>
+                                <p class="text-gray-600 text-sm leading-relaxed flex-grow">Jeu de carte de combat en C#
+                                    à travers le moteur de jeu Unity</p>
+                                <div class="mt-6">
+                                    <button onclick="openModal(this)"
+                                        class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
+                                        data-title="Merlin's Demon War"
+                                        data-description="Jeu de carte de combat en C# à travers le moteur de jeu Unity."
+                                        data-skills="cs,unity" data-image="images/projects/merlin_screen1.png">
+                                        <span>Voir plus</span>
+                                        <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
                         </div>
-
-                        <!-- Carte GSB -->
-                        <div class="card cursor-pointer group relative flex flex-col bg-slate-50 shadow-sm border border-slate-200 rounded-lg w-96 hover:shadow-lg transition-shadow duration-300 animate-zoom-in"
+                        <!-- GSB Card -->
+                        <div class="card group relative flex flex-col bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm border border-gray-100 w-96 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:-translate-y-1 animate-zoom-in"
                             data-name="bts">
-                            <div class="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
-                                <img class="transition-transform duration-500 transform group-hover:scale-110 w-full h-full object-cover"
+                            <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer" 
+                                 onclick="openModal(this.closest('.card').querySelector('button'))">
+                                <img class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover"
                                     src="images/projects/gsb_screen1.png" alt="GSB Project Image" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                </div>
                             </div>
-                            <div class="p-4 relative">
-                                <h6 class="mb-2 text-slate-800 text-xl font-semibold flex items-center justify-between">
-                                    GSB
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h6 class="text-xl font-bold text-gray-800">GSB</h6>
                                     <span
-                                        class="ml-2 bg-white/30 backdrop-blur-md text-slate-800 text-sm px-3 py-1 rounded-full shadow-sm">2024
+                                        class="px-3 py-1 text-sm font-medium text-gray-600 bg-gray-100 rounded-full">2024
                                         - 2025</span>
-                                </h6>
-                                <p class="text-slate-600 leading-normal font-light">Application Web en PHP en
+                                </div>
+                                <p class="text-gray-600 text-sm leading-relaxed flex-grow">Application Web en PHP en
                                     architecture MVC de gestion et traitement de fiche de frais</p>
-                            </div>
-                            <div class="px-4 pb-4 pt-0 mt-2">
-                                <button
-                                    class="rounded-md bg-slate-800 py-2 px-4 text-sm text-white transition-all shadow-md hover:shadow-lg hover:bg-slate-700"
-                                    type="button">Read article</button>
+                                <div class="mt-6">
+                                    <button onclick="openModal(this)"
+                                        class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
+                                        data-title="GSB"
+                                        data-description="Application Web en PHP en architecture MVC de gestion et traitement de fiche de frais."
+                                        data-skills="php,css,bootstrap,sql"
+                                        data-image="images/projects/gsb_screen1.png">
+                                        <span>Voir plus</span>
+                                        <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Carte The Return -->
-                        <div class="card cursor-pointer group relative flex flex-col bg-slate-50 shadow-sm border border-slate-200 rounded-lg w-96 hover:shadow-lg transition-shadow duration-300 animate-zoom-in"
+                        <!-- The Return Card -->
+                        <div class="card group relative flex flex-col bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm border border-gray-100 w-96 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:-translate-y-1 animate-zoom-in"
                             data-name="games">
-                            <div class="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
-                                <img class="transition-transform duration-500 transform group-hover:scale-110 w-full h-full object-cover"
+                            <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer" 
+                                 onclick="openModal(this.closest('.card').querySelector('button'))">
+                                <img class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover"
                                     src="images/projects/return_screen1.png" alt="The Return Game Image" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                </div>
                             </div>
-                            <div class="p-4 relative">
-                                <h6 class="mb-2 text-slate-800 text-xl font-semibold flex items-center justify-between">
-                                    The Return
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h6 class="text-xl font-bold text-gray-800">The Return</h6>
                                     <span
-                                        class="ml-2 bg-white/30 backdrop-blur-md text-slate-800 text-sm px-3 py-1 rounded-full shadow-sm">2022</span>
-                                </h6>
-                                <p class="text-slate-600 leading-normal font-light">Jeu d'aventure textuel en C# a
-                                    travers le moteur de jeu Unity</p>
-                            </div>
-                            <div class="px-4 pb-4 pt-0 mt-2">
-                                <button
-                                    class="rounded-md bg-slate-800 py-2 px-4 text-sm text-white transition-all shadow-md hover:shadow-lg hover:bg-slate-700"
-                                    type="button">Read article</button>
+                                        class="px-3 py-1 text-sm font-medium text-gray-600 bg-gray-100 rounded-full">2022</span>
+                                </div>
+                                <p class="text-gray-600 text-sm leading-relaxed flex-grow">Jeu d'aventure textuel en C#
+                                    à travers le moteur de jeu Unity</p>
+                                <div class="mt-6">
+                                    <button onclick="openModal(this)"
+                                        class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
+                                        data-title="The Return"
+                                        data-description="Jeu d'aventure textuel en C# à travers le moteur de jeu Unity."
+                                        data-skills="cs,unity" data-image="images/projects/return_screen1.png">
+                                        <span>Voir plus</span>
+                                        <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
                         </div>
-
 
                         <!-- Carte Snake Game -->
-                        <div class="card cursor-pointer group relative flex flex-col bg-slate-50 shadow-sm border border-slate-200 rounded-lg w-96 hover:shadow-lg transition-shadow duration-300 animate-zoom-in"
+                        <div class="card group relative flex flex-col bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm border border-gray-100 w-96 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:-translate-y-1 animate-zoom-in"
                             data-name="games">
-                            <div class="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
-                                <img class="transition-transform duration-500 transform group-hover:scale-110 w-full h-full object-cover"
+                            <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer" 
+                                 onclick="openModal(this.closest('.card').querySelector('button'))">
+                                <img class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover"
                                     src="images/projects/snake_screen1.jpeg" alt="Snake Game Image" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                </div>
                             </div>
-                            <div class="p-4 relative">
-                                <h6 class="mb-2 text-slate-800 text-xl font-semibold flex items-center justify-between">
-                                    Snake Game
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h6 class="text-xl font-bold text-gray-800">Snake Game</h6>
                                     <span
-                                        class="ml-2 bg-white/30 backdrop-blur-md text-slate-800 text-sm px-3 py-1 rounded-full shadow-sm">2022</span>
-                                </h6>
-                                <p class="text-slate-600 leading-normal font-light">Jeu Snake pour Android en C# a
-                                    travers le moteur de jeu Unity</p>
-                            </div>
-                            <div class="px-4 pb-4 pt-0 mt-2">
-                                <button
-                                    class="rounded-md bg-slate-800 py-2 px-4 text-sm text-white transition-all shadow-md hover:shadow-lg hover:bg-slate-700"
-                                    type="button">Read article</button>
+                                        class="px-3 py-1 text-sm font-medium text-gray-600 bg-gray-100 rounded-full">2022</span>
+                                </div>
+                                <p class="text-gray-600 text-sm leading-relaxed flex-grow">Jeu Snake pour Android en C#
+                                    à travers le moteur de jeu Unity</p>
+                                <div class="mt-6">
+                                    <button onclick="openModal(this)"
+                                        class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
+                                        data-title="Snake Game"
+                                        data-description="Jeu Snake pour Android en C# à travers le moteur de jeu Unity."
+                                        data-skills="cs,unity" data-image="images/projects/snake_screen1.jpeg">
+                                        <span>Voir plus</span>
+                                        <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -928,7 +1285,6 @@
         <!-- ====== FIN MAIN ====== -->
 
         <!-- Modal -->
-
         <div id="certification-modal" class="fixed inset-0 bg-black/50 items-center justify-center hidden z-50">
             <div class="bg-white rounded-lg w-[90%] h-[90%] max-w-7xl mx-auto my-8 p-8 relative flex flex-col">
                 <!-- Close button -->
