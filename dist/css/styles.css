@@ -608,6 +608,10 @@ video {
   inset: 0px;
 }
 
+.-left-\[5\%\] {
+  left: -5%;
+}
+
 .bottom-0 {
   bottom: 0px;
 }
@@ -636,20 +640,16 @@ video {
   top: 0px;
 }
 
+.top-1\/2 {
+  top: 50%;
+}
+
 .top-4 {
   top: 1rem;
 }
 
 .top-5 {
   top: 1.25rem;
-}
-
-.top-1\/2 {
-  top: 50%;
-}
-
-.-left-\[5\%\] {
-  left: -5%;
 }
 
 .z-40 {
@@ -778,10 +778,6 @@ video {
   margin-top: 2rem;
 }
 
-.mt-4 {
-  margin-top: 1rem;
-}
-
 .block {
   display: block;
 }
@@ -879,6 +875,10 @@ video {
   width: 24rem;
 }
 
+.w-\[110\%\] {
+  width: 110%;
+}
+
 .w-\[300px\] {
   width: 300px;
 }
@@ -901,10 +901,6 @@ video {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-\[110\%\] {
-  width: 110%;
 }
 
 .max-w-5xl {
@@ -1192,6 +1188,10 @@ video {
   background-color: rgb(53 51 83 / var(--tw-bg-opacity));
 }
 
+.bg-dark-purple-200\/50 {
+  background-color: rgb(53 51 83 / 0.5);
+}
+
 .bg-dark-purple-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(30 29 48 / var(--tw-bg-opacity));
@@ -1239,14 +1239,6 @@ video {
 
 .bg-zinc-50\/5 {
   background-color: rgb(250 250 250 / 0.05);
-}
-
-.bg-gray-800\/50 {
-  background-color: rgb(31 41 55 / 0.5);
-}
-
-.bg-dark-purple-200\/50 {
-  background-color: rgb(53 51 83 / 0.5);
 }
 
 .bg-opacity-20 {
@@ -1699,6 +1691,15 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.hover\:bg-dark-purple-200:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(53 51 83 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-dark-purple-200\/75:hover {
+  background-color: rgb(53 51 83 / 0.75);
+}
+
 .hover\:bg-gray-200:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
@@ -1712,19 +1713,6 @@ video {
 .hover\:bg-slate-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(51 65 85 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-gray-800\/75:hover {
-  background-color: rgb(31 41 55 / 0.75);
-}
-
-.hover\:bg-dark-purple-200\/75:hover {
-  background-color: rgb(53 51 83 / 0.75);
-}
-
-.hover\:bg-dark-purple-200:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(53 51 83 / var(--tw-bg-opacity));
 }
 
 .hover\:text-gray-700:hover {
