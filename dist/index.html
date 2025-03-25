@@ -1160,7 +1160,7 @@
                                         data-title="The Return"
                                         data-description="Jeu d'aventure textuel en C# à travers le moteur de jeu Unity."
                                         data-skills="cs,unity" data-image="images/projects/return_screen1.png"
-                                        data-type="project">
+                                        data-append="images/projects/return_screen2.png" data-type="project">
                                         <span>Voir plus</span>
                                         <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
                                             fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1301,45 +1301,82 @@
                     <i class="bi bi-x text-3xl"></i>
                 </button>
 
-                <!-- Add these buttons inside your modal, next to the close button -->
+                <!-- Navigation buttons -->
                 <div class="absolute top-1/2 transform -translate-y-1/2 flex justify-between w-[110%] -left-[5%]">
-                    <!-- Previous button -->
-                    <button onclick="switchImage('prev')" 
+                    <button onclick="switchImage('prev')"
                         class="bg-dark-purple-200/50 hover:bg-dark-purple-200/75 text-white rounded-full p-3 transition-all duration-300 transform hover:scale-110 hover:bg-dark-purple-200">
                         <i class="bi bi-chevron-left text-3xl"></i>
                     </button>
-                    
-                    <!-- Next button -->
-                    <button onclick="switchImage('next')" 
+
+                    <button onclick="switchImage('next')"
                         class="bg-dark-purple-200/50 hover:bg-dark-purple-200/75 text-white rounded-full p-3 transition-all duration-300 transform hover:scale-110 hover:bg-dark-purple-200">
                         <i class="bi bi-chevron-right text-3xl"></i>
                     </button>
                 </div>
 
-                <!-- Main content container with fixed height -->
-                <div class="flex flex-row flex-1 overflow-hidden md:flexmd:flex-col">
+                <!-- Main content container -->
+                <div class="flex flex-row flex-1 overflow-hidden">
                     <!-- Left side - Image with overflow control -->
                     <div class="w-1/2 pr-8 overflow-auto">
-                        <div class="h-full flex items-center justify-center">
-                            <img id="modal-cert-img" src=" " alt=""
+                        <div class="relative h-full flex">
+                            <img id="modal-image" src="#" alt="Modal content"
                                 class="max-w-full max-h-full object-contain rounded-lg">
                         </div>
                     </div>
 
                     <!-- Right side - Content -->
                     <div class="w-1/2 flex flex-col overflow-auto">
-                        <h2 id="modal-cert-title" class="text-center text-3xl font-bold text-pink-red"></h2>
+                        <h2 id="modal-title" class="text-center text-3xl font-bold text-pink-red"></h2>
                         <div class="flex-grow content-center">
-                            <p id="modal-cert-description" class="text-gray-600 mb-8"></p>
+                            <p id="modal-description" class="text-gray-600 mb-8"></p>
+
                         </div>
+                        <div class="flex justify-center">
+                            <!-- Gallery button moved here -->
+                            <button id="gallery-button" onclick="openImageGallery(this)"
+                                class="w-3/4 bg-dark-purple-200/75 hover:bg-dark-purple-200 text-white rounded-3xl p-3 transition-all duration-300 transform hover:scale-105 hidden">
+                                <i class="bi bi-plus text-xl mr-2"></i>
+                                Voir plus d'images
+                            </button>
+                        </div>
+
+
                     </div>
                 </div>
 
-                <!-- Skills section - Fixed at bottom -->
+                <!-- Skills section -->
                 <div class="w-full mt-8 border-t pt-6">
-                    <div id="modal-cert-skills" class="flex flex-wrap gap-4 justify-center">
+                    <div id="modal-skills" class="flex flex-wrap gap-4 justify-center">
                         <!-- Skills icons will be inserted here -->
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image Gallery Modal -->
+        <div id="image-gallery-modal" class="fixed inset-0 bg-black/90 items-center justify-center hidden z-[60]">
+            <div class="w-full h-full p-8 relative flex flex-col">
+                <!-- Close button -->
+                <button onclick="closeImageGallery()"
+                    class="absolute top-4 right-4 text-white hover:text-gray-300 z-50">
+                    <i class="bi bi-x text-3xl"></i>
+                </button>
+
+                <!-- Carousel wrapper -->
+                <div class="relative h-full flex items-center justify-center">
+                    <div id="gallery-carousel" class="relative w-full h-full max-h-[80vh]">
+                        <!-- Images will be inserted here dynamically -->
+                    </div>
+
+                    <!-- Gallery navigation -->
+                    <button onclick="navigateGallery('prev')"
+                        class="absolute left-4 z-30 flex items-center justify-center h-10 w-10 bg-dark-purple-200/50 hover:bg-dark-purple-200/75 text-white rounded-full transition-all duration-300 transform hover:scale-110">
+                        <i class="bi bi-chevron-left text-3xl"></i>
+                    </button>
+                    <button onclick="navigateGallery('next')"
+                        class="absolute right-4 z-30 flex items-center justify-center h-10 w-10 bg-dark-purple-200/50 hover:bg-dark-purple-200/75 text-white rounded-full transition-all duration-300 transform hover:scale-110">
+                        <i class="bi bi-chevron-right text-3xl"></i>
+                    </button>
                 </div>
             </div>
         </div>

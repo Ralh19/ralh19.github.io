@@ -21,11 +21,14 @@ function openModal(element) {
     });
 }
 
+// Update these lines in updateModalContent function
 function updateModalContent(element) {
-    const modalImg = document.getElementById('modal-cert-img');
-    const modalTitle = document.getElementById('modal-cert-title');
-    const modalDesc = document.getElementById('modal-cert-description');
-    const modalSkills = document.getElementById('modal-cert-skills');
+    // Update selectors to match new IDs
+    const modalImg = document.getElementById('modal-image');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDesc = document.getElementById('modal-description');
+    const modalSkills = document.getElementById('modal-skills');
+    const galleryButton = document.getElementById('gallery-button');
     
     // Handle different element types (certification images vs project buttons)
     const isProject = element.hasAttribute('onclick');
@@ -33,6 +36,13 @@ function updateModalContent(element) {
     // Update image source and title
     modalImg.src = isProject ? element.getAttribute('data-image') : element.src;
     modalTitle.textContent = isProject ? element.getAttribute('data-title') : element.dataset.title;
+    
+    // Show/hide gallery button based on data-gallery attribute
+    if (element.getAttribute('data-gallery') === 'true') {
+        galleryButton.classList.remove('hidden');
+    } else {
+        galleryButton.classList.add('hidden');
+    }
     
     // Clear existing content
     modalDesc.innerHTML = '';
@@ -117,3 +127,78 @@ document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeModal();
     }
 });
+
+let currentGalleryImages = [];
+let currentGalleryIndex = 0;
+
+function openImageGallery(button) {
+    const modal = document.getElementById('image-gallery-modal');
+    const carousel = document.getElementById('gallery-carousel');
+    const mainModal = document.getElementById('certification-modal');
+    
+    // Get gallery images from data attribute
+    const galleryContent = button.closest('.card')?.getAttribute('data-gallery-content') || 
+                          window.currentImage.getAttribute('data-gallery-content');
+    
+    if (galleryContent) {
+        currentGalleryImages = galleryContent.split(',').map(url => url.trim());
+        currentGalleryIndex = 0;
+        
+        // Create and append carousel items
+        carousel.innerHTML = currentGalleryImages.map((url, index) => `
+            <div class="absolute w-full h-full transition-opacity duration-700 ease-in-out ${index === 0 ? 'opacity-100' : 'opacity-0'}"
+                 data-gallery-item="${index}">
+                <img src="${url}" 
+                     alt="Gallery image ${index + 1}"
+                     class="absolute w-full h-full object-contain">
+            </div>
+        `).join('');
+        
+        // Show gallery modal
+        mainModal.classList.add('hidden');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        updateGalleryView();
+    }
+}
+
+function navigateGallery(direction) {
+    const itemsCount = currentGalleryImages.length;
+    
+    if (direction === 'next') {
+        currentGalleryIndex = (currentGalleryIndex + 1) % itemsCount;
+    } else {
+        currentGalleryIndex = (currentGalleryIndex - 1 + itemsCount) % itemsCount;
+    }
+    
+    updateGalleryView();
+}
+
+function updateGalleryView() {
+    const items = document.querySelectorAll('[data-gallery-item]');
+    
+    items.forEach((item, index) => {
+        if (index === currentGalleryIndex) {
+            item.classList.remove('opacity-0');
+            item.classList.add('opacity-100');
+        } else {
+            item.classList.remove('opacity-100');
+            item.classList.add('opacity-0');
+        }
+    });
+}
+
+function closeImageGallery() {
+    const galleryModal = document.getElementById('image-gallery-modal');
+    const mainModal = document.getElementById('certification-modal');
+    
+    galleryModal.classList.add('hidden');
+    galleryModal.classList.remove('flex');
+    mainModal.classList.remove('hidden');
+    mainModal.classList.add('flex');
+    
+    // Clear gallery
+    document.getElementById('gallery-carousel').innerHTML = '';
+    currentGalleryImages = [];
+    currentGalleryIndex = 0;
+}
