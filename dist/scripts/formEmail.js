@@ -125,7 +125,8 @@ function showMessage(message) {
   const messageElement = document.createElement("div");
 
   messageElement.textContent = message;
-  messageElement.className = "text-green-600 px-4 py-2 rounded shadow";
+  messageElement.className = "px-4 py-2 rounded shadow";
+  messageElement.style.color = "rgb(101, 163, 13)";
 
   // Ajoute le message au conteneur
   container.appendChild(messageElement);

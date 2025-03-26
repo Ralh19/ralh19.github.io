@@ -5,14 +5,10 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-            rel="stylesheet" />
         <title>PORTFOLIO</title>
         <link rel="stylesheet" href="./css/styles.css">
-        <link rel="stylesheet" href="./font/Komyca3Dfreeversion-Italic.ttf">
         <link rel="stylesheet" href="./css/animations.css">
         <script src="./scripts/birthDate.js"></script>
-        <script src="./scripts/scrollBack.js"></script>
         <link rel="icon" type="image/png" href="./images/skillsIcons/html_ico.png" />
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
@@ -130,6 +126,13 @@
                                     class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-pink-red">
                                     <i class="bi bi-backpack-fill"></i>
                                     <p><span class="text-[15px] ml-4 text-gray-200">Parcours Scolaire</span></p>
+                                </div>
+                            </a>
+                            <a href="#projets">
+                                <div
+                                    class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-pink-red">
+                                    <i class="bi bi-kanban"></i>
+                                    <span class="text-[15px] ml-4 text-gray-200">Projets</span>
                                 </div>
                             </a>
                             <a href="./pages/epreuve-e4.html">
@@ -360,8 +363,10 @@
                                 data-title="Certification XAMK"
                                 data-description="Formation en ligne sur la création de jeux vidéo proposée par l'université des sciences appliquées suédoise XAMK. Le cours couvre les fondamentaux du développement de jeux vidéo :"
                                 data-description-list="• Concepts de base de la création de jeux vidéo • Game design et level design • Programmation des mécaniques de jeu • Unity Engine et C# • Gestion des ressources graphiques • Tests et déploiement • La formation étant entièrement en Anglais, elle m'a également permis d'améliorer ma maîtrise de cette langue"
-                                data-skills="cs,unity,git" data-image="./images/certifications/xamk.jpg"
-                                data-type="certification" onclick="openModal(this)">
+                                data-skills="cs,unity,git" data-gallery="true"
+                                data-gallery-content="images/certifications/xamk2.jpg"
+                                data-image="./images/certifications/xamk.jpg" data-type="certification"
+                                onclick="openModal(this)">
                         </div>
                         <!-- FIN CERTIF PERSO -->
                     </div>
@@ -383,7 +388,7 @@
                             manières : certaines lors de mon BTS SIO, d'autres par initiative personnelle en développant
                             des solutions.</p>
 
-                        <!-- Languages -->
+                        <!-- Langages -->
                         <h4
                             class="relative w-full text-pink-red text-xl sm:text-2xl font-extrabold my-6 sm:my-8 ml-4 sm:ml-10 after:content-[''] after:absolute after:block after:w-8 after:h-[3px] after:bg-pink-red-light after:bottom-0 after:left-0">
                             Langages :
@@ -393,7 +398,9 @@
                             <!-- First Column -->
                             <div class="space-y-6">
                                 <!-- HTML -->
-                                <div class="flex items-center">
+                                <!-- HTML -->
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="90">
                                     <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
                                         <img src="./images/skillsIcons/html_ico.png" alt="HTML5"
                                             class="w-full h-full object-scale-down">
@@ -401,16 +408,17 @@
                                     <div class="flex-grow">
                                         <div class="flex justify-between mb-1">
                                             <span class="text-lg font-medium">HTML5</span>
-                                            <span class="text-lg font-medium">90%</span>
+                                            <span class="counter text-lg font-medium">0%</span>
                                         </div>
                                         <div class="w-full bg-gray-200 rounded-full h-3">
-                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 90%"></div>
+                                            <div class="progress-bar bg-pink-red-light h-3 rounded-full w-0"></div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- CSS -->
-                                <div class="flex items-center">
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="85">
                                     <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
                                         <img src="./images/skillsIcons/css_ico.png" alt="CSS3"
                                             class="w-full h-full object-scale-down">
@@ -418,16 +426,17 @@
                                     <div class="flex-grow">
                                         <div class="flex justify-between mb-1">
                                             <span class="text-lg font-medium">CSS3</span>
-                                            <span class="text-lg font-medium">85%</span>
+                                            <span class="counter text-lg font-medium">0%</span>
                                         </div>
                                         <div class="w-full bg-gray-200 rounded-full h-3">
-                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 85%"></div>
+                                            <div class="progress-bar bg-pink-red-light h-3 rounded-full w-0"></div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- PHP -->
-                                <div class="flex items-center">
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="75">
                                     <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
                                         <img src="./images/skillsIcons/php_ico.png" alt="PHP"
                                             class="w-full h-full object-scale-down">
@@ -435,16 +444,17 @@
                                     <div class="flex-grow">
                                         <div class="flex justify-between mb-1">
                                             <span class="text-lg font-medium">PHP</span>
-                                            <span class="text-lg font-medium">75%</span>
+                                            <span class="counter text-lg font-medium">0%</span>
                                         </div>
                                         <div class="w-full bg-gray-200 rounded-full h-3">
-                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 75%"></div>
+                                            <div class="progress-bar bg-pink-red-light h-3 rounded-full w-0"></div>
                                         </div>
                                     </div>
                                 </div>
-
+                                
                                 <!-- JavaScript -->
-                                <div class="flex items-center">
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="50">
                                     <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
                                         <img src="./images/skillsIcons/js_ico.png" alt="JavaScript"
                                             class="w-full h-full object-scale-down">
@@ -452,10 +462,10 @@
                                     <div class="flex-grow">
                                         <div class="flex justify-between mb-1">
                                             <span class="text-lg font-medium">JavaScript</span>
-                                            <span class="text-lg font-medium">50%</span>
+                                            <span class="counter text-lg font-medium">0%</span>
                                         </div>
                                         <div class="w-full bg-gray-200 rounded-full h-3">
-                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 50%"></div>
+                                            <div class="progress-bar bg-pink-red-light h-3 rounded-full w-0"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -464,7 +474,8 @@
                             <!-- Second Column -->
                             <div class="space-y-6">
                                 <!-- SQL -->
-                                <div class="flex items-center">
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="65">
                                     <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
                                         <img src="./images/skillsIcons/sql_ico.png" alt="SQL"
                                             class="w-full h-full object-scale-down">
@@ -472,16 +483,17 @@
                                     <div class="flex-grow">
                                         <div class="flex justify-between mb-1">
                                             <span class="text-lg font-medium">SQL</span>
-                                            <span class="text-lg font-medium">65%</span>
+                                            <span class="counter text-lg font-medium">0%</span>
                                         </div>
                                         <div class="w-full bg-gray-200 rounded-full h-3">
-                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 65%"></div>
+                                            <div class="progress-bar bg-pink-red-light h-3 rounded-full w-0"></div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- C# -->
-                                <div class="flex items-center">
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="65">
                                     <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
                                         <img src="./images/skillsIcons/cs_ico.png" alt="C#"
                                             class="w-full h-full object-scale-down">
@@ -489,16 +501,17 @@
                                     <div class="flex-grow">
                                         <div class="flex justify-between mb-1">
                                             <span class="text-lg font-medium">C#</span>
-                                            <span class="text-lg font-medium">65%</span>
+                                            <span class="counter text-lg font-medium">0%</span>
                                         </div>
                                         <div class="w-full bg-gray-200 rounded-full h-3">
-                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 65%"></div>
+                                            <div class="progress-bar bg-pink-red-light h-3 rounded-full w-0"></div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Python -->
-                                <div class="flex items-center">
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="30">
                                     <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
                                         <img src="./images/skillsIcons/py_ico.png" alt="Python"
                                             class="w-full h-full object-scale-down">
@@ -506,15 +519,16 @@
                                     <div class="flex-grow">
                                         <div class="flex justify-between mb-1">
                                             <span class="text-lg font-medium">Python</span>
-                                            <span class="text-lg font-medium">30%</span>
+                                            <span class="counter text-lg font-medium">0%</span>
                                         </div>
                                         <div class="w-full bg-gray-200 rounded-full h-3">
-                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 30%"></div>
+                                            <div class="progress-bar bg-pink-red-light h-3 rounded-full w-0"></div>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Java -->
-                                <div class="flex items-center">
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="70">
                                     <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
                                         <img src="./images/skillsIcons/java_ico.png" alt="Java"
                                             class="w-full h-full object-scale-down">
@@ -522,13 +536,14 @@
                                     <div class="flex-grow">
                                         <div class="flex justify-between mb-1">
                                             <span class="text-lg font-medium">Java</span>
-                                            <span class="text-lg font-medium">70%</span>
+                                            <span class="counter text-lg font-medium">0%</span>
                                         </div>
                                         <div class="w-full bg-gray-200 rounded-full h-3">
-                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 70%"></div>
+                                            <div class="progress-bar bg-pink-red-light h-3 rounded-full w-0"></div>
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
 
@@ -542,8 +557,9 @@
                             class="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 px-4">
                             <!-- First Column -->
                             <div class="space-y-6">
-                                <!-- Tailwind -->
-                                <div class="flex items-center">
+                                <!-- Tailwind CSS -->
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="95">
                                     <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
                                         <img src="./images/skillsIcons/tailwind_ico.png" alt="Tailwind CSS"
                                             class="w-full h-full object-scale-down">
@@ -551,16 +567,17 @@
                                     <div class="flex-grow">
                                         <div class="flex justify-between mb-1">
                                             <span class="text-lg font-medium">Tailwind CSS</span>
-                                            <span class="text-lg font-medium">95%</span>
+                                            <span class="counter text-lg font-medium">0%</span>
                                         </div>
                                         <div class="w-full bg-gray-200 rounded-full h-3">
-                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 95%"></div>
+                                            <div class="progress-bar bg-pink-red-light h-3 rounded-full w-0"></div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Bootstrap -->
-                                <div class="flex items-center">
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="70">
                                     <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
                                         <img src="./images/skillsIcons/bootstrap_ico.png" alt="Bootstrap"
                                             class="w-full h-full object-scale-down">
@@ -568,16 +585,17 @@
                                     <div class="flex-grow">
                                         <div class="flex justify-between mb-1">
                                             <span class="text-lg font-medium">Bootstrap</span>
-                                            <span class="text-lg font-medium">70%</span>
+                                            <span class="counter text-lg font-medium">0%</span>
                                         </div>
                                         <div class="w-full bg-gray-200 rounded-full h-3">
-                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 70%"></div>
+                                            <div class="progress-bar bg-pink-red-light h-3 rounded-full w-0"></div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Symfony -->
-                                <div class="flex items-center">
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="40">
                                     <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
                                         <img src="./images/skillsIcons/symfony_ico.png" alt="Symfony"
                                             class="w-full h-full object-scale-down">
@@ -585,16 +603,17 @@
                                     <div class="flex-grow">
                                         <div class="flex justify-between mb-1">
                                             <span class="text-lg font-medium">Symfony</span>
-                                            <span class="text-lg font-medium">40%</span>
+                                            <span class="counter text-lg font-medium">0%</span>
                                         </div>
                                         <div class="w-full bg-gray-200 rounded-full h-3">
-                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 40%"></div>
+                                            <div class="progress-bar bg-pink-red-light h-3 rounded-full w-0"></div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Spring -->
-                                <div class="flex items-center">
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="60">
                                     <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
                                         <img src="./images/skillsIcons/spring_ico.png" alt="Spring"
                                             class="w-full h-full object-scale-down">
@@ -602,10 +621,10 @@
                                     <div class="flex-grow">
                                         <div class="flex justify-between mb-1">
                                             <span class="text-lg font-medium">Spring</span>
-                                            <span class="text-lg font-medium">60%</span>
+                                            <span class="counter text-lg font-medium">0%</span>
                                         </div>
                                         <div class="w-full bg-gray-200 rounded-full h-3">
-                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 60%"></div>
+                                            <div class="progress-bar bg-pink-red-light h-3 rounded-full w-0"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -614,7 +633,8 @@
                             <!-- Second Column -->
                             <div class="space-y-6">
                                 <!-- Django -->
-                                <div class="flex items-center">
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="45">
                                     <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
                                         <img src="./images/skillsIcons/django_ico.png" alt="Django"
                                             class="w-full h-full object-scale-down">
@@ -622,18 +642,17 @@
                                     <div class="flex-grow">
                                         <div class="flex justify-between mb-1">
                                             <span class="text-lg font-medium">Django</span>
-                                            <span class="text-lg font-medium">45%</span>
+                                            <span class="counter text-lg font-medium">0%</span>
                                         </div>
                                         <div class="w-full bg-gray-200 rounded-full h-3">
-                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 45%"></div>
+                                            <div class="progress-bar bg-pink-red-light h-3 rounded-full w-0"></div>
                                         </div>
                                     </div>
                                 </div>
 
-
-
                                 <!-- VS Code -->
-                                <div class="flex items-center">
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="90">
                                     <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
                                         <img src="./images/skillsIcons/vscode_ico.png" alt="VS Code"
                                             class="w-full h-full object-scale-down">
@@ -641,16 +660,17 @@
                                     <div class="flex-grow">
                                         <div class="flex justify-between mb-1">
                                             <span class="text-lg font-medium">VS Code</span>
-                                            <span class="text-lg font-medium">90%</span>
+                                            <span class="counter text-lg font-medium">0%</span>
                                         </div>
                                         <div class="w-full bg-gray-200 rounded-full h-3">
-                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 90%"></div>
+                                            <div class="progress-bar bg-pink-red-light h-3 rounded-full w-0"></div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Eclipse -->
-                                <div class="flex items-center">
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="75">
                                     <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
                                         <img src="./images/skillsIcons/eclipse_ico.webp" alt="Eclipse"
                                             class="w-full h-full object-scale-down">
@@ -658,15 +678,17 @@
                                     <div class="flex-grow">
                                         <div class="flex justify-between mb-1">
                                             <span class="text-lg font-medium">Eclipse</span>
-                                            <span class="text-lg font-medium">75%</span>
+                                            <span class="counter text-lg font-medium">0%</span>
                                         </div>
                                         <div class="w-full bg-gray-200 rounded-full h-3">
-                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 75%"></div>
+                                            <div class="progress-bar bg-pink-red-light h-3 rounded-full w-0"></div>
                                         </div>
                                     </div>
                                 </div>
+
                                 <!-- NetBeans -->
-                                <div class="flex items-center">
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="75">
                                     <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
                                         <img src="./images/skillsIcons/netbeans_ico.png" alt="NetBeans"
                                             class="w-full h-full object-scale-down">
@@ -674,10 +696,10 @@
                                     <div class="flex-grow">
                                         <div class="flex justify-between mb-1">
                                             <span class="text-lg font-medium">NetBeans</span>
-                                            <span class="text-lg font-medium">75%</span>
+                                            <span class="counter text-lg font-medium">0%</span>
                                         </div>
                                         <div class="w-full bg-gray-200 rounded-full h-3">
-                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 75%"></div>
+                                            <div class="progress-bar bg-pink-red-light h-3 rounded-full w-0"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -686,9 +708,9 @@
                             <!-- Third Column -->
                             <div class="space-y-6">
 
-
                                 <!-- Blender -->
-                                <div class="flex items-center">
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="60">
                                     <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
                                         <img src="./images/skillsIcons/blender_ico.png" alt="Blender"
                                             class="w-full h-full object-scale-down">
@@ -696,16 +718,17 @@
                                     <div class="flex-grow">
                                         <div class="flex justify-between mb-1">
                                             <span class="text-lg font-medium">Blender</span>
-                                            <span class="text-lg font-medium">60%</span>
+                                            <span class="counter text-lg font-medium">0%</span>
                                         </div>
                                         <div class="w-full bg-gray-200 rounded-full h-3">
-                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 60%"></div>
+                                            <div class="progress-bar bg-pink-red-light h-3 rounded-full w-0"></div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Photoshop -->
-                                <div class="flex items-center">
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="75">
                                     <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
                                         <img src="./images/skillsIcons/ps_ico.png" alt="Photoshop"
                                             class="w-full h-full object-scale-down">
@@ -713,16 +736,17 @@
                                     <div class="flex-grow">
                                         <div class="flex justify-between mb-1">
                                             <span class="text-lg font-medium">Photoshop</span>
-                                            <span class="text-lg font-medium">75%</span>
+                                            <span class="counter text-lg font-medium">0%</span>
                                         </div>
                                         <div class="w-full bg-gray-200 rounded-full h-3">
-                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 75%"></div>
+                                            <div class="progress-bar bg-pink-red-light h-3 rounded-full w-0"></div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Unity -->
-                                <div class="flex items-center">
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="45">
                                     <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
                                         <img src="./images/skillsIcons/unity_ico.png" alt="Unity"
                                             class="w-full h-full object-scale-down">
@@ -730,16 +754,16 @@
                                     <div class="flex-grow">
                                         <div class="flex justify-between mb-1">
                                             <span class="text-lg font-medium">Unity</span>
-                                            <span class="text-lg font-medium">45%</span>
+                                            <span class="counter text-lg font-medium">0%</span>
                                         </div>
                                         <div class="w-full bg-gray-200 rounded-full h-3">
-                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 45%"></div>
+                                            <div class="progress-bar bg-pink-red-light h-3 rounded-full w-0"></div>
                                         </div>
                                     </div>
                                 </div>
-
                                 <!-- WordPress -->
-                                <div class="flex items-center">
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="65">
                                     <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
                                         <img src="./images/skillsIcons/wordpress_ico.png" alt="WordPress"
                                             class="w-full h-full object-scale-down">
@@ -747,10 +771,10 @@
                                     <div class="flex-grow">
                                         <div class="flex justify-between mb-1">
                                             <span class="text-lg font-medium">WordPress</span>
-                                            <span class="text-lg font-medium">65%</span>
+                                            <span class="counter text-lg font-medium">0%</span>
                                         </div>
                                         <div class="w-full bg-gray-200 rounded-full h-3">
-                                            <div class="bg-pink-red-light h-3 rounded-full" style="width: 65%"></div>
+                                            <div class="progress-bar bg-pink-red-light h-3 rounded-full w-0"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -903,7 +927,7 @@
                             <h5 class="text-lg text-pink-red font-bold">Collège Gérard Philipe - Cogolin [83310]</h5>
                             <p
                                 class="text-pink-red font-semibold text-sm bg-pink-red-light bg-opacity-20 border border-pink-red-light rounded-full px-4 py-2 mt-2 inline-block">
-                                2019 - 2022
+                                2015 - 2019
                             </p>
                             <p class="text-gray-600 py-2">
                                 Scolarité complète au collège, aboutissant à l’obtention du Brevet des Collèges en
@@ -917,7 +941,7 @@
             <!-- == FIN PARCOURS == -->
 
             <!-- == PROJECTS == -->
-            <section class="bg-white min-h-screen max-w-full p-16 max-lg:px-0">
+            <section id="projets" class="bg-white min-h-screen max-w-full p-16 max-lg:px-0">
                 <div class="w-full mb-4">
                     <h2
                         class="relative text-pink-red text-4xl text-left ml-8 lg:ml-7 my-8 font-extrabold  pb-2 after:content-[''] after:absolute after:block after:w-16 after:h-[3px] after:bg-pink-red-light after:bottom-0 after:left-0">
@@ -1004,13 +1028,13 @@
                                         class="px-3 py-1 text-sm font-medium text-gray-600 bg-gray-100 rounded-full">2023</span>
                                 </div>
                                 <p class="text-gray-600 text-sm leading-relaxed flex-grow">Site web static de vente de
-                                    casques de moto, ayant pour but l'apprentissage des languages HTML, CSS et
+                                    casques de moto, ayant pour but l'apprentissage des langages HTML, CSS et
                                     JavaScript</p>
                                 <div class="mt-6">
                                     <button onclick="openModal(this)"
                                         class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
                                         data-title="Nolark"
-                                        data-description="Site web static de vente de casques de moto, ayant pour but l'apprentissage des languages HTML, CSS et JavaScript."
+                                        data-description="Site web static de vente de casques de moto, ayant pour but l'apprentissage des langages HTML, CSS et JavaScript."
                                         data-skills="html,css,js" data-image="./images/projects/nolark_screen.png"
                                         data-type="project">
                                         <span>Voir plus</span>
@@ -1048,8 +1072,8 @@
                                         class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
                                         data-title="Portfolio d'Amélia Pilou"
                                         data-description="Portfolio d'un personnage fictif, ayant pour but la découverte du framework css Bootstrap."
-                                        data-skills="html,css,bootstrap" data-image="./images/projects/amelia_screen1.png"
-                                        data-type="project">
+                                        data-skills="html,css,bootstrap"
+                                        data-image="./images/projects/amelia_screen1.png" data-type="project">
                                         <span>Voir plus</span>
                                         <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
                                             fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1122,8 +1146,8 @@
                                         class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
                                         data-title="GSB"
                                         data-description="Application Web en PHP en architecture MVC de gestion et traitement de fiche de frais."
-                                        data-skills="php,css,bootstrap,sql" data-image="./images/projects/gsb_screen1.png"
-                                        data-type="project">
+                                        data-skills="php,css,bootstrap,sql"
+                                        data-image="./images/projects/gsb_screen1.png" data-type="project">
                                         <span>Voir plus</span>
                                         <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
                                             fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1230,31 +1254,31 @@
                             <div class="relative w-full">
                                 <label for="name"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
-                                    Vôtre nom<span class="text-pink-red-light">*</span>
+                                    Votre nom<span class="text-pink-red-light">*</span>
                                 </label>
                                 <input type="last_name" id="last_name" name="last_name"
                                     class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                                    placeholder="Vôtre nom" maxlength="50">
+                                    placeholder="Votre nom" maxlength="50">
                             </div>
                             <div class="relative w-full">
                                 <label for="name"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
-                                    Vôtre prénom<span class="text-pink-red-light">*</span>
+                                    Votre prénom<span class="text-pink-red-light">*</span>
                                 </label>
                                 <input type="first_name" id="first_name" name="first_name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500
                                     block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500
-                                    dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Vôtre prénom"
+                                    dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Votre prénom"
                                     maxlength="50">
                             </div>
                         </div>
 
                         <div class="relative">
                             <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
-                                Vôtre email<span class="text-pink-red-light">*</span>
+                                Votre email<span class="text-pink-red-light">*</span>
                             </label>
                             <input type="email" id="email" name="email"
                                 class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                                placeholder="nom@vôtremail.com (pour vous recontacter)" maxlength="254">
+                                placeholder="nom@votremail.com (pour vous recontacter)" maxlength="254">
                         </div>
                         <div class="relative">
                             <label for="subject"
@@ -1268,19 +1292,37 @@
                         <div class="relative sm:col-span-2">
                             <label for="message"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">
-                                Vôtre message<span class="text-pink-red-light">*</span>
+                                Votre message<span class="text-pink-red-light">*</span>
                             </label>
                             <textarea id="message" name="message" rows="6"
                                 class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                placeholder="Écrivez ici vôtre message :" maxlength="1000"></textarea>
+                                placeholder="Écrivez ici votre message :" maxlength="1000"></textarea>
                         </div>
 
                         <button type="submit"
-                            class="py-3 px-5 text-sm font-medium text-center text-white bg-pink-red rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                            class="py-3 px-5 text-sm font-medium text-center text-white bg-pink-red rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 transform transition-transform duration-200 hover:scale-110">
                             Envoyer le message
                         </button>
 
                     </form>
+                    <div id="contact-links" class="flex flex-row justify-end mt-4">
+                        <a href="#" target="_blank" class="transform transition-transform duration-200 hover:scale-125">
+                            <i class="bi bi-linkedin text-3xl mx-5 text-blue-500"></i>
+                        </a>
+                        <a href="https://github.com/Ralh19" target="_blank"
+                            class="transform transition-transform duration-200 hover:scale-125">
+                            <i class="bi bi-github text-3xl text-black"></i>
+                        </a>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ruben.almeidaalhada@gmail.com&su=Sujet&body=Message"
+                            class="transform transition-transform duration-200 hover:scale-125" target="_blank">
+                            <i class="bi bi-envelope-at-fill text-3xl text-slate-400 mx-5"></i>
+                        </a>
+
+                        <a href="tel:+330625093665"
+                            class="text-lg align-text-bottom text-gray-500 ml-5 underline underline-offset-4 transform transition-transform duration-200 hover:scale-110">
+                            06 25 09 36 65</a>
+
+                    </div>
                 </div>
             </section>
             <!-- == FIN CONTACT == -->
@@ -1384,6 +1426,8 @@
         <script src="./scripts/formEmail.js"></script>
         <script src="./scripts/filter.js"></script>
         <script src="./scripts/sidebar.js"></script>
+        <script src="./scripts/skillsBars.js"></script>
+
 
     </body>
 

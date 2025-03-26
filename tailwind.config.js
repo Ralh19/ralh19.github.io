@@ -13,8 +13,6 @@ module.exports = {
         "pink-red-light": "rgb(206, 100, 123)",
       },
       fontFamily: {
-        nunito: ["Nunito", "sans-serif"],
-        komyca: ["Komyca", "sans-serif"],
       },
       dropShadow: {
         glow: [
@@ -25,8 +23,8 @@ module.exports = {
       animation: {
         "zoom-in": "zoomIn 0.3s ease-in-out forwards", // Animation de zoom-in
         "zoom-out": "zoomOut 0.3s ease-in-out forwards", // Animation de zoom-out
-        'float': 'float 6s ease-in-out infinite',
-        'float-delayed': 'float 6s ease-in-out 0.3s infinite'
+        float: "float 6s ease-in-out infinite",
+        "float-delayed": "float 6s ease-in-out 0.3s infinite",
       },
       keyframes: {
         zoomIn: {
@@ -50,13 +48,15 @@ module.exports = {
           },
         },
         float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' }
-        }
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-20px)" },
+        },
       },
       textShadow: {
-        pink_red_glow: "0 0 5px #b03953, 0 0 10px #b03953, 0 0 20px #b03953, 0 0 40px #b03953, 0 0 80px #b03953",
-        white_glow: "0 0 5px #b5b5b5, 0 0 10px #b5b5b5, 0 0 20px #b5b5b5, 0 0 40px #b5b5b5, 0 0 80px #b5b5b5",
+        pink_red_glow:
+          "0 0 5px #b03953, 0 0 10px #b03953, 0 0 20px #b03953, 0 0 40px #b03953, 0 0 80px #b03953",
+        white_glow:
+          "0 0 5px #b5b5b5, 0 0 10px #b5b5b5, 0 0 20px #b5b5b5, 0 0 40px #b5b5b5, 0 0 80px #b5b5b5",
       },
     },
   },
