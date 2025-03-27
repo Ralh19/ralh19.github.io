@@ -16,7 +16,7 @@
         <script src="./scripts/sidebar.js"></script>
         <script src="./scripts/modal.js"></script>
         <script src="./scripts/certificationModal.js"></script>
-        
+
 
     </head>
 
@@ -376,17 +376,50 @@
                             lors de mon BTS SIO, j'ai eu l'occasion de passer des certifications supplémentaires.
                             <br><br> Voici donc les certifications obtenues lors de mon temps libre :
                         </p>
-                        <div class="py-8 flex flex-col lg:flex-row lg:space-x-8 items-center justify-center w-full">
-                            <img src="./images/certifications/xamk.jpg"
-                                class="w-[70%] lg:w-[40%] mb-4 lg:mb-0 cursor-pointer transform transition-transform duration-500 hover:scale-105"
-                                alt="Attestation secNumAcademi MOOC avec un score de 100% à chaque module"
-                                data-title="Certification XAMK"
-                                data-description="Formation en ligne sur la création de jeux vidéo proposée par l'université des sciences appliquées suédoise XAMK. Le cours couvre les fondamentaux du développement de jeux vidéo :"
-                                data-description-list="• Concepts de base de la création de jeux vidéo • Game design et level design • Programmation des mécaniques de jeu • Unity Engine et C# • Gestion des ressources graphiques • Tests et déploiement • La formation étant entièrement en Anglais, elle m'a également permis d'améliorer ma maîtrise de cette langue"
-                                data-skills="cs,unity,git" data-gallery="true"
-                                data-gallery-content="images/certifications/xamk2.jpg"
-                                data-image="./images/certifications/xamk.jpg" data-type="certification"
-                                onclick="openModal(this)">
+                        <div class="py-8 w-full">
+                            <!-- Certifications Grid -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <!-- Certification XAMK -->
+                                <div class="flex flex-col items-center justify-center">
+                                    <img src="./images/certifications/xamk.jpg"
+                                        class="w-[70%] lg:w-[80%] mb-4 cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                                        alt="Attestation secNumAcademi MOOC avec un score de 100% à chaque module"
+                                        data-title="Certification XAMK"
+                                        data-description="Formation en ligne sur la création de jeux vidéo proposée par l'université des sciences appliquées suédoise XAMK. Le cours couvre les fondamentaux du développement de jeux vidéo :"
+                                        data-description-list="• Concepts de base de la création de jeux vidéo • Game design et level design • Programmation des mécaniques de jeu • Unity Engine et C# • Gestion des ressources graphiques • Tests et déploiement • La formation étant entièrement en Anglais, elle m'a également permis d'améliorer ma maîtrise de cette langue"
+                                        data-skills="cs,unity,git" data-gallery="true"
+                                        data-gallery-content="./images/certifications/xamk.jpg,./images/certifications/xamk2.jpg"
+                                        data-image="./images/certifications/xamk.jpg" data-type="certification"
+                                        onclick="openModal(this)">
+                                </div>
+
+                                <!-- Certification Atelier RGPD -->
+                                <div class="flex flex-col items-center justify-center">
+                                    <img src="./images/certifications/atelier_rgpd/rgpd5.jpg"
+                                        class="w-[70%] lg:w-[80%] mb-4 cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                                        alt="Certification Example" data-title="Certification Example"
+                                        data-description="Description of the certification. This certification is about a certain field or skill."
+                                        data-description-list="• Skill 1 • Skill 2 • Skill 3" data-gallery="true"
+                                        data-gallery-content="./images/certifications/atelier_rgpd/rgpd5.jpg,./images/certifications/atelier_rgpd/rgpd4.jpg,./images/certifications/atelier_rgpd/rgpd3.jpg,./images/certifications/atelier_rgpd/rgpd2.jpg,./images/certifications/atelier_rgpd/rgpd1.jpg"
+                                        data-image="./images/certifications/atelier_rgpd/rgpd5.jpg"
+                                        data-type="certification" onclick="openModal(this)">
+                                </div>
+
+                                <!-- Certification OpenClassroom -->
+                                <div class="flex flex-col items-center justify-center">
+                                    <img src="./images/certifications/third-cert.jpg"
+                                        class="w-[70%] lg:w-[80%] mb-4 cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                                        alt="Certification Third Example" data-title="Certification Third"
+                                        data-description="Another certification description."
+                                        data-description-list="• Skill A • Skill B • Skill C"
+                                        data-skills="skillA,skillB,skillC" data-gallery="true"
+                                        data-gallery-content="images/certifications/example3.jpg"
+                                        data-image="./images/certifications/example3.jpg" data-type="certification"
+                                        onclick="openModal(this)">
+                                </div>
+
+                                <!-- More certifications can be added here in the same structure -->
+                            </div>
                         </div>
                         <!-- FIN CERTIF PERSO -->
                     </div>
@@ -417,7 +450,6 @@
                         <div class="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 px-4 pb-10">
                             <!-- First Column -->
                             <div class="space-y-6">
-                                <!-- HTML -->
                                 <!-- HTML -->
                                 <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
                                     data-value="90">
@@ -1347,7 +1379,8 @@
                             class="transform transition-transform duration-300 hover:scale-125 hover:bg-pink-red p-3 rounded-full bg-gray-800 text-white shadow-md">
                             <i class="bi bi-github text-3xl"></i>
                         </a>
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ruben.almeidaalhada@gmail.com&su=Sujet&body=Message" target="_blank"
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ruben.almeidaalhada@gmail.com&su=Sujet&body=Message"
+                            target="_blank"
                             class="transform transition-transform duration-300 hover:scale-125 hover:bg-pink-red p-3 rounded-full bg-gray-800 text-white shadow-md">
                             <i class="bi bi-envelope-at-fill text-3xl"></i>
                         </a>
@@ -1400,11 +1433,25 @@
                 <!-- Main content container -->
                 <div class="flex flex-row flex-1 overflow-hidden">
                     <!-- Left side - Image with overflow control -->
-                    <div class="w-1/2 pr-8 overflow-auto">
-                        <div class="relative h-full flex">
+                    <div class="w-1/2 pr-8">
+                        <div class="relative h-full group flex justify-center items-center">
+                            <!-- Ajout de flex et centrer l'image -->
+                            <!-- Image inside the modal -->
                             <img id="modal-image" src="#" alt="Modal content"
                                 class="max-w-full max-h-full object-contain rounded-lg">
+
+                            <!-- Overlay and Gallery button (visible when hovering over the image) -->
+                            <div id="gallery-overlay"
+                                class="absolute inset-0 bg-black bg-opacity-50 opacity-0 flex justify-center items-center transition-opacity duration-300 group-hover:opacity-100">
+                                <button id="gallery-button" onclick="openImageGallery(this)"
+                                    class="bg-dark-purple-200/75 hover:bg-dark-purple-200 text-white rounded-3xl p-4 transition-all duration-300 transform hover:scale-105">
+                                    <i class="bi bi-plus text-xl mr-2"></i>
+                                    Voir plus d'images
+                                </button>
+                            </div>
                         </div>
+                        <!-- Counter for the image -->
+                        <p id="image-counter" class="text-center text-lg text-gray-600 mt-4"></p>
                     </div>
 
                     <!-- Right side - Content -->
@@ -1412,18 +1459,7 @@
                         <h2 id="modal-title" class="text-center text-3xl font-bold text-pink-red"></h2>
                         <div class="flex-grow content-center">
                             <p id="modal-description" class="text-gray-600 mb-8"></p>
-
                         </div>
-                        <div class="flex justify-center">
-                            <!-- Gallery button moved here -->
-                            <button id="gallery-button" onclick="openImageGallery(this)"
-                                class="w-3/4 bg-dark-purple-200/75 hover:bg-dark-purple-200 text-white rounded-3xl p-3 transition-all duration-300 transform hover:scale-105 hidden">
-                                <i class="bi bi-plus text-xl mr-2"></i>
-                                Voir plus d'images
-                            </button>
-                        </div>
-
-
                     </div>
                 </div>
 
@@ -1460,6 +1496,11 @@
                         class="absolute right-4 z-30 flex items-center justify-center h-10 w-10 bg-dark-purple-200/50 hover:bg-dark-purple-200/75 text-white rounded-full transition-all duration-300 transform hover:scale-110">
                         <i class="bi bi-chevron-right text-3xl"></i>
                     </button>
+                </div>
+
+                <!-- Gallery counter -->
+                <div id="gallery-counter" class="text-center text-lg text-white mt-4">
+                    <!-- Initial counter text -->
                 </div>
             </div>
         </div>
