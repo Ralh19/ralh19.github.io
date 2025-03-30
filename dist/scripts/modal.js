@@ -31,6 +31,7 @@ function updateModalContent(element) {
   const modalSkills = document.getElementById("modal-skills");
   const galleryButton = document.getElementById("gallery-button");
   const galleryOverlay = document.getElementById("gallery-overlay");
+  const ghButton = document.getElementById("gh-button");
 
   // Handle different element types (certification images vs project buttons)
   const isProject = element.hasAttribute("onclick");
@@ -50,6 +51,16 @@ function updateModalContent(element) {
   } else {
     galleryButton.classList.add("hidden");
     galleryOverlay.classList.remove("bg-black");
+  }
+
+  const ghLink = element.getAttribute("data-gh-link");
+
+  if (ghLink && ghLink.trim() !== "") {
+    ghButton.classList.remove("hidden");
+    ghButton.setAttribute("href", ghLink);
+  } else {
+    ghButton.classList.add("hidden");
+    ghButton.removeAttribute("href"); // Supprime le lien si absent
   }
 
   // Clear existing content

@@ -350,7 +350,7 @@
                         <div class="py-8 flex flex-col lg:flex-row lg:space-x-8 items-center justify-center w-full">
                             <!-- CErtifiaction ANSSI -->
                             <img src="./images/certifications/anssi.jpg"
-                                class="w-[70%] lg:w-[40%] mb-4 lg:mb-0 cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                                class="w-[70%] lg:w-[40%] lg:h-full mb-4 lg:mb-0 cursor-pointer transform transition-transform duration-500 hover:scale-105"
                                 alt="Attestation secNumAcademi MOOC" data-title="SecNumAcademie MOOC"
                                 data-description="Formation officielle en cybersécurité proposée par l'Agence Nationale de la Sécurité des Systèmes d'Information (ANSSI). Le MOOC couvre les fondamentaux de la sécurité informatique :"
                                 data-description-list="• Protection des données personnelles • Sécurisation des appareils • Navigation web sécurisée • Bonnes pratiques de sécurité • Gestion des mots de passe • Il valide les compétences essentielles en cybersécurité avec un score de 100% obtenu sur chaque module"
@@ -358,13 +358,24 @@
                                 onclick="openModal(this)">
                             <!-- Certifiaction PIX -->
                             <img src="./images/certifications/pix.jpg"
-                                class="w-[70%] lg:w-[20%] cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                                class="w-[70%] lg:w-[20%] lg:h-full cursor-pointer border-4 border-[#086e89] border-solid rounded-lg transform transition-transform duration-500 hover:scale-105"
                                 alt="Attestation PIX" data-title="Certifiaction PIX"
                                 data-description="Pix est une plateforme française d'évaluation et de certification des compétences numériques. Cette certification valide :"
                                 data-description-list="• La manipulation de données numériques • La recherche et le traitement d'informations • La communication et la collaboration en ligne • La création de contenu numérique • La résolution de problèmes techniques"
                                 data-image="./images/certifications/pix.jpg" data-type="certification"
                                 onclick="openModal(this)">
 
+                        </div>
+                        <div class="py-8 flex flex-col lg:flex-row lg:space-x-8 items-center justify-center w-full">
+                            <!-- CErtifiaction Atelier RGPD -->
+                            <img src="./images/certifications/atelier_rgpd/rgpd5.jpg"
+                                class="w-[70%] lg:w-[40%] mb-4 lg:mb-0 border-4 border-[#086e89] border-solid rounded-xl cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                                alt="Certification Example" data-title="Certification Example"
+                                data-description="Description of the certification. This certification is about a certain field or skill."
+                                data-description-list="• Skill 1 • Skill 2 • Skill 3" data-gallery="true"
+                                data-gallery-content="./images/certifications/atelier_rgpd/rgpd5.jpg,./images/certifications/atelier_rgpd/rgpd4.jpg,./images/certifications/atelier_rgpd/rgpd3.jpg,./images/certifications/atelier_rgpd/rgpd2.jpg,./images/certifications/atelier_rgpd/rgpd1.jpg"
+                                data-image="./images/certifications/atelier_rgpd/rgpd5.jpg" data-type="certification"
+                                onclick="openModal(this)">
                         </div>
                         <!-- FIN CERTIF BTS -->
 
@@ -378,11 +389,11 @@
                         </p>
                         <div class="py-8 w-full">
                             <!-- Certifications Grid -->
-                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
                                 <!-- Certification XAMK -->
                                 <div class="flex flex-col items-center justify-center">
                                     <img src="./images/certifications/xamk.jpg"
-                                        class="w-[70%] lg:w-[80%] mb-4 cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                                        class="w-[70%] lg:w-[80%] mb-4 cursor-pointer border-2 border-[#086e89] border-solid rounded-xl transform transition-transform duration-500 hover:scale-105"
                                         alt="Attestation secNumAcademi MOOC avec un score de 100% à chaque module"
                                         data-title="Certification XAMK"
                                         data-description="Formation en ligne sur la création de jeux vidéo proposée par l'université des sciences appliquées suédoise XAMK. Le cours couvre les fondamentaux du développement de jeux vidéo :"
@@ -393,32 +404,17 @@
                                         onclick="openModal(this)">
                                 </div>
 
-                                <!-- Certification Atelier RGPD -->
-                                <div class="flex flex-col items-center justify-center">
-                                    <img src="./images/certifications/atelier_rgpd/rgpd5.jpg"
-                                        class="w-[70%] lg:w-[80%] mb-4 cursor-pointer transform transition-transform duration-500 hover:scale-105"
-                                        alt="Certification Example" data-title="Certification Example"
-                                        data-description="Description of the certification. This certification is about a certain field or skill."
-                                        data-description-list="• Skill 1 • Skill 2 • Skill 3" data-gallery="true"
-                                        data-gallery-content="./images/certifications/atelier_rgpd/rgpd5.jpg,./images/certifications/atelier_rgpd/rgpd4.jpg,./images/certifications/atelier_rgpd/rgpd3.jpg,./images/certifications/atelier_rgpd/rgpd2.jpg,./images/certifications/atelier_rgpd/rgpd1.jpg"
-                                        data-image="./images/certifications/atelier_rgpd/rgpd5.jpg"
-                                        data-type="certification" onclick="openModal(this)">
-                                </div>
-
                                 <!-- Certification OpenClassroom -->
                                 <div class="flex flex-col items-center justify-center">
-                                    <img src="./images/certifications/third-cert.jpg"
-                                        class="w-[70%] lg:w-[80%] mb-4 cursor-pointer transform transition-transform duration-500 hover:scale-105"
-                                        alt="Certification Third Example" data-title="Certification Third"
+                                    <img src="./images/certifications/open_classroom/oc_banner.jpg"
+                                        class="w-[70%] lg:w-[80%] lg:h-full mb-4 p-3 object-cover cursor-pointer border-2 border-[#086e89] border-solid rounded-xl transform transition-transform duration-500 hover:scale-105"
+                                        alt="Cours OPENCLASSROOMS" data-title="Cours OpenClassroom"
                                         data-description="Another certification description."
-                                        data-description-list="• Skill A • Skill B • Skill C"
-                                        data-skills="skillA,skillB,skillC" data-gallery="true"
-                                        data-gallery-content="images/certifications/example3.jpg"
-                                        data-image="./images/certifications/example3.jpg" data-type="certification"
-                                        onclick="openModal(this)">
+                                        data-description-list="• Skill A • Skill B • Skill C" data-gallery="true"
+                                        data-gallery-content="./images/certifications/open_classroom/oc_python.png,./images/certifications/open_classroom/oc_django.png"
+                                        data-image="./images/certifications/open_classroom/oc_banner.jpg"
+                                        data-type="certification" onclick="openModal(this)">
                                 </div>
-
-                                <!-- More certifications can be added here in the same structure -->
                             </div>
                         </div>
                         <!-- FIN CERTIF PERSO -->
@@ -941,7 +937,7 @@
                     <div class="flex flex-col ml-4 flex-grow space-y-8">
                         <!-- Bloc de contenu de XP SCO 1 -->
                         <div
-                            class="bg-white shadow-lg rounded-lg p-6 ml-[59.8667px] w-full transform transition-transform duration-500 hover:scale-105">
+                            class="bg-white shadow-lg rounded-lg p-6 ml-[59.8667px] transform transition-transform duration-500 hover:scale-105">
                             <h4 class="text-xl font-semibold text-gray-800 mb-2">BTS SIO option SLAM</h4>
                             <h5 class="text-lg text-pink-red font-bold">Lycée Bonaparte - Toulon [83000]</h5>
                             <p
@@ -957,7 +953,7 @@
 
                         <!-- Bloc de contenu de XP SCO 2 -->
                         <div
-                            class="bg-white shadow-lg rounded-lg p-6 w-full ml-[59.8667px] transform transition-transform duration-500 hover:scale-105">
+                            class="bg-white shadow-lg rounded-lg p-6 ml-[59.8667px] transform transition-transform duration-500 hover:scale-105">
                             <h4 class="text-xl font-semibold text-gray-800 mb-2">BAC STMG spécialité Mercatique</h4>
                             <h5 class="text-lg text-pink-red font-bold">Lycée du Golfe de Saint-Tropez - Gassin [83580]
                             </h5>
@@ -974,7 +970,7 @@
                         </div>
                         <!-- Bloc de contenu de XP SCO 3 -->
                         <div
-                            class="bg-white shadow-lg rounded-lg p-6 w-full ml-[59.8667px] transform transition-transform duration-500 hover:scale-105">
+                            class="bg-white shadow-lg rounded-lg p-6 ml-[59.8667px] transform transition-transform duration-500 hover:scale-105">
                             <h4 class="text-xl font-semibold text-gray-800 mb-2">Diplôme Nationale du Brevet</h4>
                             <h5 class="text-lg text-pink-red font-bold">Collège Gérard Philipe - Cogolin [83310]</h5>
                             <p
@@ -982,7 +978,7 @@
                                 2015 - 2019
                             </p>
                             <p class="text-gray-600 py-2">
-                                Scolarité complète au collège, aboutissant à l’obtention du Brevet des Collèges en
+                                Scolarité complète au collège, aboutissant à l'obtention du Brevet des Collèges en
                                 classe de 3ème
                             </p>
                         </div>
@@ -1029,7 +1025,7 @@
                             <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer"
                                 onclick="openModal(this.closest('.card').querySelector('button'))">
                                 <img class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover"
-                                    src="./images/projects/portfolio_screen1.png" alt="Portfolio Project Image" />
+                                    src="./images/projects/portfolio_screens/portfolio_screen1.png" alt="Portfolio Project Image" />
                                 <div
                                     class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 </div>
@@ -1050,7 +1046,11 @@
                                         data-title="Portfolio Personnel"
                                         data-description="Portfolio personnel développé avec TailwindCSS présentant mes compétences, projets et parcours professionnel."
                                         data-skills="html,css,tailwind,js"
-                                        data-image="./images/projects/portfolio_screen1.png" data-type="project">
+                                        data-image="./images/projects/portfolio_screens/portfolio_screen1.png"
+                                        data-gallery="true"
+                                        data-gallery-content="./images/projects/portfolio_screens/portfolio_screen1.png" 
+                                        data-type="project"
+                                        data-gh-link="https://github.com/Ralh19/ralh19.github.io">
                                         <span>Voir plus</span>
                                         <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
                                             fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1068,7 +1068,7 @@
                             <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer"
                                 onclick="openModal(this.closest('.card').querySelector('button'))">
                                 <img class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover"
-                                    src="./images/projects/nolark_screen.png" alt="Nolark Project Image" />
+                                    src="./images/projects/nolark_screens/nolark_screen1.png" alt="Nolark Project Image">
                                 <div
                                     class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 </div>
@@ -1087,7 +1087,9 @@
                                         class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
                                         data-title="Nolark"
                                         data-description="Site web static de vente de casques de moto, ayant pour but l'apprentissage des langages HTML, CSS et JavaScript."
-                                        data-skills="html,css,js" data-image="./images/projects/nolark_screen.png"
+                                        data-skills="html,css,js" data-image="./images/projects/nolark_screens/nolark_screen1.png"
+                                        data-gallery="true"
+                                        data-gallery-content="./images/projects/nolark_screens/nolark_screen1.png"
                                         data-type="project">
                                         <span>Voir plus</span>
                                         <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
@@ -1106,7 +1108,7 @@
                             <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer"
                                 onclick="openModal(this.closest('.card').querySelector('button'))">
                                 <img class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover"
-                                    src="./images/projects/amelia_screen1.png" alt="Amélia Pilou Portfolio" />
+                                    src="./images/projects/amelia_screens/amelia_screen1.png" alt="Amélia Pilou Portfolio" />
                                 <div
                                     class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 </div>
@@ -1125,7 +1127,10 @@
                                         data-title="Portfolio d'Amélia Pilou"
                                         data-description="Portfolio d'un personnage fictif, ayant pour but la découverte du framework css Bootstrap."
                                         data-skills="html,css,bootstrap"
-                                        data-image="./images/projects/amelia_screen1.png" data-type="project">
+                                        data-image="./images/projects/amelia_screens/amelia_screen1.png" data-type="project"
+                                        data-gallery="true"
+                                        data-gallery-content="./images/projects/amelia_screens/amelia_screen1.png"
+                                        data-gh-link="https://github.com/Ralh19/PortfolioAmelia-SIO-1">
                                         <span>Voir plus</span>
                                         <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
                                             fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1143,7 +1148,7 @@
                             <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer"
                                 onclick="openModal(this.closest('.card').querySelector('button'))">
                                 <img class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover"
-                                    src="./images/projects/merlin_screen1.png" alt="Merlin Game Image" />
+                                    src="./images/projects/merlin_screens/merlin_screen1.png" alt="Merlin Game Image" />
                                 <div
                                     class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 </div>
@@ -1161,8 +1166,11 @@
                                         class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
                                         data-title="Merlin's Demon War"
                                         data-description="Jeu de carte de combat en C# à travers le moteur de jeu Unity."
-                                        data-skills="cs,unity" data-image="./images/projects/merlin_screen1.png"
-                                        data-type="project">
+                                        data-skills="cs,unity"
+                                        data-image="./images/projects/merlin_screens/merlin_screen1.png"
+                                        data-type="project" data-gh-link="https://github.com/Ralh19/Merlin-s-Demon-War"
+                                        data-gallery="true"
+                                        data-gallery-content="./images/projects/merlin_screens/merlin_screen1.png,./images/projects/merlin_screens/merlin_screen2.png,./images/projects/merlin_screens/merlin_screen3.png">
                                         <span>Voir plus</span>
                                         <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
                                             fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1179,7 +1187,7 @@
                             <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer"
                                 onclick="openModal(this.closest('.card').querySelector('button'))">
                                 <img class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover"
-                                    src="./images/projects/gsb_screen1.png" alt="GSB Project Image" />
+                                    src="./images/projects/gsb_screens/gsb_screen1.png" alt="GSB Project Image" />
                                 <div
                                     class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 </div>
@@ -1199,7 +1207,10 @@
                                         data-title="GSB"
                                         data-description="Application Web en PHP en architecture MVC de gestion et traitement de fiche de frais."
                                         data-skills="php,css,bootstrap,sql"
-                                        data-image="./images/projects/gsb_screen1.png" data-type="project">
+                                        data-image="./images/projects/gsb_screens/gsb_screen1.png" data-type="project"
+                                        data-gallery="true"
+                                        data-gallery-content="./images/projects/gsb_screens/gsb_screen1.png"
+                                        >
                                         <span>Voir plus</span>
                                         <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
                                             fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1217,7 +1228,7 @@
                             <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer"
                                 onclick="openModal(this.closest('.card').querySelector('button'))">
                                 <img class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover"
-                                    src="./images/projects/return_screen1.png" alt="The Return Game Image" />
+                                    src="./images/projects/return_screens/return_screen1.png" alt="The Return Game Image" />
                                 <div
                                     class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 </div>
@@ -1235,8 +1246,10 @@
                                         class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
                                         data-title="The Return"
                                         data-description="Jeu d'aventure textuel en C# à travers le moteur de jeu Unity."
-                                        data-skills="cs,unity" data-image="./images/projects/return_screen1.png"
-                                        data-append="./images/projects/return_screen2.png" data-type="project">
+                                        data-skills="cs,unity" data-image="./images/projects/return_screens/return_screen1.png"
+                                        data-gallery="true"
+                                        data-gallery-content="./images/projects/return_screens/return_screen1.png"
+                                        data-type="project" data-gh-link="https://github.com/Ralh19/TheReturn">
                                         <span>Voir plus</span>
                                         <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
                                             fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1254,7 +1267,7 @@
                             <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer"
                                 onclick="openModal(this.closest('.card').querySelector('button'))">
                                 <img class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover"
-                                    src="./images/projects/snake_screen1.jpeg" alt="Snake Game Image" />
+                                    src="./images/projects/snake_screens/snake_screen1.jpeg" alt="Snake Game Image" />
                                 <div
                                     class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 </div>
@@ -1272,8 +1285,10 @@
                                         class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
                                         data-title="Snake Game"
                                         data-description="Jeu Snake pour Android en C# à travers le moteur de jeu Unity."
-                                        data-skills="cs,unity" data-image="./images/projects/snake_screen1.jpeg"
-                                        data-type="project">
+                                        data-skills="cs,unity" data-image="./images/projects/snake_screens/snake_screen1.jpeg"
+                                        data-type="project" data-gh-link="https://github.com/Ralh19/SnakeGame"
+                                        data-gallery="true"
+                                        data-gallery-content="./images/projects/snake_screens/snake_screen1.jpeg,./images/projects/snake_screens/snake_screen2.png,./images/projects/snake_screens/snake_screen3.png">
                                         <span>Voir plus</span>
                                         <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
                                             fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1445,8 +1460,7 @@
                                 class="absolute inset-0 bg-black bg-opacity-50 opacity-0 flex justify-center items-center transition-opacity duration-300 group-hover:opacity-100">
                                 <button id="gallery-button" onclick="openImageGallery(this)"
                                     class="bg-dark-purple-200/75 hover:bg-dark-purple-200 text-white rounded-3xl p-4 transition-all duration-300 transform hover:scale-105">
-                                    <i class="bi bi-plus text-xl mr-2"></i>
-                                    Voir plus d'images
+                                    <i class="bi bi-arrows-fullscreen text-xl"></i>
                                 </button>
                             </div>
                         </div>
@@ -1460,7 +1474,16 @@
                         <div class="flex-grow content-center">
                             <p id="modal-description" class="text-gray-600 mb-8"></p>
                         </div>
+                        <!-- Modal gh-link -->
+                        <div class="flex justify-center items-center gap-4 mb-8">
+                            <a href="" id="gh-button" target="_blank"
+                                class="hidden py-2 px-3 transform transition-transform duration-300 hover:scale-125 hover:bg-pink-red rounded-full bg-gray-800 text-white shadow-md">
+                                <i class="bi bi-link-45deg text-xl"></i>
+                            </a>
+                        </div>
+
                     </div>
+
                 </div>
 
                 <!-- Skills section -->
@@ -1468,6 +1491,9 @@
                     <div id="modal-skills" class="flex flex-wrap gap-4 justify-center">
                         <!-- Skills icons will be inserted here -->
                     </div>
+
+
+
                 </div>
             </div>
         </div>
