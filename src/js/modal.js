@@ -106,7 +106,7 @@ function updateModalContent(element) {
     const skills = skillsData.split(",");
     skills.forEach((skill) => {
       const skillIcon = document.createElement("img");
-      skillIcon.src = `images/skillsIcons/${skill}_ico.png`;
+      skillIcon.src = `assets/images/skillsIcons/${skill}_ico.png`;
       skillIcon.alt = skill;
       skillIcon.className = "w-12 h-12 object-contain";
       modalSkills.appendChild(skillIcon);
