@@ -1,0 +1,15 @@
+# Ignore les dépendances Node.js
+node_modules/
+package-lock.json
+
+# Ignore les fichiers système et temporaires
+.DS_Store
+Thumbs.db
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore les fichiers de config et docs inutiles
+tailwind.config.js
+README.md
+package.json
