@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tailwindcss -i ./src/input.css -o ./dist/css/styles.css --watch ",
-    "build": "tailwindcss -i ./src/input.css -o ./dist/css/styles.css --minify && cp -r src/index.html dist/ && sed -i 's#/dist/#./#g' dist/index.html && sed -i 's#/dist/#./#g' dist/epreuve-e4.html && cp -r src/assets dist/ && cp -r src/js dist/ && cp -r src/css/animations.css dist/css/"
+    "build": "tailwindcss -i ./src/input.css -o ./dist/css/styles.css --minify && cp -r src/index.html dist/ && sed -i 's#/dist/#./#g' dist/index.html && sed -i 's#/dist/#./#g' dist/epreuve-e5.html && cp -r src/assets dist/ && cp -r src/js dist/ && cp -r src/css/animations.css dist/css/"
 
   },
   "author": "",
