@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="fr-en" class="scroll-smooth">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PORTFOLIO</title>
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="./css/animations.css">
+        <script src="./js/birthDate.js"></script>
+        <link rel="icon" type="image/png" href="./assets/images/skillsIcons/html_ico.png" />
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <script src="./js/sidebar.js"></script>
+        <script src="./js/modal.js"></script>
+
+    </head>
+
+    <body class="overflow-x-hidden">
+        <!-- ====== HEADER ====== -->
+        <header>
+            <section id="hub" class="relative bg-dark-purple-300 h-screen w-screen">
+                <div class="h-screen w-full flex flex-col justify-center items-center transition-all duration-300">
+                    <div
+                        class="flex flex-col items-center justify-center w-full lg:ml-[300px] h-fit perspective-[1000px]">
+                        <div class="flex flex-col items-center transform-style-3d">
+                            <!-- Main title -->
+                            <h1
+                                class="text-9xl font-extrabold mb-4 max-lg:text-5xl max-:text-3xl relative transform hover:scale-105 transition-transform duration-500 animate-float">
+                                <span class="relative inline-block">
+                                    <!-- Base white shadow layer -->
+                                    <span
+                                        class="absolute inset-0 text-white [text-shadow:0_1px_0_#ffffff,0_2px_0_#ffffff,0_3px_0_#ffffff,0_4px_0_#ffffff,0_5px_0_#ffffff,0_6px_0_#ffffff,0_7px_0_#ffffff,0_8px_0_#ffffff,0_9px_0_#ffffff,0_10px_10px_rgba(0,0,0,0.8)]">
+                                        PORTFOLIO
+                                    </span>
+                                    <!-- Top pink-red layer -->
+                                    <span class="relative text-pink-red">
+                                        PORTFOLIO
+                                    </span>
+                                </span>
+                            </h1>
+
+                            <!-- Subtitle -->
+                            <h2
+                                class="text-6xl font-extrabold max-lg:text-4xl max-sm:text-2xl relative transform hover:scale-105 transition-transform duration-500 animate-float-delayed">
+                                <span class="relative inline-block">
+                                    <!-- Base pink-red shadow layer -->
+                                    <span
+                                        class="absolute inset-0 text-pink-red [text-shadow:0_1px_0_#ff1744,0_2px_0_#ff1744,0_3px_0_#ff1744,0_4px_0_#ff1744,0_5px_0_#ff1744,0_6px_0_#ff1744,0_7px_0_#ff1744,0_8px_0_#ff1744,0_9px_0_#ff1744,0_10px_10px_rgba(0,0,0,0.8)]">
+                                        ALMEIDA ALHADA Ruben
+                                    </span>
+                                    <!-- Top white layer -->
+                                    <span class="relative text-white">
+                                        ALMEIDA ALHADA Ruben
+                                    </span>
+                                </span>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hamburger Menu Button -->
+                <span class="fixed text-white text-4xl top-5 right-4 cursor-pointer lg:hidden z-50" onclick="Openbar()">
+                    <i
+                        class="bi bi-list px-2 bg-dark-purple-200 rounded-md hover:bg-dark-purple-100 transition-colors duration-300"></i>
+                </span>
+
+                <!-- Sidebar -->
+                <!-- Update the sidebar div classes in both index.html and epreuve-e5.html -->
+                <div class="sidebar fixed top-0 bottom-0 lg:left-0 -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out
+    p-2 w-[300px] overflow-y-auto text-center bg-dark-purple-200 shadow h-screen z-40">
+                    <div class="text-gray-100 text-xl">
+                        <div class="p-2.5 mt-1 flex items-center rounded-md flex-col relative">
+                            <i class="bi bi-x absolute top-0 right-0 text-3xl cursor-pointer lg:hidden"
+                                onclick="Openbar()"></i>
+                            <img class="w-1/2 mb-6 rounded-full " src="./assets/images/photo_ralh.jpg"
+                                alt="photo de Ruben Almeida Alhada">
+                            <h1 class="glow-text text-[15px]  ml-3 text-xl text-gray-200 font-bold">Ruben
+                                ALMEIDA ALHADA</h1>
+
+                            <div id="contact-links" class="flex flex-row space-x-4 text-lg">
+                                <!-- LinkedIn Button -->
+                                <a href="#" target="_blank"
+                                    class="transform transition-transform duration-300 hover:scale-125 hover:bg-pink-red rounded-full p-3 bg-gray-800 text-white shadow-md hover:shadow-lg">
+                                    <i class="bi bi-linkedin "></i>
+                                </a>
+
+                                <!-- GitHub Button -->
+                                <a href="https://github.com/Ralh19" target="_blank"
+                                    class="transform transition-transform duration-300 hover:scale-125 hover:bg-pink-red rounded-full p-3 bg-gray-800 text-white shadow-md hover:shadow-lg">
+                                    <i class="bi bi-github "></i>
+                                </a>
+
+                                <!-- Email Button -->
+                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ruben.almeidaalhada@gmail.com&su=Sujet&body=Message"
+                                    target="_blank"
+                                    class="transform transition-transform duration-300 hover:scale-125 hover:bg-pink-red rounded-full p-3 bg-gray-800 text-white shadow-md hover:shadow-lg">
+                                    <i class="bi bi-envelope-at-fill "></i>
+                                </a>
+
+                                <!-- Phone Button -->
+                                <a href="tel:+330625093665" target="_blank"
+                                    class="transform transition-transform duration-300 hover:scale-125 hover:bg-pink-red rounded-full p-3 bg-gray-800 text-white shadow-md hover:shadow-lg">
+                                    <i class="bi bi-telephone "></i>
+                                </a>
+                            </div>
+                        </div>
+                        <hr class="my-2 text-gray-600">
+                        <div>
+                            <a href="./index.html#hub">
+                                <div
+                                    class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-pink-red">
+                                    <i class="bi bi-house-door-fill"></i>
+                                    <span class="text-[15px] ml-4 text-gray-200">Accueil</span>
+                                </div>
+                            </a>
+
+                            <a href="./index.html#presentation">
+                                <div
+                                    class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-pink-red">
+                                    <i class="bi bi-easel2-fill"></i>
+                                    <p><span class="text-[15px] ml-4 text-gray-200">Présentation</span></p>
+                                </div>
+                            </a>
+                            <a href="./index.html#certifications">
+                                <div
+                                    class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-pink-red">
+                                    <i class="bi bi-patch-check-fill"></i>
+                                    <p><span class="text-[15px] ml-4 text-gray-200">Toutes mes Certifications </span>
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="./index.html#skills">
+                                <div
+                                    class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-pink-red">
+                                    <i class="bi bi-code-square"></i>
+                                    <p><span class="text-[15px] ml-4 text-gray-200">Mes Compétences</span></p>
+                                </div>
+                            </a>
+
+                            <a href="./index.html#parcours-pro">
+                                <div
+                                    class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-pink-red">
+                                    <i class="bi bi-person-fill"></i>
+                                    <p><span class="text-[15px] ml-4 text-gray-200"> Parcours Professionnel</span></p>
+                                </div>
+                            </a>
+                            <a href="./index.html#parcours-scolaire">
+                                <div
+                                    class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-pink-red">
+                                    <i class="bi bi-backpack-fill"></i>
+                                    <p><span class="text-[15px] ml-4 text-gray-200">Parcours Scolaire</span></p>
+                                </div>
+                            </a>
+                            <a href="./index.html#projets">
+                                <div
+                                    class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-pink-red">
+                                    <i class="bi bi-kanban"></i>
+                                    <span class="text-[15px] ml-4 text-gray-200">Projets</span>
+                                </div>
+                            </a>
+                            <a href="./epreuve-e5.html">
+                                <div
+                                    class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-pink-red">
+                                    <i class="bi bi-mortarboard-fill"></i>
+                                    <span class="text-[15px] ml-4 text-gray-200">Epreuve E5</span>
+                                </div>
+                            </a>
+
+                            <a href="./index.html#contact">
+                                <div
+                                    class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-pink-red">
+                                    <i class="bi bi-chat-fill"></i>
+                                    <span class="text-[15px] ml-4 text-gray-200">Contact</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====== FIN HEADER ====== -->
+
+                <!-- ====== TITLE ====== -->
+
+
+            </section>
+            <!-- ====== FIN TITLE ====== -->
+
+        </header>
+        <!-- ====== FIN HEADER ====== -->
+
+
+        <!-- ====== MAIN ====== -->
+        <main class=" ml-72 max-lg:m-0" id="presentation">
+            <!-- == PRÉSENTATION == -->
+            <section class="bg-white max-w-full p-16 max-lg:px-0">
+                <div class="flex flex-col items-center  m-auto">
+                    <div class="w-full">
+                        <!-- <h2 class="text-black text-4xl text-left ml-8 font-extrabold">A Propos</h2> -->
+                        <h2
+                            class="relative text-pink-red text-4xl text-left ml-8 mt-8 font-extrabold pb-2 after:content-[''] after:absolute after:block after:w-16 after:h-[3px] after:bg-pink-red-light after:bottom-0 after:left-0">
+                            Présentation</h2>
+                    </div>
+                    <div class="h-full w-3/5 mt-10 mx-10 max-lg:max-lg:mx-16 max-lg:h-full max-lg:w-4/5">
+                        <p id="present" class="text-xl"></p>
+                        <p class="text-xl">
+                            <br>
+                            Je suis actuellement étudiant au <a
+                                class="text-pink-red font-bold drop-shadow-2xl underline decoration-solid decoration-2"
+                                href="https://www.lyc-bonaparte.fr/" target="_blank" rel="noopener noreferrer">
+                                Lycée Bonaparte de Toulon</a> en seconde année de
+                            BTS SIO
+                            (Services Informatiques aux Organisations) dans l'option SLAM (Solutions Logicielles et
+                            Application Métier) qui en gros est une option spécialisée pour le
+                            développement.<br><br>
+                            Actuellement toujours en cours d'étude, je vous propose sur ce portfolio de retrouver
+                            ci-dessous les différentes études, et projets professionnels que j'ai pu entreprendre au
+                            sein de mon parcours.
+                            <br><br>
+                            Vous retrouverez ci-dessous mon CV ainsi que mes différents projets.
+                        </p>
+                    </div>
+                    <a href="./assets/images/AlmeidaAlhada_RubenCv.pdf" target="_blank" rel="noopener noreferrer">
+                        <button
+                            class="rounded-full bg-pink-red drop-shadow-lg text-xl font-bold text-white text-shadow-white_glow px-48 py-4 mt-10 transform transition-transform duration-200 hover:scale-105">CV</button>
+                    </a>
+                </div>
+            </section>
+            <!-- == FIN PRÉSENTATION == -->
+
+            <!-- == DESC-BTS == -->
+            <section class="bg-white min-h-screen max-w-full p-16 max-lg:px-0 mt-5">
+                <div class="flex flex-col m-auto items-center">
+                    <div class="w-full">
+                        <h2
+                            class="relative text-pink-red text-4xl text-center md:ml-32 md:text-left lg:ml-7 lg:text-left mt-8 font-extrabold pb-2 after:content-[''] after:absolute after:block after:w-16 after:h-[3px] after:bg-pink-red-light after:bottom-0 after:left-0">
+                            Le BTS SIO c'est quoi ?</h2>
+                    </div>
+                    <div class="h-full w-3/5 mt-10 mx-10 max-lg:max-lg:mx-16 max-lg:h-full max-lg:w-4/5">
+                        <p class="text-xl">
+                            Le
+                            <a href="https://www.onisep.fr/ressources/univers-formation/formations/post-bac/bts-services-informatiques-aux-organisations-option-b-solutions-logicielles-et-applications-metiers"
+                                target="_blank" rel="noopener noreferrer">
+                                <span
+                                    class="text-pink-red font-bold drop-shadow-2xl underline decoration-solid decoration-2">BTS
+                                    SIO (Services Informatiques aux Organisations)
+                                </span>
+                            </a>
+                            est un diplôme de niveau bac+2 qui forme
+                            des techniciens en informatique. Il prépare les étudiants à gérer, développer et maintenir
+                            des
+                            systèmes informatiques au sein d'entreprises ou d'organisations. Ce diplôme offre des bases
+                            solides pour travailler dans différents métiers de l'informatique.
+                            <br><br>
+                        </p>
+
+
+
+                    </div>
+                    <!-- Spécialités -->
+                    <h4 class="text-pink-red text-2xl font-bold mb-8">Les deux spécialités proposées :</h4>
+                    <div
+                        class="w-full max-w-7xl bg-gradient-to-r from-slate-50 to-slate-100 border border-black border-opacity-15 rounded-2xl shadow-2xl overflow-hidden p-6 transform transition-transform duration-500 hover:scale-105">
+                        <table class="w-full text-lg border-collapse rounded-xl overflow-hidden table-fixed">
+                            <!-- Headers -->
+                            <tr class="bg-gradient-to-r from-pink-red-light to-pink-red text-white">
+                                <th class="p-4 text-center text-xl md:text-2xl font-bold uppercase w-1/2 glow-text ">
+                                    Option SLAM
+                                </th>
+                                <th class="p-4 text-center text-xl md:text-2xl font-bold uppercase w-1/2">Option SISR
+                                </th>
+                            </tr>
+                            <!-- Description -->
+                            <tr class="odd:bg-white even:bg-slate-200">
+                                <td class="p-6 text-center leading-relaxed align-top w-1/2 ">
+                                    🚀 <span class="font-semibold">Solutions logicielles et applications métiers
+                                        :</span>
+                                    <p>Formation pour les experts en logiciels capables d'analyser les besoins, de
+                                        rédiger des cahiers des charges et de développer des solutions sur mesure.</p>
+                                </td>
+                                <td class="p-6 text-center leading-relaxed align-top w-1/2">
+                                    🔧 <span class="font-semibold">Solutions d'infrastructure, systèmes et réseaux
+                                        :</span>
+                                    <p>Préparation des professionnels en charge de l’installation, de la maintenance et
+                                        de la sécurité des systèmes informatiques d’entreprise.</p>
+                                </td>
+                            </tr>
+                            <!-- Transition text -->
+                            <tr class="bg-gradient-to-r from-slate-300 to-slate-400 text-gray-800 font-semibold">
+                                <td class="p-6 text-center w-1/2">💡 Métiers possibles après un BTS SIO SLAM :</td>
+                                <td class="p-6 text-center w-1/2">💼 Métiers possibles après un BTS SIO SISR :</td>
+                            </tr>
+                            <!-- Lists -->
+                            <tr class="odd:bg-white even:bg-slate-200">
+                                <td class="p-6 w-1/2 ">
+                                    <div class="flex flex-col items-center justify-center">
+                                        <ul class="space-y-2 text-center md:text-left text-gray-700">
+                                            <li class="font-bold">📌 Développeur Web</li>
+                                            <li>📌 Développeur informatique</li>
+                                            <li>📌 Analyste d'applications ou d'études</li>
+                                            <li>📌 Analyste programmeur</li>
+                                            <li>📌 Programmeur analyste</li>
+                                            <li>📌 Responsable des services applicatifs</li>
+
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td class="p-6 w-1/2">
+                                    <div class="flex flex-col items-center justify-center">
+                                        <ul class="space-y-2 text-center md:text-left text-gray-700">
+                                            <li>🖥️ Administrateur systèmes et réseaux</li>
+                                            <li>🖥️ Pilote d'exploitation</li>
+                                            <li>🖥️ Support systèmes et réseaux</li>
+                                            <li>🖥️ Technicien d'infrastructure</li>
+                                            <li>🖥️ Technicien de production</li>
+                                            <li>🖥️ Technicien micro et réseaux</li>
+                                        </ul>
+                                    </div>
+
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- FIN Spécialités -->
+                </div>
+            </section>
+            <!-- == FIN DESC-BTS == -->
+
+
+            <!-- == CERTIFICATIONS == -->
+            <section id="certifications" class="bg-white min-h-screen max-w-full p-16 max-lg:px-0 mt-16">
+                <div class="flex flex-col m-auto items-center">
+                    <div class="w-full mb-4">
+                        <h2
+                            class="relative text-pink-red text-4xl text-left ml-7 mt-8 font-extrabold pb-2 after:content-[''] after:absolute after:block after:w-16 after:h-[3px] after:bg-pink-red-light after:bottom-0 after:left-0">
+                            Toutes mes Certifications
+                        </h2>
+                    </div>
+                    <!-- CERTIF BTS -->
+                    <div class="flex flex-col items-center">
+                        <h4 class="text-pink-red text-2xl font-bold my-8 text-center w-full">
+                            Les certifications passées durant mon BTS SIO :
+                        </h4>
+                        <p class="text-xl lg:text-center mb-8 w-[70%]">Lors de mon BTS SIO, j'ai dû suivre certains
+                            parcours de certification obligatoires. <br><br> Vous trouverez ci-dessous les attestations
+                            prouvant ma participation ainsi que ma réussite dans ceux-ci :</p>
+                        <div class="py-8 flex flex-col lg:flex-row lg:space-x-8 items-center justify-center w-full">
+                            <!-- CErtifiaction ANSSI -->
+                            <img src="./assets/images/certifications/anssi.jpg"
+                                class="w-[70%] lg:w-[40%] lg:h-full mb-4 lg:mb-0 cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                                alt="Attestation secNumAcademi MOOC" data-title="SecNumAcademie MOOC"
+                                data-description="Formation officielle en cybersécurité proposée par l'Agence Nationale de la Sécurité des Systèmes d'Information (ANSSI). Le MOOC couvre les fondamentaux de la sécurité informatique :"
+                                data-description-list="• Protection des données personnelles • Sécurisation des appareils • Navigation web sécurisée • Bonnes pratiques de sécurité • Gestion des mots de passe • Il valide les compétences essentielles en cybersécurité avec un score de 100% obtenu sur chaque module"
+                                data-image="./assets/images/certifications/anssi.jpg" data-type="certification"
+                                onclick="openModal(this)">
+                            <!-- Certifiaction PIX -->
+                            <img src="./assets/images/certifications/pix.jpg"
+                                class="w-[70%] lg:w-[20%] lg:h-full cursor-pointer border-4 border-[#086e89] border-solid rounded-lg transform transition-transform duration-500 hover:scale-105"
+                                alt="Attestation PIX" data-title="Certifiaction PIX"
+                                data-description="Pix est une plateforme française d'évaluation et de certification des compétences numériques. Cette certification valide :"
+                                data-description-list="• La manipulation de données numériques • La recherche et le traitement d'informations • La communication et la collaboration en ligne • La création de contenu numérique • La résolution de problèmes techniques"
+                                data-image="./assets/images/certifications/pix.jpg" data-type="certification"
+                                onclick="openModal(this)">
+
+                        </div>
+                        <div class="py-8 flex flex-col lg:flex-row lg:space-x-8 items-center justify-center w-full">
+                            <!-- CErtifiaction Atelier RGPD -->
+                            <img src="./assets/images/certifications/atelier_rgpd/rgpd5.jpg"
+                                class="w-[70%] lg:w-[40%] mb-4 lg:mb-0 border-4 border-[#086e89] border-solid rounded-xl cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                                alt="Certification Example" data-title="Certification Example"
+                                data-description="Description of the certification. This certification is about a certain field or skill."
+                                data-description-list="• Skill 1 • Skill 2 • Skill 3" data-gallery="true"
+                                data-gallery-content="./assets/images/certifications/atelier_rgpd/rgpd5.jpg,./assets/images/certifications/atelier_rgpd/rgpd4.jpg,./assets/images/certifications/atelier_rgpd/rgpd3.jpg,./assets/images/certifications/atelier_rgpd/rgpd2.jpg,./assets/images/certifications/atelier_rgpd/rgpd1.jpg"
+                                data-image="./assets/images/certifications/atelier_rgpd/rgpd5.jpg"
+                                data-type="certification" onclick="openModal(this)">
+                        </div>
+                        <!-- FIN CERTIF BTS -->
+
+                        <!-- CERTIF PERSO -->
+                        <h4 class="text-pink-red text-2xl font-bold my-8 text-center w-full">
+                            Les certifications passées durant mon apprentissage personnel :
+                        </h4>
+                        <p class="text-xl lg:text-center mb-8 w-[70%]">En plus des différentes certifications obtenues
+                            lors de mon BTS SIO, j'ai eu l'occasion de passer des certifications supplémentaires.
+                            <br><br> Voici donc les certifications obtenues lors de mon temps libre :
+                        </p>
+                        <div class="py-8 w-full">
+                            <!-- Certifications Grid -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+                                <!-- Certification XAMK -->
+                                <div class="flex flex-col items-center justify-center">
+                                    <img src="./assets/images/certifications/xamk.jpg"
+                                        class="w-[70%] lg:w-[80%] mb-4 cursor-pointer border-2 border-[#086e89] border-solid rounded-xl transform transition-transform duration-500 hover:scale-105"
+                                        alt="Attestation secNumAcademi MOOC avec un score de 100% à chaque module"
+                                        data-title="Certification XAMK"
+                                        data-description="Formation en ligne sur la création de jeux vidéo proposée par l'université des sciences appliquées suédoise XAMK. Le cours couvre les fondamentaux du développement de jeux vidéo :"
+                                        data-description-list="• Concepts de base de la création de jeux vidéo • Game design et level design • Programmation des mécaniques de jeu • Unity Engine et C# • Gestion des ressources graphiques • Tests et déploiement • La formation étant entièrement en Anglais, elle m'a également permis d'améliorer ma maîtrise de cette langue"
+                                        data-skills="cs,unity,git" data-gallery="true"
+                                        data-gallery-content="./assets/images/certifications/xamk.jpg,./assets/images/certifications/xamk2.jpg"
+                                        data-image="./assets/images/certifications/xamk.jpg" data-type="certification"
+                                        onclick="openModal(this)">
+                                </div>
+
+                                <!-- Certification OpenClassroom -->
+                                <div class="flex flex-col items-center justify-center">
+                                    <img src="./assets/images/certifications/open_classroom/oc_banner.jpg"
+                                        class="w-[70%] lg:w-[80%] lg:h-full mb-4 p-3 object-cover cursor-pointer border-2 border-[#086e89] border-solid rounded-xl transform transition-transform duration-500 hover:scale-105"
+                                        alt="Cours OPENCLASSROOMS" data-title="Cours OpenClassroom"
+                                        data-description="Another certification description."
+                                        data-description-list="• Skill A • Skill B • Skill C" data-gallery="true"
+                                        data-gallery-content="./assets/images/certifications/open_classroom/oc_python.png,./assets/images/certifications/open_classroom/oc_django.png"
+                                        data-image="./assets/images/certifications/open_classroom/oc_banner.jpg"
+                                        data-type="certification" onclick="openModal(this)">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FIN CERTIF PERSO -->
+                    </div>
+                </div>
+            </section>
+            <!-- == FIN CERTIFICATIONS == -->
+
+            <!-- == SKILLS == -->
+            <section id="skills" class="bg-white min-h-screen max-w-full p-4 sm:p-8 lg:p-16 mt-16">
+                <div class="flex flex-col m-auto items-center">
+                    <div class="w-full mb-4">
+                        <h2
+                            class="relative text-pink-red text-3xl sm:text-4xl text-left ml-4 sm:ml-7 mt-8 pb-2 font-extrabold after:content-[''] after:absolute after:block after:w-16 after:h-[3px] after:bg-pink-red-light after:bottom-0 after:left-0">
+                            Mes Compétences
+                        </h2>
+                    </div>
+                    <div class="flex flex-col items-center p-4 sm:p-10 w-full">
+                        <p class="text-base sm:text-xl mb-8 px-4">Ces connaissances ont été acquises de diverses
+                            manières : certaines lors de mon BTS SIO, d'autres par initiative personnelle en développant
+                            des solutions.</p>
+
+                        <!-- Langages -->
+                        <h4
+                            class="relative w-full text-pink-red text-xl sm:text-2xl font-extrabold my-6 sm:my-8 ml-4 sm:ml-10 after:content-[''] after:absolute after:block after:w-8 after:h-[3px] after:bg-pink-red-light after:bottom-0 after:left-0">
+                            Langages :
+                        </h4>
+
+                        <div class="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 px-4 pb-10">
+                            <!-- First Column -->
+                            <div class="space-y-6">
+                                <!-- HTML -->
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="90">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="./assets/images/skillsIcons/html_ico.png" alt="HTML5"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">HTML5</span>
+                                            <span class="counter text-lg font-medium">0%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="progress-bar">
+                                                <div class="bg-pink-red-light h-3 rounded-full w-0"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- CSS -->
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="85">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="./assets/images/skillsIcons/css_ico.png" alt="CSS3"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">CSS3</span>
+                                            <span class="counter text-lg font-medium">0%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="progress-bar">
+                                                <div class="bg-pink-red-light h-3 rounded-full w-0"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- PHP -->
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="75">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="./assets/images/skillsIcons/php_ico.png" alt="PHP"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">PHP</span>
+                                            <span class="counter text-lg font-medium">0%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="progress-bar">
+                                                <div class="bg-pink-red-light h-3 rounded-full w-0"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- JavaScript -->
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="50">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="./assets/images/skillsIcons/js_ico.png" alt="JavaScript"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">JavaScript</span>
+                                            <span class="counter text-lg font-medium">0%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="progress-bar">
+                                                <div class="bg-pink-red-light h-3 rounded-full w-0"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Second Column -->
+                            <div class="space-y-6">
+                                <!-- SQL -->
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="65">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="./assets/images/skillsIcons/sql_ico.png" alt="SQL"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">SQL</span>
+                                            <span class="counter text-lg font-medium">0%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="progress-bar">
+                                                <div class="bg-pink-red-light h-3 rounded-full w-0"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- C# -->
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="65">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="./assets/images/skillsIcons/cs_ico.png" alt="C#"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">C#</span>
+                                            <span class="counter text-lg font-medium">0%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="progress-bar">
+                                                <div class="bg-pink-red-light h-3 rounded-full w-0"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Python -->
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="30">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="./assets/images/skillsIcons/py_ico.png" alt="Python"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">Python</span>
+                                            <span class="counter text-lg font-medium">0%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="progress-bar">
+                                                <div class="bg-pink-red-light h-3 rounded-full w-0"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Java -->
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="70">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="./assets/images/skillsIcons/java_ico.png" alt="Java"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">Java</span>
+                                            <span class="counter text-lg font-medium">0%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="progress-bar">
+                                                <div class="bg-pink-red-light h-3 rounded-full w-0"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Frameworks & Tools -->
+                        <h4
+                            class="relative w-full text-pink-red text-xl sm:text-2xl font-extrabold my-6 sm:my-8 ml-4 sm:ml-10 after:content-[''] after:absolute after:block after:w-8 after:h-[3px] after:bg-pink-red-light after:bottom-0 after:left-0">
+                            Frameworks &amp; Outils :
+                        </h4>
+
+                        <div
+                            class="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 px-4">
+                            <!-- First Column -->
+                            <div class="space-y-6">
+                                <!-- Tailwind CSS -->
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="95">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="./assets/images/skillsIcons/tailwind_ico.png" alt="Tailwind CSS"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">Tailwind CSS</span>
+                                            <span class="counter text-lg font-medium">0%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="progress-bar">
+                                                <div class="bg-pink-red-light h-3 rounded-full w-0"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Bootstrap -->
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="70">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="./assets/images/skillsIcons/bootstrap_ico.png" alt="Bootstrap"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">Bootstrap</span>
+                                            <span class="counter text-lg font-medium">0%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="progress-bar">
+                                                <div class="bg-pink-red-light h-3 rounded-full w-0"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Symfony -->
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="40">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="./assets/images/skillsIcons/symfony_ico.png" alt="Symfony"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">Symfony</span>
+                                            <span class="counter text-lg font-medium">0%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="progress-bar">
+                                                <div class="bg-pink-red-light h-3 rounded-full w-0"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Spring -->
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="60">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="./assets/images/skillsIcons/spring_ico.png" alt="Spring"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">Spring</span>
+                                            <span class="counter text-lg font-medium">0%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="progress-bar">
+                                                <div class="bg-pink-red-light h-3 rounded-full w-0"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Second Column -->
+                            <div class="space-y-6">
+                                <!-- Django -->
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="45">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="./assets/images/skillsIcons/django_ico.png" alt="Django"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">Django</span>
+                                            <span class="counter text-lg font-medium">0%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="progress-bar">
+                                                <div class="bg-pink-red-light h-3 rounded-full w-0"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- VS Code -->
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="90">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="./assets/images/skillsIcons/vscode_ico.png" alt="VS Code"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">VS Code</span>
+                                            <span class="counter text-lg font-medium">0%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="progress-bar">
+                                                <div class="bg-pink-red-light h-3 rounded-full w-0"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Eclipse -->
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="75">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="./assets/images/skillsIcons/eclipse_ico.webp" alt="Eclipse"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">Eclipse</span>
+                                            <span class="counter text-lg font-medium">0%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="progress-bar">
+                                                <div class="bg-pink-red-light h-3 rounded-full w-0"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- NetBeans -->
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="75">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="./assets/images/skillsIcons/netbeans_ico.png" alt="NetBeans"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">NetBeans</span>
+                                            <span class="counter text-lg font-medium">0%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="progress-bar">
+                                                <div class="bg-pink-red-light h-3 rounded-full w-0"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Third Column -->
+                            <div class="space-y-6">
+
+                                <!-- Blender -->
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="60">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="./assets/images/skillsIcons/blender_ico.png" alt="Blender"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">Blender</span>
+                                            <span class="counter text-lg font-medium">0%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="progress-bar">
+                                                <div class="bg-pink-red-light h-3 rounded-full w-0"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Photoshop -->
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="75">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="./assets/images/skillsIcons/ps_ico.png" alt="Photoshop"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">Photoshop</span>
+                                            <span class="counter text-lg font-medium">0%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="progress-bar">
+                                                <div class="bg-pink-red-light h-3 rounded-full w-0"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Unity -->
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="45">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="./assets/images/skillsIcons/unity_ico.png" alt="Unity"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">Unity</span>
+                                            <span class="counter text-lg font-medium">0%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="progress-bar">
+                                                <div class="bg-pink-red-light h-3 rounded-full w-0"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- WordPress -->
+                                <div class="flex items-center transform transition-transform duration-200 hover:scale-105 group"
+                                    data-value="65">
+                                    <div class="w-12 h-12 flex-shrink-0 bg-white shadow rounded-lg p-2 mr-4">
+                                        <img src="./assets/images/skillsIcons/wordpress_ico.png" alt="WordPress"
+                                            class="w-full h-full object-scale-down">
+                                    </div>
+                                    <div class="flex-grow">
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-lg font-medium">WordPress</span>
+                                            <span class="counter text-lg font-medium">0%</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-3">
+                                            <div class="progress-bar">
+                                                <div class="bg-pink-red-light h-3 rounded-full w-0"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- == FIN SKILLS == -->
+
+            <!-- == PARCOURS == -->
+            <!-- = PARCOURS PRO = -->
+            <section class="bg-slate-50 min-h-screen max-w-full p-16 max-lg:px-0 mt-16" id="parcours-pro">
+                <div class="w-full mb-4">
+                    <h2
+                        class="relative text-pink-red text-4xl text-left ml-8 lg:ml-7 my-8 font-extrabold pb-2 after:content-[''] after:absolute after:block after:w-16 after:h-[3px] after:bg-pink-red-light after:bottom-0 after:left-0">
+                        Parcours
+                        Professionnel
+                    </h2>
+                </div>
+
+                <div class="container mx-auto px-4 relative flex flex-col items-start">
+                    <div class="flex flex-col ml-4 flex-grow space-y-8">
+
+                        <!-- XP PRO 1 avec frise et date -->
+                        <div class="flex items-start mb-8">
+                            <!-- Frise avec date pour XP PRO 1 -->
+                            <div class="relative flex flex-col items-center mr-6">
+                                <!-- Date 2025 -->
+                                <span class="text-gray-500 font-semibold mb-2">2025</span>
+                                <!-- Flèche -->
+                                <div class="flex flex-col items-center mt-3">
+                                    <div
+                                        class="w-0 h-0 border-l-[8px] border-r-[8px] border-t-[16px] border-t-pink-red border-l-transparent border-r-transparent absolute bottom-0">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bloc de contenu de XP PRO 1 -->
+                            <div class="bg-white shadow-lg rounded-lg p-6 w-full">
+                                <h4 class="text-xl font-semibold text-gray-800 mb-2">Stage 2ème année BTS SIO</h4>
+                                <h5 class="text-lg text-pink-red font-bold">Etudes et Solutions - Toulon [83000]</h5>
+                                <p
+                                    class="text-pink-red font-semibold text-sm bg-pink-red-light bg-opacity-20 border border-pink-red-light rounded-full px-4 py-2 mt-2 inline-block">
+                                    13 Janvier 2025 - 15 Février 2025
+                                </p>
+                                <p class="text-gray-600 py-2">
+                                    Stage de 5 semaines au sein de la TPE Etudes et Solutions, une entreprise
+                                    spécialisée dans l'étude, la conception, la fabrication, la commercialisation et le
+                                    négoce de divers appareils électriques, électroniques, mécaniques ou autres
+                                </p>
+                                <div class="flex justify-center">
+                                    <a href="./epreuve-e5.html#stage-2"
+                                        class="text-white text-center font-semibold bg-pink-red-light border border-pink-red-light rounded-full px-6 py-3 mt-2 inline-flex items-center justify-center transition-all duration-300 ease-in-out hover:scale-105 hover:bg-pink-red hover:text-white shadow-lg">
+                                        PLUS +
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- XP PRO 2 avec frise et date -->
+                        <div class="flex items-start mb-8">
+                            <!-- Frise avec date pour XP PRO 2 -->
+                            <div class="relative flex flex-col items-center mr-6">
+                                <!-- Date 2024 -->
+                                <span class="text-gray-500 font-semibold mb-2">2024</span>
+                                <!-- Flèche -->
+                                <div class="flex flex-col items-center mt-3">
+                                    <div
+                                        class="w-0 h-0 border-l-[8px] border-r-[8px] border-t-[16px] border-t-pink-red border-l-transparent border-r-transparent absolute bottom-0">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Bloc de contenu de XP PRO 2 -->
+                            <div class="bg-white shadow-lg rounded-lg p-6 w-full">
+                                <h4 class="text-xl font-semibold text-gray-800 mb-2">Stage 1ère année BTS SIO</h4>
+                                <h5 class="text-lg text-pink-red font-bold">Bonifay - La Garde [83130]</h5>
+                                <p
+                                    class="text-pink-red font-semibold text-sm bg-pink-red-light bg-opacity-20 border border-pink-red-light rounded-full px-4 py-2 mt-2 inline-block">
+                                    6 Mai 2024 - 29 Juin 2024
+                                </p>
+                                <p class="text-gray-600 py-2">
+                                    Stage de 8 semaine réalisé au sein de l'entreprise de vente de matériaux de
+                                    constructions Bonifay se situant a La Garde au sein du service informatique
+                                </p>
+                                <div class="flex justify-center">
+                                    <a href="./epreuve-e5.html#stage-1"
+                                        class="text-white text-center font-semibold bg-pink-red-light border border-pink-red-light rounded-full px-6 py-3 mt-2 inline-flex items-center justify-center transition-all duration-300 ease-in-out hover:scale-105 hover:bg-pink-red hover:text-white shadow-lg">
+                                        PLUS +
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!-- = FIN PARCOURS PRO = -->
+
+            <!-- = PARCOURS SCOLAIRE = -->
+            <section id="parcours-scolaire" class="bg-slate-50 min-h-screen max-w-full p-16 max-lg:px-0">
+                <div class="w-full mb-4">
+                    <h2
+                        class="relative text-pink-red text-4xl text-left ml-8 lg:ml-7 my-8 font-extrabold pb-2 after:content-[''] after:absolute after:block after:w-16 after:h-[3px] after:bg-pink-red-light after:bottom-0 after:left-0">
+                        Parcours Scolaire
+                    </h2>
+                </div>
+
+                <div class="container mx-auto px-4 relative flex flex-col items-start">
+                    <div class="flex flex-col ml-4 flex-grow space-y-8">
+                        <!-- Bloc de contenu de XP SCO 1 -->
+                        <div
+                            class="bg-white shadow-lg rounded-lg p-6 ml-[59.8667px] transform transition-transform duration-500 hover:scale-105">
+                            <h4 class="text-xl font-semibold text-gray-800 mb-2">BTS SIO option SLAM</h4>
+                            <h5 class="text-lg text-pink-red font-bold">Lycée Bonaparte - Toulon [83000]</h5>
+                            <p
+                                class="text-pink-red font-semibold text-sm bg-pink-red-light bg-opacity-20 border border-pink-red-light rounded-full px-4 py-2 mt-2 inline-block">
+                                2023 - 2025
+                            </p>
+                            <p class="text-gray-600 py-2">
+                                Diplôme de niveau Bac+2 qui forme des professionnels du développement et de la gestion
+                                d’applications informatiques. Il met l’accent sur la conception, la programmation, la
+                                maintenance et la sécurisation de logiciels adaptés aux besoins des entreprises.
+                            </p>
+                        </div>
+
+                        <!-- Bloc de contenu de XP SCO 2 -->
+                        <div
+                            class="bg-white shadow-lg rounded-lg p-6 ml-[59.8667px] transform transition-transform duration-500 hover:scale-105">
+                            <h4 class="text-xl font-semibold text-gray-800 mb-2">BAC STMG spécialité Mercatique</h4>
+                            <h5 class="text-lg text-pink-red font-bold">Lycée du Golfe de Saint-Tropez - Gassin [83580]
+                            </h5>
+                            <p
+                                class="text-pink-red font-semibold text-sm bg-pink-red-light bg-opacity-20 border border-pink-red-light rounded-full px-4 py-2 mt-2 inline-block">
+                                2019 - 2022
+                            </p>
+                            <p class="text-gray-600 py-2">
+                                Baccalauréat technologique axé sur les stratégies commerciales et le marketing. Il porte
+                                sur l'analyse du marché, le comportement des consommateurs, la gestion de la relation
+                                client et les techniques de communication et de vente utilisées par les entreprises.
+                            </p>
+
+                        </div>
+                        <!-- Bloc de contenu de XP SCO 3 -->
+                        <div
+                            class="bg-white shadow-lg rounded-lg p-6 ml-[59.8667px] transform transition-transform duration-500 hover:scale-105">
+                            <h4 class="text-xl font-semibold text-gray-800 mb-2">Diplôme Nationale du Brevet</h4>
+                            <h5 class="text-lg text-pink-red font-bold">Collège Gérard Philipe - Cogolin [83310]</h5>
+                            <p
+                                class="text-pink-red font-semibold text-sm bg-pink-red-light bg-opacity-20 border border-pink-red-light rounded-full px-4 py-2 mt-2 inline-block">
+                                2015 - 2019
+                            </p>
+                            <p class="text-gray-600 py-2">
+                                Scolarité complète au collège, aboutissant à l'obtention du Brevet des Collèges en
+                                classe de 3ème
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- = FIN PARCOURS SCOLAIRE = -->
+            <!-- == FIN PARCOURS == -->
+
+            <!-- == PROJECTS == -->
+            <section id="projets" class="bg-white min-h-screen max-w-full p-16 max-lg:px-0">
+                <div class="w-full mb-4">
+                    <h2
+                        class="relative text-pink-red text-4xl text-left ml-8 lg:ml-7 my-8 font-extrabold  pb-2 after:content-[''] after:absolute after:block after:w-16 after:h-[3px] after:bg-pink-red-light after:bottom-0 after:left-0">
+                        Tous mes projets</h2>
+                </div>
+
+                <div class="container">
+                    <!-- BOUTONS DE FILTRES -->
+                    <div class="filter_buttons flex justify-center space-x-3">
+                        <button
+                            class="active text-pink-red text-center text-sm font-bold w-auto bg-pink-red-light bg-opacity-20 border border-pink-red-light rounded-md px-2 py-2 transform transition-transform duration-200 hover:scale-105"
+                            data-name="all">TOUT AFFICHER</button>
+
+                        <button
+                            class="text-gray-600 text-center text-sm font-bold w-auto bg-gray-100 border border-gray-300 rounded-md px-2 py-2 transform transition-transform duration-200 hover:bg-gray-200 hover:scale-105"
+                            data-name="bts">BTS - SIO</button>
+                        <button
+                            class="text-gray-600 text-center text-sm font-bold w-auto bg-gray-100 border border-gray-300 rounded-md px-2 py-2 transform transition-transform duration-200 hover:bg-gray-200 hover:scale-105"
+                            data-name="games">Jeux Vidéo</button>
+                        <button
+                            class="text-gray-600 text-center text-sm font-bold w-auto bg-gray-100 border border-gray-300 rounded-md px-2 py-2 transform transition-transform duration-200 hover:bg-gray-200 hover:scale-105"
+                            data-name="web">Web</button>
+                    </div>
+                    <!-- FIN BOUTONS DE FILTRES -->
+
+                    <!-- CARTES FILTRABLES -->
+                    <div class="filterable_cards flex flex-wrap justify-center gap-10 p-7 my-4">
+
+                        <!-- Project Card Template -->
+                        <div class="card group relative flex flex-col bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm border border-gray-100 w-96 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:-translate-y-1 animate-zoom-in"
+                            data-name="web">
+                            <!-- Image Container - Now Clickable -->
+                            <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer"
+                                onclick="openModal(this.closest('.card').querySelector('button'))">
+                                <img class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover"
+                                    src="./assets/images/projects/portfolio_screens/portfolio_screen1.png"
+                                    alt="Portfolio Project Image" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                            </div>
+
+                            <!-- Content Container - Remains Unchanged -->
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h6 class="text-xl font-bold text-gray-800">Portfolio Personnel</h6>
+                                    <span
+                                        class="px-3 py-1 text-sm font-medium text-gray-600 bg-gray-100 rounded-full">2025</span>
+                                </div>
+                                <p class="text-gray-600 text-sm leading-relaxed flex-grow">Portfolio personnel développé
+                                    avec TailwindCSS présentant mes compétences, projets et parcours professionnel</p>
+                                <div class="mt-6">
+                                    <button onclick="openModal(this)"
+                                        class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
+                                        data-title="Portfolio Personnel"
+                                        data-description="Portfolio personnel développé avec TailwindCSS présentant mes compétences, projets et parcours professionnel."
+                                        data-skills="html,css,tailwind,js"
+                                        data-image="./assets/images/projects/portfolio_screens/portfolio_screen1.png"
+                                        data-gallery="true"
+                                        data-gallery-content="./assets/images/projects/portfolio_screens/portfolio_screen1.png"
+                                        data-type="project" data-gh-link="https://github.com/Ralh19/ralh19.github.io">
+                                        <span>Voir plus</span>
+                                        <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Nolark Card -->
+                        <div class="card group relative flex flex-col bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm border border-gray-100 w-96 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:-translate-y-1 animate-zoom-in"
+                            data-name="bts">
+                            <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer"
+                                onclick="openModal(this.closest('.card').querySelector('button'))">
+                                <img class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover"
+                                    src="./assets/images/projects/nolark_screens/nolark_screen1.png"
+                                    alt="Nolark Project Image">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h6 class="text-xl font-bold text-gray-800">Nolark</h6>
+                                    <span
+                                        class="px-3 py-1 text-sm font-medium text-gray-600 bg-gray-100 rounded-full">2023</span>
+                                </div>
+                                <p class="text-gray-600 text-sm leading-relaxed flex-grow">Site web static de vente de
+                                    casques de moto, ayant pour but l'apprentissage des langages HTML, CSS et
+                                    JavaScript</p>
+                                <div class="mt-6">
+                                    <button onclick="openModal(this)"
+                                        class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
+                                        data-title="Nolark"
+                                        data-description="Site web static de vente de casques de moto, ayant pour but l'apprentissage des langages HTML, CSS et JavaScript."
+                                        data-skills="html,css,js"
+                                        data-image="./assets/images/projects/nolark_screens/nolark_screen1.png"
+                                        data-gallery="true"
+                                        data-gallery-content="./assets/images/projects/nolark_screens/nolark_screen1.png"
+                                        data-type="project">
+                                        <span>Voir plus</span>
+                                        <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Amelia Card -->
+                        <div class="card group relative flex flex-col bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm border border-gray-100 w-96 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:-translate-y-1 animate-zoom-in"
+                            data-name="bts">
+                            <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer"
+                                onclick="openModal(this.closest('.card').querySelector('button'))">
+                                <img class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover"
+                                    src="./assets/images/projects/amelia_screens/amelia_screen1.png"
+                                    alt="Amélia Pilou Portfolio" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h6 class="text-xl font-bold text-gray-800">Portfolio d'Amélia Pilou</h6>
+                                    <span
+                                        class="px-3 py-1 text-sm font-medium text-gray-600 bg-gray-100 rounded-full">2023</span>
+                                </div>
+                                <p class="text-gray-600 text-sm leading-relaxed flex-grow">Portfolio d'un personnage
+                                    fictif, ayant pour but la découverte du framework css Bootstrap</p>
+                                <div class="mt-6">
+                                    <button onclick="openModal(this)"
+                                        class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
+                                        data-title="Portfolio d'Amélia Pilou"
+                                        data-description="Portfolio d'un personnage fictif, ayant pour but la découverte du framework css Bootstrap."
+                                        data-skills="html,css,bootstrap"
+                                        data-image="./assets/images/projects/amelia_screens/amelia_screen1.png"
+                                        data-type="project" data-gallery="true"
+                                        data-gallery-content="./assets/images/projects/amelia_screens/amelia_screen1.png"
+                                        data-gh-link="https://github.com/Ralh19/PortfolioAmelia-SIO-1">
+                                        <span>Voir plus</span>
+                                        <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Merlin Card -->
+                        <div class="card group relative flex flex-col bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm border border-gray-100 w-96 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:-translate-y-1 animate-zoom-in"
+                            data-name="games">
+                            <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer"
+                                onclick="openModal(this.closest('.card').querySelector('button'))">
+                                <img class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover"
+                                    src="./assets/images/projects/merlin_screens/merlin_screen1.png"
+                                    alt="Merlin Game Image" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h6 class="text-xl font-bold text-gray-800">Merlin's Demon War</h6>
+                                    <span
+                                        class="px-3 py-1 text-sm font-medium text-gray-600 bg-gray-100 rounded-full">2022</span>
+                                </div>
+                                <p class="text-gray-600 text-sm leading-relaxed flex-grow">Jeu de carte de combat en C#
+                                    à travers le moteur de jeu Unity</p>
+                                <div class="mt-6">
+                                    <button onclick="openModal(this)"
+                                        class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
+                                        data-title="Merlin's Demon War"
+                                        data-description="Jeu de carte de combat en C# à travers le moteur de jeu Unity."
+                                        data-skills="cs,unity"
+                                        data-image="./assets/images/projects/merlin_screens/merlin_screen1.png"
+                                        data-type="project" data-gh-link="https://github.com/Ralh19/Merlin-s-Demon-War"
+                                        data-gallery="true"
+                                        data-gallery-content="./assets/images/projects/merlin_screens/merlin_screen1.png,./assets/images/projects/merlin_screens/merlin_screen2.png,./assets/images/projects/merlin_screens/merlin_screen3.png">
+                                        <span>Voir plus</span>
+                                        <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- GSB Card -->
+                        <div class="card group relative flex flex-col bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm border border-gray-100 w-96 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:-translate-y-1 animate-zoom-in"
+                            data-name="bts">
+                            <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer"
+                                onclick="openModal(this.closest('.card').querySelector('button'))">
+                                <img class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover"
+                                    src="./assets/images/projects/gsb_screens/gsb_screen1.png"
+                                    alt="GSB Project Image" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h6 class="text-xl font-bold text-gray-800">GSB</h6>
+                                    <span
+                                        class="px-3 py-1 text-sm font-medium text-gray-600 bg-gray-100 rounded-full">2024
+                                        - 2025</span>
+                                </div>
+                                <p class="text-gray-600 text-sm leading-relaxed flex-grow">Application Web en PHP en
+                                    architecture MVC de gestion et traitement de fiche de frais</p>
+                                <div class="mt-6">
+                                    <button onclick="openModal(this)"
+                                        class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
+                                        data-title="GSB"
+                                        data-description="Application Web en PHP en architecture MVC de gestion et traitement de fiche de frais."
+                                        data-skills="php,css,bootstrap,sql"
+                                        data-image="./assets/images/projects/gsb_screens/gsb_screen1.png"
+                                        data-type="project" data-gallery="true"
+                                        data-gallery-content="./assets/images/projects/gsb_screens/gsb_screen1.png">
+                                        <span>Voir plus</span>
+                                        <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- The Return Card -->
+                        <div class="card group relative flex flex-col bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm border border-gray-100 w-96 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:-translate-y-1 animate-zoom-in"
+                            data-name="games">
+                            <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer"
+                                onclick="openModal(this.closest('.card').querySelector('button'))">
+                                <img class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover"
+                                    src="./assets/images/projects/return_screens/return_screen1.png"
+                                    alt="The Return Game Image" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h6 class="text-xl font-bold text-gray-800">The Return</h6>
+                                    <span
+                                        class="px-3 py-1 text-sm font-medium text-gray-600 bg-gray-100 rounded-full">2022</span>
+                                </div>
+                                <p class="text-gray-600 text-sm leading-relaxed flex-grow">Jeu d'aventure textuel en C#
+                                    à travers le moteur de jeu Unity</p>
+                                <div class="mt-6">
+                                    <button onclick="openModal(this)"
+                                        class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
+                                        data-title="The Return"
+                                        data-description="Jeu d'aventure textuel en C# à travers le moteur de jeu Unity."
+                                        data-skills="cs,unity"
+                                        data-image="./assets/images/projects/return_screens/return_screen1.png"
+                                        data-gallery="true"
+                                        data-gallery-content="./assets/images/projects/return_screens/return_screen1.png"
+                                        data-type="project" data-gh-link="https://github.com/Ralh19/TheReturn">
+                                        <span>Voir plus</span>
+                                        <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Carte Snake Game -->
+                        <div class="card group relative flex flex-col bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm border border-gray-100 w-96 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:-translate-y-1 animate-zoom-in"
+                            data-name="games">
+                            <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer"
+                                onclick="openModal(this.closest('.card').querySelector('button'))">
+                                <img class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover"
+                                    src="./assets/images/projects/snake_screens/snake_screen1.jpeg"
+                                    alt="Snake Game Image" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                </div>
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h6 class="text-xl font-bold text-gray-800">Snake Game</h6>
+                                    <span
+                                        class="px-3 py-1 text-sm font-medium text-gray-600 bg-gray-100 rounded-full">2022</span>
+                                </div>
+                                <p class="text-gray-600 text-sm leading-relaxed flex-grow">Jeu Snake pour Android en C#
+                                    à travers le moteur de jeu Unity</p>
+                                <div class="mt-6">
+                                    <button onclick="openModal(this)"
+                                        class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
+                                        data-title="Snake Game"
+                                        data-description="Jeu Snake pour Android en C# à travers le moteur de jeu Unity."
+                                        data-skills="cs,unity"
+                                        data-image="./assets/images/projects/snake_screens/snake_screen1.jpeg"
+                                        data-type="project" data-gh-link="https://github.com/Ralh19/SnakeGame"
+                                        data-gallery="true"
+                                        data-gallery-content="./assets/images/projects/snake_screens/snake_screen1.jpeg,./assets/images/projects/snake_screens/snake_screen2.png,./assets/images/projects/snake_screens/snake_screen3.png">
+                                        <span>Voir plus</span>
+                                        <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FIN CARTES FILTRABLES -->
+                </div>
+            </section>
+            <!-- == FIN PROJECTS == -->
+
+            <!-- == CONTACT == -->
+            <section id="contact" class="bg-dark-purple-300 min-h-screen max-w-full p-16 max-lg:px-0">
+                <div class="bg-zinc-50/5 rounded-3xl lg:px-16 py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+                    <h3 class="mb-4 text-3xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
+                        ENVOYEZ-MOI UN MESSAGE
+                    </h3>
+                    <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
+                        Des questions ? Un retour à faire sur un sujet quelconque ? <br> Libre à vous de le faire à
+                        travers le formulaire ci-dessous.
+                    </p>
+                    <form id="contact-form" class="space-y-8 relative" novalidate>
+                        <div class="flex justify-evenly gap-4">
+                            <div id="message-container" class="absolute bottom-full"></div>
+                            <div class="relative w-full">
+                                <label for="name"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    Votre nom<span class="text-pink-red-light">*</span>
+                                </label>
+                                <input type="last_name" id="last_name" name="last_name"
+                                    class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                                    placeholder="Votre nom" maxlength="50">
+                            </div>
+                            <div class="relative w-full">
+                                <label for="name"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    Votre prénom<span class="text-pink-red-light">*</span>
+                                </label>
+                                <input type="first_name" id="first_name" name="first_name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500
+                                    block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500
+                                    dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Votre prénom"
+                                    maxlength="50">
+                            </div>
+                        </div>
+
+                        <div class="relative">
+                            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                Votre email<span class="text-pink-red-light">*</span>
+                            </label>
+                            <input type="email" id="email" name="email"
+                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                                placeholder="nom@votremail.com (pour vous recontacter)" maxlength="254">
+                        </div>
+                        <div class="relative">
+                            <label for="subject"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                Objet<span class="text-pink-red-light">*</span>
+                            </label>
+                            <input type="text" id="subject" name="subject"
+                                class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                                placeholder="De quoi voulez-vous parler ?" maxlength="100">
+                        </div>
+                        <div class="relative sm:col-span-2">
+                            <label for="message"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">
+                                Votre message<span class="text-pink-red-light">*</span>
+                            </label>
+                            <textarea id="message" name="message" rows="6"
+                                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                placeholder="Écrivez ici votre message :" maxlength="1000"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="py-3 px-5 text-sm font-medium text-center text-white bg-pink-red rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 transform transition-transform duration-200 hover:scale-110">
+                            Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </section>
+            <!-- == FIN CONTACT == -->
+
+
+            <!-- == FOOTER == -->
+            <section id="footer" class="bg-dark-purple-300 py-12 px-8 lg:px-16">
+                <div class="container mx-auto text-center text-white">
+                    <!-- Footer Heading -->
+                    <h3 class="text-3xl font-extrabold mb-6">
+                        Restons en Contact !
+                    </h3>
+
+                    <!-- Social Links Section -->
+                    <div class="flex justify-center gap-8 mb-6">
+                        <a href="#" target="_blank"
+                            class="transform transition-transform duration-300 hover:scale-125 hover:bg-pink-red p-3 rounded-full bg-gray-800 text-white shadow-md">
+                            <i class="bi bi-linkedin text-3xl"></i>
+                        </a>
+                        <a href="https://github.com/Ralh19" target="_blank"
+                            class="transform transition-transform duration-300 hover:scale-125 hover:bg-pink-red p-3 rounded-full bg-gray-800 text-white shadow-md">
+                            <i class="bi bi-github text-3xl"></i>
+                        </a>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ruben.almeidaalhada@gmail.com&su=Sujet&body=Message"
+                            target="_blank"
+                            class="transform transition-transform duration-300 hover:scale-125 hover:bg-pink-red p-3 rounded-full bg-gray-800 text-white shadow-md">
+                            <i class="bi bi-envelope-at-fill text-3xl"></i>
+                        </a>
+                        <a href="tel:+330625093665" target="_blank"
+                            class="transform transition-transform duration-300 hover:scale-125 hover:bg-pink-red p-3 rounded-full bg-gray-800 text-white shadow-md">
+                            <i class="bi bi-telephone text-3xl"></i>
+                        </a>
+                    </div>
+
+                    <!-- Footer Text -->
+                    <p class="text-sm font-light mb-4 text-gray-400">
+                        Copyright 2025 © ALMEIDA ALHADA Ruben
+                    </p>
+
+                </div>
+            </section>
+            <!-- == FIN FOOTER == -->
+
+
+            <!-- Go Back Button -->
+            <a href="#"
+                class="fixed bottom-8 right-8 p-4 bg-dark-purple-200 text-white rounded-full shadow-lg hover:bg-dark-purple-100 transition-all duration-300 transform hover:scale-110">
+                <i class="bi bi-arrow-up text-2xl"></i>
+            </a>
+
+        </main>
+        <!-- ====== FIN MAIN ====== -->
+
+        <!-- Modal -->
+        <div id="certification-modal" class="fixed inset-0 bg-black/50 items-center justify-center hidden z-50">
+            <div class="bg-white rounded-lg w-[90%] h-[90%] max-w-7xl mx-auto my-8 p-8 relative flex flex-col">
+                <!-- Close button -->
+                <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                    <i class="bi bi-x text-3xl"></i>
+                </button>
+
+                <!-- Navigation buttons -->
+                <div class="absolute top-1/2 transform -translate-y-1/2 flex justify-between w-[110%] -left-[5%]">
+                    <button onclick="switchImage('prev')"
+                        class="bg-dark-purple-200/50 hover:bg-dark-purple-200/75 text-white rounded-full p-3 transition-all duration-300 transform hover:scale-110 hover:bg-dark-purple-200">
+                        <i class="bi bi-chevron-left text-3xl"></i>
+                    </button>
+
+                    <button onclick="switchImage('next')"
+                        class="bg-dark-purple-200/50 hover:bg-dark-purple-200/75 text-white rounded-full p-3 transition-all duration-300 transform hover:scale-110 hover:bg-dark-purple-200">
+                        <i class="bi bi-chevron-right text-3xl"></i>
+                    </button>
+                </div>
+
+                <!-- Main content container -->
+                <div class="flex flex-row flex-1 overflow-hidden">
+                    <!-- Left side - Image with overflow control -->
+                    <div class="w-1/2 pr-8">
+                        <div class="relative h-full group flex justify-center items-center">
+                            <!-- Ajout de flex et centrer l'image -->
+                            <!-- Image inside the modal -->
+                            <img id="modal-image" src="#" alt="Modal content"
+                                class="max-w-full max-h-full object-contain rounded-lg">
+
+                            <!-- Overlay and Gallery button (visible when hovering over the image) -->
+                            <div id="gallery-overlay"
+                                class="absolute inset-0 bg-black bg-opacity-50 opacity-0 flex justify-center items-center transition-opacity duration-300 group-hover:opacity-100">
+                                <button id="gallery-button" onclick="openImageGallery(this)"
+                                    class="bg-dark-purple-200/75 hover:bg-dark-purple-200 text-white rounded-3xl p-4 transition-all duration-300 transform hover:scale-105">
+                                    <i class="bi bi-arrows-fullscreen text-xl"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Counter for the image -->
+                        <p id="image-counter" class="text-center text-lg text-gray-600 mt-4"></p>
+                    </div>
+
+                    <!-- Right side - Content -->
+                    <div class="w-1/2 flex flex-col overflow-auto">
+                        <h2 id="modal-title" class="text-center text-3xl font-bold text-pink-red"></h2>
+                        <div class="flex-grow content-center">
+                            <p id="modal-description" class="text-gray-600 mb-8"></p>
+                        </div>
+                        <!-- Modal gh-link -->
+                        <div class="flex justify-center items-center gap-4 mb-8">
+                            <a href="" id="gh-button" target="_blank"
+                                class="hidden py-2 px-3 transform transition-transform duration-300 hover:scale-125 hover:bg-pink-red rounded-full bg-gray-800 text-white shadow-md">
+                                <i class="bi bi-link-45deg text-xl"></i>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Skills section -->
+                <div class="w-full mt-8 border-t pt-6">
+                    <div id="modal-skills" class="flex flex-wrap gap-4 justify-center">
+                        <!-- Skills icons will be inserted here -->
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Image Gallery Modal -->
+        <div id="image-gallery-modal" class="fixed inset-0 bg-black/90 items-center justify-center hidden z-[60]">
+            <div class="w-full h-full p-8 relative flex flex-col">
+                <!-- Close button -->
+                <button onclick="closeImageGallery()"
+                    class="absolute top-4 right-4 text-white hover:text-gray-300 z-50">
+                    <i class="bi bi-x text-3xl"></i>
+                </button>
+
+                <!-- Carousel wrapper -->
+                <div class="relative h-full flex items-center justify-center">
+                    <div id="gallery-carousel" class="relative w-full h-full max-h-[80vh]">
+                        <!-- Images will be inserted here dynamically -->
+                    </div>
+
+                    <!-- Gallery navigation -->
+                    <button onclick="navigateGallery('prev')"
+                        class="absolute left-4 z-30 flex items-center justify-center h-10 w-10 bg-dark-purple-200/50 hover:bg-dark-purple-200/75 text-white rounded-full transition-all duration-300 transform hover:scale-110">
+                        <i class="bi bi-chevron-left text-3xl"></i>
+                    </button>
+                    <button onclick="navigateGallery('next')"
+                        class="absolute right-4 z-30 flex items-center justify-center h-10 w-10 bg-dark-purple-200/50 hover:bg-dark-purple-200/75 text-white rounded-full transition-all duration-300 transform hover:scale-110">
+                        <i class="bi bi-chevron-right text-3xl"></i>
+                    </button>
+                </div>
+
+                <!-- Gallery counter -->
+                <div id="gallery-counter" class="text-center text-lg text-white mt-4">
+                    <!-- Initial counter text -->
+                </div>
+            </div>
+        </div>
+        <script src="./js/formEmail.js"></script>
+        <script src="./js/filter.js"></script>
+        <script src="./js/sidebar.js"></script>
+        <script src="./js/skillsBars.js"></script>
+    </body>
+
+</html>
