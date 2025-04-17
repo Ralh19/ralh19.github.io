@@ -563,21 +563,176 @@
                   </div>
                 </div>
                 <div class="flex gap-4 justify-center p-4">
-                  <img class="max-w-1/2 h-1/4" src="./assets/images/epreuve-e5/bonifay/bonifay_app1.png"
-                    alt="Diagramme réseau intranet">
+                  <div class="bg-white p-6 rounded-lg shadow-md space-y-6">
+                    <h2 class="text-2xl font-semibold text-slate-800">🚀 Projet : Application Mobile Web pour
+                      Chauffeurs/Livreurs - Bonifay</h2>
 
+                    <p class="text-slate-700">
+                      <strong>Contexte :</strong><br>
+                      Durant mon stage chez <strong>Bonifay</strong>, une entreprise spécialisée dans le secteur du BTP,
+                      j'ai contribué au développement
+                      d'une <strong>application web mobile destinée aux chauffeurs-livreurs</strong>. Cette application
+                      avait pour vocation de
+                      <strong>simplifier la gestion quotidienne des tournées</strong> tout en fluidifiant la
+                      <strong>communication entre les équipes terrain et l'entreprise</strong>.
+
+                      <br><br>
+                      Grâce à une interface intuitive accessible depuis leur smartphone, les chauffeurs pouvaient
+                      <strong>visualiser leur prochaine livraison</strong>
+                      avec l'ensemble des détails utiles (adresse, client, créneau horaire, etc.). Une fois la livraison
+                      effectuée,
+                      un simple clic permettait de la valider, <strong>déclenchant automatiquement l'affichage de la
+                        suivante</strong>.
+                      Ce fonctionnement assurait une continuité fluide et sans erreur dans l'exécution des tournées, en
+                      supprimant tout besoin de ressaisie ou de manipulation technique.
+                    </p>
+
+                    <h3 class="text-xl font-medium text-slate-800">🧠 Objectifs du projet</h3>
+                    <p class="text-slate-700">
+                      L'objectif principal de l'application était de permettre aux chauffeurs de :
+                    </p>
+                    <ul class="list-inside list-disc text-slate-700">
+                      <li>✅ Accepter ou refuser une livraison directement via l'interface</li>
+                      <li>✅ Signaler la fin d'une livraison et afficher automatiquement la suivante</li>
+                      <li>🔄 Recevoir des mises à jour en temps réel (modification d'horaires, annulations, incidents,
+                        etc.)</li>
+                    </ul>
+
+                    <p class="text-slate-700 mt-2">
+                      Côté technique, plusieurs objectifs transverses étaient également visés :
+                    </p>
+                    <ul class="list-inside list-disc text-slate-700">
+                      <li>🚀 Développer un système de <strong>push intelligent</strong> permettant l'enchaînement
+                        automatique des livraisons</li>
+                      <li>🔐 Mettre en place une <strong>API REST sécurisée</strong> connectée à une base de données
+                        MySQL</li>
+                      <li>🧾 Implémenter une <strong>authentification basée sur les cookies de session</strong></li>
+                    </ul>
+
+                    <p class="text-slate-700">
+                      💡 <em>Schéma fonctionnel :</em>
+                    <div class="flex justify-center">
+                      <img src="./assets/images/epreuve-e5/bonifay/bonifay_fonctional.png" alt="Schéma API REST"
+                        class="h-[20%] mt-4 object-scale-down rounded-lg shadow-sm">
+                    </div>
+                    </p>
+
+                    <h3 class="text-xl font-medium text-slate-800">🛠️ Technologies utilisées</h3>
+                    <p class="text-slate-700">
+                      Le projet reposait sur une architecture répartie entre deux environnements de développement
+                      distincts :
+                    </p>
+                    <ul class="list-inside list-disc text-slate-700 ml-4">
+                      <li><strong>DEV1</strong> : Environnement Frontend en <strong>Symfony 3.4</strong></li>
+                      <li><strong>DEV2</strong> : Environnement Backend/API en <strong>Symfony 5.4</strong></li>
+                    </ul>
+
+                    <p class="text-slate-700">
+                      J'étais connecté simultanément aux deux serveurs via <strong>Visual Studio Code</strong> à l'aide
+                      d'une extension SSH.
+                      Cela me permettait de travailler directement sur les fichiers distants, avec une fluidité
+                      comparable à du développement local.
+                      Pour la gestion des terminaux et des logs serveur, j'utilisais également <strong>Tabby</strong>,
+                      un terminal performant et personnalisable.
+                    </p>
+
+                    <p class="text-slate-700">
+                      Le socle technique de l'application incluait :
+                    </p>
+                    <ul class="list-inside list-disc text-slate-700 ml-4">
+                      <li><strong>Langages et Frameworks :</strong> PHP 7.4.3, Symfony (3.4 et 5.4), JavaScript,
+                        Bootstrap
+                      </li>
+                      <li>
+                        <strong>Base de données :</strong> MySQL, manipulée via <strong>PHPMyAdmin</strong>
+                      </li>
+                      <li>
+                        <strong>Gestion des dépendances :</strong> Composer 2.6.6
+                      </li>
+                      <li>
+                        <strong>Journalisation :</strong> Un système de <strong>debug log déja développer par
+                          l'entreprise</strong> a également été
+                        utilisé afin de suivre les événements critiques, erreurs et actions utilisateur pour faciliter
+                        le debugging et l'audit.
+                      </li>
+                    </ul>
+
+                    <p class="text-slate-700">
+                      💡 <em>Extrait du service de journalisation</em>
+                    <div class="flex flex-wrap justify-center">
+                      <img src="./assets/images/epreuve-e5/bonifay/bonifay_logs1.png"
+                        alt="Organisation environnement DEV"
+                        class="w-[50%] mt-4 rounded-lg shadow-sm object-scale-down">
+                      <img src="./assets/images/epreuve-e5/bonifay/bonifay_logs2.png"
+                        alt="Organisation environnement DEV"
+                        class="w-[50%] mt-4 rounded-lg shadow-sm object-scale-down">
+                      <img src="./assets/images/epreuve-e5/bonifay/bonifay_logs3.png"
+                        alt="Organisation environnement DEV"
+                        class="w-[100%] mt-4 rounded-lg shadow-sm object-scale-down">
+                    </div>
+                    </p>
+
+                    <h3 class="text-xl font-medium text-slate-800">📅 Déroulement du stage et réalisations clés</h3>
+
+                    <p class="text-slate-700">
+                      Durant le stage, j'ai développé et intégré plusieurs fonctionnalités :
+                    </p>
+
+                    <p class="text-slate-700">
+                      🔸 <strong>Connexion et Accès aux données :</strong><br>
+                      J'ai mis en place une connexion sécurisée aux serveurs via SSH, et développé plusieurs fonctions
+                      PHP, notamment des fonctions de manipulation des données (création, lecture, mise à jour,
+                      suppression) en utilisant l'interface PDO de PHP.
+                    </p>
+
+                    <p class="text-slate-700">
+                      💡 <em>Extrait de code :</em>
+                    <div class="flex gap-4 justify-center">
+                      <img src="./assets/images/epreuve-e5/bonifay/bonifay_fonctions1.png"
+                        alt="Organisation environnement DEV"
+                        class="w-[50%] mt-4 rounded-lg shadow-sm object-scale-down">
+                      <img src="./assets/images/epreuve-e5/bonifay/bonifay_fonctions2.png"
+                        alt="Organisation environnement DEV"
+                        class="w-[55%] mt-4 rounded-lg shadow-sm object-scale-down">
+                    </div>
+                    </p>
+
+                    <p class="text-slate-700">
+                      🔸 <strong>Fonctionnalités majeures implémentées :</strong><br>
+                    <ul class="list-disc ml-6 text-slate-700">
+                      <li>Bouton <strong>“Accepter livraison”</strong> : enregistrement d'un timestamp dans la base</li>
+                      <li>Bouton <strong>“Livraison terminée”</strong> : mise à jour de la colonne
+                        <code>date_heure_push</code> et passage automatique à la suivante
+                      </li>
+                      <li>Système d'<strong>authentification sécurisée</strong> par token stocké en cookie</li>
+                    </ul>
+                    </p>
+
+                    <p class="text-slate-700">
+                      💡 <em>Interface utilisateur :</em>
+                    <div class="flex justify-center">
+                      <img src="./assets/images/epreuve-e5/bonifay/bonifay_app1.png" alt="Maquette application Bonifay"
+                        class="w-[60%] mt-4 rounded-lg shadow-sm object-scale-down">
+                      <img src="./assets/images/epreuve-e5/bonifay/bonifay_app2.png" alt="Maquette application Bonifay"
+                        class="w-[60%] mt-4 rounded-lg shadow-sm object-scale-down">
+                    </div>
+                    </p>
+
+                    <h3 class="text-xl font-medium text-slate-800">⚠️ Limitations et fin de projet</h3>
+                    <p class="text-slate-700">
+                      Malgré les avancées, certaines fonctionnalités n'ont pas pu être finalisées à temps :
+                    </p>
+                    <ul class="list-inside list-disc text-slate-700">
+                      <li>❌ Le système de <strong>push intelligent</strong> est resté partiellement implémenté</li>
+                      <li>❌ L'application ne supportait pas le temps réel (absence de jQuery ou AJAX)</li>
+                      <li>❌ Le module de <strong>notifications</strong> n'a pas été intégré</li>
+                      <li>❌ L'intégration d'une <strong>carte de suivi en temps réel</strong> type Waze/Google Maps n'a
+                        pas été réalisée</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-
             </div>
-          </div>
-          <div class="mt-12 flex justify-center">
-            <a href="#" class="w-1/2">
-              <button
-                class="w-full text-white text-2xl text-center font-semibold bg-pink-red-light border border-pink-red-light rounded-full px-6 py-8 inline-flex items-center justify-center transition-all duration-300 ease-in-out hover:scale-105 hover:bg-pink-red hover:text-white shadow-lg">
-                Projet de Stage : Premiere année
-              </button>
-            </a>
           </div>
         </div>
       </section>
@@ -601,19 +756,19 @@
               </h3>
               <p class="mt-4">
               <p>
-                Basée à Toulon, Etudes et Solutions est une société à responsabilité limitée (SARL) française
-                spécialisée
-                dans les services informatiques et les solutions technologiques innovantes. Fondée en 2005, l'entreprise
-                compte une équipe de 25 collaborateurs, composée d'experts en développement logiciel, en gestion de
-                réseaux et en cybersécurité.
+                Basée à Toulon, Études et Solutions est une société par actions simplifiée (SAS) française
+                spécialisée dans l'ingénierie et les études techniques. Fondée en août 2019, elle a été créée par
+                M. Max Menini et M. Joël Queyrel, chacun détenant 50 % du capital social.
+                À ce jour, l'entreprise ne compte aucun salarié déclaré.
               </p>
               <br>
               <p>
-                Elle accompagne les entreprises locales dans leur transformation numérique en proposant des solutions
-                sur
-                mesure adaptées à leurs besoins spécifiques. Grâce à son expertise et à son engagement envers la
-                satisfaction client, Etudes et Solutions s'est imposée comme un acteur clé dans le secteur technologique
-                de la région.
+                Études et Solutions se concentre sur la conception, la fabrication et la commercialisation
+                d'appareils électriques, électroniques et mécaniques. Elle intervient également dans le domaine
+                de la propriété intellectuelle, en assurant la protection et l'exploitation de brevets, ainsi que
+                dans la formation technique. Grâce à la complémentarité de ses fondateurs et à son approche
+                innovante, la société accompagne ses partenaires dans la mise en œuvre de solutions techniques
+                adaptées à leurs besoins.
               </p>
               </p>
             </div>
@@ -624,6 +779,13 @@
             <h3 class="text-2xl font-bold text-pink-red mb-4">
               Présentation des différents postes
             </h3>
+            <p class="text-md">
+              Malgré une équipe réduite composée uniquement des deux fondateurs, Études et Solutions fonctionne
+              efficacement grâce à leur polyvalence : chacun occupe plusieurs fonctions au sein de l'entreprise.
+              L'accueil régulier de stagiaires vient également renforcer cette dynamique, en apportant un soutien
+              concret aux projets en cours. Cela permet à la structure de rester agile tout en couvrant les besoins
+              essentiels de l'activité, comme les postes suivants :
+            </p>
 
             <!-- Accordion Item 1 -->
             <div class="border-b border-slate-200">
@@ -713,19 +875,16 @@
               </h3>
               <p class="mt-4">
               <p>
-                Basée à Toulon, Etudes et Solutions est une société à responsabilité limitée (SARL) française
-                spécialisée
-                dans les services informatiques et les solutions technologiques innovantes. Fondée en 2005, l'entreprise
-                compte une équipe de 25 collaborateurs, composée d'experts en développement logiciel, en gestion de
-                réseaux et en cybersécurité.
+                Lors de mon stage chez la TPE Etudes et Solutions, j'étais installé dans un open space composé de quatre
+                postes de travail, chacun équipé d'un ordinateur sous Windows 10 et d'un écran Full HD de 24 pouces.
+                Nous avions également accès à la baie de brassage, comprenant deux switchs de 16 ports, que nous
+                utilisions régulièrement pour effectuer différentes connexions, notamment pour les Raspberry Pi.
               </p>
               <br>
               <p>
-                Elle accompagne les entreprises locales dans leur transformation numérique en proposant des solutions
-                sur
-                mesure adaptées à leurs besoins spécifiques. Grâce à son expertise et à son engagement envers la
-                satisfaction client, Etudes et Solutions s'est imposée comme un acteur clé dans le secteur technologique
-                de la région.
+                Une salle de réunion était à notre disposition, où nous échangions des idées sur les solutions
+                potentielles du projet ou tout simplement pour partager nos pauses déjeuner. Un espace cuisine était
+                également disponible, permettant de préparer ou de réchauffer nos repas du midi.
               </p>
               </p>
             </div>
@@ -1177,7 +1336,7 @@
                       gestion réseau sur Raspberry Pi</h2>
 
                     <p class="text-slate-700">
-                      <strong>📌 Contexte :</strong>
+                      <strong>Contexte :</strong>
                       Projet mené en équipe de <strong>4 stagiaires</strong>, répartis en <strong>2 binômes</strong>.
                       Chaque binôme disposait de son propre <strong>poste de travail et Raspberry Pi</strong>, configuré
                       comme <strong>routeur grâce à OpenWrt</strong>.
@@ -1269,8 +1428,6 @@
 
                   </div>
                 </div>
-                <!-- Bouton vers projet Stage 2 -->
-
               </div>
             </div>
           </div>
