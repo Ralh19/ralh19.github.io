@@ -188,8 +188,8 @@
             <div class="w-2/5 h-full">
               <img src="./assets/images/epreuve-e5/skills_table.png" alt="Tableau de synthèse des compétences"
                 class="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer transform transition-transform duration-500 hover:scale-105"
-                onclick="openModal(this)" data-title="Image 1" data-description="Description for Image 1"
-                data-gallery="true" data-gallery-content="./assets/images/epreuve-e5/skills_table.png" data-open-gallery="true" />
+                onclick="openModal(this)" data-gallery="true"
+                data-gallery-content="./assets/images/epreuve-e5/skills_table.png" data-open-gallery="true" />
             </div>
 
             <div class="flex flex-col justify-center w-2/5 gap-10">
@@ -227,7 +227,9 @@
           <!-- Présentation de l'entreprise -->
           <div class="mt-12 flex flex-col lg:flex-row items-center gap-8">
             <img src="./assets/images/epreuve-e5/bonifay/bonifay_front.jpg" alt="Entreprise"
-              class="w-full lg:w-2/5 rounded-lg shadow-lg" />
+              class="w-full lg:w-2/5 rounded-lg shadow-lg cursor-pointer transform transition-transform duration-500 hover:scale-105"
+              onclick="openModal(this)" data-gallery="true"
+              data-gallery-content="./assets/images/epreuve-e5/bonifay/bonifay_front.jpg" data-open-gallery="true" />
             <div class="lg:w-3/5 text-gray-700 text-lg">
               <h3 class="text-2xl font-bold text-pink-red">
                 Présentation de l'entreprise
@@ -372,7 +374,10 @@
           <!-- Présentation de l'espace de travail -->
           <div class="mt-12 flex flex-col lg:flex-row items-center gap-8">
             <img src="./assets/images/epreuve-e5/bonifay/bonifay_workplace.jpg" alt="Entreprise"
-              class="w-full lg:w-2/5 rounded-lg shadow-lg" />
+              class="w-full lg:w-2/5 rounded-lg shadow-lg cursor-pointer transform transition-transform duration-500 hover:scale-105"
+              onclick="openModal(this)" data-gallery="true"
+              data-gallery-content="./assets/images/epreuve-e5/bonifay/bonifay_workplace.jpg"
+              data-open-gallery="true" />
             <div class="lg:w-3/5 text-gray-700 text-lg">
               <h3 class="text-2xl font-bold text-pink-red">
                 Présentation de mon espace de travail
@@ -444,10 +449,16 @@
                   </div>
                 </div>
                 <div class="flex gap-4 justify-center p-4">
-                  <img class="w-1/2" src="./assets/images/epreuve-e5/bonifay/bonifay_training1.png"
-                    alt="Diagramme réseau intranet">
-                  <img class="w-1/2" src="./assets/images/epreuve-e5/bonifay/bonifay_training2.png"
-                    alt="Diagramme réseau intranet">
+                  <img class="w-1/2 cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                    src="./assets/images/epreuve-e5/bonifay/bonifay_training1.png" alt="Diagramme réseau intranet"
+                    onclick="openModal(this)" data-gallery="true"
+                    data-gallery-content="./assets/images/epreuve-e5/bonifay/bonifay_training1.png,./assets/images/epreuve-e5/bonifay/bonifay_training2.png"
+                    data-open-gallery="true">
+                  <img class="w-1/2 cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                    src="./assets/images/epreuve-e5/bonifay/bonifay_training2.png" alt="Diagramme réseau intranet"
+                    onclick="openModal(this)" data-gallery="true"
+                    data-gallery-content="./assets/images/epreuve-e5/bonifay/bonifay_training2.png,./assets/images/epreuve-e5/bonifay/bonifay_training1.png"
+                    data-open-gallery="true">
                 </div>
               </div>
             </div>
@@ -497,8 +508,11 @@
                   </div>
                 </div>
                 <div class="flex justify-center p-4">
-                  <img class="w-1/2" src="./assets/images/epreuve-e5/bonifay/bonifay_network.png"
-                    alt="Diagramme réseau intranet">
+                  <img class="w-1/2 cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                    src="./assets/images/epreuve-e5/bonifay/bonifay_network.png" alt="Diagramme réseau intranet"
+                    onclick="openModal(this)" data-gallery="true"
+                    data-gallery-content="./assets/images/epreuve-e5/bonifay/bonifay_network.png"
+                    data-open-gallery="true">
                 </div>
 
 
@@ -615,7 +629,10 @@
                       💡 <em>Schéma fonctionnel :</em>
                     <div class="flex justify-center">
                       <img src="./assets/images/epreuve-e5/bonifay/bonifay_fonctional.png" alt="Schéma API REST"
-                        class="h-[20%] mt-4 object-scale-down rounded-lg shadow-sm">
+                        class="h-[20%]mt-4 object-scale-down rounded-lg shadow-sm cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                        onclick="openModal(this)" data-gallery="true"
+                        data-gallery-content="./assets/images/epreuve-e5/bonifay/bonifay_fonctional.png"
+                        data-open-gallery="true">
                     </div>
                     </p>
 
@@ -664,13 +681,22 @@
                     <div class="flex flex-wrap justify-center">
                       <img src="./assets/images/epreuve-e5/bonifay/bonifay_logs1.png"
                         alt="Organisation environnement DEV"
-                        class="w-[50%] mt-4 rounded-lg shadow-sm object-scale-down">
+                        class="w-[50%] mt-4 rounded-lg shadow-sm object-scale-down cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                        onclick="openModal(this)" data-gallery="true"
+                        data-gallery-content="./assets/images/epreuve-e5/bonifay/bonifay_logs1.png,./assets/images/epreuve-e5/bonifay/bonifay_logs2.png,./assets/images/epreuve-e5/bonifay/bonifay_logs3.png"
+                        data-open-gallery="true">
                       <img src="./assets/images/epreuve-e5/bonifay/bonifay_logs2.png"
                         alt="Organisation environnement DEV"
-                        class="w-[50%] mt-4 rounded-lg shadow-sm object-scale-down">
+                        class="w-[50%] mt-4 rounded-lg shadow-sm object-scale-down cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                        onclick="openModal(this)" data-gallery="true"
+                        data-gallery-content="./assets/images/epreuve-e5/bonifay/bonifay_logs2.png,./assets/images/epreuve-e5/bonifay/bonifay_logs3.png,./assets/images/epreuve-e5/bonifay/bonifay_logs1.png"
+                        data-open-gallery="true">
                       <img src="./assets/images/epreuve-e5/bonifay/bonifay_logs3.png"
                         alt="Organisation environnement DEV"
-                        class="w-[100%] mt-4 rounded-lg shadow-sm object-scale-down">
+                        class="w-[100%] mt-4 rounded-lg shadow-sm object-scale-down cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                        onclick="openModal(this)" data-gallery="true"
+                        data-gallery-content="./assets/images/epreuve-e5/bonifay/bonifay_logs3.png,./assets/images/epreuve-e5/bonifay/bonifay_logs1.png,./assets/images/epreuve-e5/bonifay/bonifay_logs2.png"
+                        data-open-gallery="true">
                     </div>
                     </p>
 
@@ -692,10 +718,16 @@
                     <div class="flex gap-4 justify-center">
                       <img src="./assets/images/epreuve-e5/bonifay/bonifay_fonctions1.png"
                         alt="Organisation environnement DEV"
-                        class="w-[50%] mt-4 rounded-lg shadow-sm object-scale-down">
+                        class="w-[50%] mt-4 rounded-lg shadow-sm object-scale-down cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                        onclick="openModal(this)" data-gallery="true"
+                        data-gallery-content="./assets/images/epreuve-e5/bonifay/bonifay_fonctions1.png,./assets/images/epreuve-e5/bonifay/bonifay_fonctions2.png"
+                        data-open-gallery="true">
                       <img src="./assets/images/epreuve-e5/bonifay/bonifay_fonctions2.png"
                         alt="Organisation environnement DEV"
-                        class="w-[55%] mt-4 rounded-lg shadow-sm object-scale-down">
+                        class="w-[55%] mt-4 rounded-lg shadow-sm object-scale-down cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                        onclick="openModal(this)" data-gallery="true"
+                        data-gallery-content="./assets/images/epreuve-e5/bonifay/bonifay_fonctions2.png,./assets/images/epreuve-e5/bonifay/bonifay_fonctions1.png"
+                        data-open-gallery="true">
                     </div>
                     </p>
 
@@ -714,9 +746,15 @@
                       💡 <em>Interface utilisateur :</em>
                     <div class="flex justify-center">
                       <img src="./assets/images/epreuve-e5/bonifay/bonifay_app1.png" alt="Maquette application Bonifay"
-                        class="w-[60%] mt-4 rounded-lg shadow-sm object-scale-down">
+                        class="w-[60%] mt-4 rounded-lg shadow-sm object-scale-down cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                        onclick="openModal(this)" data-gallery="true"
+                        data-gallery-content="./assets/images/epreuve-e5/bonifay/bonifay_app1.png,./assets/images/epreuve-e5/bonifay/bonifay_app2.png"
+                        data-open-gallery="true">
                       <img src="./assets/images/epreuve-e5/bonifay/bonifay_app2.png" alt="Maquette application Bonifay"
-                        class="w-[60%] mt-4 rounded-lg shadow-sm object-scale-down">
+                        class="w-[60%] mt-4 rounded-lg shadow-sm object-scale-down cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                        onclick="openModal(this)" data-gallery="true"
+                        data-gallery-content="./assets/images/epreuve-e5/bonifay/bonifay_app2.png,./assets/images/epreuve-e5/bonifay/bonifay_app1.png"
+                        data-open-gallery="true">
                     </div>
                     </p>
 
@@ -751,7 +789,10 @@
           <!-- Présentation de l'entreprise -->
           <div class="mt-12 flex flex-col lg:flex-row items-center gap-8">
             <img src="./assets/images/epreuve-e5/etudes_solutions/e&s_front.png" alt="Entreprise"
-              class="w-full lg:w-2/5 rounded-lg shadow-lg" />
+              class="w-full lg:w-2/5 rounded-lg shadow-lg cursor-pointer transform transition-transform duration-500 hover:scale-105"
+              onclick="openModal(this)" data-gallery="true"
+              data-gallery-content="./assets/images/epreuve-e5/etudes_solutions/e&s_front.png"
+              data-open-gallery="true" />
             <div class="lg:w-3/5 text-gray-700 text-lg">
               <h3 class="text-2xl font-bold text-pink-red">
                 Présentation de l'entreprise
@@ -870,7 +911,10 @@
           <!-- Présentation de l'espace de travail -->
           <div class="mt-12 flex flex-col lg:flex-row items-center gap-8">
             <img src="./assets/images/epreuve-e5/etudes_solutions/e&s_workplace.jpg" alt="Entreprise"
-              class="w-full lg:w-2/5 rounded-lg shadow-lg" />
+              class="w-full lg:w-2/5 rounded-lg shadow-lg cursor-pointer transform transition-transform duration-500 hover:scale-105"
+              onclick="openModal(this)" data-gallery="true"
+              data-gallery-content="./assets/images/epreuve-e5/etudes_solutions/e&s_workplace.jpg"
+              data-open-gallery="true" />
             <div class="lg:w-3/5 text-gray-700 text-lg">
               <h3 class="text-2xl font-bold text-pink-red">
                 Présentation de mon espace de travail
@@ -961,10 +1005,18 @@
                   </div>
                 </div>
                 <div class="flex gap-4 justify-center p-4">
-                  <img class="max-w-[40%] h-1/4" src="./assets/images/epreuve-e5/etudes_solutions/e&s_remote_table.png"
-                    alt="Diagramme réseau intranet">
-                  <img class="max-w-[40%] object-scale-down"
-                    src="./assets/images/epreuve-e5/etudes_solutions/e&s_network1.png" alt="Diagramme réseau intranet">
+                  <img
+                    class="max-w-[40%] h-1/4 cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                    src="./assets/images/epreuve-e5/etudes_solutions/e&s_remote_table.png"
+                    alt="Diagramme réseau intranet" onclick="openModal(this)" data-gallery="true"
+                    data-gallery-content="./assets/images/epreuve-e5/etudes_solutions/e&s_remote_table.png,./assets/images/epreuve-e5/etudes_solutions/e&s_network1.png"
+                    data-open-gallery="true">
+                  <img
+                    class="max-w-[40%] object-scale-down cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                    src="./assets/images/epreuve-e5/etudes_solutions/e&s_network1.png" alt="Diagramme réseau intranet"
+                    onclick="openModal(this)" data-gallery="true"
+                    data-gallery-content="./assets/images/epreuve-e5/etudes_solutions/e&s_network1.png,./assets/images/epreuve-e5/etudes_solutions/e&s_remote_table.png"
+                    data-open-gallery="true">
                 </div>
               </div>
             </div>
@@ -1029,10 +1081,18 @@
                   </div>
                 </div>
                 <div class="flex flex-wrap gap-4 justify-center p-4">
-                  <img class="max-w-[50%] h-1/4" src="./assets/images/epreuve-e5/etudes_solutions/e&s_rasp_install1.png"
-                    alt="Diagramme réseau intranet">
-                  <img class="max-w-[50%] h-1/4" src="./assets/images/epreuve-e5/etudes_solutions/e&s_rasp_install2.png"
-                    alt="Diagramme réseau intranet">
+                  <img
+                    class="max-w-[45%] h-1/4 cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                    src="./assets/images/epreuve-e5/etudes_solutions/e&s_rasp_install1.png"
+                    alt="Diagramme réseau intranet" onclick="openModal(this)" data-gallery="true"
+                    data-gallery-content="./assets/images/epreuve-e5/etudes_solutions/e&s_rasp_install1.png,./assets/images/epreuve-e5/etudes_solutions/e&s_rasp_install2.png"
+                    data-open-gallery="true">
+                  <img
+                    class="max-w-[45%] h-1/4 cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                    src="./assets/images/epreuve-e5/etudes_solutions/e&s_rasp_install2.png"
+                    alt="Diagramme réseau intranet" onclick="openModal(this)" data-gallery="true"
+                    data-gallery-content="./assets/images/epreuve-e5/etudes_solutions/e&s_rasp_install2.png,./assets/images/epreuve-e5/etudes_solutions/e&s_rasp_install1.png"
+                    data-open-gallery="true">
 
                 </div>
               </div>
@@ -1140,10 +1200,18 @@
                     Raspberry fonctionnel, a malheureusement été effectué après mon départ.
                   </p>
                   <div class="flex flex-wrap gap-4 justify-center p-4">
-                    <img class="max-w-[50%] h-1/4" src="./assets/images/epreuve-e5/etudes_solutions/e&s_git1.png"
-                      alt="Diagramme réseau intranet">
-                    <img class="max-w-[50%] h-1/4" src="./assets/images/epreuve-e5/etudes_solutions/e&s_git2.png"
-                      alt="Diagramme réseau intranet">
+                    <img
+                      class="max-w-[45%] h-1/4 cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                      src="./assets/images/epreuve-e5/etudes_solutions/e&s_git1.png" alt="Diagramme réseau intranet"
+                      onclick="openModal(this)" data-gallery="true"
+                      data-gallery-content="./assets/images/epreuve-e5/etudes_solutions/e&s_git1.png,./assets/images/epreuve-e5/etudes_solutions/e&s_git2.png"
+                      data-open-gallery="true">
+                    <img
+                      class="max-w-[45%] h-1/4 cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                      src="./assets/images/epreuve-e5/etudes_solutions/e&s_git2.png" alt="Diagramme réseau intranet"
+                      onclick="openModal(this)" data-gallery="true"
+                      data-gallery-content="./assets/images/epreuve-e5/etudes_solutions/e&s_git2.png,./assets/images/epreuve-e5/etudes_solutions/e&s_git1.png"
+                      data-open-gallery="true">
                   </div>
                 </div>
               </div>
@@ -1243,10 +1311,18 @@
                     un gain de temps pour les utilisateurs.
                   </p>
                   <div class="flex flex-wrap gap-4 justify-center p-4">
-                    <img class="max-w-[50%] h-1/4" src="./assets/images/epreuve-e5/etudes_solutions/e&s_script1.png"
-                      alt="Diagramme réseau intranet">
-                    <img class="max-w-[50%] h-1/4" src="./assets/images/epreuve-e5/etudes_solutions/e&s_script2.png"
-                      alt="Diagramme réseau intranet">
+                    <img
+                      class="max-w-[45%] h-1/4 cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                      src="./assets/images/epreuve-e5/etudes_solutions/e&s_script1.png" alt="Diagramme réseau intranet"
+                      onclick="openModal(this)" data-gallery="true"
+                      data-gallery-content="./assets/images/epreuve-e5/etudes_solutions/e&s_script1.png,./assets/images/epreuve-e5/etudes_solutions/e&s_script2.png"
+                      data-open-gallery="true">
+                    <img
+                      class="max-w-[45%] h-1/4 cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                      src="./assets/images/epreuve-e5/etudes_solutions/e&s_script2.png" alt="Diagramme réseau intranet"
+                      onclick="openModal(this)" data-gallery="true"
+                      data-gallery-content="./assets/images/epreuve-e5/etudes_solutions/e&s_script2.png,./assets/images/epreuve-e5/etudes_solutions/e&s_script1.png"
+                      data-open-gallery="true">
                   </div>
                 </div>
               </div>
@@ -1349,7 +1425,11 @@
                       💡 <em>Schèma rèseau :</em>
                     <div class="flex justify-center">
                       <img src="./assets/images/epreuve-e5/etudes_solutions/e&s_network2.png"
-                        alt="Exemple de tableau du scanner réseau" class="w-[60%] mt-4 rounded-lg shadow-sm">
+                        alt="Exemple de tableau du scanner réseau"
+                        class="w-[60%] mt-4 rounded-lg shadow-sm cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                        onclick="openModal(this)" data-gallery="true"
+                        data-gallery-content="./assets/images/epreuve-e5/etudes_solutions/e&s_network2.png"
+                        data-open-gallery="true">
                     </div>
                     </p>
 
@@ -1370,9 +1450,17 @@
                       💡 <em>L'interface Créer :</em>
                     <div class="flex justify-center">
                       <img src="./assets/images/epreuve-e5/etudes_solutions/e&s_interface1.png"
-                        alt="Exemple de tableau du scanner réseau" class="w-[60%] mt-4 rounded-lg shadow-sm">
+                        alt="Exemple de tableau du scanner réseau"
+                        class="w-[60%] mt-4 rounded-lg shadow-sm cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                        onclick="openModal(this)" data-gallery="true"
+                        data-gallery-content="./assets/images/epreuve-e5/etudes_solutions/e&s_interface1.png,./assets/images/epreuve-e5/etudes_solutions/e&s_interface2.png"
+                        data-open-gallery="true">
                       <img src="./assets/images/epreuve-e5/etudes_solutions/e&s_interface2.png"
-                        alt="Exemple de tableau du scanner réseau" class="w-[60%] mt-4 rounded-lg shadow-sm">
+                        alt="Exemple de tableau du scanner réseau"
+                        class="w-[60%] mt-4 rounded-lg shadow-sm cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                        onclick="openModal(this)" data-gallery="true"
+                        data-gallery-content="./assets/images/epreuve-e5/etudes_solutions/e&s_interface2.png,./assets/images/epreuve-e5/etudes_solutions/e&s_interface1.png"
+                        data-open-gallery="true">
                     </div>
                     </p>
 
@@ -1390,7 +1478,11 @@
                       💡 <em>Model SQLite</em>
                     <div class="flex justify-center">
                       <img src="./assets/images/epreuve-e5/etudes_solutions/e&s_sqlite1.png"
-                        alt="Exemple de tableau du scanner réseau" class="w-[60%] mt-4 rounded-lg shadow-sm">
+                        alt="Exemple de tableau du scanner réseau"
+                        class="w-[60%] mt-4 rounded-lg shadow-sm cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                        onclick="openModal(this)" data-gallery="true"
+                        data-gallery-content="./assets/images/epreuve-e5/etudes_solutions/e&s_sqlite1.png"
+                        data-open-gallery="true">
                     </div>
                     </p>
 
@@ -1407,14 +1499,23 @@
                     <div class="flex flex-wrap justify-center gap-4">
                       <img src="./assets/images/epreuve-e5/etudes_solutions/e&s_as_old_interface.png"
                         alt="Exemple de tableau du scanner réseau"
-                        class="w-[40%] mt-4 rounded-lg shadow-sm object-scale-down ">
+                        class="w-[40%] mt-4 rounded-lg shadow-sm object-scale-down cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                        onclick="openModal(this)" data-gallery="true"
+                        data-gallery-content="./assets/images/epreuve-e5/etudes_solutions/e&s_as_old_interface.png,./assets/images/epreuve-e5/etudes_solutions/e&s_network1_zoomed.png,./assets/images/epreuve-e5/etudes_solutions/e&s_as_structure1.png"
+                        data-open-gallery="true">
 
                       <img src="./assets/images/epreuve-e5/etudes_solutions/e&s_network1_zoomed.png"
                         alt="Exemple de tableau du scanner réseau"
-                        class="w-[40%] mt-4 rounded-lg shadow-sm object-scale-down">
+                        class="w-[40%] mt-4 rounded-lg shadow-sm object-scale-down cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                        onclick="openModal(this)" data-gallery="true"
+                        data-gallery-content="./assets/images/epreuve-e5/etudes_solutions/e&s_network1_zoomed.png,./assets/images/epreuve-e5/etudes_solutions/e&s_as_structure1.png"
+                        data-open-gallery="true">
                       <img src="./assets/images/epreuve-e5/etudes_solutions/e&s_as_structure1.png"
                         alt="Exemple de tableau du scanner réseau"
-                        class=" w-[10%] mt-4 rounded-lg shadow-sm object-scale-down">
+                        class=" w-[10%] mt-4 rounded-lg shadow-sm object-scale-down cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                        onclick="openModal(this)" data-gallery="true"
+                        data-gallery-content="./assets/images/epreuve-e5/etudes_solutions/e&s_as_structure1.png,./assets/images/epreuve-e5/etudes_solutions/e&s_as_old_interface.png,./assets/images/epreuve-e5/etudes_solutions/e&s_network1_zoomed.png"
+                        data-open-gallery="true">
                     </div>
                     </p>
 
