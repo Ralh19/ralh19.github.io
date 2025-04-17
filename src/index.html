@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <script src="./js/sidebar.js"></script>
         <script src="./js/modal.js"></script>
+        <script src="./js/accordion.js"></script>
 
     </head>
 
@@ -82,7 +83,7 @@
 
                             <div id="contact-links" class="flex flex-row space-x-4 text-lg">
                                 <!-- LinkedIn Button -->
-                                <a href="#" target="_blank"
+                                <a href="https://www.linkedin.com/in/ruben-almeida-alhada-0b449435a/" target="_blank"
                                     class="transform transition-transform duration-300 hover:scale-125 hover:bg-pink-red rounded-full p-3 bg-gray-800 text-white shadow-md hover:shadow-lg">
                                     <i class="bi bi-linkedin "></i>
                                 </a>
@@ -366,11 +367,13 @@
                         </div>
                         <div class="py-8 flex flex-col lg:flex-row lg:space-x-8 items-center justify-center w-full">
                             <!-- CErtifiaction Atelier RGPD -->
+
                             <img src="./assets/images/certifications/atelier_rgpd/rgpd5.jpg"
                                 class="w-[70%] lg:w-[40%] mb-4 lg:mb-0 border-4 border-[#086e89] border-solid rounded-xl cursor-pointer transform transition-transform duration-500 hover:scale-105"
-                                alt="Certification Example" data-title="Certification Example"
-                                data-description="Description of the certification. This certification is about a certain field or skill."
-                                data-description-list="• Skill 1 • Skill 2 • Skill 3" data-gallery="true"
+                                alt="Certification Example" data-title="Atelier RGPD"
+                                data-description="L'atelier RGPD proposé par la CNIL est conçu pour sensibiliser les participants aux enjeux de la protection des données personnelles et leur fournir les outils nécessaires pour garantir la conformité aux exigences du Règlement Général sur la Protection des Données (RGPD). Cet atelier couvre les principes fondamentaux du RGPD et la mise en œuvre d'une politique de protection des données dans les entreprises."
+                                data-description-list="• Sensibilisation à la réglementation RGPD • Gestion des données personnelles • Droit des personnes concernées • Sécurisation des données • Analyse des risques et mesures de conformité • Mise en place de la gouvernance de la protection des données"
+                                data-gallery="true"
                                 data-gallery-content="./assets/images/certifications/atelier_rgpd/rgpd5.jpg,./assets/images/certifications/atelier_rgpd/rgpd4.jpg,./assets/images/certifications/atelier_rgpd/rgpd3.jpg,./assets/images/certifications/atelier_rgpd/rgpd2.jpg,./assets/images/certifications/atelier_rgpd/rgpd1.jpg"
                                 data-image="./assets/images/certifications/atelier_rgpd/rgpd5.jpg"
                                 data-type="certification" onclick="openModal(this)">
@@ -407,8 +410,8 @@
                                     <img src="./assets/images/certifications/open_classroom/oc_banner.jpg"
                                         class="w-[70%] lg:w-[80%] lg:h-full mb-4 p-3 object-cover cursor-pointer border-2 border-[#086e89] border-solid rounded-xl transform transition-transform duration-500 hover:scale-105"
                                         alt="Cours OPENCLASSROOMS" data-title="Cours OpenClassroom"
-                                        data-description="Another certification description."
-                                        data-description-list="• Skill A • Skill B • Skill C" data-gallery="true"
+                                        data-description="Another certification description." data-open-gallery="true"
+                                        data-gallery="true"
                                         data-gallery-content="./assets/images/certifications/open_classroom/oc_python.png,./assets/images/certifications/open_classroom/oc_django.png"
                                         data-image="./assets/images/certifications/open_classroom/oc_banner.jpg"
                                         data-type="certification" onclick="openModal(this)">
@@ -1035,21 +1038,35 @@
                 </div>
 
                 <div class="container">
-                    <!-- BOUTONS DE FILTRES -->
-                    <div class="filter_buttons flex justify-center space-x-3">
+                    <div class="filter_buttons flex justify-center flex-wrap gap-3">
                         <button
-                            class="active text-pink-red text-center text-sm font-bold w-auto bg-pink-red-light bg-opacity-20 border border-pink-red-light rounded-md px-2 py-2 transform transition-transform duration-200 hover:scale-105"
-                            data-name="all">TOUT AFFICHER</button>
+                            class="active text-pink-red text-sm font-semibold px-4 py-2 bg-pink-red-light bg-opacity-20 border border-pink-red-light rounded-xl shadow-md transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
+                            data-name="all">
+                            TOUT AFFICHER
+                        </button>
 
                         <button
-                            class="text-gray-600 text-center text-sm font-bold w-auto bg-gray-100 border border-gray-300 rounded-md px-2 py-2 transform transition-transform duration-200 hover:bg-gray-200 hover:scale-105"
-                            data-name="bts">BTS - SIO</button>
+                            class="text-gray-600 text-sm font-semibold px-4 py-2 bg-gray-100 border border-gray-300 rounded-xl shadow-md transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg hover:bg-gray-200"
+                            data-name="bts">
+                            BTS - SIO
+                        </button>
+
                         <button
-                            class="text-gray-600 text-center text-sm font-bold w-auto bg-gray-100 border border-gray-300 rounded-md px-2 py-2 transform transition-transform duration-200 hover:bg-gray-200 hover:scale-105"
-                            data-name="games">Jeux Vidéo</button>
+                            class="text-gray-600 text-sm font-semibold px-4 py-2 bg-gray-100 border border-gray-300 rounded-xl shadow-md transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg hover:bg-gray-200"
+                            data-name="games">
+                            Jeux Vidéo
+                        </button>
+
                         <button
-                            class="text-gray-600 text-center text-sm font-bold w-auto bg-gray-100 border border-gray-300 rounded-md px-2 py-2 transform transition-transform duration-200 hover:bg-gray-200 hover:scale-105"
-                            data-name="web">Web</button>
+                            class="text-gray-600 text-sm font-semibold px-4 py-2 bg-gray-100 border border-gray-300 rounded-xl shadow-md transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg hover:bg-gray-200"
+                            data-name="web">
+                            Web
+                        </button>
+                        <button
+                            class="text-gray-600 text-sm font-semibold px-4 py-2 bg-gray-100 border border-gray-300 rounded-xl shadow-md transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg hover:bg-gray-200"
+                            data-name="stage">
+                            Stages
+                        </button>
                     </div>
                     <!-- FIN BOUTONS DE FILTRES -->
 
@@ -1125,11 +1142,12 @@
                                     <button onclick="openModal(this)"
                                         class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
                                         data-title="Nolark"
-                                        data-description="Site web static de vente de casques de moto, ayant pour but l'apprentissage des langages HTML, CSS et JavaScript."
+                                        data-description-list="• Présentation des gammes de casques • Fiches produits détaillées • Formulaire de contact fonctionnel • Interface responsive multi-supports"
+                                        data-description="Ce projet avait pour but de concevoir un site vitrine pour une entreprise fictive spécialisée dans la vente de casques de moto. Il visait à mettre en application les compétences acquises en développement front-end, tout en proposant une interface utilisateur moderne, claire et responsive, adaptée à tous les types d'appareils."
                                         data-skills="html,css,js"
                                         data-image="./assets/images/projects/nolark_screens/nolark_screen1.png"
                                         data-gallery="true"
-                                        data-gallery-content="./assets/images/projects/nolark_screens/nolark_screen1.png"
+                                        data-gallery-content="./assets/images/projects/nolark_screens/nolark_screen1.png,./assets/images/projects/nolark_screens/nolark_screen2.png,./assets/images/projects/nolark_screens/nolark_screen3.png"
                                         data-type="project">
                                         <span>Voir plus</span>
                                         <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
@@ -1170,7 +1188,7 @@
                                         data-skills="html,css,bootstrap"
                                         data-image="./assets/images/projects/amelia_screens/amelia_screen1.png"
                                         data-type="project" data-gallery="true"
-                                        data-gallery-content="./assets/images/projects/amelia_screens/amelia_screen1.png"
+                                        data-gallery-content="./assets/images/projects/amelia_screens/amelia_screen1.png,./assets/images/projects/amelia_screens/amelia_screen2.png,./assets/images/projects/amelia_screens/amelia_screen3.png,./assets/images/projects/amelia_screens/amelia_screen4.png,./assets/images/projects/amelia_screens/amelia_screen5.png"
                                         data-gh-link="https://github.com/Ralh19/PortfolioAmelia-SIO-1">
                                         <span>Voir plus</span>
                                         <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
@@ -1248,11 +1266,12 @@
                                     <button onclick="openModal(this)"
                                         class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
                                         data-title="GSB"
-                                        data-description="Application Web en PHP en architecture MVC de gestion et traitement de fiche de frais."
+                                        data-description="Ce projet visait à développer une application web dédiée à la gestion des frais de déplacement des visiteurs médicaux. L’objectif principal était de fournir aux comptables un outil sécurisé et ergonomique pour le traitement, la validation et le suivi des fiches de frais. L’interface, personnalisée selon le profil utilisateur, propose un tableau de bord intuitif et un accès direct aux principales fonctionnalités."
                                         data-skills="php,css,bootstrap,sql"
                                         data-image="./assets/images/projects/gsb_screens/gsb_screen1.png"
+                                        data-description-list="• Authentification sécurisée des utilisateurs • Tableau de bord dynamique adapté au profil connecté • Validation des fiches de frais par les comptables • Suivi des statuts (en attente, validée, mise en paiement) • Paiement des fiches par lot ou individuellement • Génération et export de rapports PDF récapitulatifs"
                                         data-type="project" data-gallery="true"
-                                        data-gallery-content="./assets/images/projects/gsb_screens/gsb_screen1.png">
+                                        data-gallery-content="./assets/images/projects/gsb_screens/gsb_screen1.png,./assets/images/projects/gsb_screens/gsb_screen2.png,./assets/images/projects/gsb_screens/gsb_screen3.png,./assets/images/projects/gsb_screens/gsb_screen4.png,./assets/images/projects/gsb_screens/gsb_screen5.png">
                                         <span>Voir plus</span>
                                         <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
                                             fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1345,6 +1364,110 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Carte Projet Bonifay -->
+                        <div class="card group relative flex flex-col bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm border border-gray-100 w-96 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:-translate-y-1 animate-zoom-in"
+                            data-name="stage">
+                            <a href="./epreuve-e5.html#stage-1">
+                                <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer">
+                                    <img class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover"
+                                        src="./assets/images/projects/bonifay_screens/bonifay_logo1.png"
+                                        alt="Snake Game Image" />
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h6 class="text-xl font-bold text-gray-800">Projet de stage - Bonifay</h6>
+                                    <span
+                                        class="px-3 py-1 text-sm font-medium text-gray-600 bg-gray-100 rounded-full">2024</span>
+                                </div>
+                                <p class="text-gray-600 text-sm leading-relaxed flex-grow">Application web mobile conçue
+                                    pour optimiser les tournées des chauffeurs-livreurs en automatisant le suivi et la
+                                    validation des livraisons. Développée avec Symfony (3.4 et 5.4), PHP, JavaScript,
+                                    Bootstrap et MySQL.
+                                </p>
+                                <div class="mt-6">
+                                    <a href="./epreuve-e5.html#stage-1">
+                                        <button
+                                            class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
+                                            data-title="Projet de stage - Bonifay" data-description="Application web mobile conçue
+                                    pour optimiser les tournées des chauffeurs-livreurs en automatisant le suivi et la
+                                    validation des livraisons. Développée avec Symfony (3.4 et 5.4), PHP, JavaScript,
+                                    Bootstrap et MySQL.
+                                    Un bouton ci-dessous permet d'accéder aux détails complets du projet :"
+                                            data-skills="php,symfony,sql,bootstrap"
+                                            data-gallery-content="./assets/images/epreuve-e5/bonifay/bonifay_app1.png"
+                                            data-gallery="true"
+                                            data-image="./assets/images/epreuve-e5/bonifay/bonifay_app1.png"
+                                            data-type="project" data-gh-link="./epreuve-e5.html#stage-1"> <span>Voir
+                                                plus</span>
+                                            <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7" />
+                                            </svg>
+                                        </button>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Carte Projet E&S -->
+                        <div class="card group relative flex flex-col bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm border border-gray-100 w-96 transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:-translate-y-1 animate-zoom-in"
+                            data-name="stage">
+                            <a href="./epreuve-e5.html#stage-2">
+                                <div class="relative h-56 rounded-t-xl overflow-hidden cursor-pointer">
+                                    <img class="transition-transform duration-500 group-hover:scale-105 w-full h-full object-scale-down"
+                                        src="./assets/images/projects/e&s_screens/e&s_logo1.png"
+                                        alt="Snake Game Image" />
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    </div>
+                                </div>
+                            </a>
+
+                            <div class="p-6 flex flex-col flex-grow">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h6 class="text-xl font-bold text-gray-800">Projet de stage - Etudes et Solutions
+                                    </h6>
+                                    <span
+                                        class="px-3 py-1 text-sm font-medium text-gray-600 bg-gray-100 rounded-full">2025</span>
+                                </div>
+                                <p class="text-gray-600 text-sm leading-relaxed flex-grow">Application web développée
+                                    avec Django (Python) pour remplacer l'interface d'administration OpenWrt sur
+                                    Raspberry Pi, intégrant un scanner réseau interactif avec affichage en temps réel
+                                    des appareils connectés.
+                                </p>
+                                <div class="mt-6">
+                                    <a href="./epreuve-e5.html#projet-e&s">
+                                        <button
+                                            class="w-full bg-slate-800 text-white py-2.5 px-4 rounded-lg font-medium transition-all duration-300 hover:bg-slate-700 active:scale-95 flex items-center justify-center gap-2 group"
+                                            data-title="Projet de stage - Bonifay" data-description="Application web mobile conçue
+                                pour optimiser les tournées des chauffeurs-livreurs en automatisant le suivi et la
+                                validation des livraisons. Développée avec Symfony (3.4 et 5.4), PHP, JavaScript,
+                                Bootstrap et MySQL.
+                                Un bouton ci-dessous permet d'accéder aux détails complets du projet :"
+                                            data-skills="php,symfony,sql,bootstrap"
+                                            data-gallery-content="./assets/images/epreuve-e5/bonifay/bonifay_app1.png"
+                                            data-gallery="true"
+                                            data-image="./assets/images/epreuve-e5/bonifay/bonifay_app1.png"
+                                            data-type="project" data-gh-link="./epreuve-e5.html#stage-1"> <span>Voir
+                                                plus</span>
+                                            <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+                                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7" />
+                                            </svg>
+                                        </button>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <!-- FIN CARTES FILTRABLES -->
                 </div>
@@ -1432,7 +1555,7 @@
 
                     <!-- Social Links Section -->
                     <div class="flex justify-center gap-8 mb-6">
-                        <a href="#" target="_blank"
+                        <a href="https://www.linkedin.com/in/ruben-almeida-alhada-0b449435a/" target="_blank"
                             class="transform transition-transform duration-300 hover:scale-125 hover:bg-pink-red p-3 rounded-full bg-gray-800 text-white shadow-md">
                             <i class="bi bi-linkedin text-3xl"></i>
                         </a>
