@@ -187,7 +187,9 @@
           <div class="flex w-full h-full justify-evenly p-16">
             <div class="w-2/5 h-full">
               <img src="./assets/images/epreuve-e5/skills_table.png" alt="Tableau de synthèse des compétences"
-                class="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer transform transition-transform duration-500 hover:scale-105" />
+                class="w-full h-full object-cover rounded-lg shadow-lg cursor-pointer transform transition-transform duration-500 hover:scale-105"
+                onclick="openModal(this)" data-title="Image 1" data-description="Description for Image 1"
+                data-gallery="true" data-gallery-content="./assets/images/epreuve-e5/skills_table.png" data-open-gallery="true" />
             </div>
 
             <div class="flex flex-col justify-center w-2/5 gap-10">
@@ -1482,7 +1484,7 @@
     <div id="certification-modal" class="fixed inset-0 bg-black/50 items-center justify-center hidden z-50">
       <div class="bg-white rounded-lg w-[90%] h-[90%] max-w-7xl mx-auto my-8 p-8 relative flex flex-col">
         <!-- Close button -->
-        <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+        <button onclick="closeMainModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
           <i class="bi bi-x text-3xl"></i>
         </button>
 

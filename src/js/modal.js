@@ -1,25 +1,31 @@
 function openModal(element) {
   const modal = document.getElementById("certification-modal");
 
-  // Show modal and navigation
-  modal.classList.remove("hidden");
-  modal.classList.add("flex");
-  document.body.style.overflow = "hidden";
+  // Check if the element has the data-open-gallery attribute
+  const openGallery = element.getAttribute("data-open-gallery") === "true";
 
-  // Store current image and its type for carousel
-  window.currentImage = element;
-  window.currentType =
-    element.getAttribute("data-type") ||
-    element.closest(".card").getAttribute("data-type");
+  if (openGallery) {
+    // If the attribute is true, open the gallery directly
+    openImageGallery(element); // Opens the gallery instead of the main modal
+  } else {
+    // If no gallery, proceed with the modal as normal
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+    document.body.style.overflow = "hidden";
 
-  // Call updateModalContent immediately
-  updateModalContent(element);
+    // Store current image and its type for carousel
+    window.currentImage = element;
+    window.currentType = element.getAttribute("data-type") || "image";
 
-  // Ensure navigation buttons are visible
-  const navButtons = modal.querySelectorAll('button[onclick^="switchImage"]');
-  navButtons.forEach((button) => {
-    button.classList.remove("hidden");
-  });
+    // Call updateModalContent immediately
+    updateModalContent(element);
+
+    // Ensure navigation buttons are visible
+    const navButtons = modal.querySelectorAll('button[onclick^="switchImage"]');
+    navButtons.forEach((button) => {
+      button.classList.remove("hidden");
+    });
+  }
 }
 
 // Update these lines in updateModalContent function
@@ -142,11 +148,28 @@ function switchImage(direction) {
 
 function closeModal() {
   const modal = document.getElementById("certification-modal");
-  modal.classList.add("hidden");
-  modal.classList.remove("flex");
+  const galleryModal = document.getElementById("image-gallery-modal");
 
-  // Re-enable scrolling
-  document.body.style.overflow = "auto";
+  // Si la galerie est ouverte et que le modal principal est caché (c'est la galerie seule qui est ouverte)
+  if (
+    !modal.classList.contains("flex") &&
+    !galleryModal.classList.contains("hidden")
+  ) {
+    // Fermer tous les modals
+    galleryModal.classList.add("hidden");
+    galleryModal.classList.remove("flex");
+
+    // Réactiver le scrolling
+    document.body.style.overflow = "auto";
+  } else {
+    // Si le modal principal est ouvert, on ferme seulement la galerie
+    galleryModal.classList.add("hidden");
+    galleryModal.classList.remove("flex");
+
+    // Assurer que le modal principal reste ouvert
+    modal.classList.add("flex");
+    modal.classList.remove("hidden");
+  }
 }
 
 // Add keyboard navigation
@@ -166,18 +189,17 @@ let currentGalleryIndex = 0;
 function openImageGallery(button) {
   const modal = document.getElementById("image-gallery-modal");
   const carousel = document.getElementById("gallery-carousel");
-  const mainModal = document.getElementById("certification-modal");
 
-  // Get gallery images from data attribute
+  // Get gallery images from data attribute of clicked image
   const galleryContent =
-    button.closest(".card")?.getAttribute("data-gallery-content") ||
+    button.getAttribute("data-gallery-content") ||
     window.currentImage.getAttribute("data-gallery-content");
 
   if (galleryContent) {
     currentGalleryImages = galleryContent.split(",").map((url) => url.trim());
     currentGalleryIndex = 0;
 
-    // Create and append carousel items
+    // Create and append carousel items for gallery
     carousel.innerHTML = currentGalleryImages
       .map(
         (url, index) => `
@@ -193,10 +215,11 @@ function openImageGallery(button) {
       )
       .join("");
 
-    // Show gallery modal
-    mainModal.classList.add("hidden");
+    // Show gallery modal and hide main modal
+    document.getElementById("certification-modal").classList.add("hidden"); // Hide main modal
     modal.classList.remove("hidden");
     modal.classList.add("flex");
+
     updateGalleryView();
     updateGalleryCounter(); // Update the counter when the gallery opens
   }
@@ -240,13 +263,43 @@ function closeImageGallery() {
   const galleryModal = document.getElementById("image-gallery-modal");
   const mainModal = document.getElementById("certification-modal");
 
-  galleryModal.classList.add("hidden");
-  galleryModal.classList.remove("flex");
-  mainModal.classList.remove("hidden");
-  mainModal.classList.add("flex");
+  // Si seule la galerie est ouverte
+  if (!mainModal.classList.contains("flex")) {
+    // Fermer la galerie et tout
+    galleryModal.classList.add("hidden");
+    galleryModal.classList.remove("flex");
 
-  // Clear gallery
-  document.getElementById("gallery-carousel").innerHTML = "";
-  currentGalleryImages = [];
-  currentGalleryIndex = 0;
+    // Réactiver le scrolling
+    document.body.style.overflow = "auto";
+  } else {
+    // Fermer seulement la galerie, garder le modal principal ouvert
+    galleryModal.classList.add("hidden");
+    galleryModal.classList.remove("flex");
+
+    // Garder le modal principal ouvert
+    mainModal.classList.add("flex");
+    mainModal.classList.remove("hidden");
+  }
+}
+
+function closeAllModals() {
+  // Close both modals (main modal and gallery modal)
+  const modal = document.getElementById("certification-modal");
+  const galleryModal = document.getElementById("image-gallery-modal");
+
+  modal.classList.add("hidden");
+  galleryModal.classList.add("hidden");
+
+  // Re-enable scrolling
+  document.body.style.overflow = "auto";
+}
+
+function closeMainModal() {
+  const modal = document.getElementById("certification-modal");
+
+  modal.classList.add("hidden");
+  modal.classList.remove("flex");
+
+  // Réactiver le scrolling
+  document.body.style.overflow = "auto";
 }
