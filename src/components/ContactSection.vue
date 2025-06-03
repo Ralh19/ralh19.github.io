@@ -1,3 +1,39 @@
+<script setup>
+import { ref } from 'vue'
+import emailjs from '@emailjs/browser'
+
+const form = ref(null)
+const isLoading = ref(false)
+const showSuccess = ref(false)
+const showError = ref(false)
+
+const sendEmail = async (e) => {
+  e.preventDefault()
+  isLoading.value = true
+  showSuccess.value = false
+  showError.value = false
+
+  try {
+    await emailjs.sendForm(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      form.value,
+      {
+        publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+      }
+    )
+    showSuccess.value = true
+    form.value.reset()
+  } catch (error) {
+    console.error('FAILED...', error.text)
+    showError.value = true
+  } finally {
+    isLoading.value = false
+  }
+}
+</script>
+
+
 <template>
   <section id="contact" class="py-20 bg-gradient-to-b from-gray-50 to-white min-h-screen flex items-center">
     <container>
@@ -15,63 +51,54 @@
         </div>
 
         <!-- Contact Form -->
-        <form class="bg-white rounded-2xl shadow-lg p-8 space-y-6">
+        <form ref="form" @submit.prevent="sendEmail" class="bg-white rounded-2xl shadow-lg p-8 space-y-6">
           <!-- Name Fields Row -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="space-y-2">
               <label class="block text-sm font-medium text-gray-700">First Name</label>
-              <input 
-                type="text" 
-                placeholder="John" 
-                class="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-highlight-color/20 focus:border-highlight-color transition-colors"
-              />
+              <input type="text" name="user_firstname" required placeholder="John"
+                class="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-highlight-color/20 focus:border-highlight-color transition-colors" />
             </div>
             <div class="space-y-2">
               <label class="block text-sm font-medium text-gray-700">Last Name</label>
-              <input 
-                type="text" 
-                placeholder="Doe" 
-                class="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-highlight-color/20 focus:border-highlight-color transition-colors"
-              />
+              <input type="text" name="user_lastname" required placeholder="Doe"
+                class="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-highlight-color/20 focus:border-highlight-color transition-colors" />
             </div>
           </div>
 
           <!-- Email Field -->
           <div class="space-y-2">
             <label class="block text-sm font-medium text-gray-700">Email</label>
-            <input 
-              type="email" 
-              placeholder="john.doe@example.com" 
-              class="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-highlight-color/20 focus:border-highlight-color transition-colors"
-            />
+            <input type="email" name="user_email" required placeholder="john.doe@example.com"
+              class="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-highlight-color/20 focus:border-highlight-color transition-colors" />
           </div>
 
           <!-- Subject Field -->
           <div class="space-y-2">
             <label class="block text-sm font-medium text-gray-700">Subject</label>
-            <input 
-              type="text" 
-              placeholder="What is this about?" 
-              class="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-highlight-color/20 focus:border-highlight-color transition-colors"
-            />
+            <input type="text" name="subject" required placeholder="What is this about?"
+              class="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-highlight-color/20 focus:border-highlight-color transition-colors" />
           </div>
 
           <!-- Message Field -->
           <div class="space-y-2">
             <label class="block text-sm font-medium text-gray-700">Message</label>
-            <textarea 
-              placeholder="Your message..." 
-              rows="5"
-              class="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-highlight-color/20 focus:border-highlight-color transition-colors resize-none"
-            ></textarea>
+            <textarea name="message" required placeholder="Your message..." rows="5"
+              class="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-highlight-color/20 focus:border-highlight-color transition-colors resize-none"></textarea>
+          </div>
+
+          <!-- Status Messages -->
+          <div v-if="showSuccess" class="text-green-600 text-center">
+            Message sent successfully!
+          </div>
+          <div v-if="showError" class="text-red-600 text-center">
+            Failed to send message. Please try again.
           </div>
 
           <!-- Submit Button -->
-          <button 
-            type="submit" 
-            class="w-full bg-highlight-color text-white py-4 rounded-lg hover:bg-highlight-color/90 transition-colors duration-300 font-medium text-lg scale-animation"
-          >
-            Send Message
+          <button type="submit" :disabled="isLoading"
+            class="w-full bg-highlight-color text-white py-4 rounded-lg hover:bg-highlight-color/90 transition-colors duration-300 font-medium text-lg scale-animation disabled:opacity-50">
+            {{ isLoading ? 'Sending...' : 'Send Message' }}
           </button>
         </form>
       </div>
