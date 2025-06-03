@@ -1,12 +1,78 @@
 @import "tailwindcss";
 
-@import "tailwindcss";
-
 @theme {
   --color-main-background-color: rgb(32, 33, 40);
   --color-main-gui-color: rgb(39, 45, 52);
+  --color-highlight-color: rgb(224, 108, 117);
 }
 
 body {
   @apply bg-white text-gray-900 font-sans;
-} 
+}
+
+container {
+  @apply max-w-6xl w-full mx-auto px-6;
+  display: block;
+}
+
+/* ANIMATIONS */
+
+/* Scale Animation */
+.scale-animation {
+  @apply transform;
+  transition: all 500ms ease;
+}
+
+.scale-animation:hover {
+  @apply scale-110;
+}
+
+/* Wave Animation */
+.wave-animation {
+  animation: wave 2.5s infinite;
+  display: inline-block;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Bouncing animation */
+.bounce-animation {
+  animation: bounce 2s infinite;
+  display: inline-block;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}

@@ -20,7 +20,6 @@ const activeSection = ref('home')
 // Liste des items du menu, avec un id qui correspond à l'id des sections de la page
 const navItems = [
   { id: 'home', name: 'Home' },
-  { id: 'about', name: 'About Me' },
   { id: 'projects', name: 'Projects' },
   { id: 'skills', name: 'Skills' },
   { id: 'contact', name: 'Contact' }
