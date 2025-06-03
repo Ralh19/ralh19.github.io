@@ -15,6 +15,11 @@ container {
   display: block;
 }
 
+h2{
+  @apply font-bold text-5xl text-center;
+}
+
+
 /* ANIMATIONS */
 
 /* Scale Animation */
@@ -25,6 +30,14 @@ container {
 
 .scale-animation:hover {
   @apply scale-110;
+}
+.scale-animation-sm {
+  @apply transform;
+  transition: all 500ms ease;
+}
+
+.scale-animation-sm:hover {
+  @apply scale-105;
 }
 
 /* Wave Animation */

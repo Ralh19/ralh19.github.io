@@ -20,6 +20,7 @@ const activeSection = ref('home')
 // Liste des items du menu, avec un id qui correspond à l'id des sections de la page
 const navItems = [
   { id: 'home', name: 'Home' },
+  { id: 'experience', name: 'Experience' }, // Ajout de l'item Experience
   { id: 'projects', name: 'Projects' },
   { id: 'skills', name: 'Skills' },
   { id: 'contact', name: 'Contact' }
@@ -89,7 +90,7 @@ onUnmounted(() => {
     <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
 
       <!-- Nom du portfolio / logo -->
-      <div class="font-bold text-xl text-blue-600">{{ portfolioName }}</div>
+      <div class="font-extrabold text-xl text-highlight-color">{{ portfolioName }}</div>
 
       <!-- Menu Desktop (visible uniquement sur md et plus grands écrans) -->
       <div class="hidden md:flex space-x-6">
@@ -98,13 +99,13 @@ onUnmounted(() => {
         <!-- Intercepte le clic, empêche le comportement par défaut (href), et appelle handleNavClick -->
         <!-- Texte bleu si c'est la section active -->
         <a v-for="item in navItems" :key="item.id" @click.prevent="handleNavClick(item.id)"
-          class="cursor-pointer relative text-gray-700 hover:text-blue-600 transition"
-          :class="{ 'text-blue-600': activeSection === item.id }">
+          class="cursor-pointer relative text-gray-700 hover:text-highlight-color transition"
+          :class="{ 'text-highlight-color': activeSection === item.id }">
           {{ item.name }}
 
           <!-- Petit trait bleu sous l'item actif (animation avec scale-x) -->
           <span
-            class="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform"
+            class="absolute bottom-0 left-0 w-full h-0.5 bg-highlight-color scale-x-0 group-hover:scale-x-100 transition-transform"
             :class="{ 'scale-x-100': activeSection === item.id }"></span>
         </a>
       </div>
@@ -129,7 +130,7 @@ onUnmounted(() => {
 
       <!-- Quand on clique, on scroll vers la section et ferme le menu -->
       <a v-for="item in navItems" :key="item.id" @click.prevent="handleNavClick(item.id)"
-        class="block py-2 text-gray-700 hover:text-blue-600" :class="{ 'text-blue-600': activeSection === item.id }">
+        class="block py-2 text-gray-700 hover:text-highlight-color" :class="{ 'text-highlight-color': activeSection === item.id }">
         {{ item.name }}
       </a>
     </div>

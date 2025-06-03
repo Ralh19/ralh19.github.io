@@ -4,6 +4,7 @@
 
     <main class="pt-16 scroll-smooth">
       <HeroSection id="home" />
+      <ExperienceSection id="experience" />
       <ProjectsSection id="projects" />
       <SkillsSection id="skills" />
       <ContactSection id="contact" />
@@ -18,5 +19,6 @@ import HeroSection from './components/HeroSection.vue'
 import ProjectsSection from './components/ProjectsSection.vue'
 import SkillsSection from './components/SkillsSection.vue'
 import ContactSection from './components/ContactSection.vue'
+import ExperienceSection from './components/ExperienceSection.vue'
 </script>
 
