@@ -5,7 +5,6 @@
         <!-- GOATS's Photo -->
         <div class="w-1/3 flex flex-col items-center gap-4">
           <div class="aspect-square bg-gray-300 rounded-lg w-full"></div>
-
         </div>
 
         <!-- Text content -->
@@ -27,7 +26,7 @@
             </a>
 
             <div class="mt-6 flex items-center text-highlight-color">
-              <i class="bi bi-geo-alt-fill text-3xl"></i>
+              <i class="bi bi-geo-alt-fill text-3xl bounce-animation"></i>
               <span class="text-2xl ml-2">France</span>
             </div>
           </div>
@@ -38,9 +37,8 @@
 
     <!-- Scroll down button -->
     <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 pb-6">
-      <a href="#experience" 
-         @click="handleScrollClick"
-         class="flex flex-col items-center text-gray-600 hover:text-highlight-color transition-colors">
+      <a href="#experience" @click="handleScrollClick"
+        class="flex flex-col items-center text-gray-600 hover:text-highlight-color transition-colors">
         <span class="text-2xl mb-2">Scroll Down</span>
         <i class="bi bi-arrow-down-short text-4xl bounce-animation"></i>
       </a>
@@ -53,9 +51,9 @@ const handleScrollClick = (event) => {
   event.preventDefault()
   const targetId = event.currentTarget.getAttribute('href').slice(1)
   const element = document.getElementById(targetId)
-  
+
   if (element) {
-    element.scrollIntoView({ 
+    element.scrollIntoView({
       behavior: 'smooth',
       block: 'start'
     })

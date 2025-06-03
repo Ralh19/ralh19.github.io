@@ -90,7 +90,7 @@ onUnmounted(() => {
     <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
 
       <!-- Nom du portfolio / logo -->
-      <div class="font-extrabold text-xl text-highlight-color">{{ portfolioName }}</div>
+      <div class="font-extrabold text-2xl text-highlight-color">{{ portfolioName }}</div>
 
       <!-- Menu Desktop (visible uniquement sur md et plus grands écrans) -->
       <div class="hidden md:flex space-x-6">

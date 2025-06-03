@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-main-background-color: rgb(32, 33, 40);
+  --color-main-background-color-dark: rgb(32, 33, 40);
   --color-main-gui-color: rgb(39, 45, 52);
   --color-highlight-color: rgb(224, 108, 117);
   --color-stack-green: rgb(152, 195, 121);
