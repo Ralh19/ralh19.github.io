@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@import "tailwindcss";
+
+@theme {
+  --color-main-background-color: rgb(32, 33, 40);
+  --color-main-gui-color: rgb(39, 45, 52);
+}
+
+body {
+  @apply bg-white text-gray-900 font-sans;
+} 
