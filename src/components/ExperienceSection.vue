@@ -26,7 +26,11 @@ const experiences = [
 <template>
     <section id="experience" class="py-20 bg-white">
         <container>
-            <h2 class="mb-10">Experience</h2>
+            <h2 class="mb-10">
+                <span class="text-highlight-color">&lt;</span>
+                Experience
+                <span class="text-highlight-color">/&gt;</span>
+            </h2>
 
             <div class="relative max-w-4xl mx-auto px-6">
                 <!-- Timeline line -->
@@ -42,7 +46,8 @@ const experiences = [
                             <div class="flex justify-between items-start mb-4">
                                 <div>
                                     <h3 class="text-xl font-bold text-gray-900">{{ job.title }}</h3>
-                                    <a :href="job.company_link" target="_blank" class="text-gray-600 hover:text-highlight-color">{{ job.company }}</a>
+                                    <a :href="job.company_link" target="_blank"
+                                        class="text-gray-600 hover:text-highlight-color">{{ job.company }}</a>
                                 </div>
                                 <span class="text-gray-500">{{ job.period }}</span>
                             </div>

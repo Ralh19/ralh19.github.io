@@ -4,6 +4,10 @@
   --color-main-background-color: rgb(32, 33, 40);
   --color-main-gui-color: rgb(39, 45, 52);
   --color-highlight-color: rgb(224, 108, 117);
+  --color-stack-green: rgb(152, 195, 121);
+  --color-stack-blue: rgb(97, 175, 240);
+  --color-stack-yellow: rgb(229, 192, 123);
+  --color-stack-purple: rgb(198, 120, 221);
 }
 
 body {
@@ -18,6 +22,7 @@ container {
 h2{
   @apply font-bold text-5xl text-center;
 }
+
 
 
 /* ANIMATIONS */

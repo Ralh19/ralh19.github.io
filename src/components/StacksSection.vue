@@ -79,10 +79,10 @@ const stacks = [
 ];
 
 const stackColors = {
-  'Frontend': 'bg-blue-500',
-  'Backend': 'bg-green-500',
-  'Database': 'bg-orange-500',
-  'Tools': 'bg-purple-500'
+  'Frontend': 'bg-stack-blue',
+  'Backend': 'bg-stack-green',
+  'Database': 'bg-stack-yellow',
+  'Tools': 'bg-stack-purple'
 }
 </script>
 

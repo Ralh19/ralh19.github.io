@@ -1,6 +1,10 @@
 <template>
   <section id="contact" class="py-20 bg-gray-50 text-center h-screen">
-    <h2 class="text-3xl font-semibold mb-6">Me contacter</h2>
+    <h2 class="text-3xl font-semibold mb-6">
+      <span class="text-highlight-color">&lt;</span>
+      Contact
+      <span class="text-highlight-color">/&gt;</span>
+    </h2>
     <p class="mb-6 text-gray-700">Tu veux discuter ou collaborer ? Envoie-moi un message !</p>
     <form class="max-w-md mx-auto space-y-4">
       <input type="text" placeholder="Votre nom" class="w-full p-3 border rounded-md" />
