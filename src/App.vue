@@ -6,7 +6,7 @@
       <HeroSection id="home" />
       <ExperienceSection id="experience" />
       <ProjectsSection id="projects" />
-      <SkillsSection id="skills" />
+      <StacksSection id="stacks" />
       <ContactSection id="contact" />
     </main>
   </div>
@@ -17,7 +17,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import NavBar from './components/NavBar.vue'
 import HeroSection from './components/HeroSection.vue'
 import ProjectsSection from './components/ProjectsSection.vue'
-import SkillsSection from './components/SkillsSection.vue'
+import StacksSection from './components/StacksSection.vue'
 import ContactSection from './components/ContactSection.vue'
 import ExperienceSection from './components/ExperienceSection.vue'
 </script>

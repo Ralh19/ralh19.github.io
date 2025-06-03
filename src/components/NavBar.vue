@@ -22,7 +22,7 @@ const navItems = [
   { id: 'home', name: 'Home' },
   { id: 'experience', name: 'Experience' }, // Ajout de l'item Experience
   { id: 'projects', name: 'Projects' },
-  { id: 'skills', name: 'Skills' },
+  { id: 'stacks', name: 'My Stacks' },
   { id: 'contact', name: 'Contact' }
 ]
 
