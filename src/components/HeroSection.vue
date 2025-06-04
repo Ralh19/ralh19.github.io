@@ -1,3 +1,18 @@
+<script setup>
+const handleScrollClick = (event) => {
+  event.preventDefault()
+  const targetId = event.currentTarget.getAttribute('href').slice(1)
+  const element = document.getElementById(targetId)
+
+  if (element) {
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  }
+}
+</script>
+
 <template>
   <section id="home" class="h-screen flex justify-center items-center bg-gray-100 relative">
     <container>
@@ -20,7 +35,7 @@
             <a href="#contact" class="text-xl mt-6 px-6 py-3 bg-highlight-color text-white rounded-lg scale-animation" @click="handleScrollClick">
               Hire Me
             </a>
-            <a href="#" class="text-xl mt-6 px-6 py-3 bg-highlight-color text-white rounded-lg scale-animation">
+            <a href="/docs/resume_fr.pdf" target="_blank" class="text-xl mt-6 px-6 py-3 bg-highlight-color text-white rounded-lg scale-animation">
               <i class="bi bi-filetype-pdf"></i>
               Resume
             </a>
@@ -45,18 +60,3 @@
     </div>
   </section>
 </template>
-
-<script setup>
-const handleScrollClick = (event) => {
-  event.preventDefault()
-  const targetId = event.currentTarget.getAttribute('href').slice(1)
-  const element = document.getElementById(targetId)
-
-  if (element) {
-    element.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    })
-  }
-}
-</script>
