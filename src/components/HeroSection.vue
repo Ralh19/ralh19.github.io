@@ -27,7 +27,7 @@ const handleScrollClick = (event) => {
           <h1 class="text-5xl font-bold mb-4">Hello, I'm <span class="text-highlight-color">Ruben</span> <span
               class="cursor-default wave-animation">👋</span></h1>
           <p class="text-xl text-gray-600">
-            Frontend Developer passionate about creating intuitive and
+            Developer passionate about creating intuitive and
             user-centric digital experiences. Focused on building modern web applications with clean architecture and
             pixel-perfect designs. Always eager to learn and embrace new challenges.
           </p>
