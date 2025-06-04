@@ -41,7 +41,7 @@ const DEGREES = [
         title: 'High School Degree with a specialization in Marketing (STMG)',
         school: 'Golfe de Saint-Tropez Highschool, Gassin France',
         description: 'French Baccalauréat in Management - Marketing Major (STMG Track)',
-        path: '/images/degrees/bac.jpg',
+        path: '/images/degrees/bac.png',
         date: '2022'
     },
 ]

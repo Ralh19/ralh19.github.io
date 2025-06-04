@@ -43,6 +43,10 @@ const STACKS = [
       {
         title: 'C#',
         path: '/images/tech/cs_ico.png'
+      },
+      {
+        title: 'Rust',
+        path: '/images/tech/rust_ico.png'
       }
     ]
   },
