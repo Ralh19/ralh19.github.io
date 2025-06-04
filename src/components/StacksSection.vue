@@ -1,5 +1,5 @@
 <script setup>
-const stacks = [
+const STACKS = [
   {
     title: 'Frontend',
     technologies: [
@@ -87,7 +87,7 @@ const stackColors = {
 </script>
 
 <template>
-  <section id="stacks" class="py-20 bg-gray-50">
+  <section id="STACKS" class="py-20 bg-gray-50">
     <container>
       <h2 class="mb-16 text-4xl font-bold text-center">
         <span class="text-highlight-color">&lt;</span>
@@ -97,7 +97,7 @@ const stackColors = {
 
       <div class="max-w-7xl mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div v-for="stack in stacks" :key="stack.title" class="relative group">
+          <div v-for="stack in STACKS" :key="stack.title" class="relative group">
             <!-- Category Card -->
             <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <!-- Stack Header -->

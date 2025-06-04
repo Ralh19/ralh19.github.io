@@ -20,7 +20,8 @@ const activeSection = ref('home')
 // Liste des items du menu, avec un id qui correspond à l'id des sections de la page
 const navItems = [
   { id: 'home', name: 'Home' },
-  { id: 'experience', name: 'Experience' }, // Ajout de l'item Experience
+  { id: 'experience', name: 'Experience' },
+  { id: 'education', name: 'Education' },
   { id: 'projects', name: 'Projects' },
   { id: 'stacks', name: 'My Stacks' },
   { id: 'contact', name: 'Contact' }
@@ -130,7 +131,8 @@ onUnmounted(() => {
 
       <!-- Quand on clique, on scroll vers la section et ferme le menu -->
       <a v-for="item in navItems" :key="item.id" @click.prevent="handleNavClick(item.id)"
-        class="block py-2 text-gray-700 hover:text-highlight-color" :class="{ 'text-highlight-color': activeSection === item.id }">
+        class="block py-2 text-gray-700 hover:text-highlight-color"
+        :class="{ 'text-highlight-color': activeSection === item.id }">
         {{ item.name }}
       </a>
     </div>
