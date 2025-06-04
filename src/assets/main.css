@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-main-background-color-dark: rgb(32, 33, 40);
   --color-main-gui-color: rgb(39, 45, 52);

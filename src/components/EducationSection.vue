@@ -92,7 +92,7 @@ const handleKeydown = (e) => {
 </script>
 
 <template>
-    <section id="education" class="py-20 bg-white">
+    <section id="education" class="py-20 bg-white dark:bg-main-background-color-dark">
         <container>
             <h2 class="mb-16 text-4xl font-bold text-center">
                 <span class="text-highlight-color">&lt;</span>

@@ -14,7 +14,8 @@ const handleScrollClick = (event) => {
 </script>
 
 <template>
-  <section id="home" class="h-screen flex justify-center items-center bg-gray-100 relative">
+  <section id="home"
+    class="h-screen flex justify-center items-center bg-gray-100 dark:bg-main-background-color-dark relative">
     <container>
       <div class="flex gap-8 items-center">
         <!-- GOATS's Photo -->
@@ -32,10 +33,12 @@ const handleScrollClick = (event) => {
             pixel-perfect designs. Always eager to learn and embrace new challenges.
           </p>
           <div class="flex gap-6">
-            <a href="#contact" class="text-xl mt-6 px-6 py-3 bg-highlight-color text-white rounded-lg scale-animation" @click="handleScrollClick">
+            <a href="#contact" class="text-xl mt-6 px-6 py-3 bg-highlight-color text-white rounded-lg scale-animation"
+              @click="handleScrollClick">
               Hire Me
             </a>
-            <a href="/docs/resume_fr.pdf" target="_blank" class="text-xl mt-6 px-6 py-3 bg-highlight-color text-white rounded-lg scale-animation">
+            <a href="/docs/resume_fr.pdf" target="_blank"
+              class="text-xl mt-6 px-6 py-3 bg-highlight-color text-white rounded-lg scale-animation">
               <i class="bi bi-filetype-pdf"></i>
               Resume
             </a>

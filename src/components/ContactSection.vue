@@ -56,7 +56,8 @@ const updateMessageLength = (e) => {
 
 
 <template>
-  <section id="contact" class="py-20 bg-gradient-to-b from-gray-50 to-white min-h-screen flex items-center">
+  <section id="contact"
+    class="py-20 bg-white min-h-screen flex items-center dark:bg-main-background-color-dark">
     <container>
       <div class="max-w-3xl mx-auto px-4">
         <!-- Header -->
@@ -109,19 +110,11 @@ const updateMessageLength = (e) => {
                 {{ messageLength }}/{{ MESSAGE_MAX_LENGTH }}
               </span>
             </div>
-            <textarea 
-              name="message" 
-              required
-              :minlength="MESSAGE_MIN_LENGTH"
-              :maxlength="MESSAGE_MAX_LENGTH"
-              placeholder="Your message..." 
-              rows="5"
-              @input="updateMessageLength"
-              class="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg 
+            <textarea name="message" required :minlength="MESSAGE_MIN_LENGTH" :maxlength="MESSAGE_MAX_LENGTH"
+              placeholder="Your message..." rows="5" @input="updateMessageLength" class="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg 
                      focus:ring-2 focus:ring-highlight-color/20 
                      focus:border-highlight-color transition-colors 
-                     resize-none"
-            ></textarea>
+                     resize-none"></textarea>
           </div>
 
           <!-- Status Messages -->

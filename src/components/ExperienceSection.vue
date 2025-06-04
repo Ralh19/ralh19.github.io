@@ -25,7 +25,7 @@ const experiences = [
 </script>
 
 <template>
-    <section id="experience" class="py-20 bg-white">
+    <section id="experience" class="py-20 bg-white dark:bg-main-background-color-dark">
         <container>
             <h2 class="mb-10">
                 <span class="text-highlight-color">&lt;</span>

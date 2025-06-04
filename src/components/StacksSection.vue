@@ -91,7 +91,7 @@ const stackColors = {
 </script>
 
 <template>
-  <section id="STACKS" class="py-20 bg-gray-50">
+  <section id="STACKS" class="py-20 bg-gray-50 dark:bg-main-background-color-dark">
     <container>
       <h2 class="mb-16 text-4xl font-bold text-center">
         <span class="text-highlight-color">&lt;</span>

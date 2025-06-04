@@ -54,7 +54,7 @@ const projects = [
 
 
 <template>
-  <section id="projects" class="py-20 bg-gray-50">
+  <section id="projects" class="py-20 bg-gray-50 dark:bg-main-background-color-dark">
     <div class="max-w-7xl mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-16">
         <span class="text-highlight-color">&lt;</span>
