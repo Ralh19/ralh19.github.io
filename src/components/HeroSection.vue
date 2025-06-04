@@ -17,7 +17,7 @@
             pixel-perfect designs. Always eager to learn and embrace new challenges.
           </p>
           <div class="flex gap-6">
-            <a href="#contact" class="text-xl mt-6 px-6 py-3 bg-highlight-color text-white rounded-lg scale-animation">
+            <a href="#contact" class="text-xl mt-6 px-6 py-3 bg-highlight-color text-white rounded-lg scale-animation" @click="handleScrollClick">
               Hire Me
             </a>
             <a href="#" class="text-xl mt-6 px-6 py-3 bg-highlight-color text-white rounded-lg scale-animation">

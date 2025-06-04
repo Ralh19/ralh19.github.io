@@ -90,7 +90,7 @@ onUnmounted(() => {
     <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
 
       <!-- Nom du portfolio / logo -->
-      <div class="font-extrabold text-2xl text-highlight-color">{{ portfolioName }}</div>
+      <div class="font-extrabold text-2xl text-highlight-color cursor-default">{{ portfolioName }}</div>
 
       <!-- Menu Desktop (visible uniquement sur md et plus grands écrans) -->
       <div class="hidden md:flex space-x-6">
@@ -99,7 +99,7 @@ onUnmounted(() => {
         <!-- Intercepte le clic, empêche le comportement par défaut (href), et appelle handleNavClick -->
         <!-- Texte bleu si c'est la section active -->
         <a v-for="item in navItems" :key="item.id" @click.prevent="handleNavClick(item.id)"
-          class="cursor-pointer relative text-gray-700 hover:text-highlight-color transition"
+          class="cursor-pointer relative text-lg text-gray-700 hover:text-highlight-color transition"
           :class="{ 'text-highlight-color': activeSection === item.id }">
           {{ item.name }}
 

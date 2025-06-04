@@ -7,6 +7,20 @@ const isLoading = ref(false)
 const showSuccess = ref(false)
 const showError = ref(false)
 
+// Add these constants
+const MESSAGE_MIN_LENGTH = 20
+const MESSAGE_MAX_LENGTH = 1000
+
+// Add new ref for message length
+const messageLength = ref(0)
+
+const hideNotification = () => {
+  setTimeout(() => {
+    showSuccess.value = false
+    showError.value = false
+  }, 3000) // Notifications will disappear after 3 seconds
+}
+
 const sendEmail = async (e) => {
   e.preventDefault()
   isLoading.value = true
@@ -23,13 +37,20 @@ const sendEmail = async (e) => {
       }
     )
     showSuccess.value = true
+    hideNotification()
     form.value.reset()
   } catch (error) {
     console.error('FAILED...', error.text)
     showError.value = true
+    hideNotification()
   } finally {
     isLoading.value = false
   }
+}
+
+// Add function to update message length
+const updateMessageLength = (e) => {
+  messageLength.value = e.target.value.length
 }
 </script>
 
@@ -46,7 +67,7 @@ const sendEmail = async (e) => {
             <span class="text-highlight-color">/&gt;</span>
           </h2>
           <p class="text-lg text-gray-600">
-            Interested in collaborating? Let's get in touch!
+            Interested in collaborating ? Let's get in touch!
           </p>
         </div>
 
@@ -56,12 +77,12 @@ const sendEmail = async (e) => {
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="space-y-2">
               <label class="block text-sm font-medium text-gray-700">First Name</label>
-              <input type="text" name="user_firstname" required placeholder="John"
+              <input type="text" name="first_name" required placeholder="John"
                 class="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-highlight-color/20 focus:border-highlight-color transition-colors" />
             </div>
             <div class="space-y-2">
               <label class="block text-sm font-medium text-gray-700">Last Name</label>
-              <input type="text" name="user_lastname" required placeholder="Doe"
+              <input type="text" name="last_name" required placeholder="Doe"
                 class="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-highlight-color/20 focus:border-highlight-color transition-colors" />
             </div>
           </div>
@@ -69,22 +90,38 @@ const sendEmail = async (e) => {
           <!-- Email Field -->
           <div class="space-y-2">
             <label class="block text-sm font-medium text-gray-700">Email</label>
-            <input type="email" name="user_email" required placeholder="john.doe@example.com"
+            <input type="email" name="email" required placeholder="john.doe@example.com"
               class="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-highlight-color/20 focus:border-highlight-color transition-colors" />
           </div>
 
           <!-- Subject Field -->
           <div class="space-y-2">
             <label class="block text-sm font-medium text-gray-700">Subject</label>
-            <input type="text" name="subject" required placeholder="What is this about?"
+            <input type="text" name="subject" required placeholder="What is this about ?"
               class="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-highlight-color/20 focus:border-highlight-color transition-colors" />
           </div>
 
           <!-- Message Field -->
           <div class="space-y-2">
-            <label class="block text-sm font-medium text-gray-700">Message</label>
-            <textarea name="message" required placeholder="Your message..." rows="5"
-              class="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-highlight-color/20 focus:border-highlight-color transition-colors resize-none"></textarea>
+            <div class="flex justify-between items-center">
+              <label class="block text-sm font-medium text-gray-700">Message</label>
+              <span class="text-sm text-gray-500">
+                {{ messageLength }}/{{ MESSAGE_MAX_LENGTH }}
+              </span>
+            </div>
+            <textarea 
+              name="message" 
+              required
+              :minlength="MESSAGE_MIN_LENGTH"
+              :maxlength="MESSAGE_MAX_LENGTH"
+              placeholder="Your message..." 
+              rows="5"
+              @input="updateMessageLength"
+              class="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg 
+                     focus:ring-2 focus:ring-highlight-color/20 
+                     focus:border-highlight-color transition-colors 
+                     resize-none"
+            ></textarea>
           </div>
 
           <!-- Status Messages -->
