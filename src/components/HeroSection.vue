@@ -18,9 +18,20 @@ const handleScrollClick = (event) => {
     class="h-screen flex justify-center items-center bg-gray-100 dark:bg-main-background-color-dark relative">
     <container>
       <div class="flex gap-8 items-center">
-        <!-- GOATS's Photo -->
-        <div class="w-1/3 flex flex-col items-center gap-4">
-          <div class="aspect-square bg-gray-300 dark:bg-main-gui-color-dark rounded-lg w-full"></div>
+        <!-- Profile Photo -->
+        <div class="w-1/3 aspect-square relative">
+          <!-- Purple glow background -->
+          <div class="absolute inset-0 rounded-full bg-highlight-color/25 dark:bg-highlight-color/30 blur-3xl scale-110"></div>
+          
+          <!-- Image container -->
+          <div class="relative w-full h-full rounded-full overflow-hidden">
+            <img 
+              src="/images/hero_section/goat.png"
+              class="w-full h-full object-cover scale-110"
+              style="object-position: center 70%;"
+              alt="Profile picture" 
+            />
+          </div>
         </div>
 
         <!-- Text content -->
@@ -63,3 +74,9 @@ const handleScrollClick = (event) => {
     </div>
   </section>
 </template>
+
+<style scoped>
+img {
+  filter: contrast(1.1) brightness(1.05);
+}
+</style>

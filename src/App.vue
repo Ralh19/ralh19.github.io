@@ -9,6 +9,7 @@
     <ProjectsSection id="projects" />
     <StacksSection id="stacks" />
     <ContactSection id="contact" />
+    <Footer id="footer" />
   </main>
 </template>
 
@@ -21,5 +22,6 @@ import StacksSection from './components/StacksSection.vue'
 import ContactSection from './components/ContactSection.vue'
 import ExperienceSection from './components/ExperienceSection.vue'
 import EducationSection from './components/EducationSection.vue'
+import Footer from './components/Footer.vue'
 
 </script>
