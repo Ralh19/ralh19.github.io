@@ -83,10 +83,10 @@ const STACKS = [
 ];
 
 const stackColors = {
-  'Frontend': 'bg-stack-blue dark:bg-main-gui-color-darker dark:border-stack-blue dark:border-3',
-  'Backend': 'bg-stack-green dark:bg-main-gui-color-darker dark:border-stack-green dark:border-3',
-  'Database': 'bg-stack-yellow dark:bg-main-gui-color-darker dark:border-stack-yellow dark:border-3',
-  'Tools': 'bg-stack-purple dark:bg-main-gui-color-darker dark:border-stack-purple dark:border-3'
+  'Frontend': 'bg-stack-blue dark:bg-main-gui-color-darker',
+  'Backend': 'bg-stack-green dark:bg-main-gui-color-darker',
+  'Database': 'bg-stack-yellow dark:bg-main-gui-color-darker',
+  'Tools': 'bg-stack-purple dark:bg-main-gui-color-darker'
 }
 </script>
 
