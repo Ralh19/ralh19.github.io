@@ -1,10 +1,8 @@
 <script setup>
 // Import des fonctions Vue nécessaires
-import { ref, onMounted, onUnmounted, nextTick } from 'vue'
-import { useDark, useToggle } from '@vueuse/core'
-
-const isDark = useDark()
-const toggleDark = useToggle(isDark)
+import { useDarkMode } from '../composables/useDarkMode'
+import { useNavigation } from '../composables/useNavigation'
+const { isDark, toggleDark } = useDarkMode()
 
 // Définition des props reçues par le composant
 // Ici on attend un nom de portfolio, avec une valeur par défaut
@@ -14,12 +12,6 @@ const props = defineProps({
     default: 'ALMEIDA ALHADA Ruben'
   }
 })
-
-// Variable réactive pour savoir si le menu mobile est ouvert ou fermé
-const isMobileMenuOpen = ref(false)
-
-// Variable réactive pour suivre la section active visible à l'écran
-const activeSection = ref('home')
 
 // Liste des items du menu, avec un id qui correspond à l'id des sections de la page
 const navItems = [
@@ -31,59 +23,12 @@ const navItems = [
   { id: 'contact', name: 'Contact' }
 ]
 
-// Fonction qui inverse l'état du menu mobile (ouvre ou ferme)
-const toggleMobileMenu = () => {
-  isMobileMenuOpen.value = !isMobileMenuOpen.value
-}
-
-// Fonction qui gère le clic sur un élément de navigation
-// Elle ferme le menu mobile, puis fait défiler la page vers la section ciblée en douceur
-const handleNavClick = async (id) => {
-  // Fermer le menu mobile (utile pour les petits écrans)
-  isMobileMenuOpen.value = false
-
-  // nextTick attend que Vue ait appliqué les changements DOM avant de continuer
-  // Cela garantit que le menu est bien fermé avant de scroller
-  await nextTick()
-
-  // On récupère l'élément HTML correspondant à la section demandée
-  const el = document.getElementById(id)
-
-  // Si cet élément existe, on fait défiler la page vers lui avec animation
-  if (el) {
-    el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-  }
-}
-
-// Fonction qui met à jour la section active en fonction du scroll actuel
-const updateActiveSection = () => {
-  const scrollY = window.scrollY  // Position verticale actuelle du scroll
-  const offset = 80               // Décalage pour prendre en compte la hauteur de la navbar fixe
-
-  // On parcourt la liste des sections à l'envers
-  // Cela permet de détecter la dernière section visible quand on descend dans la page
-  for (let i = navItems.length - 1; i >= 0; i--) {
-    const el = document.getElementById(navItems[i].id)  // Récupère la section HTML
-    // Si la position de scroll + offset dépasse le début de la section,
-    // on considère cette section comme active
-    if (el && scrollY + offset >= el.offsetTop) {
-      activeSection.value = navItems[i].id
-      break // On arrête la boucle dès qu'on trouve la section active
-    }
-  }
-}
-
-// Lors du montage du composant (quand il est ajouté à la page), on ajoute un listener au scroll
-// Ce listener appelle updateActiveSection à chaque fois qu'on défile
-onMounted(() => {
-  window.addEventListener('scroll', updateActiveSection)
-})
-
-// Lors du démontage du composant (quand il est retiré de la page), on enlève le listener
-// C'est important pour éviter les fuites de mémoire et les erreurs
-onUnmounted(() => {
-  window.removeEventListener('scroll', updateActiveSection)
-})
+const {
+  isMobileMenuOpen,
+  activeSection,
+  toggleMobileMenu,
+  handleNavClick
+} = useNavigation(navItems)
 </script>
 
 <template>
