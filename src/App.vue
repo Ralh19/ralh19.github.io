@@ -3,13 +3,14 @@
     <NavBar portfolioName="ALMEIDA ALHADA Ruben" />
   </header>
   <main class="pt-16 scroll-smooth dark:bg-main-background-color-dark">
+    <ScrollUpButton/>
     <HeroSection id="home" />
     <ExperienceSection id="experience" />
     <EducationSection id="education" />
     <ProjectsSection id="projects" />
     <StacksSection id="stacks" />
     <ContactSection id="contact" />
-    <Footer id="footer" />
+    <Footer/>
   </main>
 </template>
 
@@ -23,5 +24,7 @@ import ContactSection from './components/ContactSection.vue'
 import ExperienceSection from './components/ExperienceSection.vue'
 import EducationSection from './components/EducationSection.vue'
 import Footer from './components/Footer.vue'
+import ScrollUpButton from './components/ScrollUpButton.vue'
+
 
 </script>
