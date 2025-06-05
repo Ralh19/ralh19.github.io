@@ -6,7 +6,7 @@ const DEGREES = [
         title: '2-year Technical Degree (Higher Technician\'s Certificate)',
         school: 'Bonaparte Highschool, Toulon France',
         description: 'Technical Degree in IT Services for Organizations - Software Development Track (BTS SIO - SLAM)',
-        path: '/images/degrees/',
+        path: '/images/degrees/comming_soon.jpg',
         date: '2025'
     },
     {
