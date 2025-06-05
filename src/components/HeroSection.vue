@@ -15,7 +15,7 @@ const handleScrollClick = (event) => {
 
 <template>
   <section id="home"
-    class="h-screen flex justify-center items-center bg-gray-100 dark:bg-main-background-color-dark relative">
+    class="h-screen flex justify-center items-center bg-gray-100 dark:bg-main-gui-color-darker relative">
     <container>
       <div class="flex gap-8 items-center">
         <!-- Profile Photo -->
@@ -36,7 +36,7 @@ const handleScrollClick = (event) => {
 
         <!-- Text content -->
         <div class="w-2/3 flex flex-col items-start">
-          <h1 class="text-5xl font-bold mb-4 text-gray-900 dark:text-white">Hello, I'm <span
+          <h1 class="text-5xl font-extrabold mb-4 text-gray-900 dark:text-white">Hello, I'm <span
               class="text-highlight-color">Ruben</span> <span class="cursor-default wave-animation">👋</span></h1>
           <p class="text-xl text-gray-600 dark:text-main-text-color-dark">
             Developer passionate about creating intuitive and

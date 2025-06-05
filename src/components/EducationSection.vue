@@ -149,7 +149,7 @@ const handleKeydown = (e) => {
                 <div class="relative">
                     <!-- Navigation Buttons -->
                     <button @click="showPrevious"
-                        class="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/80  dark:bg-main-gui-color-dark/80 p-2 rounded-full hover:bg-white transition-colors">
+                        class="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/80  dark:bg-main-background-color-dark/80 p-2 rounded-full hover:bg-white dark:hover:bg-main-gui-color-dark transition-colors">
                         <span class="sr-only">Previous</span>
                         <!-- Left arrow icon -->
                         <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -158,7 +158,7 @@ const handleKeydown = (e) => {
                     </button>
 
                     <button @click="showNext"
-                        class="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 dark:bg-main-gui-color-dark/80 p-2 rounded-full hover:bg-white transition-colors">
+                        class="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 dark:bg-main-background-color-dark/80 p-2 rounded-full hover:bg-white dark:hover:bg-main-gui-color transition-colors">
                         <span class="sr-only">Next</span>
                         <!-- Right arrow icon -->
                         <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
