@@ -20,35 +20,35 @@ const handleScrollClick = (event) => {
       <div class="flex gap-8 items-center">
         <!-- GOATS's Photo -->
         <div class="w-1/3 flex flex-col items-center gap-4">
-          <div class="aspect-square bg-gray-300 rounded-lg w-full"></div>
+          <div class="aspect-square bg-gray-300 dark:bg-main-gui-color-dark rounded-lg w-full"></div>
         </div>
 
         <!-- Text content -->
         <div class="w-2/3 flex flex-col items-start">
-          <h1 class="text-5xl font-bold mb-4">Hello, I'm <span class="text-highlight-color">Ruben</span> <span
-              class="cursor-default wave-animation">👋</span></h1>
-          <p class="text-xl text-gray-600">
+          <h1 class="text-5xl font-bold mb-4 text-gray-900 dark:text-white">Hello, I'm <span
+              class="text-highlight-color">Ruben</span> <span class="cursor-default wave-animation">👋</span></h1>
+          <p class="text-xl text-gray-600 dark:text-main-text-color-dark">
             Developer passionate about creating intuitive and
             user-centric digital experiences. Focused on building modern web applications with clean architecture and
             pixel-perfect designs. Always eager to learn and embrace new challenges.
           </p>
           <div class="flex gap-6">
-            <a href="#contact" class="text-xl mt-6 px-6 py-3 bg-highlight-color text-white rounded-lg scale-animation"
+            <a href="#contact"
+              class="text-xl mt-6 px-6 py-3 bg-highlight-color text-white rounded-lg scale-animation hover:opacity-90"
               @click="handleScrollClick">
               Hire Me
             </a>
             <a href="/docs/resume_fr.pdf" target="_blank"
-              class="text-xl mt-6 px-6 py-3 bg-highlight-color text-white rounded-lg scale-animation">
+              class="text-xl mt-6 px-6 py-3 bg-highlight-color text-white rounded-lg scale-animation hover:opacity-90">
               <i class="bi bi-filetype-pdf"></i>
               Resume
             </a>
 
             <div class="mt-6 flex items-center text-highlight-color">
               <i class="bi bi-geo-alt-fill text-3xl bounce-animation"></i>
-              <span class="text-2xl ml-2">France</span>
+              <span class="text-2xl ml-2 dark:text-main-text-color-dark">France</span>
             </div>
           </div>
-
         </div>
       </div>
     </container>
@@ -56,7 +56,7 @@ const handleScrollClick = (event) => {
     <!-- Scroll down button -->
     <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 pb-6">
       <a href="#experience" @click="handleScrollClick"
-        class="flex flex-col items-center text-gray-600 hover:text-highlight-color transition-colors">
+        class="flex flex-col items-center text-gray-600 dark:text-main-text-color-dark hover:text-highlight-color dark:hover:text-highlight-color transition-colors">
         <span class="text-2xl mb-2">Scroll Down</span>
         <i class="bi bi-arrow-down-short text-4xl bounce-animation"></i>
       </a>

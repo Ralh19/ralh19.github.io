@@ -88,41 +88,35 @@ onUnmounted(() => {
 
 <template>
   <!-- Barre de navigation fixe en haut de la page -->
-  <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-main-gui-color/80 backdrop-blur border-b border-gray-200 dark:border-gray-700">
+  <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-main-gui-color-dark/80 backdrop-blur border-b border-gray-200 dark:border-gray-700">
 
     <!-- Conteneur de la nav avec max-width et padding -->
     <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
 
       <!-- Nom du portfolio / logo -->
-      <div class="font-extrabold text-2xl text-highlight-color dark:text-highlight-color cursor-default">
+      <div class="font-extrabold text-2xl text-highlight-color cursor-default">
         {{ portfolioName }}
       </div>
 
-      <!-- Menu Desktop (visible uniquement sur md et plus grands écrans) -->
+      <!-- Menu Desktop -->
       <div class="hidden md:flex space-x-6">
-        <!-- Boucle sur les items de navigation -->
-
-        <!-- Intercepte le clic, empêche le comportement par défaut (href), et appelle handleNavClick -->
-        <!-- Texte bleu si c'est la section active -->
         <a v-for="item in navItems" 
            :key="item.id" 
            @click.prevent="handleNavClick(item.id)"
-           class="cursor-pointer relative text-lg text-gray-700 dark:text-gray-300 hover:text-highlight-color dark:hover:text-highlight-color transition"
+           class="cursor-pointer relative text-lg text-gray-700 dark:text-main-text-color-dark hover:text-highlight-color dark:hover:text-highlight-color transition duration-300"
            :class="{ 'text-highlight-color dark:text-highlight-color': activeSection === item.id }">
           {{ item.name }}
-
-          <!-- Petit trait bleu sous l'item actif (animation avec scale-x) -->
           <span class="absolute bottom-0 left-0 w-full h-0.5 bg-highlight-color scale-x-0 group-hover:scale-x-100 transition-transform"
                 :class="{ 'scale-x-100': activeSection === item.id }">
           </span>
         </a>
       </div>
 
-      <!-- Conteneur pour les icônes à droite de la navbar -->
+      <!-- Conteneur pour les icônes -->
       <div class="flex items-center mr-4">
         <!-- Bouton de changement de thème -->
         <button 
-          class="p-2 text-gray-500 dark:text-gray-400 hover:text-highlight-color dark:hover:text-highlight-color transition-colors rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
+          class="p-2 text-gray-500 dark:text-main-text-color-dark hover:text-highlight-color dark:hover:text-highlight-color transition-colors rounded-full hover:bg-gray-100 dark:hover:bg-main-background-color-dark"
           aria-label="Toggle theme" 
           @click="toggleDark()">
           <div class="relative w-6 h-6">
@@ -147,8 +141,8 @@ onUnmounted(() => {
           </div>
         </button>
 
-        <!-- Bouton menu mobile (visible uniquement en dessous de md) -->
-        <button class="md:hidden" @click="toggleMobileMenu">
+        <!-- Bouton menu mobile -->
+        <button class="md:hidden text-gray-700 dark:text-main-text-color-dark" @click="toggleMobileMenu">
           <!-- Icone hamburger quand menu fermé -->
           <svg v-if="!isMobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -159,19 +153,15 @@ onUnmounted(() => {
           </svg>
         </button>
       </div>
-
     </div>
 
     <!-- Menu mobile déroulant -->
     <div v-if="isMobileMenuOpen" 
-         class="md:hidden px-4 pb-4 pt-2 bg-white dark:bg-gray-900 shadow dark:shadow-gray-800">
-      <!-- Items de navigation mobile, fonctionnent comme en desktop -->
-
-      <!-- Quand on clique, on scroll vers la section et ferme le menu -->
+         class="md:hidden px-4 pb-4 pt-2 bg-white dark:bg-main-gui-color-dark shadow dark:shadow-main-background-color-dark">
       <a v-for="item in navItems" 
          :key="item.id" 
          @click.prevent="handleNavClick(item.id)"
-         class="block py-2 text-gray-700 dark:text-gray-300 hover:text-highlight-color dark:hover:text-highlight-color"
+         class="block py-2 text-gray-700 dark:text-main-text-color-dark hover:text-highlight-color dark:hover:text-highlight-color transition duration-300"
          :class="{ 'text-highlight-color dark:text-highlight-color': activeSection === item.id }">
         {{ item.name }}
       </a>

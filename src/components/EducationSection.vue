@@ -94,7 +94,7 @@ const handleKeydown = (e) => {
 <template>
     <section id="education" class="py-20 bg-white dark:bg-main-background-color-dark">
         <container>
-            <h2 class="mb-16 text-4xl font-bold text-center">
+            <h2 class="mb-16 text-4xl font-bold text-center dark:text-white">
                 <span class="text-highlight-color">&lt;</span>
                 Education
                 <span class="text-highlight-color">/&gt;</span>
@@ -144,12 +144,12 @@ const handleKeydown = (e) => {
         <!-- Modal -->
         <div v-if="isModalOpen" class="fixed inset-0 bg-black/90 z-50 flex items-center justify-center"
             @click.self="closeModal" @keydown="handleKeydown" tabindex="0">
-            <div class="max-w-4xl w-full mx-4 bg-white rounded-xl overflow-hidden">
+            <div class="max-w-4xl w-full mx-4 bg-white dark:bg-main-gui-color-dark rounded-xl overflow-hidden">
                 <!-- Modal Content -->
                 <div class="relative">
                     <!-- Navigation Buttons -->
                     <button @click="showPrevious"
-                        class="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 p-2 rounded-full hover:bg-white transition-colors">
+                        class="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/80  dark:bg-main-gui-color-dark/80 p-2 rounded-full hover:bg-white transition-colors">
                         <span class="sr-only">Previous</span>
                         <!-- Left arrow icon -->
                         <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -158,7 +158,7 @@ const handleKeydown = (e) => {
                     </button>
 
                     <button @click="showNext"
-                        class="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 p-2 rounded-full hover:bg-white transition-colors">
+                        class="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 dark:bg-main-gui-color-dark/80 p-2 rounded-full hover:bg-white transition-colors">
                         <span class="sr-only">Next</span>
                         <!-- Right arrow icon -->
                         <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -167,7 +167,7 @@ const handleKeydown = (e) => {
                     </button>
 
                     <!-- Image -->
-                    <div class="h-[400px] bg-gray-100 overflow-hidden">
+                    <div class="h-[400px] bg-gray-100 dark:bg-main-gui-color-darker overflow-hidden">
                         <transition
                             :enter-active-class="slideDirection === 'right' ? 'animate-slide-in-right' : 'animate-slide-in-left'"
                             :leave-active-class="slideDirection === 'right' ? 'animate-slide-out-left' : 'animate-slide-out-right'"
@@ -185,7 +185,7 @@ const handleKeydown = (e) => {
                             mode="out-in">
                             <div :key="currentIndex" class="space-y-6">
                                 <div class="flex items-center justify-between">
-                                    <h3 class="text-2xl font-bold text-gray-900">
+                                    <h3 class="text-2xl font-bold text-gray-900 dark:text-main-text-color-dark">
                                         {{ DEGREES[currentIndex].title }}
                                     </h3>
                                     <span
@@ -194,11 +194,11 @@ const handleKeydown = (e) => {
                                     </span>
                                 </div>
 
-                                <div class="text-lg font-medium text-gray-600">
+                                <div class="text-lg font-medium text-gray-600 dark:text-main-text-color-dark/60">
                                     {{ DEGREES[currentIndex].school }}
                                 </div>
 
-                                <p class="text-gray-600">
+                                <p class="text-gray-600 dark:text-main-text-color-dark">
                                     {{ DEGREES[currentIndex].description }}
                                 </p>
                             </div>

@@ -1,16 +1,15 @@
 <template>
-  <div>
+  <header>
     <NavBar portfolioName="ALMEIDA ALHADA Ruben" />
-
-    <main class="pt-16 scroll-smooth">
-      <HeroSection id="home" />
-      <ExperienceSection id="experience" />
-      <EducationSection id="education" />
-      <ProjectsSection id="projects" />
-      <StacksSection id="stacks" />
-      <ContactSection id="contact" />
-    </main>
-  </div>
+  </header>
+  <main class="pt-16 scroll-smooth dark:bg-main-background-color-dark">
+    <HeroSection id="home" />
+    <ExperienceSection id="experience" />
+    <EducationSection id="education" />
+    <ProjectsSection id="projects" />
+    <StacksSection id="stacks" />
+    <ContactSection id="contact" />
+  </main>
 </template>
 
 <script setup>
@@ -24,4 +23,3 @@ import ExperienceSection from './components/ExperienceSection.vue'
 import EducationSection from './components/EducationSection.vue'
 
 </script>
-

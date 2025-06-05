@@ -3,13 +3,22 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-main-background-color-dark: rgb(32, 33, 40);
-  --color-main-gui-color: rgb(39, 45, 52);
   --color-highlight-color: rgb(224, 108, 117);
   --color-stack-green: rgb(152, 195, 121);
   --color-stack-blue: rgb(97, 175, 240);
   --color-stack-yellow: rgb(229, 192, 123);
   --color-stack-purple: rgb(198, 120, 221);
+
+  /* Dark Themes */
+  --color-main-background-color-dark: rgb(40, 44, 52);
+  --color-main-gui-color-dark: rgb(33, 37, 43);
+  --color-main-gui-color-darker: rgb(32, 33, 40);
+  --color-main-text-color-dark: rgb(171, 178, 191);
+
+  --color-stack-green-dark: rgb(152, 195, 121);
+  --color-stack-blue-dark: rgb(66, 119, 163);
+  --color-stack-yellow-dark: rgb(152, 127, 81);
+  --color-stack-purple-dark: rgb(129, 78, 144);
 }
 
 body {
