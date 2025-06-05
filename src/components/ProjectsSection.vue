@@ -1,10 +1,36 @@
 <script setup>
+import { ref, onUnmounted } from 'vue'
+
+const showTroll = ref(false)
+const trollTimer = ref(null)
+
+const displayTroll = () => {
+  showTroll.value = true
+
+  // Clear any existing timer
+  if (trollTimer.value) {
+    clearTimeout(trollTimer.value)
+  }
+
+  // Set new timer to hide the troll after 3 seconds
+  trollTimer.value = setTimeout(() => {
+    showTroll.value = false
+  }, 3000)
+}
+
+// Cleanup timer on component unmount
+onUnmounted(() => {
+  if (trollTimer.value) {
+    clearTimeout(trollTimer.value)
+  }
+})
+
 const projects = [
   {
     title: 'PORTFOLIO',
     description: 'Personal portfolio website built with Vue.js 3 and TailwindCSS for the styling, featuring responsive design, project showcase, and modern UI components. Demonstrates proficiency in frontend development.',
     technologies: ['Vue.js 3', 'Javascript', 'TailwindCSS', 'NodeJS', 'Vite', 'Git'],
-    imageUrl: '/images/projects/gainz.png',
+    imageUrl: '/images/projects/portfolio_screen.png',
     links: {
       github: 'https://github.com/Ralh19/ralh19.github.io',
     }
@@ -42,7 +68,7 @@ const projects = [
   {
     title: 'GSB',
     description: 'GSB is a PHP/MySQL-based web application designed to streamline the monthly reimbursement process for medical representatives. Built with HTML, CSS, JavaScript, and Bootstrap on the frontend, and PHP (with PDO) on the backend, it enables users to securely log in, submit expense claims, upload supporting documents, and track reimbursement status. Accountants validate and manage entries via a dedicated interface. The application replicates a real-world expense cycle with automated month closure, validation logic, and historical tracking—all hosted on an Apache server via WAMP',
-    technologies: ['PHP','Javascript','MySQL','Bootstrap'],
+    technologies: ['PHP', 'Javascript', 'MySQL', 'Bootstrap'],
     imageUrl: '/images/projects/gsb_screen.png',
     links: {
       github: 'https://github.com/Ralh19/GSB',
@@ -54,6 +80,21 @@ const projects = [
 
 
 <template>
+  <!-- Troll overlay -->
+  <Transition 
+    enter-active-class="transition-all duration-300" 
+    leave-active-class="transition-all duration-300"
+    enter-from-class="opacity-0 scale-95" 
+    leave-to-class="opacity-0 scale-95">
+    <div v-if="showTroll" class="fixed inset-0 z-[9999] flex items-center justify-center pointer-events-none">
+      <img 
+        src="/images/troll.png" 
+        alt="troll" 
+        class="w-screen h-screen object-cover" 
+      />
+    </div>
+  </Transition>
+
   <section id="projects" class="py-20 bg-gray-50 dark:bg-main-background-color-dark">
     <div class="max-w-7xl mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-16 dark:text-white">
@@ -95,7 +136,19 @@ const projects = [
                   </svg>
                   Github
                 </a>
-                <a v-if="project.links.demo" :href="project.links.demo" target="_blank"
+
+                <!-- Special troll button for Portfolio project -->
+                <button v-if="project.title === 'PORTFOLIO'" @click="displayTroll"
+                  class="inline-flex items-center gap-2 px-4 py-2 bg-highlight-color text-white rounded-lg hover:bg-highlight-color/90 transition-colors">
+                  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                  Live Demo
+                </button>
+
+                <!-- Regular demo button for other projects -->
+                <a v-else-if="project.links.demo" :href="project.links.demo" target="_blank"
                   class="inline-flex items-center gap-2 px-4 py-2 bg-highlight-color text-white rounded-lg hover:bg-highlight-color/90 transition-colors">
                   <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
