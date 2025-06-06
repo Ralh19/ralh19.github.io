@@ -1,0 +1,17 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "experience": "Expérience",
+    "education": "Formation",
+    "projects": "Projets",
+    "stacks": "Mes Stacks",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Bonjour, je suis",
+    "description": "Développeur passionné par la création d'expériences numériques intuitives et centrées sur l'utilisateur. Focalisé sur la construction d'applications web modernes avec une architecture propre et des designs précis. Toujours désireux d'apprendre et de relever de nouveaux défis.",
+    "hireMe": "Recrutez-moi",
+    "resume": "CV",
+    "scrollDown": "Défiler vers le bas"
+  }
+}

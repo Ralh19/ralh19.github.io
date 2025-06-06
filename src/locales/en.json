@@ -1,0 +1,17 @@
+{
+  "nav": {
+    "home": "Home",
+    "experience": "Experience",
+    "education": "Education",
+    "projects": "Projects",
+    "stacks": "My Stacks",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "description": "Developer passionate about creating intuitive and user-centric digital experiences. Focused on building modern web applications with clean architecture and pixel-perfect designs. Always eager to learn and embrace new challenges.",
+    "hireMe": "Hire Me",
+    "resume": "Resume",
+    "scrollDown": "Scroll Down"
+  }
+}

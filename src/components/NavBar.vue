@@ -1,10 +1,12 @@
 <script setup>
 // Import des fonctions Vue nécessaires
-import { useDarkMode } from '@/composables/useDarkMode';
-import { useNavigation } from '@/composables/useNavigation';
-
+import { useDarkMode } from '@/composables/useDarkMode'
+import { useNavigation } from '@/composables/useNavigation'
+import { useNavTranslation } from '@/composables/useNavTranslation'
+import LanguageSwitcher from './LanguageSwitcher.vue'
 
 const { isDark, toggleDark } = useDarkMode()
+const { navItems } = useNavTranslation()
 
 // Définition des props reçues par le composant
 // Ici on attend un nom de portfolio, avec une valeur par défaut
@@ -16,21 +18,12 @@ const props = defineProps({
 })
 
 // Liste des items du menu, avec un id qui correspond à l'id des sections de la page
-const navItems = [
-  { id: 'home', name: 'Home' },
-  { id: 'experience', name: 'Experience' },
-  { id: 'education', name: 'Education' },
-  { id: 'projects', name: 'Projects' },
-  { id: 'stacks', name: 'My Stacks' },
-  { id: 'contact', name: 'Contact' }
-]
-
 const {
   isMobileMenuOpen,
   activeSection,
   toggleMobileMenu,
   handleNavClick
-} = useNavigation(navItems)
+} = useNavigation(navItems.value)
 </script>
 
 <template>
@@ -58,6 +51,7 @@ const {
 
       <!-- Icons container -->
       <div class="flex items-center space-x-2 sm:space-x-4">
+        <LanguageSwitcher />
         <!-- Theme toggle button -->
         <button 
           class="p-1.5 sm:p-2 text-gray-500 dark:text-main-text-color-dark hover:text-highlight-color dark:hover:text-highlight-color transition-colors rounded-full hover:bg-gray-100 dark:hover:bg-main-background-color-dark"
