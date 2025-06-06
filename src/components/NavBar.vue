@@ -1,7 +1,9 @@
 <script setup>
 // Import des fonctions Vue nécessaires
-import { useDarkMode } from '../composables/useDarkMode'
-import { useNavigation } from '../composables/useNavigation'
+import { useDarkMode } from '@/composables/useDarkMode';
+import { useNavigation } from '@/composables/useNavigation';
+
+
 const { isDark, toggleDark } = useDarkMode()
 
 // Définition des props reçues par le composant

@@ -1,29 +1,9 @@
 <script setup>
-import { ref, onUnmounted } from 'vue'
+import { useTrollEffect } from '@/composables/useTrollEffect';
 
-const showTroll = ref(false)
-const trollTimer = ref(null)
+const {showTroll, displayTroll} = useTrollEffect()
 
-const displayTroll = () => {
-  showTroll.value = true
 
-  // Clear any existing timer
-  if (trollTimer.value) {
-    clearTimeout(trollTimer.value)
-  }
-
-  // Set new timer to hide the troll after 3 seconds
-  trollTimer.value = setTimeout(() => {
-    showTroll.value = false
-  }, 3000)
-}
-
-// Cleanup timer on component unmount
-onUnmounted(() => {
-  if (trollTimer.value) {
-    clearTimeout(trollTimer.value)
-  }
-})
 
 const projects = [
   {
