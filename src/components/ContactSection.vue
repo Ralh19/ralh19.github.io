@@ -1,59 +1,18 @@
 <script setup>
-import { ref } from 'vue'
-import emailjs from '@emailjs/browser'
+import { useContactForm } from '@/composables/useContactForm'
 
-const form = ref(null)
-const isLoading = ref(false)
-const showSuccess = ref(false)
-const showError = ref(false)
-
-// Add these constants
-const MESSAGE_MIN_LENGTH = 20
-const MESSAGE_MAX_LENGTH = 1000
-
-// Add new ref for message length
-const messageLength = ref(0)
-
-const hideNotification = () => {
-  setTimeout(() => {
-    showSuccess.value = false
-    showError.value = false
-  }, 3000) // Notifications will disappear after 3 seconds
-}
-
-const sendEmail = async (e) => {
-  e.preventDefault()
-  isLoading.value = true
-  showSuccess.value = false
-  showError.value = false
-
-  try {
-    await emailjs.sendForm(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      form.value,
-      {
-        publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-      }
-    )
-    showSuccess.value = true
-    hideNotification()
-    form.value.reset()
-  } catch (error) {
-    console.error('FAILED...', error.text)
-    showError.value = true
-    hideNotification()
-  } finally {
-    isLoading.value = false
-  }
-}
-
-// Add function to update message length
-const updateMessageLength = (e) => {
-  messageLength.value = e.target.value.length
-}
+const {
+  form,
+  isLoading,
+  showSuccess,
+  showError,
+  messageLength,
+  MESSAGE_MIN_LENGTH,
+  MESSAGE_MAX_LENGTH,
+  sendEmail,
+  updateMessageLength,
+} = useContactForm()
 </script>
-
 <template>
   <section id="contact" class="py-20 bg-white dark:bg-main-background-color-dark min-h-screen flex items-center">
     <container>

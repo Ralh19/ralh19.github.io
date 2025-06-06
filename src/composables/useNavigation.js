@@ -1,4 +1,3 @@
-// composables/useNavigation.js
 import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 
 export function useNavigation(navItems) {
