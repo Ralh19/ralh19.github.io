@@ -1,5 +1,5 @@
 <script setup>
-import { useExperienceTranslation } from '@/composables/useExperienceTranslation'
+import { useExperienceTranslation } from '@/composables/translation_composables/useExperienceTranslation'
 
 const { experiences, t } = useExperienceTranslation()
 </script>

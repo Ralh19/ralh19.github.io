@@ -1,5 +1,5 @@
 <script setup>
-import { useHeroTranslation } from '@/composables/useHeroTranslation'
+import { useHeroTranslation } from '@/composables/translation_composables/useHeroTranslation'
 
 const { t } = useHeroTranslation()
 

@@ -1,6 +1,6 @@
 <script setup>
 import { useModal } from '@/composables/useModal'
-import { useEducationTranslation } from '@/composables/useEducationTranslation'
+import { useEducationTranslation } from '@/composables/translation_composables/useEducationTranslation'
 
 const { degrees, t } = useEducationTranslation()
 

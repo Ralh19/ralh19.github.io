@@ -1,6 +1,6 @@
 <script setup>
 import { useTrollEffect } from '@/composables/useTrollEffect'
-import { useProjectsTranslation } from '@/composables/useProjectsTranslation'
+import { useProjectsTranslation } from '@/composables/translation_composables/useProjectsTranslation'
 
 const { showTroll, displayTroll } = useTrollEffect()
 const { projects, t } = useProjectsTranslation()
