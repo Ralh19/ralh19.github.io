@@ -1,50 +1,8 @@
 <script setup>
-import { useModal } from '@/composables/useModal';
+import { useModal } from '@/composables/useModal'
+import { useEducationTranslation } from '@/composables/useEducationTranslation'
 
-const DEGREES = [
-    {
-        title: '2-year Technical Degree (Higher Technician\'s Certificate)',
-        school: 'Bonaparte Highschool, Toulon France',
-        description: 'Technical Degree in IT Services for Organizations - Software Development Track (BTS SIO - SLAM)',
-        path: '/images/degrees/comming_soon.jpg',
-        date: '2025'
-    },
-    {
-        title: 'PIX Digital Skills Certificate',
-        school: 'Bonaparte Highschool, Toulon France',
-        description: 'Certified digital proficiency in various domains',
-        path: '/images/degrees/pix.jpg',
-        date: '2025'
-    },
-    {
-        title: 'GDPR Workshop',
-        school: 'National Data Protection Commission',
-        description: 'Training on data privacy and General Data Protection Regulation',
-        path: '/images/degrees/rgpd5.jpg',
-        date: '2024'
-    },
-    {
-        title: 'Cybersecurity MOOC',
-        school: 'ANSSI (French National Cybersecurity Agency)',
-        description: 'Introductory training focused on cybersecurity principles, best practices in digital safety, and risk prevention strategies for individuals and organizations.',
-        path: '/images/degrees/anssi.jpg',
-        date: '2023'
-    },
-    {
-        title: 'Introduction to Game Development Certificate (25 ECTS)',
-        school: 'XAMK University of Applied Sciences',
-        description: 'Comprehensive course covering the fundamentals of game design and development, including game engines, programming logic, 2D/3D graphics, and gameplay mechanics.',
-        path: '/images/degrees/xamk.jpg',
-        date: '2023'
-    },
-    {
-        title: 'High School Degree with a specialization in Marketing (STMG)',
-        school: 'Golfe de Saint-Tropez Highschool, Gassin France',
-        description: 'French Baccalauréat in Management - Marketing Major (STMG Track)',
-        path: '/images/degrees/bac.png',
-        date: '2022'
-    },
-]
+const { degrees, t } = useEducationTranslation()
 
 const {
     isModalOpen,
@@ -54,7 +12,7 @@ const {
     closeModal,
     showNext,
     showPrevious,
-} = useModal(DEGREES)
+} = useModal(degrees.value)
 </script>
 
 <template>
@@ -62,14 +20,14 @@ const {
         <container>
             <h2 class="mb-16 text-4xl font-bold text-center dark:text-white">
                 <span class="text-highlight-color">&lt;</span>
-                Education
+                {{ t('education.title') }}
                 <span class="text-highlight-color">/&gt;</span>
             </h2>
 
             <div class="max-w-6xl mx-auto px-4">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Degree Card -->
-                    <div v-for="(degree, index) in DEGREES" :key="degree.title"
+                    <div v-for="(degree, index) in degrees" :key="degree.title"
                         class="relative h-[400px] rounded-xl overflow-hidden group cursor-pointer"
                         @click="openModal(index)">
                         <!-- Image -->
@@ -109,14 +67,14 @@ const {
 
         <!-- Modal -->
         <div v-if="isModalOpen" class="fixed inset-0 bg-black/90 z-50 flex items-center justify-center"
-            @click.self="closeModal" @keydown="handleKeydown" tabindex="0">
+            @click.self="closeModal">
             <div class="max-w-4xl w-full mx-4 bg-white dark:bg-main-gui-color-dark rounded-xl overflow-hidden">
                 <!-- Modal Content -->
                 <div class="relative">
                     <!-- Navigation Buttons -->
                     <button @click="showPrevious"
                         class="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/80  dark:bg-main-background-color-dark/80 p-2 rounded-full hover:bg-white dark:hover:bg-main-gui-color-dark transition-colors">
-                        <span class="sr-only">Previous</span>
+                        <span class="sr-only">{{ t('education.previous') }}</span>
                         <!-- Left arrow icon -->
                         <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -125,7 +83,7 @@ const {
 
                     <button @click="showNext"
                         class="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 dark:bg-main-background-color-dark/80 p-2 rounded-full hover:bg-white dark:hover:bg-main-gui-color-dark transition-colors">
-                        <span class="sr-only">Next</span>
+                        <span class="sr-only">{{ t('education.next') }}</span>
                         <!-- Right arrow icon -->
                         <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -138,8 +96,8 @@ const {
                             :enter-active-class="slideDirection === 'right' ? 'animate-slide-in-right' : 'animate-slide-in-left'"
                             :leave-active-class="slideDirection === 'right' ? 'animate-slide-out-left' : 'animate-slide-out-right'"
                             mode="out-in">
-                            <img :key="currentIndex" :src="DEGREES[currentIndex].path"
-                                :alt="DEGREES[currentIndex].title" class="w-full h-full object-contain" />
+                            <img :key="currentIndex" :src="degrees[currentIndex].path"
+                                :alt="degrees[currentIndex].title" class="w-full h-full object-contain" />
                         </transition>
                     </div>
 
@@ -152,20 +110,20 @@ const {
                             <div :key="currentIndex" class="space-y-6">
                                 <div class="flex items-center justify-between">
                                     <h3 class="text-2xl font-bold text-gray-900 dark:text-main-text-color-dark">
-                                        {{ DEGREES[currentIndex].title }}
+                                        {{ degrees[currentIndex].title }}
                                     </h3>
                                     <span
                                         class="bg-highlight-color/10 text-highlight-color px-3 py-1 rounded-full text-sm font-medium">
-                                        {{ DEGREES[currentIndex].date }}
+                                        {{ degrees[currentIndex].date }}
                                     </span>
                                 </div>
 
                                 <div class="text-lg font-medium text-gray-600 dark:text-main-text-color-dark/60">
-                                    {{ DEGREES[currentIndex].school }}
+                                    {{ degrees[currentIndex].school }}
                                 </div>
 
                                 <p class="text-gray-600 dark:text-main-text-color-dark">
-                                    {{ DEGREES[currentIndex].description }}
+                                    {{ degrees[currentIndex].description }}
                                 </p>
                             </div>
                         </transition>
@@ -176,7 +134,7 @@ const {
             <!-- Close button -->
             <button @click="closeModal"
                 class="absolute top-4 right-4 text-white hover:text-highlight-color transition-colors">
-                <span class="sr-only">Close</span>
+                <span class="sr-only">{{ t('education.close') }}</span>
                 <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>

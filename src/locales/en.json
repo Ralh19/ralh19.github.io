@@ -22,5 +22,41 @@
     "period2": "05/06/2024 - 06/29/2024",
     "achievement1": "Develop a web application built with Django (Python) to replace the OpenWrt admin interface on a Raspberry Pi, featuring an interactive network scanner with real-time display of connected devices.",
     "achievement2": "Develop a web application designed to optimize delivery drivers routes by automating delivery tracking and validation. Developed using Symfony (versions 3.4 and 5.4), PHP, JavaScript, Bootstrap, and MySQL."
+  },
+  "education": {
+    "title": "Education",
+    "previous": "Previous",
+    "next": "Next",
+    "close": "Close",
+    "degree1": {
+      "title": "2-year Technical Degree (Higher Technician's Certificate)",
+      "school": "Bonaparte Highschool, Toulon France",
+      "description": "Technical Degree in IT Services for Organizations - Software Development Track (BTS SIO - SLAM)"
+    },
+    "degree2": {
+      "title": "PIX Digital Skills Certificate",
+      "school": "Bonaparte Highschool, Toulon France",
+      "description": "Certified digital proficiency in various domains"
+    },
+    "degree3": {
+      "title": "GDPR Workshop",
+      "school": "National Data Protection Commission",
+      "description": "Training on data privacy and General Data Protection Regulation"
+    },
+    "degree4": {
+      "title": "Cybersecurity MOOC",
+      "school": "ANSSI (French National Cybersecurity Agency)",
+      "description": "Introductory training focused on cybersecurity principles, best practices in digital safety, and risk prevention strategies for individuals and organizations."
+    },
+    "degree5": {
+      "title": "Introduction to Game Development Certificate (25 ECTS)",
+      "school": "XAMK University of Applied Sciences",
+      "description": "Comprehensive course covering the fundamentals of game design and development, including game engines, programming logic, 2D/3D graphics, and gameplay mechanics."
+    },
+    "degree6": {
+      "title": "High School Degree with a specialization in Marketing (STMG)",
+      "school": "Golfe de Saint-Tropez Highschool, Gassin France",
+      "description": "French Baccalauréat in Management - Marketing Major (STMG Track)"
+    }
   }
 }

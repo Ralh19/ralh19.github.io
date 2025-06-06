@@ -22,5 +22,41 @@
     "period2": "06/05/2024 - 29/06/2024",
     "achievement1": "Développement d'une application web avec Django (Python) pour remplacer l'interface d'administration OpenWrt sur un Raspberry Pi, incluant un scanner réseau interactif avec affichage en temps réel des appareils connectés.",
     "achievement2": "Développement d'une application web conçue pour optimiser les itinéraires des chauffeurs-livreurs en automatisant le suivi et la validation des livraisons. Développée avec Symfony (versions 3.4 et 5.4), PHP, JavaScript, Bootstrap et MySQL."
+  },
+  "education": {
+    "title": "Formation",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "close": "Fermer",
+    "degree1": {
+      "title": "BTS Services Informatiques aux Organisations",
+      "school": "Lycée Bonaparte, Toulon",
+      "description": "BTS SIO option Solutions Logicielles et Applications Métiers (SLAM)"
+    },
+    "degree2": {
+      "title": "Certification PIX",
+      "school": "Lycée Bonaparte, Toulon",
+      "description": "Certification des compétences numériques dans divers domaines"
+    },
+    "degree3": {
+      "title": "Formation RGPD",
+      "school": "Commission Nationale de l'Informatique et des Libertés",
+      "description": "Formation sur la protection des données et le Règlement Général sur la Protection des Données"
+    },
+    "degree4": {
+      "title": "MOOC Cybersécurité",
+      "school": "ANSSI (Agence Nationale de la Sécurité des Systèmes d'Information)",
+      "description": "Formation d'introduction aux principes de cybersécurité, aux bonnes pratiques de sécurité numérique et aux stratégies de prévention des risques pour les particuliers et les organisations."
+    },
+    "degree5": {
+      "title": "Certificat d'Introduction au Développement de Jeux (25 ECTS)",
+      "school": "XAMK Université des Sciences Appliquées",
+      "description": "Cours complet couvrant les fondamentaux du design et du développement de jeux, incluant les moteurs de jeu, la logique de programmation, les graphismes 2D/3D et les mécaniques de gameplay."
+    },
+    "degree6": {
+      "title": "Baccalauréat STMG spécialité Marketing",
+      "school": "Lycée du Golfe de Saint-Tropez, Gassin",
+      "description": "Baccalauréat Sciences et Technologies du Management et de la Gestion - spécialité Marketing"
+    }
   }
 }
