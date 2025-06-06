@@ -1,4 +1,8 @@
 <script setup>
+import { useHeroTranslation } from '@/composables/useHeroTranslation'
+
+const { t } = useHeroTranslation()
+
 const handleScrollClick = (event) => {
   event.preventDefault()
   const targetId = event.currentTarget.getAttribute('href').slice(1)
@@ -37,13 +41,11 @@ const handleScrollClick = (event) => {
         <!-- Text content - Full width on mobile, 2/3 on desktop -->
         <div class="w-full md:w-2/3 flex flex-col items-center md:items-start text-center md:text-left">
           <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900 dark:text-white">
-            Hello, I'm <span class="text-highlight-color">Ruben</span> 
+            {{ t('hero.greeting') }} <span class="text-highlight-color">Ruben</span>
             <span class="cursor-default wave-animation">👋</span>
           </h1>
           <p class="text-lg md:text-xl text-gray-600 dark:text-main-text-color-dark">
-            Developer passionate about creating intuitive and
-            user-centric digital experiences. Focused on building modern web applications with clean architecture and
-            pixel-perfect designs. Always eager to learn and embrace new challenges.
+            {{ t('hero.description') }}
           </p>
 
           <!-- Buttons row on mobile and desktop -->
@@ -51,26 +53,26 @@ const handleScrollClick = (event) => {
             <a href="#contact"
               class="text-lg md:text-xl mt-6 px-6 py-3 bg-highlight-color text-white rounded-lg scale-animation hover:opacity-90 flex-1 md:flex-none text-center"
               @click="handleScrollClick">
-              Hire Me
+              {{ t('hero.hireMe') }}
             </a>
             <a href="/docs/resume_fr.pdf" target="_blank"
               class="text-lg md:text-xl mt-6 px-6 py-3 bg-highlight-color text-white rounded-lg scale-animation hover:opacity-90 flex-1 md:flex-none text-center">
               <i class="bi bi-filetype-pdf"></i>
-              Resume
+              {{ t('hero.resume') }}
             </a>
           </div>
 
           <!-- Location stacked below buttons -->
           <div class="mt-6 flex items-center text-highlight-color">
             <i class="bi bi-geo-alt-fill text-2xl md:text-3xl bounce-animation"></i>
-            <span class="text-xl md:text-2xl ml-2 dark:text-main-text-color-dark">France</span>
+            <span class="text-xl md:text-2xl ml-2 dark:text-main-text-color-dark">{{ t('hero.location') }}</span>
           </div>
 
           <!-- Mobile scroll button -->
           <div class="md:hidden mt-6">
             <a href="#experience" @click="handleScrollClick"
               class="flex flex-col items-center text-gray-600 dark:text-main-text-color-dark hover:text-highlight-color dark:hover:text-highlight-color transition-colors">
-              <span class="text-xl mb-2">Scroll Down</span>
+              <span class="text-xl mb-2">{{ t('hero.scrollDown') }}</span>
               <i class="bi bi-arrow-down-short text-3xl bounce-animation"></i>
             </a>
           </div>
@@ -82,7 +84,7 @@ const handleScrollClick = (event) => {
     <div class="hidden md:block absolute bottom-8 left-1/2 transform -translate-x-1/2 pb-6">
       <a href="#experience" @click="handleScrollClick"
         class="flex flex-col items-center text-gray-600 dark:text-main-text-color-dark hover:text-highlight-color dark:hover:text-highlight-color transition-colors">
-        <span class="text-xl md:text-2xl mb-2">Scroll Down</span>
+        <span class="text-xl md:text-2xl mb-2">{{ t('hero.scrollDown') }}</span>
         <i class="bi bi-arrow-down-short text-3xl md:text-4xl bounce-animation"></i>
       </a>
     </div>
