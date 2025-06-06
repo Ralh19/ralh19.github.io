@@ -23,6 +23,6 @@ const toggleLanguage = () => {
                  hover:text-highlight-color dark:hover:text-highlight-color 
                  transition-colors rounded-full 
                  hover:bg-gray-100 dark:hover:bg-main-background-color-dark">
-    {{ locale === 'en' ? 'FR' : 'EN' }}
+    {{ locale === 'en' ? 'EN' : 'FR' }}
   </button>
 </template>
