@@ -1,27 +1,6 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
-
-const isVisible = ref(false)
-const showThreshold = 500 // Show button after scrolling 500px
-
-const checkScroll = () => {
-    isVisible.value = window.scrollY > showThreshold
-}
-
-const scrollToTop = () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    })
-}
-
-onMounted(() => {
-    window.addEventListener('scroll', checkScroll)
-})
-
-onUnmounted(() => {
-    window.removeEventListener('scroll', checkScroll)
-})
+import { useScrollUpButton } from '@/composables/useScrollUpButton'
+const { isVisible, scrollToTop } = useScrollUpButton(500) // seuil à 500px
 </script>
 
 <template>
