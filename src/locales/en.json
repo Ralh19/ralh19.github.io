@@ -97,5 +97,29 @@
     "tools": {
       "title": "Tools"
     }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Interested in collaborating? Let's get in touch!",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "placeholders": {
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe@example.com",
+        "subject": "What is this about?",
+        "message": "Your message..."
+      }
+    },
+    "status": {
+      "success": "Message sent successfully!",
+      "error": "Failed to send message. Please try again.",
+      "sending": "Sending...",
+      "send": "Send Message"
+    }
   }
 }

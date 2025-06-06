@@ -97,5 +97,29 @@
     "tools": {
       "title": "Outils"
     }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Intéressé par une collaboration ? Contactez-moi !",
+    "form": {
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "email": "Email",
+      "subject": "Sujet",
+      "message": "Message",
+      "placeholders": {
+        "firstName": "Jean",
+        "lastName": "Dupont",
+        "email": "jean.dupont@exemple.com",
+        "subject": "Quel est le sujet ?",
+        "message": "Votre message..."
+      }
+    },
+    "status": {
+      "success": "Message envoyé avec succès !",
+      "error": "Échec de l'envoi du message. Veuillez réessayer.",
+      "sending": "Envoi en cours...",
+      "send": "Envoyer le message"
+    }
   }
 }
