@@ -7,7 +7,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/portfolio-vue/',
+  base: '/ralh19.github.io/',
   plugins: [
     vue(),
     vueDevTools(),
