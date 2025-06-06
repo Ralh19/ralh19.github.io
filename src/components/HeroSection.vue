@@ -25,16 +25,15 @@ const handleScrollClick = (event) => {
         <!-- Profile Photo - Full width on mobile, 1/3 on desktop -->
         <div class="w-2/3 md:w-1/3 aspect-square relative">
           <!-- Purple glow background -->
-          <div class="absolute inset-0 rounded-full bg-highlight-color/25 dark:bg-highlight-color/30 blur-3xl scale-110"></div>
-          
+          <div
+            class="absolute inset-0 rounded-full bg-highlight-color/25 dark:bg-highlight-color/30 blur-3xl scale-110">
+          </div>
+
           <!-- Image container -->
           <div class="relative w-full h-full rounded-full overflow-hidden">
-            <img 
-              src="/images/hero_section/goat.png"
-              class="w-full h-full object-cover scale-110"
-              style="object-position: center 70%;"
-              alt="Profile picture" 
-            />
+            <img src="/images/hero_section/goat2.png"
+              class="w-full h-full object-cover scale-125 transform translate-x-16 -translate-y-11"
+              alt="Profile picture" />
           </div>
         </div>
 
