@@ -1,27 +1,7 @@
 <script setup>
-const experiences = [
-    {
-        title: 'Intern',
-        company: 'Etudes et Solutions - Toulon',
-        company_link: 'https://www.etudesetsolutions.fr/',
-        period: '13/01/2025 - 15/02/2025',
-        achievements: [
-            'Develop a web application built with Django (Python) to replace the OpenWrt admin interface on a Raspberry Pi, featuring an interactive network scanner with real-time display of connected devices.'
-        ],
-        technologies: ['Django', 'Python', 'JavaScript', 'SQLite']
-    },
-    {
-        title: 'Intern',
-        company: 'Bonifay - La Garde',
-        company_link: 'https://www.bonifay.fr/',
-        period: '06/05/2024 - 29/06/2024',
-        achievements: [
-            'Develop a web application designed to optimize delivery drivers routes by automating delivery tracking and validation. Developed using Symfony (versions 3.4 and 5.4), PHP, JavaScript, Bootstrap, and MySQL.'
-        ],
-        technologies: ['Symfony', 'PHP', 'JavaScript', 'Bootstrap', 'MySQL']
+import { useExperienceTranslation } from '@/composables/useExperienceTranslation'
 
-    }
-]
+const { experiences, t } = useExperienceTranslation()
 </script>
 
 <template>
@@ -29,7 +9,7 @@ const experiences = [
         <container>
             <h2 class="mb-10 dark:text-white">
                 <span class="text-highlight-color">&lt;</span>
-                Experience
+                {{ t('experience.title') }}
                 <span class="text-highlight-color">/&gt;</span>
             </h2>
 

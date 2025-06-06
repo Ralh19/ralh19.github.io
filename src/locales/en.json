@@ -12,6 +12,15 @@
     "description": "Developer passionate about creating intuitive and user-centric digital experiences. Focused on building modern web applications with clean architecture and pixel-perfect designs. Always eager to learn and embrace new challenges.",
     "hireMe": "Hire Me",
     "resume": "Resume",
-    "scrollDown": "Scroll Down"
+    "scrollDown": "Scroll Down",
+    "location": "France"
+  },
+  "experience": {
+    "title": "Experience",
+    "intern": "Intern",
+    "period1": "01/13/2025 - 02/15/2025",
+    "period2": "05/06/2024 - 06/29/2024",
+    "achievement1": "Develop a web application built with Django (Python) to replace the OpenWrt admin interface on a Raspberry Pi, featuring an interactive network scanner with real-time display of connected devices.",
+    "achievement2": "Develop a web application designed to optimize delivery drivers routes by automating delivery tracking and validation. Developed using Symfony (versions 3.4 and 5.4), PHP, JavaScript, Bootstrap, and MySQL."
   }
 }

@@ -10,8 +10,17 @@
   "hero": {
     "greeting": "Bonjour, je suis",
     "description": "Développeur passionné par la création d'expériences numériques intuitives et centrées sur l'utilisateur. Focalisé sur la construction d'applications web modernes avec une architecture propre et des designs précis. Toujours désireux d'apprendre et de relever de nouveaux défis.",
-    "hireMe": "Recrutez-moi",
+    "hireMe": "Me Recruter",
     "resume": "CV",
-    "scrollDown": "Défiler vers le bas"
+    "scrollDown": "Défiler vers le bas",
+    "location": "France"
+  },
+  "experience": {
+    "title": "Expérience",
+    "intern": "Stagiaire",
+    "period1": "13/01/2025 - 15/02/2025",
+    "period2": "06/05/2024 - 29/06/2024",
+    "achievement1": "Développement d'une application web avec Django (Python) pour remplacer l'interface d'administration OpenWrt sur un Raspberry Pi, incluant un scanner réseau interactif avec affichage en temps réel des appareils connectés.",
+    "achievement2": "Développement d'une application web conçue pour optimiser les itinéraires des chauffeurs-livreurs en automatisant le suivi et la validation des livraisons. Développée avec Symfony (versions 3.4 et 5.4), PHP, JavaScript, Bootstrap et MySQL."
   }
 }
