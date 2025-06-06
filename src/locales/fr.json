@@ -58,5 +58,29 @@
       "school": "Lycée du Golfe de Saint-Tropez, Gassin",
       "description": "Baccalauréat Sciences et Technologies du Management et de la Gestion - spécialité Marketing"
     }
+  },
+  "projects": {
+    "title": "Projets",
+    "liveDemo": "Démo en direct",
+    "portfolio": {
+      "title": "PORTFOLIO",
+      "description": "Site personnel de portfolio réalisé avec Vue.js 3 et TailwindCSS pour le style, avec un design réactif, une vitrine de projets et des composants d'interface utilisateur modernes. Démonstration de compétences en développement frontend."
+    },
+    "merlin": {
+      "title": "Merlin's Demon War",
+      "description": "Merlin's Demon War est un jeu de cartes de combat au tour par tour développé sous Unity, mettant en valeur la logique de gameplay, la conception de l'interface et l'intégration des assets. Le jeu a été réalisé dans le cadre d’un cours universitaire à XAMK, mettant l'accent sur la programmation orientée objet et l'architecture basée sur les composants."
+    },
+    "snake": {
+      "title": "Mobile Snake Game",
+      "description": "Ce projet est un jeu Snake classique développé pour les appareils Android à l'aide du moteur de jeu Unity. Il a été créé dans le cadre du cours « Introduction à la création de jeux vidéo » proposé par l’université XAMK, en se concentrant sur les fondamentaux du développement de jeux mobiles."
+    },
+    "return": {
+      "title": "The Return",
+      "description": "The Return est un jeu d'aventure textuel et narratif développé avec le moteur Unity. Créé dans le cadre d’un cours universitaire à XAMK, ce projet met l'accent sur la narration, les choix du joueur et la gestion d'état dans une interface minimaliste."
+    },
+    "gsb": {
+      "title": "GSB",
+      "description": "GSB est une application web basée sur PHP/MySQL conçue pour simplifier le processus de remboursement mensuel des visiteurs médicaux. Développée avec HTML, CSS, JavaScript et Bootstrap côté frontend, et PHP (avec PDO) côté backend, elle permet aux utilisateurs de se connecter en toute sécurité, de soumettre des notes de frais, de télécharger des justificatifs et de suivre l'état de leurs remboursements. Les comptables valident et gèrent les saisies via une interface dédiée. L'application reproduit un cycle de dépenses réel avec clôture mensuelle automatisée, logique de validation et suivi historique—le tout hébergé sur un serveur Apache via WAMP."
+    }
   }
 }

@@ -1,63 +1,10 @@
 <script setup>
-import { useTrollEffect } from '@/composables/useTrollEffect';
+import { useTrollEffect } from '@/composables/useTrollEffect'
+import { useProjectsTranslation } from '@/composables/useProjectsTranslation'
 
-const {showTroll, displayTroll} = useTrollEffect()
-
-
-
-const projects = [
-  {
-    title: 'PORTFOLIO',
-    description: 'Personal portfolio website built with Vue.js 3 and TailwindCSS for the styling, featuring responsive design, project showcase, and modern UI components. Demonstrates proficiency in frontend development.',
-    technologies: ['Vue.js 3', 'Javascript', 'TailwindCSS', 'NodeJS', 'Vite', 'Git'],
-    imageUrl: '/images/projects/portfolio_screen.png',
-    links: {
-      github: 'https://github.com/Ralh19/ralh19.github.io',
-    }
-  },
-  {
-    title: 'Merlin\'s Demon War',
-    description: 'Merlin\'s Demon War is a turn-based combat card game developed in Unity, showcasing gameplay logic, UI design, and asset integration. The game was built as part of a university course at XAMK, emphasizing object-oriented programming and component-based architecture.',
-    technologies: ['Unity Engine', 'C#', 'Krita', 'Git'],
-    imageUrl: '/images/projects/merlin_screen.png',
-    links: {
-      github: 'https://github.com/Ralh19/Merlin-s-Demon-War',
-      demo: '#'
-    }
-  },
-  {
-    title: 'Mobile Snake Game',
-    description: 'This project is a classic Snake game developed for Android devices using the Unity game engine. It was created as part of the "Introduction to Video Games Creation" course offered by XAMK University, focusing on mobile game development fundamentals',
-    technologies: ['Unity Engine', 'C#', 'Krita', 'Git'],
-    imageUrl: '/images/projects/snake_screen.jpeg',
-    links: {
-      github: 'https://github.com/Ralh19/SnakeGame',
-      demo: '#'
-    }
-  },
-  {
-    title: 'The Return',
-    description: 'The Return is a narrative-driven, text-based adventure game developed using the Unity game engine. Created as part of a university course at XAMK, this project emphasizes storytelling, player choice, and state management within a minimalist interface',
-    technologies: ['Unity Engine', 'C#', 'Git'],
-    imageUrl: '/images/projects/return_screen.png',
-    links: {
-      github: 'https://github.com/Ralh19/TheReturn',
-      demo: '#'
-    }
-  },
-  {
-    title: 'GSB',
-    description: 'GSB is a PHP/MySQL-based web application designed to streamline the monthly reimbursement process for medical representatives. Built with HTML, CSS, JavaScript, and Bootstrap on the frontend, and PHP (with PDO) on the backend, it enables users to securely log in, submit expense claims, upload supporting documents, and track reimbursement status. Accountants validate and manage entries via a dedicated interface. The application replicates a real-world expense cycle with automated month closure, validation logic, and historical tracking—all hosted on an Apache server via WAMP',
-    technologies: ['PHP', 'Javascript', 'MySQL', 'Bootstrap'],
-    imageUrl: '/images/projects/gsb_screen.png',
-    links: {
-      github: 'https://github.com/Ralh19/GSB',
-      demo: '#'
-    }
-  }
-]
+const { showTroll, displayTroll } = useTrollEffect()
+const { projects, t } = useProjectsTranslation()
 </script>
-
 
 <template>
   <!-- Troll overlay -->
@@ -67,11 +14,7 @@ const projects = [
     enter-from-class="opacity-0 scale-95" 
     leave-to-class="opacity-0 scale-95">
     <div v-if="showTroll" class="fixed inset-0 z-[9999] flex items-center justify-center pointer-events-none">
-      <img 
-        src="/images/troll.png" 
-        alt="troll" 
-        class="w-screen h-screen object-cover" 
-      />
+      <img src="/images/troll.png" alt="troll" class="w-screen h-screen object-cover" />
     </div>
   </Transition>
 
@@ -79,7 +22,7 @@ const projects = [
     <div class="max-w-7xl mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-16 dark:text-white">
         <span class="text-highlight-color">&lt;</span>
-        Projects
+        {{ t('projects.title') }}
         <span class="text-highlight-color">/&gt;</span>
       </h2>
 
@@ -111,20 +54,19 @@ const projects = [
                 <a v-if="project.links.github" :href="project.links.github" target="_blank"
                   class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-main-gui-color-darker text-white rounded-lg hover:bg-gray-800 dark:hover:bg-main-background-color-dark transition-colors">
                   <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.11.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12" />
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.11.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12" />
                   </svg>
                   Github
                 </a>
 
                 <!-- Special troll button for Portfolio project -->
-                <button v-if="project.title === 'PORTFOLIO'" @click="displayTroll"
+                <button v-if="project.title === t('projects.portfolio.title')" @click="displayTroll"
                   class="inline-flex items-center gap-2 px-4 py-2 bg-highlight-color text-white rounded-lg hover:bg-highlight-color/90 transition-colors">
                   <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                       d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
-                  Live Demo
+                  {{ t('projects.liveDemo') }}
                 </button>
 
                 <!-- Regular demo button for other projects -->
@@ -134,7 +76,7 @@ const projects = [
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                       d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
-                  Live Demo
+                  {{ t('projects.liveDemo') }}
                 </a>
               </div>
             </div>
@@ -150,8 +92,6 @@ const projects = [
     </div>
   </section>
 </template>
-
-
 
 <style scoped>
 .grid {
