@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watch } from 'vue'
+import { useModal } from '@/composables/useModal';
 
 const DEGREES = [
     {
@@ -46,49 +46,15 @@ const DEGREES = [
     },
 ]
 
-const isModalOpen = ref(false)
-const currentIndex = ref(0)
-const slideDirection = ref('right')
-
-const openModal = (index) => {
-    currentIndex.value = index
-    isModalOpen.value = true
-}
-
-const closeModal = () => {
-    isModalOpen.value = false
-}
-
-const showNext = () => {
-    slideDirection.value = 'right'
-    currentIndex.value = (currentIndex.value + 1) % DEGREES.length
-}
-
-const showPrevious = () => {
-    slideDirection.value = 'left'
-    currentIndex.value = (currentIndex.value - 1 + DEGREES.length) % DEGREES.length
-}
-
-// Toggle body scroll
-const toggleScroll = (disable) => {
-    if (disable) {
-        document.body.style.overflow = 'hidden'
-    } else {
-        document.body.style.overflow = ''
-    }
-}
-
-// Watch modal state to toggle scroll
-watch(isModalOpen, (newValue) => {
-    toggleScroll(newValue)
-})
-
-// Close modal on escape key
-const handleKeydown = (e) => {
-    if (e.key === 'Escape') closeModal()
-    if (e.key === 'ArrowRight') showNext()
-    if (e.key === 'ArrowLeft') showPrevious()
-}
+const {
+    isModalOpen,
+    currentIndex,
+    slideDirection,
+    openModal,
+    closeModal,
+    showNext,
+    showPrevious,
+} = useModal(DEGREES)
 </script>
 
 <template>
@@ -158,7 +124,7 @@ const handleKeydown = (e) => {
                     </button>
 
                     <button @click="showNext"
-                        class="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 dark:bg-main-background-color-dark/80 p-2 rounded-full hover:bg-white dark:hover:bg-main-gui-color transition-colors">
+                        class="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 dark:bg-main-background-color-dark/80 p-2 rounded-full hover:bg-white dark:hover:bg-main-gui-color-dark transition-colors">
                         <span class="sr-only">Next</span>
                         <!-- Right arrow icon -->
                         <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
