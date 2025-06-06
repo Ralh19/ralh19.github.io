@@ -82,5 +82,20 @@
       "title": "GSB",
       "description": "GSB est une application web basée sur PHP/MySQL conçue pour simplifier le processus de remboursement mensuel des visiteurs médicaux. Développée avec HTML, CSS, JavaScript et Bootstrap côté frontend, et PHP (avec PDO) côté backend, elle permet aux utilisateurs de se connecter en toute sécurité, de soumettre des notes de frais, de télécharger des justificatifs et de suivre l'état de leurs remboursements. Les comptables valident et gèrent les saisies via une interface dédiée. L'application reproduit un cycle de dépenses réel avec clôture mensuelle automatisée, logique de validation et suivi historique—le tout hébergé sur un serveur Apache via WAMP."
     }
+  },
+  "stacks": {
+    "title": "Mes Stacks",
+    "frontend": {
+      "title": "Frontend"
+    },
+    "backend": {
+      "title": "Backend"
+    },
+    "database": {
+      "title": "Base de données"
+    },
+    "tools": {
+      "title": "Outils"
+    }
   }
 }

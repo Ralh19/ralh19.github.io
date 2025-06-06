@@ -1,111 +1,41 @@
 <script setup>
-const STACKS = [
-  {
-    title: 'Frontend',
-    technologies: [
-      {
-        title: 'Javascript',
-        path: '/images/tech/js_ico.png'
-      },
-      {
-        title: 'TypeScript',
-        path: '/images/tech/ts_ico.png'
-      },
-      {
-        title: 'Vue.js',
-        path: '/images/tech/vuejs_ico.png'
-      },
-      {
-        title: 'TailwindCSS',
-        path: '/images/tech/tw_ico.png'
-      },
-      {
-        title: 'Bootstrap',
-        path: '/images/tech/bootstrap_ico.png'
-      }
-    ]
-  },
-  {
-    title: 'Backend',
-    technologies: [
-      {
-        title: 'Node.js',
-        path: '/images/tech/nodejs_ico.png'
-      },
-      {
-        title: 'Symfony',
-        path: '/images/tech/symfony_ico.png'
-      },
-      {
-        title: 'Tauri',
-        path: '/images/tech/tauri_ico.png'
-      },
-      {
-        title: 'C#',
-        path: '/images/tech/cs_ico.png'
-      },
-      {
-        title: 'Rust',
-        path: '/images/tech/rust_ico.png'
-      }
-    ]
-  },
-  {
-    title: 'Database',
-    technologies: [
-      {
-        title: 'MySQL',
-        path: '/images/tech/mysql_ico.png'
-      },
-      {
-        title: 'SQLite',
-        path: '/images/tech/sqlite_ico.png'
-      }
-    ]
-  },
-  {
-    title: 'Tools',
-    technologies: [
-      {
-        title: 'Git',
-        path: '/images/tech/git_ico.png'
-      },
-      {
-        title: 'Docker',
-        path: '/images/tech/docker_ico.png'
-      },
-      {
-        title: 'Unity',
-        path: '/images/tech/unity_ico.png'
-      }
-    ]
-  }
-];
+import { useStacksTranslation } from '@/composables/useStacksTranslation'
 
+const { stacks, t } = useStacksTranslation()
+
+// Updated to use highlight-color for all stacks in light mode
 const stackColors = {
-  'Frontend': 'bg-stack-blue dark:bg-main-gui-color-darker',
-  'Backend': 'bg-stack-green dark:bg-main-gui-color-darker',
-  'Database': 'bg-stack-yellow dark:bg-main-gui-color-darker',
-  'Tools': 'bg-stack-purple dark:bg-main-gui-color-darker'
+  'frontend': 'bg-highlight-color dark:bg-main-gui-color-darker',
+  'backend': 'bg-highlight-color dark:bg-main-gui-color-darker',
+  'database': 'bg-highlight-color dark:bg-main-gui-color-darker',
+  'tools': 'bg-highlight-color dark:bg-main-gui-color-darker'
+}
+
+// Helper function remains the same
+const getStackColor = (stackTitle) => {
+  const key = Object.keys(t('stacks')).find(k => 
+    k !== 'title' && t(`stacks.${k}.title`) === stackTitle
+  )
+  return stackColors[key] || stackColors.frontend
 }
 </script>
 
 <template>
-  <section id="STACKS" class="py-20 bg-gray-50 dark:bg-main-background-color-dark">
+  <section id="stacks" class="py-20 bg-gray-50 dark:bg-main-background-color-dark">
     <container>
       <h2 class="mb-16 text-4xl font-bold text-center dark:text-white">
         <span class="text-highlight-color">&lt;</span>
-        My Stacks
+        {{ t('stacks.title') }}
         <span class="text-highlight-color">/&gt;</span>
       </h2>
 
       <div class="max-w-7xl mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div v-for="stack in STACKS" :key="stack.title" class="relative group">
+          <div v-for="stack in stacks" :key="stack.title" class="relative group">
             <!-- Category Card -->
             <div class="bg-white dark:bg-main-gui-color-dark rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <!-- Stack Header -->
-              <div :class="['px-6 py-4 rounded-t-2xl flex items-center gap-3', stackColors[stack.title]]">
+              <div :class="['px-6 py-4 rounded-t-2xl flex items-center gap-3', getStackColor(stack.title)]">
                 <h3 class="text-xl font-bold text-white">{{ stack.title }}</h3>
                 <div class="h-1 flex-grow rounded-full bg-white/20"></div>
               </div>

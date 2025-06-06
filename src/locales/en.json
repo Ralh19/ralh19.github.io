@@ -82,5 +82,20 @@
       "title": "GSB",
       "description": "GSB is a PHP/MySQL-based web application designed to streamline the monthly reimbursement process for medical representatives. Built with HTML, CSS, JavaScript, and Bootstrap on the frontend, and PHP (with PDO) on the backend, it enables users to securely log in, submit expense claims, upload supporting documents, and track reimbursement status. Accountants validate and manage entries via a dedicated interface. The application replicates a real-world expense cycle with automated month closure, validation logic, and historical tracking—all hosted on an Apache server via WAMP"
     }
+  },
+  "stacks": {
+    "title": "My Stacks",
+    "frontend": {
+      "title": "Frontend"
+    },
+    "backend": {
+      "title": "Backend"
+    },
+    "database": {
+      "title": "Database"
+    },
+    "tools": {
+      "title": "Tools"
+    }
   }
 }
