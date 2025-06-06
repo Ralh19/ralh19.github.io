@@ -121,5 +121,9 @@
       "sending": "Envoi en cours...",
       "send": "Envoyer le message"
     }
+  },
+  "footer": {
+    "builtWith": "Créé avec",
+    "undertaleHeart": "coeur rouge d'undertale"
   }
 }

@@ -1,5 +1,6 @@
 <script setup>
-
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 const currentYear = new Date().getFullYear()
 
 const socialLinks = [
@@ -22,8 +23,8 @@ const socialLinks = [
             <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                 <!-- Copyright -->
                 <div class="flex text-gray-600 dark:text-main-text-color-dark gap-2">
-                    © {{ currentYear }} ALMEIDA ALHADA Ruben | Built with
-                    <img src="/images/footer/heart.png" alt="undertale red heart" class="w-4 object-scale-down">
+                    © {{ currentYear }} ALMEIDA ALHADA Ruben | {{ t('footer.builtWith') }}
+                    <img src="/images/footer/heart.png" :alt="t('footer.undertaleHeart')" class="w-4 object-scale-down">
                 </div>
 
                 <!-- Social Links -->

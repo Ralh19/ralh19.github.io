@@ -121,5 +121,9 @@
       "sending": "Sending...",
       "send": "Send Message"
     }
+  },
+  "footer": {
+    "builtWith": "Built with",
+    "undertaleHeart": "undertale red heart"
   }
 }
