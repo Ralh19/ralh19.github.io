@@ -9,7 +9,7 @@
     <EducationSection id="education" />
     <ProjectsSection id="projects" />
     <StacksSection id="stacks" />
-    <!-- <ContactSection id="contact" /> -->
+    <ContactSection id="contact" />
     <Footer/>
   </main>
 </template>

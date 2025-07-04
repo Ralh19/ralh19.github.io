@@ -3,7 +3,7 @@ import { useContactForm } from '@/composables/useContactForm'
 import { useContactTranslation } from '@/composables/translation_composables/useContactTranslation'
 
 const {
-  form,
+  form, 
   isLoading,
   showSuccess,
   showError,
