@@ -110,7 +110,7 @@
       "placeholders": {
         "firstName": "Jean",
         "lastName": "Dupont",
-        "email": "jean.dupont@exemple.com",
+        "email": "jean.dupont{domain}",
         "subject": "Quel est le sujet ?",
         "message": "Votre message..."
       }
