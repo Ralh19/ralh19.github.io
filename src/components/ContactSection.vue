@@ -1,20 +1,9 @@
 <script setup>
 import { useContactForm } from '@/composables/useContactForm'
-import { useContactTranslation } from '@/composables/translation_composables/useContactTranslation'
+import { useTranslations } from '@/composables/useTranslations'
 
-const {
-  form, 
-  isLoading,
-  showSuccess,
-  showError,
-  messageLength,
-  MESSAGE_MIN_LENGTH,
-  MESSAGE_MAX_LENGTH,
-  sendEmail,
-  updateMessageLength,
-} = useContactForm()
-
-const { t } = useContactTranslation()
+const { form, isLoading, showSuccess, showError, messageLength, MESSAGE_MIN_LENGTH, MESSAGE_MAX_LENGTH, sendEmail, updateMessageLength } = useContactForm()
+const { t, contact } = useTranslations()
 </script>
 
 <template>
@@ -52,8 +41,7 @@ const { t } = useContactTranslation()
               <label class="block text-sm font-medium text-gray-700 dark:text-main-text-color-dark">
                 {{ t('contact.form.lastName') }}
               </label>
-              <input type="text" name="last_name" required :placeholder="t('contact.form.placeholders.lastName')"
-                class="w-full p-3 bg-gray-50 dark:bg-main-background-color-dark border border-gray-200 dark:border-gray-700 
+              <input type="text" name="last_name" required :placeholder="t('contact.form.placeholders.lastName')" class="w-full p-3 bg-gray-50 dark:bg-main-background-color-dark border border-gray-200 dark:border-gray-700 
                 rounded-lg outline-none focus:ring-2 focus:ring-highlight-color/20 focus:border-highlight-color 
                 transition-colors text-gray-900 dark:text-main-text-color-dark 
                 placeholder-gray-400 dark:placeholder-gray-500" />
@@ -65,8 +53,7 @@ const { t } = useContactTranslation()
             <label class="block text-sm font-medium text-gray-700 dark:text-main-text-color-dark">
               {{ t('contact.form.email') }}
             </label>
-            <input type="email" name="email" required :placeholder="t('contact.form.placeholders.email')"
-              class="w-full p-3 bg-gray-50 dark:bg-main-background-color-dark border border-gray-200 dark:border-gray-700 
+            <input type="email" name="email" required :placeholder="t('contact.form.placeholders.email')" class="w-full p-3 bg-gray-50 dark:bg-main-background-color-dark border border-gray-200 dark:border-gray-700 
               rounded-lg outline-none focus:ring-2 focus:ring-highlight-color/20 focus:border-highlight-color 
               transition-colors text-gray-900 dark:text-main-text-color-dark 
               placeholder-gray-400 dark:placeholder-gray-500" />
@@ -77,8 +64,7 @@ const { t } = useContactTranslation()
             <label class="block text-sm font-medium text-gray-700 dark:text-main-text-color-dark">
               {{ t('contact.form.subject') }}
             </label>
-            <input type="text" name="subject" required :placeholder="t('contact.form.placeholders.subject')"
-              class="w-full p-3 bg-gray-50 dark:bg-main-background-color-dark border border-gray-200 dark:border-gray-700 
+            <input type="text" name="subject" required :placeholder="t('contact.form.placeholders.subject')" class="w-full p-3 bg-gray-50 dark:bg-main-background-color-dark border border-gray-200 dark:border-gray-700 
               rounded-lg outline-none focus:ring-2 focus:ring-highlight-color/20 focus:border-highlight-color 
               transition-colors text-gray-900 dark:text-main-text-color-dark 
               placeholder-gray-400 dark:placeholder-gray-500" />
@@ -95,8 +81,7 @@ const { t } = useContactTranslation()
               </span>
             </div>
             <textarea name="message" required :minlength="MESSAGE_MIN_LENGTH" :maxlength="MESSAGE_MAX_LENGTH"
-              :placeholder="t('contact.form.placeholders.message')" rows="5" @input="updateMessageLength"
-              class="w-full p-3 bg-gray-50 dark:bg-main-background-color-dark border border-gray-200 dark:border-gray-700 
+              :placeholder="t('contact.form.placeholders.message')" rows="5" @input="updateMessageLength" class="w-full p-3 bg-gray-50 dark:bg-main-background-color-dark border border-gray-200 dark:border-gray-700 
               rounded-lg focus:ring-2 focus:ring-highlight-color/20 outline-none focus:border-highlight-color 
               transition-colors resize-none text-gray-900 dark:text-main-text-color-dark 
               placeholder-gray-400 dark:placeholder-gray-500">
@@ -112,8 +97,7 @@ const { t } = useContactTranslation()
           </div>
 
           <!-- Submit Button -->
-          <button type="submit" :disabled="isLoading"
-            class="w-full bg-highlight-color text-white py-4 rounded-lg hover:bg-highlight-color/90 
+          <button type="submit" :disabled="isLoading" class="w-full bg-highlight-color text-white py-4 rounded-lg hover:bg-highlight-color/90 
             transition-colors duration-300 font-medium text-lg scale-animation disabled:opacity-50">
             {{ isLoading ? t('contact.status.sending') : t('contact.status.send') }}
           </button>
