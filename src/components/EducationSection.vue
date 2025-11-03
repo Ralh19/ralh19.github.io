@@ -1,6 +1,7 @@
 <script setup>
 import { useModal } from '@/composables/useModal'
 import { useTranslations } from '@/composables/useTranslations'
+import Container from '@/components/Container.vue'
 
 const { education } = useTranslations()
 const {
@@ -16,7 +17,7 @@ const {
 
 <template>
     <section id="education" class="py-20 bg-white dark:bg-main-background-color-dark">
-        <container>
+        <Container>
             <h2 class="mb-16 text-4xl font-bold text-center dark:text-white">
                 <span class="text-highlight-color">&lt;</span>
                 {{ education.title }}
@@ -61,7 +62,7 @@ const {
                     </div>
                 </div>
             </div>
-        </container>
+        </Container>
 
         <!-- Modal -->
         <div v-if="isModalOpen" class="fixed inset-0 bg-black/90 z-50 flex items-center justify-center"

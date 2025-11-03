@@ -1,5 +1,6 @@
 <script setup>
 import { useTranslations } from '@/composables/useTranslations'
+import Container from '@/components/Container.vue'
 
 const { stacks, t } = useTranslations()
 
@@ -20,7 +21,7 @@ const getStackColor = (stackTitle) => {
 
 <template>
   <section id="stacks" class="py-20 bg-gray-50 dark:bg-main-background-color-dark">
-    <container>
+    <Container>
       <h2 class="mb-16 text-4xl font-bold text-center dark:text-white">
         <span class="text-highlight-color">&lt;</span>
         {{ t('stacks.title') }}
@@ -61,7 +62,7 @@ const getStackColor = (stackTitle) => {
           </div>
         </div>
       </div>
-    </container>
+    </Container>
   </section>
 </template>
 

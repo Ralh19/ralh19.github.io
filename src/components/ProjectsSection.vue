@@ -10,16 +10,17 @@ const { projects } = useTranslations()
 <template>
   <!-- Troll overlay -->
   <Transition 
-    enter-active-class="transition-all duration-300" 
-    leave-active-class="transition-all duration-300"
-    enter-from-class="opacity-0 scale-95" 
-    leave-to-class="opacity-0 scale-95">
-    <div v-if="showTroll" class="fixed inset-0 z-[9999] flex items-center justify-center pointer-events-none">
-      <img src="/images/troll.png" alt="troll" class="w-screen h-screen object-cover" />
-    </div>
-  </Transition>
+  enter-active-class="transition-all duration-300" 
+  leave-active-class="transition-all duration-300"
+  enter-from-class="opacity-0 scale-95" 
+  leave-to-class="opacity-0 scale-95">
+  <div v-if="showTroll" class="fixed inset-0 z-[9999] flex items-center justify-center pointer-events-none">
+    <img src="/images/troll.png" alt="troll" class="w-screen h-screen object-fill" />
+  </div>
+</Transition>
 
-  <section id="projects" class="py-20 bg-gray-50 dark:bg-main-background-color-dark">
+
+  <section id="projects" class="py-20 bg-gray-50 dark:bg-main-background-color-dark" v-bind="$attrs">
     <div class="max-w-7xl mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-16 dark:text-white">
         <span class="text-highlight-color">&lt;</span>
@@ -49,17 +50,17 @@ const { projects } = useTranslations()
 
               <div class="flex gap-4">
                 <a v-if="project.links.github" :href="project.links.github" target="_blank"
-                  class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-main-gui-color-darker text-white rounded-lg hover:bg-gray-800 dark:hover:bg-main-background-color-dark transition-colors">
+                  class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-main-gui-color-darker text-white rounded-lg hover:bg-gray-800 dark:hover:bg-main-background-color-dark transition-colors"> <i class="bi bi-github text-xl"></i>
                   Github
                 </a>
 
                 <button v-if="project.title === projects.portfolioTitle" @click="displayTroll"
-                  class="inline-flex items-center gap-2 px-4 py-2 bg-highlight-color text-white rounded-lg hover:bg-highlight-color/90 transition-colors">
-                  {{ projects.liveDemo }}
+                  class="inline-flex items-center gap-2 px-4 py-2 bg-highlight-color text-white rounded-lg hover:bg-highlight-color/90 transition-colors"> <i class="bi bi-file-earmark-play text-xl"></i>
+                  {{ projects.liveDemo }} 
                 </button>
 
                 <a v-else-if="project.links.demo" :href="project.links.demo" target="_blank"
-                  class="inline-flex items-center gap-2 px-4 py-2 bg-highlight-color text-white rounded-lg hover:bg-highlight-color/90 transition-colors">
+                  class="inline-flex items-center gap-2 px-4 py-2 bg-highlight-color text-white rounded-lg hover:bg-highlight-color/90 transition-colors"> <i class="bi bi-file-earmark-play text-xl"></i>
                   {{ projects.liveDemo }}
                 </a>
               </div>

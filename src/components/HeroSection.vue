@@ -1,5 +1,6 @@
 <script setup>
 import { useTranslations } from '@/composables/useTranslations'
+import Container from '@/components/Container.vue'
 
 const { hero } = useTranslations()
 
@@ -20,7 +21,7 @@ const handleScrollClick = (event) => {
 <template>
   <section id="home"
     class="min-h-screen flex justify-center items-center bg-gray-100 dark:bg-main-gui-color-darker relative py-20 md:py-0">
-    <container>
+    <Container>
       <div class="flex flex-col items-start justify-center w-full max-w-8xl mx-auto relative">
         <div
           class="absolute z-10 flex flex-col items-start w-full max-w-7xl left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2"
@@ -81,7 +82,7 @@ const handleScrollClick = (event) => {
           <i class="bi bi-arrow-down-short text-5xl bounce-animation"></i>
         </a>
       </div>
-    </container>
+    </Container>
   </section>
 </template>
 

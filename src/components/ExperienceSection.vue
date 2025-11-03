@@ -1,5 +1,6 @@
 <script setup>
 import { useTranslations } from '@/composables/useTranslations'
+import Container from '@/components/Container.vue'
 
 // On récupère la section "experience" du composable global
 const { experience } = useTranslations()
@@ -7,7 +8,7 @@ const { experience } = useTranslations()
 
 <template>
   <section id="experience" class="py-20 bg-white dark:bg-main-background-color-dark">
-    <container>
+    <Container>
       <h2 class="mb-10 dark:text-white">
         <span class="text-highlight-color">&lt;</span>
         {{ experience.title }}
@@ -66,6 +67,6 @@ const { experience } = useTranslations()
           </section>
         </div>
       </div>
-    </container>
+    </Container>
   </section>
 </template>

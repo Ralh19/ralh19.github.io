@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import emailjs from '@emailjs/browser'
 import { useTranslations } from '@/composables/useTranslations'
+import Container from '@/components/Container.vue'
 
 const { t } = useTranslations()
 
@@ -56,7 +57,7 @@ const updateMessageLength = (e) => {
 
 <template>
   <section id="contact" class="py-20 bg-white dark:bg-main-background-color-dark min-h-screen flex items-center">
-    <container>
+    <Container>
       <div class="max-w-3xl mx-auto px-4">
         <!-- Header -->
         <div class="text-center mb-12">
@@ -130,13 +131,6 @@ const updateMessageLength = (e) => {
                 {{ messageLength }}/{{ MESSAGE_MAX_LENGTH }}
               </span>
             </div>
-            <!-- <textarea name="message" required :minlength="MESSAGE_MIN_LENGTH" :maxlength="MESSAGE_MAX_LENGTH"
-              :placeholder="t('contact.form.placeholders.message')" rows="5" @input="updateMessageLength" 
-              class="w-full p-3 bg-gray-50 dark:bg-main-background-color-dark border border-gray-200 dark:border-gray-700 
-              rounded-lg focus:ring-2 focus:ring-highlight-color/20 outline-none focus:border-highlight-color 
-              transition-colors resize-none text-gray-900 dark:text-main-text-color-dark 
-              placeholder-gray-400 dark:placeholder-gray-500">
-            </textarea> -->
             <textarea name="message" required :minlength="MESSAGE_MIN_LENGTH" :maxlength="MESSAGE_MAX_LENGTH"
               :placeholder="t('contact.form.placeholders.message')" rows="5" @input="updateMessageLength" class="w-full p-3 bg-gray-50 dark:bg-main-background-color-dark border border-gray-200 dark:border-gray-700 
          rounded-lg focus:ring-2 focus:ring-highlight-color/20 outline-none focus:border-highlight-color 
@@ -159,6 +153,6 @@ const updateMessageLength = (e) => {
           </button>
         </form>
       </div>
-    </container>
+    </Container>
   </section>
 </template>
