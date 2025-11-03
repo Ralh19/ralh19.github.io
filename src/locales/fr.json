@@ -17,7 +17,7 @@
   },
   "experience": {
     "title": "Expérience",
-    "intern": "Stagiaire",
+    "role": "Stagiaire",
     "period1": "13/01/2025 - 15/02/2025",
     "period2": "06/05/2024 - 29/06/2024",
     "achievement1": "Développement d'une application web avec Django (Python) pour remplacer l'interface d'administration OpenWrt sur un Raspberry Pi, incluant un scanner réseau interactif avec affichage en temps réel des appareils connectés.",

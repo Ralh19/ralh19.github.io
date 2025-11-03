@@ -17,7 +17,7 @@
   },
   "experience": {
     "title": "Experience",
-    "intern": "Intern",
+    "role": "Intern",
     "period1": "01/13/2025 - 02/15/2025",
     "period2": "05/06/2024 - 06/29/2024",
     "achievement1": "Develop a web application built with Django (Python) to replace the OpenWrt admin interface on a Raspberry Pi, featuring an interactive network scanner with real-time display of connected devices.",

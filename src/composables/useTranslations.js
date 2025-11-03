@@ -30,7 +30,7 @@ export function useTranslations() {
     title: t("experience.title"),
     experiences: [
       {
-        title: t("experience.intern"),
+        title: t("experience.role"),
         company: "Etudes et Solutions - Toulon",
         company_link: "https://www.etudesetsolutions.fr/",
         period: t("experience.period1"),
@@ -38,7 +38,7 @@ export function useTranslations() {
         technologies: ["Django", "Python", "JavaScript", "SQLite"],
       },
       {
-        title: t("experience.intern"),
+        title: t("experience.role"),
         company: "Bonifay - La Garde",
         company_link: "https://www.bonifay.fr/",
         period: t("experience.period2"),
@@ -47,7 +47,7 @@ export function useTranslations() {
       },
     ],
   }));
-
+  
   const education = computed(() => ({
     title: t("education.title"),
     previous: t("education.previous"),
