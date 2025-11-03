@@ -1,142 +1,173 @@
 <script setup>
-import { useModal } from '@/composables/useModal'
+import { ref, watch, onMounted, onBeforeUnmount } from 'vue'
 import { useTranslations } from '@/composables/useTranslations'
 import Container from '@/components/Container.vue'
+import Modal from '@/components/Modal.vue'
 
 const { education } = useTranslations()
-const {
-    isModalOpen,
-    currentIndex,
-    slideDirection,
-    openModal,
-    closeModal,
-    showNext,
-    showPrevious,
-} = useModal(education.value.degrees)
+
+// --- Modal state ---
+const isModalOpen = ref(false)
+const currentIndex = ref(0)
+const slideDirection = ref('right')
+
+const openModal = (index) => {
+  currentIndex.value = index
+  isModalOpen.value = true
+}
+
+const closeModal = () => {
+  isModalOpen.value = false
+}
+
+const showNext = () => {
+  slideDirection.value = 'right'
+  currentIndex.value = (currentIndex.value + 1) % education.value.degrees.length
+}
+
+const showPrevious = () => {
+  slideDirection.value = 'left'
+  currentIndex.value =
+    (currentIndex.value - 1 + education.value.degrees.length) % education.value.degrees.length
+}
+
+// --- Scroll and keyboard handling ---
+const toggleScroll = (disable) => {
+  document.body.style.overflow = disable ? 'hidden' : ''
+}
+
+const handleKeydown = (e) => {
+  if (!isModalOpen.value) return
+  if (e.key === 'Escape') closeModal()
+  if (e.key === 'ArrowRight') showNext()
+  if (e.key === 'ArrowLeft') showPrevious()
+}
+
+watch(isModalOpen, toggleScroll)
+onMounted(() => window.addEventListener('keydown', handleKeydown))
+onBeforeUnmount(() => window.removeEventListener('keydown', handleKeydown))
 </script>
 
 <template>
-    <section id="education" class="py-20 bg-white dark:bg-main-background-color-dark">
-        <Container>
-            <h2 class="mb-16 text-4xl font-bold text-center dark:text-white">
-                <span class="text-highlight-color">&lt;</span>
-                {{ education.title }}
-                <span class="text-highlight-color">/&gt;</span>
-            </h2>
+  <section id="education" class="py-20 bg-white dark:bg-main-background-color-dark">
+    <Container>
+      <h2 class="mb-16 text-4xl font-bold text-center dark:text-white">
+        <span class="text-highlight-color">&lt;</span>
+        {{ education.title }}
+        <span class="text-highlight-color">/&gt;</span>
+      </h2>
 
-            <div class="max-w-6xl mx-auto px-4">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Degree Card -->
-                    <div v-for="(degree, index) in education.degrees" :key="degree.title"
-                        class="relative h-[400px] rounded-xl overflow-hidden group cursor-pointer"
-                        @click="openModal(index)">
-                        <!-- Image -->
-                        <img :src="degree.path" :alt="degree.title"
-                            class="w-full h-full object-scale-down group-hover:scale-110 transition-transform duration-500" />
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            v-for="(degree, index) in education.degrees"
+            :key="degree.title"
+            class="relative h-[400px] rounded-xl overflow-hidden group cursor-pointer"
+            @click="openModal(index)"
+          >
+            <img
+              :src="degree.path"
+              :alt="degree.title"
+              class="w-full h-full object-scale-down group-hover:scale-110 transition-transform duration-500"
+            />
 
-                        <!-- Overlay -->
-                        <div
-                            class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div
-                                class="absolute inset-0 p-6 flex flex-col justify-between text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                                <!-- Header -->
-                                <div class="space-y-4">
-                                    <span
-                                        class="inline-block bg-highlight-color/80 px-3 py-1 rounded-full text-sm font-medium">
-                                        {{ degree.date }}
-                                    </span>
-                                    <h3 class="text-xl font-semibold">
-                                        {{ degree.title }}
-                                    </h3>
-                                    <div class="font-medium text-gray-300">
-                                        {{ degree.school }}
-                                    </div>
-                                </div>
-
-                                <!-- Description -->
-                                <p class="text-sm text-gray-300">
-                                    {{ degree.description }}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+            <div
+              class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            >
+              <div
+                class="absolute inset-0 p-6 flex flex-col justify-between text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
+              >
+                <div class="space-y-4">
+                  <span class="inline-block bg-highlight-color/80 px-3 py-1 rounded-full text-sm font-medium">
+                    {{ degree.date }}
+                  </span>
+                  <h3 class="text-xl font-semibold">{{ degree.title }}</h3>
+                  <div class="font-medium text-gray-300">{{ degree.school }}</div>
                 </div>
+                <p class="text-sm text-gray-300">{{ degree.description }}</p>
+              </div>
             </div>
-        </Container>
-
-        <!-- Modal -->
-        <div v-if="isModalOpen" class="fixed inset-0 bg-black/90 z-50 flex items-center justify-center"
-            @click.self="closeModal">
-            <div class="max-w-4xl w-full mx-4 bg-white dark:bg-main-gui-color-dark rounded-xl overflow-hidden">
-                <div class="relative">
-                    <!-- Navigation Buttons -->
-                    <button @click="showPrevious"
-                        class="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 dark:bg-main-background-color-dark/80 p-2 rounded-full hover:bg-white dark:hover:bg-main-gui-color-dark transition-colors">
-                        <span class="sr-only">{{ education.previous }}</span>
-                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                        </svg>
-                    </button>
-
-                    <button @click="showNext"
-                        class="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 dark:bg-main-background-color-dark/80 p-2 rounded-full hover:bg-white dark:hover:bg-main-gui-color-dark transition-colors">
-                        <span class="sr-only">{{ education.next }}</span>
-                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                        </svg>
-                    </button>
-
-                    <!-- Image -->
-                    <div class="h-[400px] bg-gray-100 dark:bg-main-gui-color-darker overflow-hidden">
-                        <transition
-                            :enter-active-class="slideDirection === 'right' ? 'animate-slide-in-right' : 'animate-slide-in-left'"
-                            :leave-active-class="slideDirection === 'right' ? 'animate-slide-out-left' : 'animate-slide-out-right'"
-                            mode="out-in">
-                            <img :key="currentIndex" :src="education.degrees[currentIndex].path"
-                                :alt="education.degrees[currentIndex].title" class="w-full h-full object-contain" />
-                        </transition>
-                    </div>
-
-                    <!-- Content -->
-                    <div class="p-8 space-y-6">
-                        <transition
-                            :enter-active-class="slideDirection === 'right' ? 'animate-fade-in-right' : 'animate-fade-in-left'"
-                            :leave-active-class="slideDirection === 'right' ? 'animate-fade-out-left' : 'animate-fade-out-right'"
-                            mode="out-in">
-                            <div :key="currentIndex" class="space-y-6">
-                                <div class="flex items-center justify-between">
-                                    <h3 class="text-2xl font-bold text-gray-900 dark:text-main-text-color-dark">
-                                        {{ education.degrees[currentIndex].title }}
-                                    </h3>
-                                    <span
-                                        class="bg-highlight-color/10 text-highlight-color px-3 py-1 rounded-full text-sm font-medium">
-                                        {{ education.degrees[currentIndex].date }}
-                                    </span>
-                                </div>
-
-                                <div class="text-lg font-medium text-gray-600 dark:text-main-text-color-dark/60">
-                                    {{ education.degrees[currentIndex].school }}
-                                </div>
-
-                                <p class="text-gray-600 dark:text-main-text-color-dark">
-                                    {{ education.degrees[currentIndex].description }}
-                                </p>
-                            </div>
-                        </transition>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Close button -->
-            <button @click="closeModal"
-                class="absolute top-4 right-4 text-white hover:text-highlight-color transition-colors">
-                <span class="sr-only">{{ education.close }}</span>
-                <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
+          </div>
         </div>
-    </section>
+      </div>
+    </Container>
+
+    <!-- Modal -->
+    <Modal :isOpen="isModalOpen" @close="closeModal">
+      <div class="bg-white dark:bg-main-gui-color-dark rounded-xl overflow-hidden relative">
+        <!-- Navigation Buttons -->
+        <button @click.stop="showPrevious"
+          class="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 dark:bg-main-background-color-dark/80 p-2 rounded-full hover:bg-white dark:hover:bg-main-gui-color-dark transition-colors">
+          <span class="sr-only">{{ education.previous }}</span>
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+
+        <button @click.stop="showNext"
+          class="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 dark:bg-main-background-color-dark/80 p-2 rounded-full hover:bg-white dark:hover:bg-main-gui-color-dark transition-colors">
+          <span class="sr-only">{{ education.next }}</span>
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+
+        <!-- Image -->
+        <div class="h-[400px] bg-gray-100 dark:bg-main-gui-color-darker overflow-hidden">
+          <transition
+            :enter-active-class="slideDirection === 'right' ? 'animate-slide-in-right' : 'animate-slide-in-left'"
+            :leave-active-class="slideDirection === 'right' ? 'animate-slide-out-left' : 'animate-slide-out-right'"
+            mode="out-in"
+          >
+            <img
+              :key="currentIndex"
+              :src="education.degrees[currentIndex].path"
+              :alt="education.degrees[currentIndex].title"
+              class="w-full h-full object-contain"
+            />
+          </transition>
+        </div>
+
+        <!-- Content -->
+        <div class="p-8 space-y-6">
+          <transition
+            :enter-active-class="slideDirection === 'right' ? 'animate-fade-in-right' : 'animate-fade-in-left'"
+            :leave-active-class="slideDirection === 'right' ? 'animate-fade-out-left' : 'animate-fade-out-right'"
+            mode="out-in"
+          >
+            <div :key="currentIndex" class="space-y-6">
+              <div class="flex items-center justify-between">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-main-text-color-dark">
+                  {{ education.degrees[currentIndex].title }}
+                </h3>
+                <span class="bg-highlight-color/10 text-highlight-color px-3 py-1 rounded-full text-sm font-medium">
+                  {{ education.degrees[currentIndex].date }}
+                </span>
+              </div>
+
+              <div class="text-lg font-medium text-gray-600 dark:text-main-text-color-dark/60">
+                {{ education.degrees[currentIndex].school }}
+              </div>
+
+              <p class="text-gray-600 dark:text-main-text-color-dark">
+                {{ education.degrees[currentIndex].description }}
+              </p>
+            </div>
+          </transition>
+        </div>
+
+        <!-- Close button -->
+        <button @click="closeModal"
+          class="absolute top-4 right-4 text-white hover:text-highlight-color transition-colors">
+          <span class="sr-only">{{ education.close }}</span>
+          <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </Modal>
+  </section>
 </template>
+
 
 <style scoped></style>
