@@ -1,6 +1,7 @@
 <script setup>
 import { useTranslations } from '@/composables/useTranslations'
 import Container from '@/components/Container.vue'
+import StackCategory from '@/components/StackCategory.vue'
 
 const { stacks, t } = useTranslations()
 
@@ -30,36 +31,12 @@ const getStackColor = (stackTitle) => {
 
       <div class="max-w-7xl mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div v-for="stack in stacks" :key="stack.title" class="relative group">
-            <div class="bg-white dark:bg-main-gui-color-dark rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div :class="['px-6 py-4 rounded-t-2xl flex items-center gap-3', getStackColor(stack.title)]">
-                <h3 class="text-xl font-bold text-white">{{ stack.title }}</h3>
-                <div class="h-1 flex-grow rounded-full bg-white/20"></div>
-              </div>
-
-              <div class="p-6">
-                <div class="flex flex-wrap justify-center gap-6">
-                  <div v-for="tech in stack.technologies" :key="tech.title" class="group/tech w-[140px]">
-                    <div class="relative bg-gray-50 dark:bg-main-background-color-dark rounded-xl p-4 
-                              hover:bg-gray-100 dark:hover:bg-main-gui-color-darker
-                              transition-all duration-300 hover:-translate-y-1">
-                      <div class="flex flex-col items-center gap-3">
-                        <div class="relative w-14 h-14 flex items-center justify-center
-                                  bg-white dark:bg-main-gui-color-dark rounded-lg shadow-sm p-2">
-                          <img :src="tech.path" :alt="tech.title" class="w-10 h-10 object-contain group-hover/tech:scale-110 transition-transform duration-300" />
-                        </div>
-                        <span class="text-sm font-medium text-gray-700 dark:text-main-text-color-dark text-center
-                                     group-hover/tech:text-highlight-color transition-colors">
-                          {{ tech.title }}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
+          <StackCategory
+            v-for="stack in stacks"
+            :key="stack.title"
+            :stack="stack"
+            :color-class="getStackColor(stack.title)"
+          />
         </div>
       </div>
     </Container>
