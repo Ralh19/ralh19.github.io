@@ -135,13 +135,6 @@ export function useTranslations() {
         links: { github: "https://github.com/Ralh19/SnakeGame", demo: "#" },
       },
       {
-        title: t("projects.return.title"),
-        description: t("projects.return.description"),
-        technologies: ["Unity Engine", "C#", "Git"],
-        imageUrl: "/images/projects/return_screen.png",
-        links: { github: "https://github.com/Ralh19/TheReturn", demo: "#" },
-      },
-      {
         title: t("projects.gsb.title"),
         description: t("projects.gsb.description"),
         technologies: ["PHP", "Javascript", "MySQL", "Bootstrap"],
