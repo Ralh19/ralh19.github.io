@@ -90,6 +90,7 @@ onBeforeUnmount(() => document.removeEventListener('click', handleClickOutside))
                 class="text-2xl px-10 py-5 bg-highlight-color text-white rounded-2xl 
                        shadow-md hover:shadow-lg scale-animation hover:opacity-90 text-center transition-all"
               >
+              <i class="bi bi-file-earmark-check text-2xl md:text-3xl"></i>
                 {{ hero.hireMe }}
               </a>
 
