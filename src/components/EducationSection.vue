@@ -3,6 +3,7 @@ import { ref, watch, onMounted, onBeforeUnmount } from 'vue'
 import { useTranslations } from '@/composables/useTranslations'
 import Container from '@/components/Container.vue'
 import Modal from '@/components/Modal.vue'
+import SectionTitle from './SectionTitle.vue'
 
 const { education } = useTranslations()
 
@@ -51,11 +52,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', handleKeydown))
 <template>
   <section id="education" class="py-20 bg-white dark:bg-main-background-color-dark">
     <Container>
-      <h2 class="mb-16 text-4xl font-bold text-center dark:text-white">
-        <span class="text-highlight-color">&lt;</span>
-        {{ education.title }}
-        <span class="text-highlight-color">/&gt;</span>
-      </h2>
+      <SectionTitle :title="education.title" />
 
       <div class="max-w-6xl mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -97,7 +94,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', handleKeydown))
       <div class="bg-white dark:bg-main-gui-color-dark rounded-xl overflow-hidden relative">
         <!-- Navigation Buttons -->
         <button @click.stop="showPrevious"
-          class="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 dark:bg-main-background-color-dark/80 p-2 rounded-full hover:bg-white dark:hover:bg-main-gui-color-dark transition-colors">
+          class="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 dark:bg-main-background-color-dark/80 p-2 rounded-full hover:bg-white dark:hover:bg-main-gui-color-dark transition-colors cursor-pointer">
           <span class="sr-only">{{ education.previous }}</span>
           <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -105,7 +102,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', handleKeydown))
         </button>
 
         <button @click.stop="showNext"
-          class="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 dark:bg-main-background-color-dark/80 p-2 rounded-full hover:bg-white dark:hover:bg-main-gui-color-dark transition-colors">
+          class="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 dark:bg-main-background-color-dark/80 p-2 rounded-full hover:bg-white dark:hover:bg-main-gui-color-dark transition-colors cursor-pointer">
           <span class="sr-only">{{ education.next }}</span>
           <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />

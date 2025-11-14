@@ -3,6 +3,7 @@ import { Transition } from 'vue'
 import { useTrollEffect } from '@/composables/useTrollEffect'
 import { useTranslations } from '@/composables/useTranslations'
 import ProjectCard from '@/components/ProjectCard.vue'
+import SectionTitle from './SectionTitle.vue'
 
 const { showTroll, displayTroll } = useTrollEffect()
 const { projects } = useTranslations()
@@ -26,11 +27,7 @@ const { projects } = useTranslations()
 
   <section id="projects" class="py-20 bg-gray-50 dark:bg-main-background-color-dark" v-bind="$attrs">
     <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center mb-16 dark:text-white">
-        <span class="text-highlight-color">&lt;</span>
-        {{ projects.title }}
-        <span class="text-highlight-color">/&gt;</span>
-      </h2>
+      <SectionTitle :title="projects.title" />
 
       <div class="flex flex-col gap-12">
         <ProjectCard

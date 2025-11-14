@@ -2,6 +2,7 @@
 import { useTranslations } from '@/composables/useTranslations'
 import Container from '@/components/Container.vue'
 import StackCategory from '@/components/StackCategory.vue'
+import SectionTitle from './SectionTitle.vue'
 
 const { stacks, t } = useTranslations()
 
@@ -23,20 +24,12 @@ const getStackColor = (stackTitle) => {
 <template>
   <section id="stacks" class="py-20 bg-gray-50 dark:bg-main-background-color-dark">
     <Container>
-      <h2 class="mb-16 text-4xl font-bold text-center dark:text-white">
-        <span class="text-highlight-color">&lt;</span>
-        {{ t('stacks.title') }}
-        <span class="text-highlight-color">/&gt;</span>
-      </h2>
+      <SectionTitle :title="t('stacks.title')" />
 
       <div class="max-w-7xl mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <StackCategory
-            v-for="stack in stacks"
-            :key="stack.title"
-            :stack="stack"
-            :color-class="getStackColor(stack.title)"
-          />
+          <StackCategory v-for="stack in stacks" :key="stack.title" :stack="stack"
+            :color-class="getStackColor(stack.title)" />
         </div>
       </div>
     </Container>
@@ -53,6 +46,7 @@ const getStackColor = (stackTitle) => {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

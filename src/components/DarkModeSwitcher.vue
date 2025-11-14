@@ -9,7 +9,8 @@ const { isDark, toggleDark } = useDarkMode()
     class="p-1.5 sm:p-2 text-gray-500 dark:text-main-text-color-dark 
            hover:text-highlight-color dark:hover:text-highlight-color 
            transition-colors rounded-full hover:bg-gray-100 
-           dark:hover:bg-main-background-color-dark"
+           dark:hover:bg-main-background-color-dark
+           cursor-pointer"
     aria-label="Toggle theme"
     @click="toggleDark()"
   >

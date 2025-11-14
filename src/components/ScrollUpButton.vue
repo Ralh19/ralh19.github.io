@@ -31,7 +31,7 @@ onUnmounted(() => window.removeEventListener('scroll', checkScroll))
       @click="scrollToTop"
       class="fixed bottom-8 right-8 p-3 bg-white dark:bg-main-gui-color-dark 
              rounded-full shadow-lg hover:shadow-xl z-50 group 
-             transition-all duration-300 scale-animation"
+             transition-all duration-300 scale-animation cursor-pointer"
       aria-label="Scroll to top"
     >
       <svg

@@ -21,7 +21,7 @@ const props = defineProps({
           <a
             :href="job.company_link"
             target="_blank"
-            class="text-gray-600 dark:text-main-text-color-dark hover:text-highlight-color"
+            class="text-gray-600 dark:text-main-text-color-dark hover:text-highlight-color underline underline-offset-4"
           >
             {{ job.company }}
           </a>

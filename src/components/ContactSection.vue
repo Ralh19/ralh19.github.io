@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import emailjs from '@emailjs/browser'
 import { useTranslations } from '@/composables/useTranslations'
 import Container from '@/components/Container.vue'
+import SectionTitle from "@/components/SectionTitle.vue"
 
 const { t } = useTranslations()
 
@@ -61,12 +62,8 @@ const updateMessageLength = (e) => {
       <div class="max-w-3xl mx-auto px-4">
         <!-- Header -->
         <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold mb-4 dark:text-white">
-            <span class="text-highlight-color">&lt;</span>
-            {{ t('contact.title') }}
-            <span class="text-highlight-color">/&gt;</span>
-          </h2>
-          <p class="text-lg text-gray-600 dark:text-main-text-color-dark">
+          <SectionTitle :title="t('contact.title')" />
+          <p class="text-xl text-gray-600 dark:text-main-text-color-dark">
             {{ t('contact.subtitle') }}
           </p>
         </div>
@@ -148,7 +145,7 @@ const updateMessageLength = (e) => {
 
           <!-- Submit Button -->
           <button type="submit" :disabled="isLoading" class="w-full bg-highlight-color text-white py-4 rounded-lg hover:bg-highlight-color/90 
-            transition-colors duration-300 font-medium text-lg scale-animation disabled:opacity-50">
+            transition-colors duration-300 font-medium text-lg scale-animation disabled:opacity-50 cursor-pointer">
             {{ isLoading ? t('contact.status.sending') : t('contact.status.send') }}
           </button>
         </form>

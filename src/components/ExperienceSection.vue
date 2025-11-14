@@ -2,6 +2,7 @@
 import { useTranslations } from '@/composables/useTranslations'
 import Container from '@/components/Container.vue'
 import ExperienceCard from '@/components/ExperienceCard.vue'
+import SectionTitle from '@/components/SectionTitle.vue'
 
 const { experience } = useTranslations()
 </script>
@@ -9,11 +10,7 @@ const { experience } = useTranslations()
 <template>
   <section id="experience" class="py-20 bg-white dark:bg-main-background-color-dark">
     <Container>
-      <h2 class="mb-10 dark:text-white text-center text-3xl md:text-4xl font-bold">
-        <span class="text-highlight-color">&lt;</span>
-        {{ experience.title }}
-        <span class="text-highlight-color">/&gt;</span>
-      </h2>
+     <SectionTitle :title="experience.title" />
 
       <div class="relative max-w-4xl mx-auto px-6">
         <!-- Timeline line -->
