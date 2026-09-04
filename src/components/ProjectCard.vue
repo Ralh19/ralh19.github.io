@@ -19,6 +19,10 @@ defineProps({
   onDisplayTroll: {
     type: Function,
     required: false
+  },
+  onDisplayVideo: {
+    type: Function,
+    required: false
   }
 })
 </script>
@@ -65,14 +69,13 @@ defineProps({
             <i class="bi bi-file-earmark-play text-xl"></i> {{ liveDemoText }}
           </button>
 
-          <a
-            v-else-if="project.links.demo"
-            :href="project.links.demo"
-            target="_blank"
-            class="inline-flex items-center gap-2 px-4 py-2 bg-highlight-color text-white rounded-lg hover:bg-highlight-color/90 transition-colors"
+          <button
+            v-else-if="project.links.demo && project.links.demo !== '#'"
+            @click="onDisplayVideo && onDisplayVideo(project.links.demo)"
+            class="cursor-pointer inline-flex items-center gap-2 px-4 py-2 bg-highlight-color text-white rounded-lg hover:bg-highlight-color/90 transition-colors"
           >
             <i class="bi bi-file-earmark-play text-xl"></i> {{ liveDemoText }}
-          </a>
+          </button>
         </div>
       </div>
 

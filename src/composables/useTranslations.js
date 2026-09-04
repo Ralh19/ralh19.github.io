@@ -124,7 +124,7 @@ export function useTranslations() {
         imageUrl: "/images/projects/merlin_screen.png",
         links: {
           github: "https://github.com/Ralh19/Merlin-s-Demon-War",
-          demo: "#",
+          demo: "https://www.youtube-nocookie.com/embed/wdEGWjFpaNg?autoplay=1&rel=0&vq=hd1080",
         },
       },
       {
@@ -132,7 +132,7 @@ export function useTranslations() {
         description: t("projects.snake.description"),
         technologies: ["Unity Engine", "C#", "Krita", "Git"],
         imageUrl: "/images/projects/snake_screen.jpeg",
-        links: { github: "https://github.com/Ralh19/SnakeGame", demo: "#" },
+        links: { github: "https://github.com/Ralh19/SnakeGame", demo: "https://www.youtube-nocookie.com/embed/DxK7JEZeerU?autoplay=1&rel=0&vq=hd1080" },
       },
       {
         title: t("projects.gsb.title"),
