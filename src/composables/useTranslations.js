@@ -58,7 +58,7 @@ export function useTranslations() {
         title: t("education.degree1.title"),
         school: t("education.degree1.school"),
         description: t("education.degree1.description"),
-        path: "/images/degrees/comming_soon.jpg",
+        path: "/images/degrees/bts.jpg",
         date: "2025",
       },
       {
